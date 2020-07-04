@@ -1,3 +1,0 @@
-[submodule "packages/wake_on_lan"]
-	path = packages/wake_on_lan
-	url = git@github.com:LunaTools/wake_on_lan.git
