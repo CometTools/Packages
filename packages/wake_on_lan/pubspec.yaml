@@ -1,0 +1,15 @@
+name: wake_on_lan
+description: Send wake on LAN magic packets to devices on your local network.
+version: 1.1.0
+homepage: https://github.com/LunaTools/wake_on_lan
+repository: https://github.com/LunaTools/wake_on_lan
+issue_tracker: https://github.com/LunaTools/wake_on_lan/issues
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+dependencies:
+  convert: ^2.1.1
+dev_dependencies:
+  test: ^1.15.1
+scripts:
+  coverage: test_coverage --no-badge
+  netcat: nc -ul 9 | hexdump -C
