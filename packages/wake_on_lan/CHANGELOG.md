@@ -1,3 +1,6 @@
+# 1.1.0+3
+- Updated README.md
+- Updated example/main.dart
 # 1.1.0+2
 - Fixed code coverage shield
 # 1.1.0+1

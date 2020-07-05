@@ -76,7 +76,7 @@ if(MACAddress.validate(mac) && IPv4Address.validate(ipv4)) {
 
 Because wake-on-LAN packets are sent over UDP, beyond the successful creation of a datagram socket and sending the data over the network, there is no way to confirm that the machine has been awoken beyond pinging the machine after waking it (**This functionality is not implemented in this package**). This is because of the nature of UDP sockets which do not need to establish the connection for the data to be sent.
 
-[license-shield]: https://img.shields.io/github/license/lunatools/wake_on_lan?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/LunaTools/Packages?style=for-the-badge
 [codecov]: https://codecov.io/gh/LunaTools/Packages
 [codecov-shield]: https://img.shields.io/codecov/c/gh/LunaTools/Packages?flag=wake_on_lan&style=for-the-badge
 [pubdev]: https://pub.dev/packages/wake_on_lan/
