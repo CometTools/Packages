@@ -1,3 +1,5 @@
+# 1.1.0+2
+- Fixed code coverage shield
 # 1.1.0+1
 - Updated repository, homepage, and issues links
 # 1.1.0

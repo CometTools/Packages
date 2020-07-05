@@ -78,6 +78,6 @@ Because wake-on-LAN packets are sent over UDP, beyond the successful creation of
 
 [license-shield]: https://img.shields.io/github/license/lunatools/wake_on_lan?style=for-the-badge
 [codecov]: https://codecov.io/gh/LunaTools/Packages
-[codecov-shield]: https://img.shields.io/codecov/c/gh/LunaTools/Packages?flag=wake_on_lan?style=for-the-badge
+[codecov-shield]: https://img.shields.io/codecov/c/gh/LunaTools/Packages?flag=wake_on_lan&style=for-the-badge
 [pubdev]: https://pub.dev/packages/wake_on_lan/
 [pubdev-shield]: https://img.shields.io/pub/v/wake_on_lan.svg?style=for-the-badge
