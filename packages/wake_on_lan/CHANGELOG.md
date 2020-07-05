@@ -1,3 +1,5 @@
+# 1.1.0+1
+- Updated repository, homepage, and issues links
 # 1.1.0
 - BREAKING: `magicPacket` getter is now a function, `magicPacket()`
 - Added test cases, now achieved 100% coverage
