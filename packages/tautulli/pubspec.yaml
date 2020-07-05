@@ -1,0 +1,14 @@
+name: tautulli
+description: Facilitate the communication to and from Tautulli's API
+version: 0.0.1-pre.1
+homepage: https://github.com/LunaTools/Packages
+repository: https://github.com/LunaTools/Packages/tree/master/packages/tautulli
+issue_tracker: https://github.com/LunaTools/Packages/issues
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+dependencies:
+  dio: ^3.0.9
+dev_dependencies:
+  test: ^1.15.1
+scripts:
+  coverage: test_coverage --no-badge
