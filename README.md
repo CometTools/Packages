@@ -11,6 +11,6 @@ All packages are available on [pub](https://pub.dev/publishers/lunatools.io).
 | [wake_on_lan][wake_on_lan:github] | [![pub package][wake_on_lan:shield]][wake_on_lan:pubdev] |
 
 
-[wake_on_lan:github]: https://github.com/LunaTools/Packages/tree/master/packages/pending_operations
+[wake_on_lan:github]: https://github.com/LunaTools/Packages/tree/master/packages/wake_on_lan
 [wake_on_lan:shield]: https://img.shields.io/pub/v/wake_on_lan.svg?style=for-the-badge
 [wake_on_lan:pubdev]: https://pub.dev/packages/wake_on_lan/

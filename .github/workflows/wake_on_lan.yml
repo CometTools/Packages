@@ -1,0 +1,33 @@
+name: wake_on_lan
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - "packages/wake_on_lan/**"
+  pull_request:
+    branches: [ master ]
+    paths:
+      - "packages/wake_on_lan/**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 'packages/wake_on_lan'
+    container:
+      image: google/dart:latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: pub get
+    - name: Run Tests
+      run: pub run test
+    - name: Collect Coverage
+      run: |
+        pub global activate test_coverage
+        pub global run test_coverage --no-badge
+    - name: Upload Coverage
+      uses: codecov/codecov-action@v1
+      with:
+        file: packages/wake_on_lan/coverage/lcov.info
+        flags: wake_on_lan

@@ -1,0 +1,14 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+      wake_on_lan:
+        target: auto
+        flags: wake_on_lan
+    patch: off
+flags:
+  wake_on_lan:
+    paths:
+      - packages/wake_on_lan
+    carryforward: true
