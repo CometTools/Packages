@@ -6,7 +6,7 @@ void main() async {
     String host = 'http://192.168.1.123:8181/tautulli';
     // Your key can be fetched from the Tautulli web GUI
     String key = '1234567890';
-    TautulliConnection tautulli = TautulliConnection(host: host, apiKey: key);
+    Tautulli tautulli = Tautulli(host: host, apiKey: key);
     // Run the `arnold` command for example, which fetches an Arnold Schwarzenegger quote
     await tautulli.miscellaneous.arnold().then((quote) => print(quote));
 }

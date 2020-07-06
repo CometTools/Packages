@@ -1,12 +1,13 @@
 part of tautulli;
 
-/// The core class to handle all connections to Tautulli. Grants access to all encapsulated command handlers.
+/// The core class to handle all connections to Tautulli.
+/// Gives you easy access to all implemented command handlers, initialized and ready to call.
 /// 
-/// [TautulliConnection] handles the creation of the initial [Dio] HTTP client.
+/// [Tautulli] handles the creation of the initial [Dio] HTTP client & command handlers.
 /// You can optionally use the factory `.from()` to define your own [Dio] HTTP client.
-class TautulliConnection {
+class Tautulli {
     /// Internal constructor
-    TautulliConnection._internal({
+    Tautulli._internal({
         @required this.httpClient,
         @required this.activity,
         @required this.miscellaneous,
@@ -21,7 +22,7 @@ class TautulliConnection {
     /// - `strictTLS`: If the HTTP client should validate that the SSL/TLS certificate is valid against the device's CA.
     /// - `followRedirects`: If the HTTP client should follow URL redirects.
     /// - `maxRedirects`: The maximum amount of redirects the client should follow (does nothing if `followRedirects` is false).
-    factory TautulliConnection({
+    factory Tautulli({
         @required String host,
         @required String apiKey,
         Map<String, dynamic> headers,
@@ -56,10 +57,10 @@ class TautulliConnection {
                 client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
             };
         }
-        return TautulliConnection._internal(
+        return Tautulli._internal(
             httpClient: _dio,
-            activity: _ActivityCommandHandler(_dio),
-            miscellaneous: _MiscellaneousCommandHandler(_dio),
+            activity: CommandHandler_Activity(_dio),
+            miscellaneous: CommandHandler_Miscellaneous(_dio),
         );
     }
 
@@ -81,28 +82,28 @@ class TautulliConnection {
     ///     ),
     /// );
     /// ```
-    factory TautulliConnection.from({
+    factory Tautulli.from({
         @required Dio client,
     }) {
         assert(client != null, 'client cannot be null.');
-        return TautulliConnection._internal(
+        return Tautulli._internal(
             httpClient: client,
-            activity: _ActivityCommandHandler(client),
-            miscellaneous: _MiscellaneousCommandHandler(client),
+            activity: CommandHandler_Activity(client),
+            miscellaneous: CommandHandler_Miscellaneous(client),
         );
     }
 
     /// The [Dio] HTTP client built during initialization.
     /// 
-    /// Making changes to the [Dio] client will not propogate to the command handlers.
-    /// You must reinitialize [TautulliConnection] to set a new HTTP client.
+    /// Making changes to the [Dio] client should propogate to the command handlers, but is not recommended.
+    /// The recommended way to make changes to the HTTP client is to use the `.from()` factory to build your own [Dio] HTTP client.
     final Dio httpClient;
     /// Command handler for all activity-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
-    final _ActivityCommandHandler activity;
+    final CommandHandler_Activity activity;
     /// Command handler for all misc-related API calls.
     /// 
     /// _Check the documentation to see all API calls taht fall under this category._
-    final _MiscellaneousCommandHandler miscellaneous;
+    final CommandHandler_Miscellaneous miscellaneous;
 }

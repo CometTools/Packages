@@ -1,13 +1,13 @@
 part of tautulli;
 
-/// Facilitates and encapsulates and manages individual calls related to activity within Tautulli.
+/// Facilitates, encapsulates, and manages individual calls related to activity within Tautulli.
 /// 
-/// [_ActivityCommandHandler] internally handles routing the HTTP client to the API calls.
-class _ActivityCommandHandler {
+/// [CommandHandler_Activity] internally handles routing the HTTP client to the API calls.
+class CommandHandler_Activity {
     final Dio _client;
 
     /// Create an Activity command handler using an initialized [Dio] client.
-    _ActivityCommandHandler(this._client);
+    CommandHandler_Activity(this._client);
 
     /// Handler for [get_activity](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_activity).
     /// Returns a Future containing [TautulliActivity].
