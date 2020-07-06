@@ -1,3 +1,3 @@
 library tautulli;
 
-export './src/http_adapter.dart';
+export './src/core.dart';
