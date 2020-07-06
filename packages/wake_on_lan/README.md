@@ -11,7 +11,7 @@ Dart library package to easily send [Wake-on-LAN](https://en.wikipedia.org/wiki/
 `wake_on_lan` has three core classes for functionality, `IPv4Address`, `MACAddress`, and `WakeOnLAN`. All classes are exported in the main file, to import:
 
 ```dart
-import 'package:wake_on_lan:wake_on_lan.dart';
+import 'package:wake_on_lan/wake_on_lan.dart';
 ```
 
 #### Create an IPv4 Address
@@ -44,7 +44,7 @@ The class has a static function, `validate(String address)` which allows easy va
 Create a `MACAddress` object by using the factory `MACAddress.from(address)` where `address` is a string representation of the address. The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
 
 ```dart
-String address = 'A4:83:E7:0D:7F:4F';
+String address = 'AA:BB:CC:DD:EE:FF';
 if(MACAddress.validate(address)) {
     MACAddress mac = MACAddress.from(address);
     //Continue execution
@@ -62,7 +62,7 @@ Create a `WakeOnLAN` object by using the factory `WakeOnLAN.from(ipv4, mac, { po
 Once created, call the function `wake()` on the `WakeOnLAN` object to send the packet.
 
 ```dart
-String mac = 'A4:83:E7:0D:7F:4F';
+String mac = 'AA:BB:CC:DD:EE:FF';
 String ipv4 = '192.168.1.255';
 if(MACAddress.validate(mac) && IPv4Address.validate(ipv4)) {
     MACAddress macAddress = MACAddress.from(mac);
