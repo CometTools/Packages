@@ -16,5 +16,8 @@ void _getters() {
         test('host', () {
             expect(tautulli.host, host); 
         });
+        test('apiKey', () {
+            expect(tautulli.apiKey, key);
+        });
     });
 }
