@@ -73,10 +73,10 @@ void _functionMagicPacket() {
         MACAddress mac = MACAddress.from('AA:BB:CC:DD:EE:FF');
         IPv4Address ipv4 = IPv4Address.from('192.168.1.1');
         const _PREBUILT_PACKET = [
-            //6 0xFF (255) bytes
+            // 6 0xFF (255) bytes
             255, 255, 255, 255, 255, 255,
-            //16 instances of the MAC Address AA:BB:CC:DD:EE:FF
-            //AA = 170, BB = 187, CC = 204, DD = 221, EE = 238, FF = 255
+            // 16 instances of the MAC Address AA:BB:CC:DD:EE:FF
+            // AA = 170, BB = 187, CC = 204, DD = 221, EE = 238, FF = 255
             170, 187, 204, 221, 238, 255,
             170, 187, 204, 221, 238, 255,
             170, 187, 204, 221, 238, 255,
