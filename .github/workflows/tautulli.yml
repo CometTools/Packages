@@ -31,3 +31,5 @@ jobs:
       with:
         file: packages/tautulli/coverage/lcov.info
         flags: tautulli
+        name: tautulli
+

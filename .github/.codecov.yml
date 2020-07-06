@@ -5,11 +5,14 @@ coverage:
         target: auto
       wake_on_lan:
         target: auto
-        flags: wake_on_lan
+        flags:
+          - wake_on_lan
       tautulli:
         target: auto
-        flags: tautulli
+        flags:
+          - tautulli
     patch: off
+    changes: off
 flags:
   wake_on_lan:
     paths:

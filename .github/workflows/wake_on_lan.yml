@@ -31,3 +31,4 @@ jobs:
       with:
         file: packages/wake_on_lan/coverage/lcov.info
         flags: wake_on_lan
+        name: wake_on_lan
