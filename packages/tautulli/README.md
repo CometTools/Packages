@@ -6,6 +6,8 @@
 
 Dart library package to facilitate the connection to and from [Tautulli](https://tautulli.com)'s API, a Python based monitoring and tracking tool for Plex Media Server.
 
+> **Currently WIP**
+
 [license-shield]: https://img.shields.io/github/license/LunaTools/Packages?style=for-the-badge
 [codecov]: https://codecov.io/gh/LunaTools/Packages
 [codecov-shield]: https://img.shields.io/codecov/c/gh/LunaTools/Packages?flag=tautulli&style=for-the-badge

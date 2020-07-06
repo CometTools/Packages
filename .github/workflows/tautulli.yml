@@ -1,19 +1,19 @@
-name: wake_on_lan
+name: tautulli
 on:
   push:
     branches: [ master ]
     paths:
-      - "packages/wake_on_lan/**"
+      - "packages/tautulli/**"
   pull_request:
     branches: [ master ]
     paths:
-      - "packages/wake_on_lan/**"
+      - "packages/tautulli/**"
 jobs:
   test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 'packages/wake_on_lan'
+        working-directory: 'packages/tautulli'
     container:
       image: google/dart:latest
     steps:
@@ -29,5 +29,5 @@ jobs:
     - name: Upload Coverage
       uses: codecov/codecov-action@v1
       with:
-        file: packages/wake_on_lan/coverage/lcov.info
-        flags: wake_on_lan
+        file: packages/tautulli/coverage/lcov.info
+        flags: tautulli
