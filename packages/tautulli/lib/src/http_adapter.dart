@@ -9,4 +9,9 @@ class Tautulli {
         @required String host,
         @required String apiKey,
     }) => Tautulli._internal(host, apiKey);
+
+    /// Returns the host used to connect to Tautulli
+    String get host => _host;
+    /// Returns the API key used to connect to Tautulli
+    String get apiKey => _apiKey;
 }
