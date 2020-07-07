@@ -2,7 +2,11 @@
 
 This repository contains all library packages maintained and in use by [LunaSea](https://github.com/LunaTools/LunaSea). Included are libraries to facilitate communication with other open-source application's APIs, utilities, etc.
 
-All packages are available on LunaTool's verified [pub](https://pub.dev/publishers/lunatools.io). 
+All packages are available on LunaTool's [verified publisher pub](https://pub.dev/publishers/lunatools.io).
+
+## Issues
+
+Issue templates have been created for each package currently available, please use the issue template for the respective package. Failure to use the template may result in the issue going unnoticed.
 
 ## Directory
 

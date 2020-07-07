@@ -7,7 +7,7 @@ Future<bool> _commandUpdateCheck(Dio client) async {
                 'cmd': 'update_check',
             },
         );
-        return (response.data['response']['update'] as bool);
+        return (response.data['response']['data']['update'] as bool);
     } catch(error, stack) {
         return Future.error(error, stack);
     }
