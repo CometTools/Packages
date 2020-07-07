@@ -1,4 +1,25 @@
-part of tautulli;
+/// Dart library package to facilitate the connection to and from [Tautulli](https://tautulli.com)'s API:
+/// a Python based monitoring and tracking tool for Plex Media Server.
+/// 
+/// This library contains all logic and access to make calls to Tautulli's API through this package.
+library tautulli_commands;
+
+import 'dart:io';
+import 'package:meta/meta.dart';
+import 'package:dio/dio.dart';
+import 'package:dio/adapter.dart';
+import './models.dart';
+
+// Activity
+part './src/commands/activity.dart';
+part './src/commands/activity/get_activity.dart';
+// Miscellaneous
+part './src/commands/miscellaneous.dart';
+part './src/commands/miscellaneous/arnold.dart';
+// System
+part './src/commands/system.dart';
+part './src/commands/system/update.dart';
+part './src/commands/system/update_check.dart';
 
 /// The core class to handle all connections to Tautulli.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
@@ -60,9 +81,9 @@ class Tautulli {
         }
         return Tautulli._internal(
             httpClient: _dio,
-            activity: CommandHandler_Activity(_dio),
-            miscellaneous: CommandHandler_Miscellaneous(_dio),
-            system: CommandHandler_System(_dio),
+            activity: TautulliCommandHandler_Activity(_dio),
+            miscellaneous: TautulliCommandHandler_Miscellaneous(_dio),
+            system: TautulliCommandHandler_System(_dio),
         );
     }
 
@@ -90,9 +111,9 @@ class Tautulli {
         assert(client != null, 'client cannot be null.');
         return Tautulli._internal(
             httpClient: client,
-            activity: CommandHandler_Activity(client),
-            miscellaneous: CommandHandler_Miscellaneous(client),
-            system: CommandHandler_System(client),
+            activity: TautulliCommandHandler_Activity(client),
+            miscellaneous: TautulliCommandHandler_Miscellaneous(client),
+            system: TautulliCommandHandler_System(client),
         );
     }
 
@@ -104,13 +125,13 @@ class Tautulli {
     /// Command handler for all activity-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
-    final CommandHandler_Activity activity;
+    final TautulliCommandHandler_Activity activity;
     /// Command handler for all misc-related API calls.
     /// 
     /// _Check the documentation to see all API calls taht fall under this category._
-    final CommandHandler_Miscellaneous miscellaneous;
+    final TautulliCommandHandler_Miscellaneous miscellaneous;
     /// Command handler for all system-related API calls.
     /// 
     /// _Check the documentation to see all API calls taht fall under this category._
-    final CommandHandler_System system;
+    final TautulliCommandHandler_System system;
 }

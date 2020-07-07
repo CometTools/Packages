@@ -1,16 +1,21 @@
-part of tautulli;
+part of tautulli_commands;
 
-/// Facilitates, encapsulates, and manages individual calls for any miscellaneous calls within Tautulli.
+/// Facilitates, encapsulates, and manages individual calls for any system calls within Tautulli.
 /// 
-/// [CommandHandler_System] internally handles routing the HTTP client to the API calls.
-class CommandHandler_System {
+/// [TautulliCommandHandler_System] internally handles routing the HTTP client to the API calls.
+class TautulliCommandHandler_System {
     final Dio _client;
 
-    /// Create an Activity command handler using an initialized [Dio] client.
-    CommandHandler_System(this._client);
+    /// Create a system command handler using an initialized [Dio] client.
+    TautulliCommandHandler_System(this._client);
 
     /// Handler for [update](https://github.com/Tautulli/Tautulli/blob/master/API.md#update).
     /// 
     /// Update Tautulli.
     Future<void> update() async => _commandUpdate(_client);
+
+    /// Handler for [update_check](https://github.com/Tautulli/Tautulli/blob/master/API.md#update_check).
+    /// 
+    /// Check for Tautulli updates.
+    Future<bool> updateCheck() async => _commandUpdateCheck(_client);
 }

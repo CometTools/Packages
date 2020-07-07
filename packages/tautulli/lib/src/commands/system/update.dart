@@ -1,4 +1,4 @@
-part of tautulli;
+part of tautulli_commands;
 
 Future<void> _commandUpdate(Dio client) async {
     try {

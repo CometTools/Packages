@@ -1,4 +1,4 @@
-part of tautulli;
+part of tautulli_commands;
 
 Future<TautulliActivity> _commandGetActivity(Dio client, {
     int sessionKey,
