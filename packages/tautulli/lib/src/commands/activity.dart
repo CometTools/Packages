@@ -10,7 +10,8 @@ class CommandHandler_Activity {
     CommandHandler_Activity(this._client);
 
     /// Handler for [get_activity](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_activity).
-    /// Returns a Future containing [TautulliActivity].
+    /// 
+    /// Get the current activity on the Plex Media Server.
     /// 
     /// You can optionally define **one of** the following session identifiers.
     /// Defining both will result in an [AssertionError].

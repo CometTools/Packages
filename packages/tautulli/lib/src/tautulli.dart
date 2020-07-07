@@ -11,6 +11,7 @@ class Tautulli {
         @required this.httpClient,
         @required this.activity,
         @required this.miscellaneous,
+        @required this.system,
     });
 
     /// Create a new Tautulli API connection manager to connection to your instance.
@@ -40,8 +41,8 @@ class Tautulli {
         // Build the HTTP client
         Dio _dio = Dio(
             BaseOptions(
-                baseUrl: host.length != 0 && host.endsWith('/')
-                    ? '${host.substring(0, host.length-1)}/api/v2'
+                baseUrl: host.endsWith('/')
+                    ? '${host}api/v2'
                     : '$host/api/v2',
                 queryParameters: {
                     'apikey': apiKey,
@@ -61,6 +62,7 @@ class Tautulli {
             httpClient: _dio,
             activity: CommandHandler_Activity(_dio),
             miscellaneous: CommandHandler_Miscellaneous(_dio),
+            system: CommandHandler_System(_dio),
         );
     }
 
@@ -90,6 +92,7 @@ class Tautulli {
             httpClient: client,
             activity: CommandHandler_Activity(client),
             miscellaneous: CommandHandler_Miscellaneous(client),
+            system: CommandHandler_System(client),
         );
     }
 
@@ -106,4 +109,8 @@ class Tautulli {
     /// 
     /// _Check the documentation to see all API calls taht fall under this category._
     final CommandHandler_Miscellaneous miscellaneous;
+    /// Command handler for all system-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls taht fall under this category._
+    final CommandHandler_System system;
 }

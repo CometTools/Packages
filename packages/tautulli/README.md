@@ -116,7 +116,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [terminate_session][api:terminate_session] | X |
 | [undelete_library][api:undelete_library] | X |
 | [undelete_user][api:undelete_user] | X |
-| [update][api:update] | X |
+| [update][api:update] | `system.update()` |
 | [update_check][api:update_check] | X |
 | [update_metadata_details][api:update_metadata_details] | X |
 

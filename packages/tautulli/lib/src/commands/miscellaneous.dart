@@ -10,6 +10,7 @@ class CommandHandler_Miscellaneous {
     CommandHandler_Miscellaneous(this._client);
 
     /// Handler for [arnold](https://github.com/Tautulli/Tautulli/blob/master/API.md#arnold).
-    /// Returns a Future containing [String], a quote from Arnold Schwarzenegger himself.
+    /// 
+    /// Get to the chopper!
     Future<String> arnold() async => _commandArnold(_client);
 }

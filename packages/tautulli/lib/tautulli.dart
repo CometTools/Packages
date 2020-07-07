@@ -15,6 +15,9 @@ part './src/commands/activity/get_activity.dart';
 // Commands - Miscellaneous
 part './src/commands/miscellaneous.dart';
 part './src/commands/miscellaneous/arnold.dart';
+// Commands - System
+part './src/commands/system.dart';
+part './src/commands/system/update.dart';
 // Models
 part './src/models/activity.dart';
 part './src/models/session.dart';
