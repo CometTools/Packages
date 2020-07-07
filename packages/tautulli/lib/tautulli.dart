@@ -12,7 +12,9 @@ part './src/tautulli.dart';
 // Commands - Activity
 part './src/commands/activity.dart';
 part './src/commands/activity/get_activity.dart';
-part './src/commands/activity/models/activity.dart';
 // Commands - Miscellaneous
 part './src/commands/miscellaneous.dart';
 part './src/commands/miscellaneous/arnold.dart';
+// Models
+part './src/models/activity.dart';
+part './src/models/session.dart';

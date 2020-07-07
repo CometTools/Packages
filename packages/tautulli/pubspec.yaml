@@ -13,5 +13,5 @@ dependencies:
 dev_dependencies:
   test: ^1.15.1
 scripts:
-  test: dart pub run test test
+  tests: dart pub run test test
   coverage: test_coverage --no-badge
