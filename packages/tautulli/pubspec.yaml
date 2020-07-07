@@ -1,6 +1,6 @@
 name: tautulli
 description: Facilitate the communication to and from Tautulli's API
-version: 0.0.1-pre.1
+version: 0.0.1-pre.2
 homepage: https://github.com/LunaTools/Packages
 repository: https://github.com/LunaTools/Packages/tree/master/packages/tautulli
 issue_tracker: https://github.com/LunaTools/Packages/issues
@@ -13,5 +13,5 @@ dependencies:
 dev_dependencies:
   test: ^1.15.1
 scripts:
-  test: dart pub run test test
+  tests: dart pub run test test
   coverage: test_coverage --no-badge

@@ -48,4 +48,13 @@ void _factory() {
             expect(() => Tautulli(host: host, apiKey: key, maxRedirects: null), throwsA(isA<AssertionError>()));
         });
     });
+    group('Factory: .from()', () {
+        test('Valid Instance', () {
+            Dio _dio = Dio();
+            expect(Tautulli.from(client: _dio), equals(isA<Tautulli>()));
+        });
+        test('Invalid Instance (client is null)', () {
+            expect(() => Tautulli.from(client: null), throwsA(isA<AssertionError>()));
+        });
+    });
 }
