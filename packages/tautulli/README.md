@@ -12,7 +12,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | :--------- | :----------: |
 | [add_newsletter_config][api:add_newsletter_config]                                | X |
 | [add_notifier_config][api:add_notifier_config]                                    | X |
-| [arnold][api:arnold]                                                              | `miscellaneous.arnold()`|
+| [arnold][api:arnold]                                                              | `TautulliCommandHandler_Miscellaneous.arnold()`|
 | [backup_config][api:backup_config]                                                | X |
 | [backup_db][api:backup_db]                                                        | X |
 | [delete_all_library_history][api:delete_all_library_history]                      | X |
@@ -116,8 +116,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [terminate_session][api:terminate_session]                                        | X |
 | [undelete_library][api:undelete_library]                                          | X |
 | [undelete_user][api:undelete_user]                                                | X |
-| [update][api:update]                                                              | `system.update()` |
-| [update_check][api:update_check]                                                  | `system.updateCheck()` |
+| [update][api:update]                                                              | `TautulliCommandHandler_System.update()` |
+| [update_check][api:update_check]                                                  | `TautulliCommandHandler_System.updateCheck()` |
 | [update_metadata_details][api:update_metadata_details]                            | X |
 
 [api:add_newsletter_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_newsletter_config
