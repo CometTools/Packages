@@ -1,7 +1,7 @@
 /// Dart library package to facilitate the connection to and from [Tautulli](https://tautulli.com)'s API:
 /// a Python based monitoring and tracking tool for Plex Media Server.
 /// 
-/// This library gives access to both [tautulli_commands] and [tautulli_models] as well, and is needed as the only entrypoint.
+/// This library gives access to both [tautulli_commands], [tautulli_models], and [tautulli_types] as well, and is needed as the only entrypoint.
 library tautulli;
 
 // Imports
@@ -14,6 +14,7 @@ import './commands.dart';
 // Export other libraries
 export './commands.dart';
 export './models.dart';
+export './types.dart';
 
 /// The core class to handle all connections to Tautulli.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
