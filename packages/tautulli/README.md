@@ -106,14 +106,14 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [refresh_libraries_list][api:refresh_libraries_list]                              | X |
 | [refresh_users_list][api:refresh_users_list]                                      | X |
 | [register_device][api:register_device]                                            | X |
-| [restart][api:restart]                                                            | X |
+| [restart][api:restart]                                                            | `TautulliCommandHandler_System.restart()` |
 | [search][api:search]                                                              | X |
 | [set_mobile_device_config][api:set_mobile_device_config]                          | X |
 | [set_newsletter_config][api:set_newsletter_config]                                | X |
 | [set_notifier_config][api:set_notifier_config]                                    | X |
 | [sql][api:sql]                                                                    | X |
 | [status][api:status]                                                              | X |
-| [terminate_session][api:terminate_session]                                        | X |
+| [terminate_session][api:terminate_session]                                        | `TautulliCommandHandler_Activity.terminateSession()` |
 | [undelete_library][api:undelete_library]                                          | X |
 | [undelete_user][api:undelete_user]                                                | X |
 | [update][api:update]                                                              | `TautulliCommandHandler_System.update()` |

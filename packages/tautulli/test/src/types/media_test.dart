@@ -7,10 +7,14 @@ void main() {
 
 void _value() {
     group('Type/TautulliMediaType: .value', () {
-        test('Check all possible values', () {
+        test('Check all possible valid values', () {
             for(TautulliMediaType mediaType in TautulliMediaType.values) {
                 expect(mediaType.value, equals(isA<String>()));
-            }
+            } 
+        });
+        test('Invalid Instance (null value)', () {
+            TautulliMediaType type = null;
+            expect(() => type.value, throwsA(isA<Exception>()));
         });
     });
 }

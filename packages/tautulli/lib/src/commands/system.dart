@@ -9,6 +9,11 @@ class TautulliCommandHandler_System {
     /// Create a system command handler using an initialized [Dio] client.
     TautulliCommandHandler_System(this._client);
 
+    /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
+    /// 
+    /// Restart Tautulli.
+    Future<void> restart() async => _commandRestart(_client);
+
     /// Handler for [update](https://github.com/Tautulli/Tautulli/blob/master/API.md#update).
     /// 
     /// Update Tautulli.

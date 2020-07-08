@@ -14,7 +14,6 @@ class TautulliCommandHandler_Activity {
     /// Get the current activity on the Plex Media Server.
     /// 
     /// You can optionally define **one of** the following session identifiers.
-    /// Defining both will result in an [AssertionError].
     /// - `sessionKey`: Session key for the session info to return
     /// - `sessionId`: Session ID for the session info to return
     Future<TautulliActivity> getActivity({
@@ -24,5 +23,23 @@ class TautulliCommandHandler_Activity {
         _client,
         sessionKey: sessionKey,
         sessionId: sessionId,
+    );
+
+    /// Handler for [terminate_session](https://github.com/Tautulli/Tautulli/blob/master/API.md#terminate_session).
+    /// 
+    /// Stop a streaming session.
+    /// 
+    /// - `sessionKey` **(required)**: Integer key of the session.
+    /// - `sessionId` **(required)**: String identifier for the session.
+    /// - `message`: Optional message to send to the user on why the session was terminated.
+    Future<bool> terminateSession({
+        @required int sessionKey,
+        @required String sessionId,
+        String message,
+    }) async => _commandTerminateSession(
+        _client,
+        sessionKey: sessionKey,
+        sessionId: sessionId,
+        message: message,
     );
 }
