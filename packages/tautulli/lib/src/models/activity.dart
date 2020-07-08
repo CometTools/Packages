@@ -1,6 +1,6 @@
-part of tautulli;
+import './session.dart';
 
-/// Container for activity data from Tautulli.
+/// Model for activity data from Tautulli.
 /// 
 /// Each individual session data is stored in `sessions`, with each session being a [TautulliSession].
 class TautulliActivity {

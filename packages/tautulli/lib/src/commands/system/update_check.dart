@@ -1,15 +1,14 @@
 part of tautulli_commands;
 
-Future<String> _commandArnold(Dio client) async {
+Future<bool> _commandUpdateCheck(Dio client) async {
     try {
         Response response = await client.get('/',
             queryParameters: {
-                'cmd': 'arnold',
+                'cmd': 'update_check',
             },
         );
-        return response.data['response']['data'];
+        return (response.data['response']['data']['update'] as bool);
     } catch(error, stack) {
-        //Return the error as a [Future.error] 
         return Future.error(error, stack);
     }
 }
