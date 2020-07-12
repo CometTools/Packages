@@ -2,7 +2,7 @@
 
 This repository contains all library packages maintained and in use by Comet.Tools. Included are libraries to facilitate communication with other open-source application's APIs, utilities, etc.
 
-All packages are available on LunaTool's [verified publisher pub](https://pub.dev/publishers/comet.tools).
+All packages are available on Comet.Tool's [verified publisher pub](https://pub.dev/publishers/comet.tools).
 
 ## Issues
 
