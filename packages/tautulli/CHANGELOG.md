@@ -1,3 +1,5 @@
+# 0.0.1-pre.5
+- Updated pubspec.yaml
 # 0.0.1-pre.4
 - Implemented [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart)
 - Implemented [terminate_session](https://github.com/Tautulli/Tautulli/blob/master/API.md#terminate_session)

@@ -230,8 +230,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 [api:update_check]: https://github.com/Tautulli/Tautulli/blob/master/API.md#update_check
 [api:update_metadata_details]: https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details
 
-[license-shield]: https://img.shields.io/github/license/LunaTools/Packages?style=for-the-badge
-[codecov]: https://codecov.io/gh/LunaTools/Packages
-[codecov-shield]: https://img.shields.io/codecov/c/gh/LunaTools/Packages?flag=tautulli&style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/CometTools/Packages?style=for-the-badge
+[codecov]: https://codecov.io/gh/CometTools/Packages
+[codecov-shield]: https://img.shields.io/codecov/c/gh/CometTools/Packages?flag=tautulli&style=for-the-badge
 [pubdev]: https://pub.dev/packages/tautulli/
 [pubdev-shield]: https://img.shields.io/pub/v/tautulli.svg?style=for-the-badge
