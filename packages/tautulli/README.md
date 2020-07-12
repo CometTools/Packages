@@ -12,7 +12,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | :--------- | :----------: |
 | [add_newsletter_config][api:add_newsletter_config]                                | X |
 | [add_notifier_config][api:add_notifier_config]                                    | X |
-| [arnold][api:arnold]                                                              | `TautulliCommandHandler_Miscellaneous.arnold()`|
+| [arnold][api:arnold]                                                              | `miscellaneous.arnold()`|
 | [backup_config][api:backup_config]                                                | X |
 | [backup_db][api:backup_db]                                                        | X |
 | [delete_all_library_history][api:delete_all_library_history]                      | X |
@@ -106,18 +106,18 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [refresh_libraries_list][api:refresh_libraries_list]                              | X |
 | [refresh_users_list][api:refresh_users_list]                                      | X |
 | [register_device][api:register_device]                                            | X |
-| [restart][api:restart]                                                            | `TautulliCommandHandler_System.restart()` |
+| [restart][api:restart]                                                            | `system.restart()` |
 | [search][api:search]                                                              | X |
 | [set_mobile_device_config][api:set_mobile_device_config]                          | X |
 | [set_newsletter_config][api:set_newsletter_config]                                | X |
 | [set_notifier_config][api:set_notifier_config]                                    | X |
 | [sql][api:sql]                                                                    | X |
 | [status][api:status]                                                              | X |
-| [terminate_session][api:terminate_session]                                        | `TautulliCommandHandler_Activity.terminateSession()` |
+| [terminate_session][api:terminate_session]                                        | `activity.terminateSession()` |
 | [undelete_library][api:undelete_library]                                          | X |
 | [undelete_user][api:undelete_user]                                                | X |
-| [update][api:update]                                                              | `TautulliCommandHandler_System.update()` |
-| [update_check][api:update_check]                                                  | `TautulliCommandHandler_System.updateCheck()` |
+| [update][api:update]                                                              | `system.update()` |
+| [update_check][api:update_check]                                                  | `system.updateCheck()` |
 | [update_metadata_details][api:update_metadata_details]                            | X |
 
 [api:add_newsletter_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_newsletter_config
