@@ -20,7 +20,7 @@ import 'package:wake_on_lan/wake_on_lan.dart';
 
 The class has a static function, `validate(String address)` which allows easy validation that an IPv4 address string is correctly formatted.
 
-Create an `IPv4Address` object by using the factory `IPv4Address.from(address)` where `address` is a string representation of the address. The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
+Create an `IPv4Address` instance by using the factory `IPv4Address.from(address)` where `address` is a string representation of the address. The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
 
 ```dart
 String address = '192.168.1.1';
@@ -36,12 +36,11 @@ if(IPv4Address.validate(address)) {
 
 `MACAddress` is a helper class to ensure that your MAC address has been formatted correctly.
 
-The class has a static function, `validate(String address)` which allows easy validation that an MAC address string is correctly formatted.
+The class has a static function, `validate(String address)` which allows easy validation that a MAC address string is correctly formatted.
 
 > The MAC address **must be** delimited by colons (:) between each hexidecimal octet.
 
-
-Create a `MACAddress` object by using the factory `MACAddress.from(address)` where `address` is a string representation of the address. The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
+Create a `MACAddress` instance by using the factory `MACAddress.from(address)` where `address` is a string representation of the address. The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
 
 ```dart
 String address = 'AA:BB:CC:DD:EE:FF';
@@ -57,7 +56,7 @@ if(MACAddress.validate(address)) {
 
 `WakeOnLAN` is the class to handle sending the actual wake-on-LAN magic packet to your network.
 
-Create a `WakeOnLAN` object by using the factory `WakeOnLAN.from(ipv4, mac, { port })` where `ipv4` is an `IPv4Address` object, `mac` is a `MACAddress` object, and `port` is an optional integer parameter for which port the packet should be sent over (defaulted to the specification standard port, 9).
+Create a `WakeOnLAN` instance by using the factory `WakeOnLAN.from(ipv4, mac, { port })` where `ipv4` is an `IPv4Address` instance, `mac` is a `MACAddress` instance, and `port` is an optional integer parameter for which port the packet should be sent over (defaulted to the specification standard port, 9).
 
 Once created, call the function `wake()` on the `WakeOnLAN` object to send the packet.
 

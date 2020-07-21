@@ -1,3 +1,8 @@
+/// [IPv4Address] is a helper class to ensure that your IPv4 address has been formatted correctly.
+/// 
+/// The class has a static function, `validate(String address)` which allows easy validation that an IPv4 address string is correctly formatted.
+///
+/// Create an [IPv4Address] object by using the factory `IPv4Address.from(address)` where address is a string representation of the address. The factory will call the validation function mentioned above, but will throw a [FormatException] on a poorly constructed string, so it is recommended to validate it first.
 class IPv4Address {
     static const String _REGEX = r"\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b";
     final String _address;

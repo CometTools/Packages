@@ -1,3 +1,6 @@
+# 1.1.1
+- Improved commenting
+- Added descriptors for all classes
 # 1.1.0+6
 - Updated pubspec.yaml for new GitHub URLs
 # 1.1.0+5
