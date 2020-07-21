@@ -14,6 +14,8 @@ part './src/commands/miscellaneous.dart';
 part './src/commands/miscellaneous/arnold.dart';
 // System
 part './src/commands/system.dart';
+part './src/commands/system/backup_config.dart';
+part './src/commands/system/backup_db.dart';
 part './src/commands/system/restart.dart';
 part './src/commands/system/update.dart';
 part './src/commands/system/update_check.dart';

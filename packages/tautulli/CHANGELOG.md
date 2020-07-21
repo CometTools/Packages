@@ -1,3 +1,6 @@
+# 0.0.1-pre.6
+- Implemented [backup_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#backup_config)
+- Implemented [backup_db](https://github.com/Tautulli/Tautulli/blob/master/API.md#backup_db)
 # 0.0.1-pre.5
 - Updated pubspec.yaml
 # 0.0.1-pre.4

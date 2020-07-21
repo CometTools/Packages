@@ -8,117 +8,117 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 
 ## Implementation Status
 
-| API Method | Implemented? |
-| :--------- | :----------: |
-| [add_newsletter_config][api:add_newsletter_config]                                | X |
-| [add_notifier_config][api:add_notifier_config]                                    | X |
-| [arnold][api:arnold]                                                              | `TautulliCommandHandler_Miscellaneous.arnold()`|
-| [backup_config][api:backup_config]                                                | X |
-| [backup_db][api:backup_db]                                                        | X |
-| [delete_all_library_history][api:delete_all_library_history]                      | X |
-| [delete_all_user_history][api:delete_all_user_history]                            | X |
-| [delete_cache][api:delete_cache]                                                  | X |
-| [delete_history][api:delete_history]                                              | X |
-| [delete_hosted_images][api:delete_hosted_images]                                  | X |
-| [delete_image_cache][api:delete_image_cache]                                      | X |
-| [delete_library][api:delete_library]                                              | X |
-| [delete_login_log][api:delete_login_log]                                          | X |
-| [delete_lookup_info][api:delete_lookup_info]                                      | X |
-| [delete_media_info_cache][api:delete_media_info_cache]                            | X |
-| [delete_mobile_device][api:delete_mobile_device]                                  | X |
-| [delete_newsletter][api:delete_newsletter]                                        | X |
-| [delete_newsletter_log][api:delete_newsletter_log]                                | X |
-| [delete_notification_log][api:delete_notification_log]                            | X |
-| [delete_notifier][api:delete_notifier]                                            | X |
-| [delete_recently_added][api:delete_recently_added]                                | X |
-| [delete_temp_sessions][api:delete_temp_sessions]                                  | X |
-| [delete_user][api:delete_user]                                                    | X |
-| [docs][api:docs]                                                                  | X |
-| [docs_md][api:docs_md]                                                            | X |
-| [download_config][api:download_config]                                            | X |
-| [download_database][api:download_database]                                        | X |
-| [download_log][api:download_log]                                                  | X |
-| [download_plex_log][api:download_plex_log]                                        | X |
-| [edit_library][api:edit_library]                                                  | X |
-| [edit_user][api:edit_user]                                                        | X |
-| [get_activity][api:get_activity]                                                  | X |
-| [get_apikey][api:get_apikey]                                                      | X |
-| [get_date_formats][api:get_date_formats]                                          | X |
-| [get_geoip_lookup][api:get_geoip_lookup]                                          | X |
-| [get_history][api:get_history]                                                    | X |
-| [get_home_stats][api:get_home_stats]                                              | X |
-| [get_libraries][api:get_libraries]                                                | X |
-| [get_libraries_table][api:get_libraries_table]                                    | X |
-| [get_library][api:get_library]                                                    | X |
-| [get_library_media_info][api:get_library_media_info]                              | X |
-| [get_library_names][api:get_library_names]                                        | X |
-| [get_library_user_stats][api:get_library_user_stats]                              | X |
-| [get_library_watch_time_stats][api:get_library_watch_time_stats]                  | X |
-| [get_logs][api:get_logs]                                                          | X |
-| [get_metadata][api:get_metadata]                                                  | X |
-| [get_new_rating_keys][api:get_new_rating_keys]                                    | X |
-| [get_newsletter_config][api:get_newsletter_config]                                | X |
-| [get_newsletter_log][api:get_newsletter_log]                                      | X |
-| [get_newsletters][api:get_newsletters]                                            | X |
-| [get_notification_log][api:get_notification_log]                                  | X |
-| [get_notifier_config][api:get_notifier_config]                                    | X |
-| [get_notifier_parameters][api:get_notifier_parameters]                            | X |
-| [get_notifiers][api:get_notifiers]                                                | X |
-| [get_old_rating_keys][api:get_old_rating_keys]                                    | X |
-| [get_plays_by_date][api:get_plays_by_date]                                        | X |
-| [get_plays_by_dayofweek][api:get_plays_by_dayofweek]                              | X |
-| [get_plays_by_hourofday][api:get_plays_by_hourofday]                              | X |
-| [get_plays_by_source_resolution][api:get_plays_by_source_resolution]              | X |
-| [get_plays_by_stream_resolution][api:get_plays_by_stream_resolution]              | X |
-| [get_plays_by_stream_type][api:get_plays_by_stream_type]                          | X |
-| [get_plays_by_top_10_platforms][api:get_plays_by_top_10_platforms]                | X |
-| [get_plays_by_top_10_users][api:get_plays_by_top_10_users]                        | X |
-| [get_plays_per_month][api:get_plays_per_month]                                    | X |
-| [get_plex_log][api:get_plex_log]                                                  | X |
-| [get_pms_token][api:get_pms_token]                                                | X |
-| [get_pms_update][api:get_pms_update]                                              | X |
-| [get_recently_added][api:get_recently_added]                                      | X |
-| [get_server_friendly_name][api:get_server_friendly_name]                          | X |
-| [get_server_id][api:get_server_id]                                                | X |
-| [get_server_identity][api:get_server_identity]                                    | X |
-| [get_server_list][api:get_server_list]                                            | X |
-| [get_server_pref][api:get_server_pref]                                            | X |
-| [get_servers_info][api:get_servers_info]                                          | X |
-| [get_settings][api:get_settings]                                                  | X |
-| [get_stream_data][api:get_stream_data]                                            | X |
-| [get_stream_type_by_top_10_platforms][api:get_stream_type_by_top_10_platforms]    | X |
-| [get_stream_type_by_top_10_users][api:get_stream_type_by_top_10_users]            | X |
-| [get_synced_items][api:get_synced_items]                                          | X |
-| [get_user][api:get_user]                                                          | X |
-| [get_user_ips][api:get_user_ips]                                                  | X |
-| [get_user_logins][api:get_user_logins]                                            | X |
-| [get_user_names][api:get_user_names]                                              | X |
-| [get_user_player_stats][api:get_user_player_stats]                                | X |
-| [get_user_watch_time_stats][api:get_user_watch_time_stats]                        | X |
-| [get_users][api:get_users]                                                        | X |
-| [get_users_table][api:get_users_table]                                            | X |
-| [get_whois_lookup][api:get_whois_lookup]                                          | X |
-| [import_database][api:import_database]                                            | X |
-| [notify][api:notify]                                                              | X |
-| [notify_newsletter][api:notify_newsletter]                                        | X |
-| [notify_recently_added][api:notify_recently_added]                                | X |
-| [pms_image_proxy][api:pms_image_proxy]                                            | X |
-| [refresh_libraries_list][api:refresh_libraries_list]                              | X |
-| [refresh_users_list][api:refresh_users_list]                                      | X |
-| [register_device][api:register_device]                                            | X |
-| [restart][api:restart]                                                            | `TautulliCommandHandler_System.restart()` |
-| [search][api:search]                                                              | X |
-| [set_mobile_device_config][api:set_mobile_device_config]                          | X |
-| [set_newsletter_config][api:set_newsletter_config]                                | X |
-| [set_notifier_config][api:set_notifier_config]                                    | X |
-| [sql][api:sql]                                                                    | X |
-| [status][api:status]                                                              | X |
-| [terminate_session][api:terminate_session]                                        | `TautulliCommandHandler_Activity.terminateSession()` |
-| [undelete_library][api:undelete_library]                                          | X |
-| [undelete_user][api:undelete_user]                                                | X |
-| [update][api:update]                                                              | `TautulliCommandHandler_System.update()` |
-| [update_check][api:update_check]                                                  | `TautulliCommandHandler_System.updateCheck()` |
-| [update_metadata_details][api:update_metadata_details]                            | X |
+| API Method | Category | Command |
+| :--------- | :------: | ------: |
+| [add_newsletter_config][api:add_newsletter_config]                                | X               | X |
+| [add_notifier_config][api:add_notifier_config]                                    | X               | X |
+| [arnold][api:arnold]                                                              | `miscellaneous` | `arnold()` |
+| [backup_config][api:backup_config]                                                | `system`        | `backupConfig()` |
+| [backup_db][api:backup_db]                                                        | `system`        | `backupDB()` |
+| [delete_all_library_history][api:delete_all_library_history]                      | X               | X |
+| [delete_all_user_history][api:delete_all_user_history]                            | X               | X |
+| [delete_cache][api:delete_cache]                                                  | X               | X |
+| [delete_history][api:delete_history]                                              | X               | X |
+| [delete_hosted_images][api:delete_hosted_images]                                  | X               | X |
+| [delete_image_cache][api:delete_image_cache]                                      | X               | X |
+| [delete_library][api:delete_library]                                              | X               | X |
+| [delete_login_log][api:delete_login_log]                                          | X               | X |
+| [delete_lookup_info][api:delete_lookup_info]                                      | X               | X |
+| [delete_media_info_cache][api:delete_media_info_cache]                            | X               | X |
+| [delete_mobile_device][api:delete_mobile_device]                                  | X               | X |
+| [delete_newsletter][api:delete_newsletter]                                        | X               | X |
+| [delete_newsletter_log][api:delete_newsletter_log]                                | X               | X |
+| [delete_notification_log][api:delete_notification_log]                            | X               | X |
+| [delete_notifier][api:delete_notifier]                                            | X               | X |
+| [delete_recently_added][api:delete_recently_added]                                | X               | X |
+| [delete_temp_sessions][api:delete_temp_sessions]                                  | X               | X |
+| [delete_user][api:delete_user]                                                    | X               | X |
+| [docs][api:docs]                                                                  | X               | X |
+| [docs_md][api:docs_md]                                                            | X               | X |
+| [download_config][api:download_config]                                            | X               | X |
+| [download_database][api:download_database]                                        | X               | X |
+| [download_log][api:download_log]                                                  | X               | X |
+| [download_plex_log][api:download_plex_log]                                        | X               | X |
+| [edit_library][api:edit_library]                                                  | X               | X |
+| [edit_user][api:edit_user]                                                        | X               | X |
+| [get_activity][api:get_activity]                                                  | X               | X |
+| [get_apikey][api:get_apikey]                                                      | X               | X |
+| [get_date_formats][api:get_date_formats]                                          | X               | X |
+| [get_geoip_lookup][api:get_geoip_lookup]                                          | X               | X |
+| [get_history][api:get_history]                                                    | X               | X |
+| [get_home_stats][api:get_home_stats]                                              | X               | X |
+| [get_libraries][api:get_libraries]                                                | X               | X |
+| [get_libraries_table][api:get_libraries_table]                                    | X               | X |
+| [get_library][api:get_library]                                                    | X               | X |
+| [get_library_media_info][api:get_library_media_info]                              | X               | X |
+| [get_library_names][api:get_library_names]                                        | X               | X |
+| [get_library_user_stats][api:get_library_user_stats]                              | X               | X |
+| [get_library_watch_time_stats][api:get_library_watch_time_stats]                  | X               | X |
+| [get_logs][api:get_logs]                                                          | X               | X |
+| [get_metadata][api:get_metadata]                                                  | X               | X |
+| [get_new_rating_keys][api:get_new_rating_keys]                                    | X               | X |
+| [get_newsletter_config][api:get_newsletter_config]                                | X               | X |
+| [get_newsletter_log][api:get_newsletter_log]                                      | X               | X |
+| [get_newsletters][api:get_newsletters]                                            | X               | X |
+| [get_notification_log][api:get_notification_log]                                  | X               | X |
+| [get_notifier_config][api:get_notifier_config]                                    | X               | X |
+| [get_notifier_parameters][api:get_notifier_parameters]                            | X               | X |
+| [get_notifiers][api:get_notifiers]                                                | X               | X |
+| [get_old_rating_keys][api:get_old_rating_keys]                                    | X               | X |
+| [get_plays_by_date][api:get_plays_by_date]                                        | X               | X |
+| [get_plays_by_dayofweek][api:get_plays_by_dayofweek]                              | X               | X |
+| [get_plays_by_hourofday][api:get_plays_by_hourofday]                              | X               | X |
+| [get_plays_by_source_resolution][api:get_plays_by_source_resolution]              | X               | X |
+| [get_plays_by_stream_resolution][api:get_plays_by_stream_resolution]              | X               | X |
+| [get_plays_by_stream_type][api:get_plays_by_stream_type]                          | X               | X |
+| [get_plays_by_top_10_platforms][api:get_plays_by_top_10_platforms]                | X               | X |
+| [get_plays_by_top_10_users][api:get_plays_by_top_10_users]                        | X               | X |
+| [get_plays_per_month][api:get_plays_per_month]                                    | X               | X |
+| [get_plex_log][api:get_plex_log]                                                  | X               | X |
+| [get_pms_token][api:get_pms_token]                                                | X               | X |
+| [get_pms_update][api:get_pms_update]                                              | X               | X |
+| [get_recently_added][api:get_recently_added]                                      | X               | X |
+| [get_server_friendly_name][api:get_server_friendly_name]                          | X               | X |
+| [get_server_id][api:get_server_id]                                                | X               | X |
+| [get_server_identity][api:get_server_identity]                                    | X               | X |
+| [get_server_list][api:get_server_list]                                            | X               | X |
+| [get_server_pref][api:get_server_pref]                                            | X               | X |
+| [get_servers_info][api:get_servers_info]                                          | X               | X |
+| [get_settings][api:get_settings]                                                  | X               | X |
+| [get_stream_data][api:get_stream_data]                                            | X               | X |
+| [get_stream_type_by_top_10_platforms][api:get_stream_type_by_top_10_platforms]    | X               | X |
+| [get_stream_type_by_top_10_users][api:get_stream_type_by_top_10_users]            | X               | X |
+| [get_synced_items][api:get_synced_items]                                          | X               | X |
+| [get_user][api:get_user]                                                          | X               | X |
+| [get_user_ips][api:get_user_ips]                                                  | X               | X |
+| [get_user_logins][api:get_user_logins]                                            | X               | X |
+| [get_user_names][api:get_user_names]                                              | X               | X |
+| [get_user_player_stats][api:get_user_player_stats]                                | X               | X |
+| [get_user_watch_time_stats][api:get_user_watch_time_stats]                        | X               | X |
+| [get_users][api:get_users]                                                        | X               | X |
+| [get_users_table][api:get_users_table]                                            | X               | X |
+| [get_whois_lookup][api:get_whois_lookup]                                          | X               | X |
+| [import_database][api:import_database]                                            | X               | X |
+| [notify][api:notify]                                                              | X               | X |
+| [notify_newsletter][api:notify_newsletter]                                        | X               | X |
+| [notify_recently_added][api:notify_recently_added]                                | X               | X |
+| [pms_image_proxy][api:pms_image_proxy]                                            | X               | X |
+| [refresh_libraries_list][api:refresh_libraries_list]                              | X               | X |
+| [refresh_users_list][api:refresh_users_list]                                      | X               | X |
+| [register_device][api:register_device]                                            | X               | X |
+| [restart][api:restart]                                                            | `system`        | `restart()` |
+| [search][api:search]                                                              | X               | X |
+| [set_mobile_device_config][api:set_mobile_device_config]                          | X               | X |
+| [set_newsletter_config][api:set_newsletter_config]                                | X               | X |
+| [set_notifier_config][api:set_notifier_config]                                    | X               | X |
+| [sql][api:sql]                                                                    | X               | X |
+| [status][api:status]                                                              | X               | X |
+| [terminate_session][api:terminate_session]                                        | `activity`      | `terminateSession()` |
+| [undelete_library][api:undelete_library]                                          | X               | X |
+| [undelete_user][api:undelete_user]                                                | X               | X |
+| [update][api:update]                                                              | `system`        | `update()` |
+| [update_check][api:update_check]                                                  | `system`        | `updateCheck()` |
+| [update_metadata_details][api:update_metadata_details]                            | X               | X |
 
 [api:add_newsletter_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_newsletter_config
 [api:add_notifier_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_notifier_config
