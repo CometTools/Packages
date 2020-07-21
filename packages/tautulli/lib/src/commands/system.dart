@@ -9,6 +9,16 @@ class TautulliCommandHandler_System {
     /// Create a system command handler using an initialized [Dio] client.
     TautulliCommandHandler_System(this._client);
 
+    /// Handler for [backup_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#backup_config).
+    /// 
+    /// Create a manual backup of the `config.ini` file.
+    Future<void> backupConfig() async => _commandBackupConfig(_client);
+
+    /// Handler for [backup_db](https://github.com/Tautulli/Tautulli/blob/master/API.md#backup_db).
+    /// 
+    /// Create a manual backup of the `plexpy.db` file.
+    Future<void> backupDB() async => _commandBackupDB(_client);
+
     /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
     /// 
     /// Restart Tautulli.
