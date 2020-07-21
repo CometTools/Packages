@@ -24,6 +24,11 @@ class TautulliCommandHandler_System {
     /// Delete and recreate the cache directory.
     Future<void> deleteCache() async => _commandDeleteCache(_client);
 
+    /// Handler for [delete_image_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_image_cache).
+    /// 
+    /// Delete and recreate the image cache directory.
+    Future<void> deleteImageCache() async => _commandDeleteImageCache(_client);
+
     /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
     /// 
     /// Restart Tautulli.

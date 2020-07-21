@@ -1,14 +1,14 @@
 part of tautulli_commands;
 
-Future<void> _commandDeleteCache(Dio client) async {
+Future<void> _commandDeleteImageCache(Dio client) async {
     try {
         Response response = await client.get('/',
             queryParameters: {
-                'cmd': 'delete_cache',
+                'cmd': 'delete_image_cache',
             },
         );
         if((response.data['response']['result'] as String) != 'success') {
-            throw Exception('Tautulli cache could not be deleted: ${response.data['response']['result']}');
+            throw Exception('Tautulli image cache could not be deleted: ${response.data['response']['result']}');
         }
     } catch(error, stack) {
         return Future.error(error, stack);
