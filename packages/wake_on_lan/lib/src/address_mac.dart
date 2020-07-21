@@ -1,5 +1,12 @@
 import 'package:convert/convert.dart';
 
+/// [MACAddress] is a helper class to ensure that your MAC address has been formatted correctly.
+/// 
+/// The class has a static function, `validate(String address)` which allows easy validation that a MAC address string is correctly formatted.
+/// 
+/// **The MAC address must be delimited by colons (:) between each hexidecimal octet.**
+/// 
+/// Create a [MACAddress] object by using the factory `MACAddress.from(address)` where address is a string representation of the address. The factory will call the validation function mentioned above, but will throw a [FormatException] on a poorly constructed string, so it is recommended to validate it first.
 class MACAddress {
     static const String _REGEX = r"^([0-9A-Fa-f]{2}[:]){5}([0-9A-Fa-f]{2})$";
     final String _address;
