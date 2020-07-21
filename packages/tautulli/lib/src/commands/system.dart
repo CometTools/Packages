@@ -19,6 +19,11 @@ class TautulliCommandHandler_System {
     /// Create a manual backup of the `plexpy.db` file.
     Future<void> backupDB() async => _commandBackupDB(_client);
 
+    /// Handler for [delete_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_cache).
+    /// 
+    /// Delete and recreate the cache directory.
+    Future<void> deleteCache() async => _commandDeleteCache(_client);
+
     /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
     /// 
     /// Restart Tautulli.
