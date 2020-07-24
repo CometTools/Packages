@@ -32,7 +32,7 @@ class TautulliCommandHandler_Activity {
     /// - `sessionKey` **(required)**: Integer key of the session.
     /// - `sessionId` **(required)**: String identifier for the session.
     /// - `message`: Optional message to send to the user on why the session was terminated.
-    Future<bool> terminateSession({
+    Future<void> terminateSession({
         @required int sessionKey,
         @required String sessionId,
         String message,

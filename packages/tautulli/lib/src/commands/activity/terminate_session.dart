@@ -1,6 +1,6 @@
 part of tautulli_commands;
 
-Future<bool> _commandTerminateSession(Dio client, {
+Future<void> _commandTerminateSession(Dio client, {
     @required int sessionKey,
     @required String sessionId,
     String message,
@@ -15,9 +15,11 @@ Future<bool> _commandTerminateSession(Dio client, {
                 if(message != null) 'message': message,
             },
         );
-        return response.data['response']['result'] == 'success'
-            ? true
-            : false;
+        switch((response.data['response']['result'] as String)) {
+            case 'success': return;
+            case 'error':
+            default: throw Exception(response.data['response']['message']);
+        }
     } catch (error, stack) {
         return Future.error(error, stack);
     }

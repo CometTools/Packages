@@ -7,7 +7,11 @@ Future<String> _commandArnold(Dio client) async {
                 'cmd': 'arnold',
             },
         );
-        return response.data['response']['data'];
+        switch((response.data['response']['result'] as String)) {
+            case 'success': return response.data['response']['data'];
+            case 'error':
+            default: throw Exception(throw Exception(response.data['response']['message']));
+        }
     } catch(error, stack) {
         //Return the error as a [Future.error] 
         return Future.error(error, stack);
