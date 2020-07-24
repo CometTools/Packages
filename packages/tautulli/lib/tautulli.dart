@@ -9,12 +9,12 @@ import 'dart:io';
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/adapter.dart';
-import './commands.dart';
+import 'commands.dart';
 
 // Export other libraries
-export './commands.dart';
-export './models.dart';
-export './types.dart';
+export 'commands.dart';
+export 'models.dart';
+export 'types.dart';
 
 /// The core class to handle all connections to Tautulli.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
@@ -26,8 +26,10 @@ class Tautulli {
     Tautulli._internal({
         @required this.httpClient,
         @required this.activity,
+        @required this.library,
         @required this.miscellaneous,
         @required this.system,
+        @required this.user,
     });
 
     /// Create a new Tautulli API connection manager to connection to your instance.
@@ -77,8 +79,10 @@ class Tautulli {
         return Tautulli._internal(
             httpClient: _dio,
             activity: TautulliCommandHandler_Activity(_dio),
+            library: TautulliCommandHandler_Library(_dio),
             miscellaneous: TautulliCommandHandler_Miscellaneous(_dio),
             system: TautulliCommandHandler_System(_dio),
+            user: TautulliCommandHandler_User(_dio),
         );
     }
 
@@ -107,8 +111,10 @@ class Tautulli {
         return Tautulli._internal(
             httpClient: client,
             activity: TautulliCommandHandler_Activity(client),
+            library: TautulliCommandHandler_Library(client),
             miscellaneous: TautulliCommandHandler_Miscellaneous(client),
             system: TautulliCommandHandler_System(client),
+            user: TautulliCommandHandler_User(client),
         );
     }
 
@@ -121,6 +127,10 @@ class Tautulli {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final TautulliCommandHandler_Activity activity;
+    /// Command handler for all library-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final TautulliCommandHandler_Library library;
     /// Command handler for all misc-related API calls.
     /// 
     /// _Check the documentation to see all API calls taht fall under this category._
@@ -129,4 +139,8 @@ class Tautulli {
     /// 
     /// _Check the documentation to see all API calls taht fall under this category._
     final TautulliCommandHandler_System system;
+    /// Command handler for all user-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final TautulliCommandHandler_User user;
 }

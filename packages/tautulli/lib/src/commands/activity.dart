@@ -6,7 +6,7 @@ part of tautulli_commands;
 class TautulliCommandHandler_Activity {
     final Dio _client;
 
-    /// Create an Activity command handler using an initialized [Dio] client.
+    /// Create an activity command handler using an initialized [Dio] client.
     TautulliCommandHandler_Activity(this._client);
 
     /// Handler for [get_activity](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_activity).
