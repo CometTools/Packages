@@ -3,6 +3,7 @@ library tautulli_commands;
 
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
+import 'types.dart';
 import 'models.dart';
 
 // Activity
@@ -11,6 +12,7 @@ part 'src/commands/activity/get_activity.dart';
 part 'src/commands/activity/terminate_session.dart';
 // Library
 part 'src/commands/library.dart';
+part 'src/commands/library/update_metadata_details.dart';
 // Miscellaneous
 part 'src/commands/miscellaneous.dart';
 part 'src/commands/miscellaneous/arnold.dart';

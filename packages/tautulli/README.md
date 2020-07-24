@@ -118,7 +118,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [undelete_user][api:undelete_user]                                                | X               | X |
 | [update][api:update]                                                              | `system`        | `update()` |
 | [update_check][api:update_check]                                                  | `system`        | `updateCheck()` |
-| [update_metadata_details][api:update_metadata_details]                            | X               | X |
+| [update_metadata_details][api:update_metadata_details]                            | `library`       | `updateMetadataDetails()` |
 
 [api:add_newsletter_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_newsletter_config
 [api:add_notifier_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_notifier_config
