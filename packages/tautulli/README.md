@@ -33,8 +33,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [delete_recently_added][api:delete_recently_added]                                | X               | X |
 | [delete_temp_sessions][api:delete_temp_sessions]                                  | X               | X |
 | [delete_user][api:delete_user]                                                    | X               | X |
-| [docs][api:docs]                                                                  | X               | X |
-| [docs_md][api:docs_md]                                                            | X               | X |
+| [docs][api:docs]                                                                  | **N/A**         | **N/A** |
+| [docs_md][api:docs_md]                                                            | **N/A**         | **N/A** |
 | [download_config][api:download_config]                                            | X               | X |
 | [download_database][api:download_database]                                        | X               | X |
 | [download_log][api:download_log]                                                  | X               | X |
@@ -42,7 +42,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [edit_library][api:edit_library]                                                  | X               | X |
 | [edit_user][api:edit_user]                                                        | X               | X |
 | [get_activity][api:get_activity]                                                  | X               | X |
-| [get_apikey][api:get_apikey]                                                      | X               | X |
+| [get_apikey][api:get_apikey]                                                      | **N/A**         | **N/A** |
 | [get_date_formats][api:get_date_formats]                                          | X               | X |
 | [get_geoip_lookup][api:get_geoip_lookup]                                          | X               | X |
 | [get_history][api:get_history]                                                    | X               | X |
