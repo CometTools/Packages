@@ -8,7 +8,7 @@ enum TautulliImageHostService {
 
 /// Extension on [TautulliImageHostService] to implement extended functionality.
 extension TautulliImageHostServiceExtension on TautulliImageHostService {
-    /// The actual value/key for image hosting services in Tautulli.
+    /// The actual value/key for the image hosting services in Tautulli.
     String get value {
         switch(this) {
             case TautulliImageHostService.IMGUR: return 'imgur';
