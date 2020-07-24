@@ -16,6 +16,6 @@ extension TautulliAPILookupServiceExtension on TautulliAPILookupService {
             case TautulliAPILookupService.TVMAZE: return 'tvmaze';
             case TautulliAPILookupService.MUSICBRAINZ: return 'musicbrainz';
         }
-        throw Exception('Invalid TautulliImageHostService');
+        throw Exception('Invalid TautulliAPILookupService');
     }
 }

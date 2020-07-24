@@ -13,8 +13,8 @@ void _value() {
             } 
         });
         test('Invalid Instance (null value)', () {
-            TautulliMediaType type = null;
-            expect(() => type.value, throwsA(isA<Exception>()));
+            TautulliMediaType mediaType = null;
+            expect(() => mediaType.value, throwsA(isA<Exception>()));
         });
     });
 }
