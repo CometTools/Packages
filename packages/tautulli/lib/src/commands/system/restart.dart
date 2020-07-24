@@ -7,8 +7,10 @@ Future<void> _commandRestart(Dio client) async {
                 'cmd': 'restart',
             },
         );
-        if((response.data['response']['result'] as String) != 'success') {
-            throw Exception('Tautulli could not be restarted: ${response.data['response']['result']}');
+        switch((response.data['response']['result'] as String)) {
+            case 'success': return;
+            case 'error':
+            default: throw Exception(throw Exception(response.data['response']['message']));
         }
     } catch(error, stack) {
         return Future.error(error, stack);

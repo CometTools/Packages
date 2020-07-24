@@ -19,7 +19,8 @@ Future<void> _commandUpdateMetadataDetails(Dio client, {
         );
         switch((response.data['response']['result'] as String)) {
             case 'success': return;
-            case 'error': throw Exception(throw Exception(response.data['response']['message']));
+            case 'error':
+            default: throw Exception(throw Exception(response.data['response']['message']));
         }
     } catch(error, stack) {
         //Return the error as a [Future.error] 
