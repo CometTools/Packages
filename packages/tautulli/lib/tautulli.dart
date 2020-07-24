@@ -28,6 +28,8 @@ class Tautulli {
         @required this.activity,
         @required this.library,
         @required this.miscellaneous,
+        @required this.newsletter,
+        @required this.notifier,
         @required this.system,
         @required this.user,
     });
@@ -81,6 +83,8 @@ class Tautulli {
             activity: TautulliCommandHandler_Activity(_dio),
             library: TautulliCommandHandler_Library(_dio),
             miscellaneous: TautulliCommandHandler_Miscellaneous(_dio),
+            newsletter: TautulliCommandHandler_Newsletter(_dio),
+            notifier: TautulliCommandHandler_Notifier(_dio),
             system: TautulliCommandHandler_System(_dio),
             user: TautulliCommandHandler_User(_dio),
         );
@@ -113,6 +117,8 @@ class Tautulli {
             activity: TautulliCommandHandler_Activity(client),
             library: TautulliCommandHandler_Library(client),
             miscellaneous: TautulliCommandHandler_Miscellaneous(client),
+            newsletter: TautulliCommandHandler_Newsletter(client),
+            notifier: TautulliCommandHandler_Notifier(client),
             system: TautulliCommandHandler_System(client),
             user: TautulliCommandHandler_User(client),
         );
@@ -133,11 +139,19 @@ class Tautulli {
     final TautulliCommandHandler_Library library;
     /// Command handler for all misc-related API calls.
     /// 
-    /// _Check the documentation to see all API calls taht fall under this category._
+    /// _Check the documentation to see all API calls that fall under this category._
     final TautulliCommandHandler_Miscellaneous miscellaneous;
+    /// Command handler for all newsletter-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final TautulliCommandHandler_Newsletter newsletter;
+    /// Command handler for all notifier-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final TautulliCommandHandler_Notifier notifier;
     /// Command handler for all system-related API calls.
     /// 
-    /// _Check the documentation to see all API calls taht fall under this category._
+    /// _Check the documentation to see all API calls that fall under this category._
     final TautulliCommandHandler_System system;
     /// Command handler for all user-related API calls.
     /// 

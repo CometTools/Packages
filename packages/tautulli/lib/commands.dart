@@ -14,6 +14,10 @@ part 'src/commands/library.dart';
 // Miscellaneous
 part 'src/commands/miscellaneous.dart';
 part 'src/commands/miscellaneous/arnold.dart';
+// Newsletter
+part 'src/commands/newsletter.dart';
+// Notifier
+part 'src/commands/notifier.dart';
 // System
 part 'src/commands/system.dart';
 part 'src/commands/system/backup_config.dart';
