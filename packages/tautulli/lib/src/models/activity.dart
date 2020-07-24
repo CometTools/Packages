@@ -1,4 +1,4 @@
-import './session.dart';
+import 'session.dart';
 
 /// Model for activity data from Tautulli.
 /// 

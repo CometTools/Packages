@@ -9,12 +9,12 @@ import 'dart:io';
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/adapter.dart';
-import './commands.dart';
+import 'commands.dart';
 
 // Export other libraries
-export './commands.dart';
-export './models.dart';
-export './types.dart';
+export 'commands.dart';
+export 'models.dart';
+export 'types.dart';
 
 /// The core class to handle all connections to Tautulli.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
