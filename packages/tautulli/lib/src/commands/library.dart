@@ -16,9 +16,7 @@ class TautulliCommandHandler_Library {
     /// - `oldRatingKey` **(required)**: String identifier key for the old rating key.
     /// - `newRatingKey` **(required)**: String identifier key for the new rating key.
     /// - `mediaType`: **(rquired)**: [TautulliMediaType] value for the media type.
-    /// 
-    /// Returns the message received from Tautulli. This message *can* signify that it failed to update the metadata even on a successful call.
-    Future<String> updateMetadataDetails({
+    Future<void> updateMetadataDetails({
         @required String oldRatingKey,
         @required String newRatingKey,
         @required TautulliMediaType mediaType,

@@ -8,4 +8,19 @@ class TautulliCommandHandler_User {
 
     /// Create a user command handler using an initialized [Dio] client.
     TautulliCommandHandler_User(this._client);
+
+    /// Handler for [undelete_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#undelete_user).
+    /// 
+    /// Restore a deleted user to Tautulli.
+    /// 
+    /// - `userId` **(Required)**: String identifier of the Plex user
+    /// - `username` **(Required)**: String username of the Plex user
+    Future<void> undeleteUser({
+        @required String userId,
+        @required String username,
+    }) async => _commandUndeleteUser(
+        _client,
+        userId: userId,
+        username: username,
+    );
 }

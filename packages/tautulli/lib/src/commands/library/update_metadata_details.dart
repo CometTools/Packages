@@ -1,6 +1,6 @@
 part of tautulli_commands;
 
-Future<String> _commandUpdateMetadataDetails(Dio client, {
+Future<void> _commandUpdateMetadataDetails(Dio client, {
     @required String oldRatingKey,
     @required String newRatingKey,
     @required TautulliMediaType mediaType,
@@ -17,10 +17,10 @@ Future<String> _commandUpdateMetadataDetails(Dio client, {
                 'media_type': mediaType.value,
             },
         );
-        if((response.data['response']['result'] as String) != 'success') {
-            throw Exception('Could not update metadata details: ${response.data['response']['result']}');
+        switch((response.data['response']['result'] as String)) {
+            case 'success': return;
+            case 'error': throw Exception(throw Exception(response.data['response']['message']));
         }
-        return response.data['response']['message'];
     } catch(error, stack) {
         //Return the error as a [Future.error] 
         return Future.error(error, stack);

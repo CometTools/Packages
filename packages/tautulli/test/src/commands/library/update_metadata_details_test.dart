@@ -9,11 +9,11 @@ void main() {
                 host: Platform.environment['TAUTULLI_HOST'],
                 apiKey: Platform.environment['TAUTULLI_APIKEY'],
             );
-            expect(await _api.library.updateMetadataDetails(
+            await _api.library.updateMetadataDetails(
                 oldRatingKey: '36700',
                 newRatingKey: '36700',
                 mediaType: TautulliMediaType.EPISODE,
-            ), equals(isA<String>()));
+            );
         });
         test('Unsuccessful call', () {
             Tautulli _api = Tautulli(

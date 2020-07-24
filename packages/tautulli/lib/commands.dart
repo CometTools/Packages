@@ -32,3 +32,4 @@ part 'src/commands/system/update.dart';
 part 'src/commands/system/update_check.dart';
 // User
 part 'src/commands/user.dart';
+part 'src/commands/user/undelete_user.dart';
