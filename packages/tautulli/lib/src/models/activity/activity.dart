@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:tautulli/models.dart';
 import 'session.dart';
 
 part 'activity.g.dart';
@@ -14,7 +15,7 @@ class TautulliActivity {
     final List<TautulliSession> sessions;
     
     /// Total number of active streams.
-    @JsonKey(name: 'stream_count', fromJson: _stringToInteger, toJson: _integerToString)
+    @JsonKey(name: 'stream_count', fromJson: TautulliModelUtilities.stringToInteger, toJson: TautulliModelUtilities.integerToString)
     final int streamCount;
 
     /// Total number of _direct play_ active streams.
@@ -60,9 +61,6 @@ class TautulliActivity {
 
     factory TautulliActivity.fromJson(Map<String, dynamic> json) => _$TautulliActivityFromJson(json);
     Map<String, dynamic> toJson() => _$TautulliActivityToJson(this);
-
-    static int _stringToInteger(String value) => int.tryParse(value) ?? -1;
-    static String _integerToString(int value) => value?.toString() ?? '-1';
 
     static List<TautulliSession> _sessionsToObjectArray(List<dynamic> sessions) => sessions.map((session) => TautulliSession.fromJson((session as Map<String, dynamic>))).toList();
     static List<Map<String, dynamic>> _sessionsToMap(List<TautulliSession> sessions) => sessions.map((session) => session.toJson()).toList();
