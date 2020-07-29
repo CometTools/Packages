@@ -157,6 +157,7 @@ class TautulliSession {
     final String banner;
 
     /// The date on which the content was originally available on.
+    /// 
     /// Because of the custom formatting options, the DateTime is returned as a string.
     /// You can use the miscellaneous call `getDateFormats()` to pull the date and time formatting strings.
     @JsonKey(name: 'originally_available_at')
@@ -378,6 +379,10 @@ class TautulliSession {
     /// Scan type of the video stream.
     @JsonKey(name: 'video_scan_type')
     final String videoScanType;
+
+    /// Dynamic range of the video stream.
+    @JsonKey(name: 'video_dynamic_range')
+    final String videoDynamicRange;
     
     /// Bitrate of the audio stream.
     @JsonKey(name: 'audio_bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
@@ -679,6 +684,10 @@ class TautulliSession {
     @JsonKey(name: 'stream_audio_channel_layout')
     final String streamAudioChannelLayout;
 
+    /// The layout of the channels in the final audio stream. Unsure how this is different from [streamAudioChannelLayout].
+    @JsonKey(name: 'stream_audio_channel_layout_')
+    final String streamAudioChannelLayout_;
+
     /// Codec of the final video stream.
     @JsonKey(name: 'stream_video_codec')
     final String streamVideoCodec;
@@ -690,6 +699,166 @@ class TautulliSession {
     /// Framerate of the final video stream.
     @JsonKey(name: 'stream_video_framerate')
     final String streamVideoFramerate;
+
+    /// Height in pixels of the final video stream.
+    @JsonKey(name: 'stream_video_height', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamVideoHeight;
+
+    /// Width in pixels of the final video stream.
+    @JsonKey(name: 'stream_video_width', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamVideoWidth;
+
+    /// Duration of the final stream, in milliseconds.
+    @JsonKey(name: 'stream_duration', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamDuration;
+
+    /// What decision was made on how to handle the final container of the stream.
+    @JsonKey(name: 'stream_container_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision streamContainerDecision;
+
+    /// Optimized version title.
+    @JsonKey(name: 'optimized_version_title')
+    final String optimizedVersionTitle;
+
+    /// Is the stream a synced version of the content?
+    @JsonKey(name: 'synced_version', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool syncedVersion;
+
+    /// UUID of the live stream session.
+    @JsonKey(name: 'live_uuid')
+    final String liveUuid;
+
+    /// Location of the content's BIF thumbnail
+    @JsonKey(name: 'bif_thumb')
+    final String bifThumb;
+
+    /// What decision was made on how to handle the content.
+    @JsonKey(name: 'transcode_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision transcodeDecision;
+
+    /// Are subtitles being used for this session?
+    @JsonKey(name: 'subtitles', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool subtitles;
+
+    /// Full resoltuion of the final video stream.
+    @JsonKey(name: 'stream_video_full_resolution')
+    final String streamVideoFullResolution;
+
+    /// Dynamic range of the final video stream.
+    @JsonKey(name: 'stream_video_dynamic_range')
+    final String streamVideoDynamicRange;
+
+    /// Codec level of the final video stream.
+    @JsonKey(name: 'stream_video_codec_level')
+    final String streamVideoCodecLevel;
+
+    /// Bitrate of the final video stream.
+    @JsonKey(name: 'stream_video_bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamVideoBitrate;
+
+    /// Bit depth of the final video stream.
+    @JsonKey(name: 'stream_video_bit_depth', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamVideoBitDepth;
+
+    /// Chroma subsampling of the final video stream.
+    @JsonKey(name: 'stream_video_chroma_subsampling')
+    final String streamVideoChromaSubsampling;
+
+    /// Color primaries of the final video stream.
+    @JsonKey(name: 'stream_video_color_primaries')
+    final String streamVideoColorPrimaries;
+
+    /// Color range of the final video stream.
+    @JsonKey(name: 'stream_video_color_range')
+    final String streamVideoColorRange;
+
+    /// Color space of the final video stream.
+    @JsonKey(name: 'stream_video_color_space')
+    final String streamVideoColorSpace;
+
+    /// Color TRC of the final video stream.
+    @JsonKey(name: 'stream_video_color_trc')
+    final String streamVideoColorTRC;
+
+    /// Reference frames in the final video stream.
+    @JsonKey(name: 'stream_video_ref_frames', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamVideoRefFrames;
+
+    /// Language of the final video stream.
+    @JsonKey(name: 'stream_video_language')
+    final String streamVideoLanguage;
+
+    /// Language code of the final video stream.
+    @JsonKey(name: 'stream_video_language_code')
+    final String streamVideoLanguageCode;
+
+    /// Scan type of the final video stream.
+    @JsonKey(name: 'stream_video_scan_type')
+    final String streamVideoScanType;
+
+    /// What decision was made on how to handle the final video stream.
+    @JsonKey(name: 'stream_video_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision streamVideoDecision;
+
+    /// Bitrate of the final audio stream.
+    @JsonKey(name: 'stream_audio_bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamAudioBitrate;
+
+    /// Bitrate mode of the final audio stream.
+    @JsonKey(name: 'stream_audio_bitrate_mode')
+    final String streamAudioBitrateMode;
+
+    /// Sample rate of the final audio stream.
+    @JsonKey(name: 'stream_audio_sample_rate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamAudioSampleRate;
+
+    /// Language of the final audio stream.
+    @JsonKey(name: 'stream_audio_language')
+    final String streamAudioLanguage;
+
+    /// Language code of the final audio stream.
+    @JsonKey(name: 'stream_audio_language_code')
+    final String streamAudioLanguageCode;
+
+    /// What decision was made on how to handle the final video stream.
+    @JsonKey(name: 'stream_audio_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision streamAudioDecision;
+
+    /// Codec of the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_codec')
+    final String streamSubtitleCodec;
+
+    /// Container of the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_container')
+    final String streamSubtitleContainer;
+
+    /// Format of the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_format')
+    final String streamSubtitleFormat;
+
+    /// Is the final subtitle stream forced?
+    @JsonKey(name: 'stream_subtitle_forced', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool streamSubtitleForced;
+
+    /// Location of the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_location')
+    final String streamSubtitleLocation;
+
+    /// Language of the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_language')
+    final String streamSubtitleLanguage;
+
+    /// Language code of the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_language_code')
+    final String streamSubtitleLanguageCode;
+
+    /// Is the final subtitle stream transient?
+    @JsonKey(name: 'stream_subtitle_transient', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool streamSubtitleTransient;
+
+    /// What decision was made on how to handle the final subtitle stream.
+    @JsonKey(name: 'stream_subtitle_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision streamSubtitleDecision;
 
     TautulliSession({
         this.sessionKey,
@@ -783,6 +952,7 @@ class TautulliSession {
         this.videoWidth,
         this.videoLanguage,
         this.videoLanguageCode,
+        this.videoDynamicRange,
         this.videoScanType,
         this.audioBitrate,
         this.audioBitrateMode,
@@ -859,9 +1029,50 @@ class TautulliSession {
         this.streamAudioCodec,
         this.streamAudioChannels,
         this.streamAudioChannelLayout,
+        this.streamAudioChannelLayout_,
         this.streamVideoCodec,
         this.streamVideoFramerate,
         this.streamVideoResolution,
+        this.streamVideoHeight,
+        this.streamVideoWidth,
+        this.streamDuration,
+        this.streamContainerDecision,
+        this.optimizedVersionTitle,
+        this.syncedVersion,
+        this.liveUuid,
+        this.bifThumb,
+        this.transcodeDecision,
+        this.subtitles,
+        this.streamVideoFullResolution,
+        this.streamVideoDynamicRange,
+        this.streamVideoBitDepth,
+        this.streamVideoBitrate,
+        this.streamVideoChromaSubsampling,
+        this.streamVideoCodecLevel,
+        this.streamVideoColorPrimaries,
+        this.streamVideoColorRange,
+        this.streamVideoColorSpace,
+        this.streamVideoColorTRC,
+        this.streamVideoRefFrames,
+        this.streamVideoDecision,
+        this.streamVideoLanguage,
+        this.streamVideoLanguageCode,
+        this.streamVideoScanType,
+        this.streamAudioBitrate,
+        this.streamAudioBitrateMode,
+        this.streamAudioDecision,
+        this.streamAudioLanguage,
+        this.streamAudioLanguageCode,
+        this.streamAudioSampleRate,
+        this.streamSubtitleCodec,
+        this.streamSubtitleContainer,
+        this.streamSubtitleDecision,
+        this.streamSubtitleForced,
+        this.streamSubtitleFormat,
+        this.streamSubtitleLanguage,
+        this.streamSubtitleLanguageCode,
+        this.streamSubtitleLocation,
+        this.streamSubtitleTransient,
     });
 
     /// Returns a JSON-encoded string version of this object.

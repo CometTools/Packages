@@ -120,6 +120,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
         TautulliUtilities.stringToInteger(json['video_width'] as String),
     videoLanguage: json['video_language'] as String,
     videoLanguageCode: json['video_language_code'] as String,
+    videoDynamicRange: json['video_dynamic_range'] as String,
     videoScanType: json['video_scan_type'] as String,
     audioBitrate:
         TautulliUtilities.stringToInteger(json['audio_bitrate'] as String),
@@ -220,9 +221,67 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     streamAudioChannels: TautulliUtilities.stringToInteger(
         json['stream_audio_channels'] as String),
     streamAudioChannelLayout: json['stream_audio_channel_layout'] as String,
+    streamAudioChannelLayout_: json['stream_audio_channel_layout_'] as String,
     streamVideoCodec: json['stream_video_codec'] as String,
     streamVideoFramerate: json['stream_video_framerate'] as String,
     streamVideoResolution: json['stream_video_resolution'] as String,
+    streamVideoHeight: TautulliUtilities.stringToInteger(
+        json['stream_video_height'] as String),
+    streamVideoWidth:
+        TautulliUtilities.stringToInteger(json['stream_video_width'] as String),
+    streamDuration:
+        TautulliUtilities.stringToInteger(json['stream_duration'] as String),
+    streamContainerDecision: TautulliSession._transcodeDecisionToObject(
+        json['stream_container_decision'] as String),
+    optimizedVersionTitle: json['optimized_version_title'] as String,
+    syncedVersion:
+        TautulliUtilities.integerToBoolean(json['synced_version'] as int),
+    liveUuid: json['live_uuid'] as String,
+    bifThumb: json['bif_thumb'] as String,
+    transcodeDecision: TautulliSession._transcodeDecisionToObject(
+        json['transcode_decision'] as String),
+    subtitles: TautulliUtilities.integerToBoolean(json['subtitles'] as int),
+    streamVideoFullResolution: json['stream_video_full_resolution'] as String,
+    streamVideoDynamicRange: json['stream_video_dynamic_range'] as String,
+    streamVideoBitDepth: TautulliUtilities.stringToInteger(
+        json['stream_video_bit_depth'] as String),
+    streamVideoBitrate: TautulliUtilities.stringToInteger(
+        json['stream_video_bitrate'] as String),
+    streamVideoChromaSubsampling:
+        json['stream_video_chroma_subsampling'] as String,
+    streamVideoCodecLevel: json['stream_video_codec_level'] as String,
+    streamVideoColorPrimaries: json['stream_video_color_primaries'] as String,
+    streamVideoColorRange: json['stream_video_color_range'] as String,
+    streamVideoColorSpace: json['stream_video_color_space'] as String,
+    streamVideoColorTRC: json['stream_video_color_trc'] as String,
+    streamVideoRefFrames: TautulliUtilities.stringToInteger(
+        json['stream_video_ref_frames'] as String),
+    streamVideoDecision: TautulliSession._transcodeDecisionToObject(
+        json['stream_video_decision'] as String),
+    streamVideoLanguage: json['stream_video_language'] as String,
+    streamVideoLanguageCode: json['stream_video_language_code'] as String,
+    streamVideoScanType: json['stream_video_scan_type'] as String,
+    streamAudioBitrate: TautulliUtilities.stringToInteger(
+        json['stream_audio_bitrate'] as String),
+    streamAudioBitrateMode: json['stream_audio_bitrate_mode'] as String,
+    streamAudioDecision: TautulliSession._transcodeDecisionToObject(
+        json['stream_audio_decision'] as String),
+    streamAudioLanguage: json['stream_audio_language'] as String,
+    streamAudioLanguageCode: json['stream_audio_language_code'] as String,
+    streamAudioSampleRate: TautulliUtilities.stringToInteger(
+        json['stream_audio_sample_rate'] as String),
+    streamSubtitleCodec: json['stream_subtitle_codec'] as String,
+    streamSubtitleContainer: json['stream_subtitle_container'] as String,
+    streamSubtitleDecision: TautulliSession._transcodeDecisionToObject(
+        json['stream_subtitle_decision'] as String),
+    streamSubtitleForced: TautulliUtilities.integerToBoolean(
+        json['stream_subtitle_forced'] as int),
+    streamSubtitleFormat: json['stream_subtitle_format'] as String,
+    streamSubtitleLanguage: json['stream_subtitle_language'] as String,
+    streamSubtitleLanguageCode: json['stream_subtitle_language_code'] as String,
+    streamSubtitleLocation: json['stream_subtitle_location'] as String,
+    streamSubtitleTransient: TautulliUtilities.integerToBoolean(
+        json['stream_subtitle_transient'] as int),
   );
 }
 
@@ -333,6 +392,7 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
       'video_language': instance.videoLanguage,
       'video_language_code': instance.videoLanguageCode,
       'video_scan_type': instance.videoScanType,
+      'video_dynamic_range': instance.videoDynamicRange,
       'audio_bitrate': TautulliUtilities.integerToString(instance.audioBitrate),
       'audio_bitrate_mode': instance.audioBitrateMode,
       'audio_sample_rate':
@@ -427,7 +487,64 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
       'stream_audio_channels':
           TautulliUtilities.integerToString(instance.streamAudioChannels),
       'stream_audio_channel_layout': instance.streamAudioChannelLayout,
+      'stream_audio_channel_layout_': instance.streamAudioChannelLayout_,
       'stream_video_codec': instance.streamVideoCodec,
       'stream_video_resolution': instance.streamVideoResolution,
       'stream_video_framerate': instance.streamVideoFramerate,
+      'stream_video_height':
+          TautulliUtilities.integerToString(instance.streamVideoHeight),
+      'stream_video_width':
+          TautulliUtilities.integerToString(instance.streamVideoWidth),
+      'stream_duration':
+          TautulliUtilities.integerToString(instance.streamDuration),
+      'stream_container_decision': TautulliSession._transcodeDecisionToString(
+          instance.streamContainerDecision),
+      'optimized_version_title': instance.optimizedVersionTitle,
+      'synced_version':
+          TautulliUtilities.booleanToInteger(instance.syncedVersion),
+      'live_uuid': instance.liveUuid,
+      'bif_thumb': instance.bifThumb,
+      'transcode_decision': TautulliSession._transcodeDecisionToString(
+          instance.transcodeDecision),
+      'subtitles': TautulliUtilities.booleanToInteger(instance.subtitles),
+      'stream_video_full_resolution': instance.streamVideoFullResolution,
+      'stream_video_dynamic_range': instance.streamVideoDynamicRange,
+      'stream_video_codec_level': instance.streamVideoCodecLevel,
+      'stream_video_bitrate':
+          TautulliUtilities.integerToString(instance.streamVideoBitrate),
+      'stream_video_bit_depth':
+          TautulliUtilities.integerToString(instance.streamVideoBitDepth),
+      'stream_video_chroma_subsampling': instance.streamVideoChromaSubsampling,
+      'stream_video_color_primaries': instance.streamVideoColorPrimaries,
+      'stream_video_color_range': instance.streamVideoColorRange,
+      'stream_video_color_space': instance.streamVideoColorSpace,
+      'stream_video_color_trc': instance.streamVideoColorTRC,
+      'stream_video_ref_frames':
+          TautulliUtilities.integerToString(instance.streamVideoRefFrames),
+      'stream_video_language': instance.streamVideoLanguage,
+      'stream_video_language_code': instance.streamVideoLanguageCode,
+      'stream_video_scan_type': instance.streamVideoScanType,
+      'stream_video_decision': TautulliSession._transcodeDecisionToString(
+          instance.streamVideoDecision),
+      'stream_audio_bitrate':
+          TautulliUtilities.integerToString(instance.streamAudioBitrate),
+      'stream_audio_bitrate_mode': instance.streamAudioBitrateMode,
+      'stream_audio_sample_rate':
+          TautulliUtilities.integerToString(instance.streamAudioSampleRate),
+      'stream_audio_language': instance.streamAudioLanguage,
+      'stream_audio_language_code': instance.streamAudioLanguageCode,
+      'stream_audio_decision': TautulliSession._transcodeDecisionToString(
+          instance.streamAudioDecision),
+      'stream_subtitle_codec': instance.streamSubtitleCodec,
+      'stream_subtitle_container': instance.streamSubtitleContainer,
+      'stream_subtitle_format': instance.streamSubtitleFormat,
+      'stream_subtitle_forced':
+          TautulliUtilities.booleanToInteger(instance.streamSubtitleForced),
+      'stream_subtitle_location': instance.streamSubtitleLocation,
+      'stream_subtitle_language': instance.streamSubtitleLanguage,
+      'stream_subtitle_language_code': instance.streamSubtitleLanguageCode,
+      'stream_subtitle_transient':
+          TautulliUtilities.booleanToInteger(instance.streamSubtitleTransient),
+      'stream_subtitle_decision': TautulliSession._transcodeDecisionToString(
+          instance.streamSubtitleDecision),
     };
