@@ -13,8 +13,8 @@ class TautulliCommandHandler_Library {
     /// 
     /// Update the metadata in the Tautulli database by matching rating keys. Also updates all parents or children of the media item if it is a show/season/episode or artist/album/track.
     /// 
-    /// - `oldRatingKey` **(required)**: String identifier key for the old rating key.
-    /// - `newRatingKey` **(required)**: String identifier key for the new rating key.
+    /// - `oldRatingKey` **(required)**: Identifier key for the old rating key.
+    /// - `newRatingKey` **(required)**: Identifier key for the new rating key.
     /// - `mediaType`: **(rquired)**: [TautulliMediaType] value for the media type.
     Future<void> updateMetadataDetails({
         @required String oldRatingKey,
@@ -25,5 +25,20 @@ class TautulliCommandHandler_Library {
         oldRatingKey: oldRatingKey,
         newRatingKey: newRatingKey,
         mediaType: mediaType,
+    );
+
+    /// Handler for [undelete_library](https://github.com/Tautulli/Tautulli/blob/master/API.md#undelete_library).
+    /// 
+    /// Restore a deleted library section to Tautulli.
+    /// 
+    /// - `sectionId` **(required)**: The ID of the Plex library section.
+    /// - `sectionName` **(required)**: The name of the Plex library section.
+    Future<void> undeleteLibrary({
+        @required int sectionId,
+        @required String sectionName,
+    }) async => _commandUndeleteLibrary(
+        _client,
+        sectionId: sectionId,
+        sectionName: sectionName,
     );
 }

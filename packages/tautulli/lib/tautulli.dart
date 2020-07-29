@@ -15,6 +15,7 @@ import 'commands.dart';
 export 'commands.dart';
 export 'models.dart';
 export 'types.dart';
+export 'utilities.dart';
 
 /// The core class to handle all connections to Tautulli.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.

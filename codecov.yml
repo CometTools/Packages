@@ -7,20 +7,12 @@ coverage:
         target: auto
         flags:
           - wake_on_lan
-      tautulli:
-        target: auto
-        flags:
-          - tautulli
     patch: off
     changes: off
 flags:
   wake_on_lan:
     paths:
       - packages/wake_on_lan
-    carryforward: true
-  tautulli:
-    paths:
-      - packages/tautulli
     carryforward: true
 comment:
   layout: "reach, diff, flags, files"
