@@ -9,8 +9,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 
 | API Method | Category | Command |
 | :--------- | :------: | ------: |
-| [add_newsletter_config][api:add_newsletter_config]                                | `newsletter`    | `addNewsletterConfig()` |
-| [add_notifier_config][api:add_notifier_config]                                    | `notifier`      | `addNotifierConfig()` |
+| [add_newsletter_config][api:add_newsletter_config]                                | `notifications` | `addNewsletterConfig()` |
+| [add_notifier_config][api:add_notifier_config]                                    | `notifications` | `addNotifierConfig()` |
 | [arnold][api:arnold]                                                              | `miscellaneous` | `arnold()` |
 | [backup_config][api:backup_config]                                                | `system`        | `backupConfig()` |
 | [backup_db][api:backup_db]                                                        | `system`        | `backupDB()` |
@@ -107,9 +107,9 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [register_device][api:register_device]                                            | X               | X |
 | [restart][api:restart]                                                            | `system`        | `restart()` |
 | [search][api:search]                                                              | X               | X |
-| [set_mobile_device_config][api:set_mobile_device_config]                          | `miscellaneous` | `setMobileDeviceConfig()` |
-| [set_newsletter_config][api:set_newsletter_config]                                | `newsletter`    | `setNewsletterConfig()` |
-| [set_notifier_config][api:set_notifier_config]                                    | `notifier`      | `setNotifierConfig()` |
+| [set_mobile_device_config][api:set_mobile_device_config]                          | `notifications` | `setMobileDeviceConfig()` |
+| [set_newsletter_config][api:set_newsletter_config]                                | `notifications` | `setNewsletterConfig()` |
+| [set_notifier_config][api:set_notifier_config]                                    | `notifications` | `setNotifierConfig()` |
 | [sql][api:sql]                                                                    | **N/A**         | **N/A** |
 | [status][api:status]                                                              | `system`        | `status()` |
 | [terminate_session][api:terminate_session]                                        | `activity`      | `terminateSession()` |

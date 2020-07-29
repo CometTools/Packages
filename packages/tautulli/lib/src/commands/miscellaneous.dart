@@ -18,19 +18,4 @@ class TautulliCommandHandler_Miscellaneous {
     /// 
     /// Get the date and time formats used by Tautulli.
     Future<TautulliDateFormat> getDateFormats() async => _commandGetDateFormats(_client);
-
-    /// Handler for [set_mobile_device_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#set_mobile_device_config).
-    /// 
-    /// Configure an existing mobile device agent.
-    /// 
-    /// - `mobileDeviceId` **(required)**: The mobile device config to update.
-    /// - `friendlyName`: An optional friendly name to identify the mobile device.
-    Future<void> setMobileDeviceConfig({
-        @required int mobileDeviceId,
-        String friendlyName,
-    }) async => _commandSetMobileDeviceConfig(
-        _client,
-        mobileDeviceId: mobileDeviceId,
-        friendlyName: friendlyName,
-    );
 }
