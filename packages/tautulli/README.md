@@ -1,7 +1,6 @@
 # tautulli (pre-release)
 
 [![Pubdev][pubdev-shield]][pubdev]
-[![Code Coverage][codecov-shield]][codecov]
 ![License][license-shield]
 
 Dart library package to facilitate the connection to and from [Tautulli](https://tautulli.com)'s API, a Python based monitoring and tracking tool for Plex Media Server.
@@ -114,7 +113,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [sql][api:sql]                                                                    | X               | X |
 | [status][api:status]                                                              | X               | X |
 | [terminate_session][api:terminate_session]                                        | `activity`      | `terminateSession()` |
-| [undelete_library][api:undelete_library]                                          | X               | X |
+| [undelete_library][api:undelete_library]                                          | `library`       | `undeleteLibrary()` |
 | [undelete_user][api:undelete_user]                                                | `user`          | `undeleteUser()` |
 | [update][api:update]                                                              | `system`        | `update()` |
 | [update_check][api:update_check]                                                  | `system`        | `updateCheck()` |
@@ -231,7 +230,5 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 [api:update_metadata_details]: https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details
 
 [license-shield]: https://img.shields.io/github/license/CometTools/Packages?style=for-the-badge
-[codecov]: https://codecov.io/gh/CometTools/Packages
-[codecov-shield]: https://img.shields.io/codecov/c/gh/CometTools/Packages?flag=tautulli&style=for-the-badge
 [pubdev]: https://pub.dev/packages/tautulli/
 [pubdev-shield]: https://img.shields.io/pub/v/tautulli.svg?style=for-the-badge

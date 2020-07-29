@@ -13,6 +13,7 @@ part 'src/commands/activity/terminate_session.dart';
 // Library
 part 'src/commands/library.dart';
 part 'src/commands/library/update_metadata_details.dart';
+part 'src/commands/library/undelete_library.dart';
 // Miscellaneous
 part 'src/commands/miscellaneous.dart';
 part 'src/commands/miscellaneous/arnold.dart';
