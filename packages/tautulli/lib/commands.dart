@@ -21,6 +21,7 @@ part 'src/commands/miscellaneous/get_date_formats.dart';
 // Newsletter
 part 'src/commands/newsletter.dart';
 part 'src/commands/newsletter/add_newsletter_config.dart';
+part 'src/commands/newsletter/set_newsletter_config.dart';
 // Notifier
 part 'src/commands/notifier.dart';
 part 'src/commands/notifier/add_notifier_config.dart';
