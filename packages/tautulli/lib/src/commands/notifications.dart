@@ -13,7 +13,7 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Add a new notification agent.
     /// 
-    /// - `agentId` **(required)**: The ID of the agent.
+    /// - `agentId` (required): The ID of the agent.
     Future<void> addNewsletterConfig({
         @required int agentId,
     }) async => _commandAddNewsletterConfig(
@@ -25,7 +25,7 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Add a new notification agent.
     /// 
-    /// - `agentId` **(required)**: The ID of the agent.
+    /// - `agentId` (required): The ID of the agent.
     Future<void> addNotifierConfig({
         @required int agentId,
     }) async => _commandAddNotifierConfig(
@@ -37,8 +37,8 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Registers the Tautulli Android App for notifications.
     /// 
-    /// `deviceName` **(required)**: The device name of the Tautulli Android App.
-    /// `deviceId` **(required)**: The OneSignal device id of the Tautulli Android App.
+    /// `deviceName` (required): The device name of the Tautulli Android App.
+    /// `deviceId` (required): The OneSignal device id of the Tautulli Android App.
     /// `friendlyName`: A friendly name to identify the mobile device
     Future<void> registerDevice({
         @required String deviceName,
@@ -55,7 +55,7 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Configure an existing mobile device agent.
     /// 
-    /// - `mobileDeviceId` **(required)**: The mobile device config to update.
+    /// - `mobileDeviceId` (required): The mobile device config to update.
     /// - `friendlyName`: An optional friendly name to identify the mobile device.
     Future<void> setMobileDeviceConfig({
         @required int mobileDeviceId,
@@ -70,8 +70,8 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Configure an existing newsletter agent.
     /// 
-    /// - `agentId` **(required)**: The newsletter type of the newsletter.
-    /// - `newsletterId` **(required)**: The newsletter config to update.
+    /// - `agentId` (required): The newsletter type of the newsletter.
+    /// - `newsletterId` (required): The newsletter config to update.
     /// - `newsletterOptions` **(options)**: A map containing the configuration options for the newsletter.
     Future<void> setNewsletterConfig({
         @required int newsletterId,
@@ -88,8 +88,8 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Configure an existing notification agent.
     /// 
-    /// - `agentId` **(required)**: The agent of the notifier.
-    /// - `notifierId` **(required)**: The notifier config to update.
+    /// - `agentId` (required): The agent of the notifier.
+    /// - `notifierId` (required): The notifier config to update.
     /// - `notifierOptions` **(options)**: A map containing the configuration options for the notifier.
     Future<void> setNotifierConfig({
         @required int agentId,

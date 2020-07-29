@@ -37,8 +37,8 @@ class Tautulli {
     /// Create a new Tautulli API connection manager to connection to your instance.
     /// This default factory/constructor will create the [Dio] HTTP client for you given the parameters.
     /// 
-    /// - `host` **(required)**: String that contains the protocol (http:// or https://), the host itself, and the base URL (if applicable).
-    /// - `apiKey` **(required)**: The API key fetched from Tautulli's web interface.
+    /// - `host` (required): String that contains the protocol (http:// or https://), the host itself, and the base URL (if applicable).
+    /// - `apiKey` (required): The API key fetched from Tautulli's web interface.
     /// - `headers`: Map that contains additional headers that should be attached to all requests.
     /// - `strictTLS`: If the HTTP client should validate that the SSL/TLS certificate is valid against the device's CA.
     /// - `followRedirects`: If the HTTP client should follow URL redirects.

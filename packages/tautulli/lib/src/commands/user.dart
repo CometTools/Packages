@@ -13,8 +13,8 @@ class TautulliCommandHandler_User {
     /// 
     /// Restore a deleted user to Tautulli.
     /// 
-    /// - `userId` **(Required)**: String identifier of the Plex user
-    /// - `username` **(Required)**: String username of the Plex user
+    /// - `userId` (required): String identifier of the Plex user
+    /// - `username` (required): String username of the Plex user
     Future<void> undeleteUser({
         @required String userId,
         @required String username,

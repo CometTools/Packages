@@ -4,6 +4,8 @@ Future<void> _commandUndeleteLibrary(Dio client, {
     @required int sectionId,
     @required String sectionName,
 }) async {
+    assert(sectionId != null, 'sectionId cannot be null');
+    assert(sectionName != null, 'sectionName cannot be null');
     try {
         Response response = await client.get('/',
             queryParameters: {
