@@ -107,7 +107,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [register_device][api:register_device]                                            | X               | X |
 | [restart][api:restart]                                                            | `system`        | `restart()` |
 | [search][api:search]                                                              | X               | X |
-| [set_mobile_device_config][api:set_mobile_device_config]                          | X               | X |
+| [set_mobile_device_config][api:set_mobile_device_config]                          | `miscellaneous` | `setMobileDeviceConfig()` |
 | [set_newsletter_config][api:set_newsletter_config]                                | `newsletter`    | `setNewsletterConfig()` |
 | [set_notifier_config][api:set_notifier_config]                                    | `notifier`      | `setNotifierConfig()` |
 | [sql][api:sql]                                                                    | **N/A**         | **N/A** |

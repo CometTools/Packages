@@ -18,6 +18,7 @@ part 'src/commands/library/undelete_library.dart';
 part 'src/commands/miscellaneous.dart';
 part 'src/commands/miscellaneous/arnold.dart';
 part 'src/commands/miscellaneous/get_date_formats.dart';
+part 'src/commands/miscellaneous/set_mobile_device_config.dart';
 // Newsletter
 part 'src/commands/newsletter.dart';
 part 'src/commands/newsletter/add_newsletter_config.dart';
