@@ -29,8 +29,8 @@ class TautulliCommandHandler_Activity {
     /// 
     /// Stop a streaming session.
     /// 
-    /// - `sessionKey` **(required)**: Integer key of the session.
-    /// - `sessionId` **(required)**: String identifier for the session.
+    /// - `sessionKey` (required): Integer key of the session.
+    /// - `sessionId` (required): String identifier for the session.
     /// - `message`: Optional message to send to the user on why the session was terminated.
     Future<void> terminateSession({
         @required int sessionKey,

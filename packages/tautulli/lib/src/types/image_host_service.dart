@@ -4,6 +4,7 @@ part of tautulli_types;
 enum TautulliImageHostService {
     IMGUR,
     CLOUDINARY,
+    NULL,
 }
 
 /// Extension on [TautulliImageHostService] to implement extended functionality.
@@ -13,6 +14,7 @@ extension TautulliImageHostServiceExtension on TautulliImageHostService {
         switch(this) {
             case TautulliImageHostService.IMGUR: return 'imgur';
             case TautulliImageHostService.CLOUDINARY: return 'cloudinary';
+            case TautulliImageHostService.NULL: return '';
         }
         throw Exception('Invalid TautulliImageHostService');
     }

@@ -39,6 +39,11 @@ class TautulliCommandHandler_System {
     /// Restart Tautulli.
     Future<void> restart() async => _commandRestart(_client);
 
+    /// Handler for [status](https://github.com/Tautulli/Tautulli/blob/master/API.md#status).
+    /// 
+    /// Get the current status of Tautulli.
+    Future<String> status() async => _commandStatus(_client);
+
     /// Handler for [update](https://github.com/Tautulli/Tautulli/blob/master/API.md#update).
     /// 
     /// Update Tautulli.

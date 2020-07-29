@@ -6,6 +6,7 @@ enum TautulliSectionType {
     SHOW,
     ARTIST,
     PHOTO,
+    NULL,
 }
 
 /// Extension on [TautulliSectionType] to implement extended functionality.
@@ -17,6 +18,7 @@ extension TautulliSectionTypeExtension on TautulliSectionType {
             case TautulliSectionType.SHOW: return 'show';
             case TautulliSectionType.ARTIST: return 'artist';
             case TautulliSectionType.PHOTO: return 'photo';
+            case TautulliSectionType.NULL: return '';
         }
         throw Exception('Invalid TautulliSectionType');
     }

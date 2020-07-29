@@ -4,6 +4,8 @@ Future<void> _commandUndeleteUser(Dio client, {
     @required String userId,
     @required String username,
 }) async {
+    assert(userId != null, 'userId cannot be null');
+    assert(username != null, 'username cannot be null');
     try {
         Response response = await client.get('/',
             queryParameters: {

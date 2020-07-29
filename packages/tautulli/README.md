@@ -9,12 +9,12 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 
 | API Method | Category | Command |
 | :--------- | :------: | ------: |
-| [add_newsletter_config][api:add_newsletter_config]                                | X               | X |
-| [add_notifier_config][api:add_notifier_config]                                    | X               | X |
+| [add_newsletter_config][api:add_newsletter_config]                                | `notifications` | `addNewsletterConfig()` |
+| [add_notifier_config][api:add_notifier_config]                                    | `notifications` | `addNotifierConfig()` |
 | [arnold][api:arnold]                                                              | `miscellaneous` | `arnold()` |
 | [backup_config][api:backup_config]                                                | `system`        | `backupConfig()` |
 | [backup_db][api:backup_db]                                                        | `system`        | `backupDB()` |
-| [delete_all_library_history][api:delete_all_library_history]                      | X               | X |
+| [delete_all_library_history][api:delete_all_library_history]                      | `library`       | `deleteAllLibraryHistory()` |
 | [delete_all_user_history][api:delete_all_user_history]                            | X               | X |
 | [delete_cache][api:delete_cache]                                                  | `system`        | `deleteCache()` |
 | [delete_history][api:delete_history]                                              | X               | X |
@@ -83,7 +83,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_server_list][api:get_server_list]                                            | X               | X |
 | [get_server_pref][api:get_server_pref]                                            | X               | X |
 | [get_servers_info][api:get_servers_info]                                          | X               | X |
-| [get_settings][api:get_settings]                                                  | X               | X |
+| [get_settings][api:get_settings]                                                  | **N/A**         | **N/A** |
 | [get_stream_data][api:get_stream_data]                                            | X               | X |
 | [get_stream_type_by_top_10_platforms][api:get_stream_type_by_top_10_platforms]    | X               | X |
 | [get_stream_type_by_top_10_users][api:get_stream_type_by_top_10_users]            | X               | X |
@@ -104,14 +104,14 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [pms_image_proxy][api:pms_image_proxy]                                            | X               | X |
 | [refresh_libraries_list][api:refresh_libraries_list]                              | X               | X |
 | [refresh_users_list][api:refresh_users_list]                                      | X               | X |
-| [register_device][api:register_device]                                            | X               | X |
+| [register_device][api:register_device]                                            | `notifications` | `registerDevice()` |
 | [restart][api:restart]                                                            | `system`        | `restart()` |
 | [search][api:search]                                                              | X               | X |
-| [set_mobile_device_config][api:set_mobile_device_config]                          | X               | X |
-| [set_newsletter_config][api:set_newsletter_config]                                | X               | X |
-| [set_notifier_config][api:set_notifier_config]                                    | X               | X |
-| [sql][api:sql]                                                                    | X               | X |
-| [status][api:status]                                                              | X               | X |
+| [set_mobile_device_config][api:set_mobile_device_config]                          | `notifications` | `setMobileDeviceConfig()` |
+| [set_newsletter_config][api:set_newsletter_config]                                | `notifications` | `setNewsletterConfig()` |
+| [set_notifier_config][api:set_notifier_config]                                    | `notifications` | `setNotifierConfig()` |
+| [sql][api:sql]                                                                    | **N/A**         | **N/A** |
+| [status][api:status]                                                              | `system`        | `status()` |
 | [terminate_session][api:terminate_session]                                        | `activity`      | `terminateSession()` |
 | [undelete_library][api:undelete_library]                                          | `library`       | `undeleteLibrary()` |
 | [undelete_user][api:undelete_user]                                                | `user`          | `undeleteUser()` |

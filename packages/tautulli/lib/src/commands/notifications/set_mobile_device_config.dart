@@ -1,17 +1,16 @@
 part of tautulli_commands;
 
-Future<void> _commandUndeleteLibrary(Dio client, {
-    @required int sectionId,
-    @required String sectionName,
+Future<void> _commandSetMobileDeviceConfig(Dio client, {
+    @required int mobileDeviceId,
+    String friendlyName,
 }) async {
-    assert(sectionId != null, 'sectionId cannot be null');
-    assert(sectionName != null, 'sectionName cannot be null');
+    assert(mobileDeviceId != null, 'mobileDeviceId cannot be null');
     try {
         Response response = await client.get('/',
             queryParameters: {
-                'cmd': 'undelete_library',
-                'section_id': sectionId,
-                'section_name': sectionName,
+                'cmd': 'set_mobile_device_config',
+                'mobile_device_id': mobileDeviceId,
+                if(friendlyName != null) 'friendly_name': friendlyName,
             },
         );
         switch((response.data['response']['result'] as String)) {
@@ -19,7 +18,7 @@ Future<void> _commandUndeleteLibrary(Dio client, {
             case 'error':
             default: throw Exception(throw Exception(response.data['response']['message']));
         }
-    } catch (error, stack) {
+    } catch(error, stack) {
         return Future.error(error, stack);
     }
 }

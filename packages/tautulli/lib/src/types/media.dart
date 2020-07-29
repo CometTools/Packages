@@ -9,13 +9,14 @@ enum TautulliMediaType {
     ARTIST,
     ALBUM,
     TRACK,
+    NULL,
 }
 
 /// Extension on [TautulliMediaType] to implement extended functionality.
 extension TautulliMediaTypeExtension on TautulliMediaType {
     /// Given a String, will return the correct `TautulliMediaType` object.
-    TautulliMediaType from(String name) {
-        switch(name) {
+    TautulliMediaType from(String type) {
+        switch(type) {
             case 'movie': return TautulliMediaType.MOVIE;
             case 'show': return TautulliMediaType.SHOW;
             case 'season': return TautulliMediaType.SEASON;
@@ -23,8 +24,9 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case 'artist': return TautulliMediaType.ARTIST;
             case 'album': return TautulliMediaType.ALBUM;
             case 'track': return TautulliMediaType.TRACK;
+            case '': return TautulliMediaType.NULL;
         }
-        throw Exception('Unknown media type: ${name}');
+        throw Exception('Unknown media type: ${type}');
     }
 
     /// The actual value/key for media types used in Tautulli.
@@ -37,6 +39,7 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case TautulliMediaType.ARTIST: return 'artist';
             case TautulliMediaType.ALBUM: return 'album';
             case TautulliMediaType.TRACK: return 'track';
+            case TautulliMediaType.NULL: return '';
         }
         throw Exception('Invalid TautulliMediaType');
     }
