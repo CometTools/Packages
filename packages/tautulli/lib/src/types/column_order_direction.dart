@@ -4,6 +4,7 @@ part of tautulli_types;
 enum TautulliColumnOrderDirection {
     ASCENDING,
     DESCENDING,
+    NULL,
 }
 
 /// Extension on [TautulliColumnOrderDirection] to implement extended functionality.
@@ -13,6 +14,7 @@ extension TautulliColumnOrderDirectionExtension on TautulliColumnOrderDirection 
         switch(this) {
             case TautulliColumnOrderDirection.ASCENDING: return 'asc';
             case TautulliColumnOrderDirection.DESCENDING: return 'desc';
+            case TautulliColumnOrderDirection.NULL: return '';
         }
         throw Exception('Invalid TautulliColumnOrderDirection');
     }

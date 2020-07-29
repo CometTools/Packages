@@ -252,8 +252,8 @@ class TautulliSession {
     final String videoCodec;
 
     /// Resolution of the video stream.
-    @JsonKey(name: 'video_resolution', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
-    final int videoResolution;
+    @JsonKey(name: 'video_resolution')
+    final String videoResolution;
 
     /// Full resoltuion of the video stream.
     @JsonKey(name: 'video_full_resolution')
@@ -359,11 +359,11 @@ class TautulliSession {
     @JsonKey(name: 'video_ref_frames', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int videoRefFrames;
 
-    /// Height of the video stream.
+    /// Height in pixels of the video stream.
     @JsonKey(name: 'video_height', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int videoHeight;
 
-    /// Width of the video stream.
+    /// Width in pixels of the video stream.
     @JsonKey(name: 'video_width', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int videoWidth;
 
@@ -535,8 +535,161 @@ class TautulliSession {
     @JsonKey(name: 'machine_id')
     final String machineId;
 
+    /// Current state of the session.
     @JsonKey(name: 'state', toJson: _sessionStateToString, fromJson: _sessionStateToObject)
     final TautulliSessionState state;
+
+    /// Is it a local stream?
+    @JsonKey(name: 'local', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool local;
+
+    /// Is it a relayed stream?
+    @JsonKey(name: 'relayed', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool relayed;
+
+    /// Is it a secure stream?
+    @JsonKey(name: 'secure', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool secure;
+
+    /// Session ID of the stream.
+    @JsonKey(name: 'session_id')
+    final String sessionId;
+
+    /// The total bandwidth usage of the session.
+    @JsonKey(name: 'bandwidth', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int bandwidth;
+
+    /// Location of the stream session (LAN or WAN).
+    @JsonKey(name: 'location', toJson: _sessionLocationToString, fromJson: _sessionLocationToObject)
+    final TautulliSessionLocation location;
+
+    /// Transcoder key/identifier for the session.
+    @JsonKey(name: 'transcode_key')
+    final String transcodeKey;
+
+    /// Is the transcoder throttled?
+    @JsonKey(name: 'transcode_throttled', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool transcodeThrottled;
+
+    /// Progress of the transcoder for the session.
+    @JsonKey(name: 'transcode_progress')
+    final int transcodeProgress;
+
+    /// Transcoder speed for the session.
+    @JsonKey(name: 'transcode_speed', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
+    final double transcodeSpeed;
+
+    /// Number of audio channels in the transcode stream.
+    @JsonKey(name: 'transcode_audio_channels', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int transcodeAudioChannels;
+
+    /// Audio codec of the transcode stream.
+    @JsonKey(name: 'transcode_audio_codec')
+    final String transcodeAudioCodec;
+
+    /// Video codec of the transcode stream.
+    @JsonKey(name: 'transcode_video_codec')
+    final String transcodeVideoCodec;
+
+    /// Height in pixels of the video in the transcode stream.
+    @JsonKey(name: 'transcode_height', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int transcodeHeight;
+
+    /// Width in pixels of the video in the transcode stream.
+    @JsonKey(name: 'transcode_width', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int transcodeWidth;
+
+    /// Container used for the transcode stream.
+    @JsonKey(name: 'transcode_container')
+    final String transcodeContainer;
+
+    /// Protocol used to transmit the transcode stream.
+    @JsonKey(name: 'transcode_protocol')
+    final String transcodeProtocol;
+
+    /// Did the transcoder request hardware acceleration?
+    @JsonKey(name: 'transcode_hw_requested', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool transcodeHardwareRequested;
+
+    /// Hardware decode of the transcode stream.
+    @JsonKey(name: 'transcode_hw_decode')
+    final String transcodeHardwareDecode;
+
+    /// Hardware decode title of the transcode stream.
+    @JsonKey(name: 'transcode_hw_decode_title')
+    final String transcodeHardwareDecodeTitle;
+
+    /// Hardware encode of the transcode stream.
+    @JsonKey(name: 'transcode_hw_encode')
+    final String transcodeHardwarEencode;
+
+    /// Hardware encode title of the transcode stream.
+    @JsonKey(name: 'transcode_hw_encode_title')
+    final String transcodeHardwarEencodeTitle;
+
+    /// Is the transcoder using hardware acceleration for the full pipeline?
+    @JsonKey(name: 'transcode_hw_full_pipeline', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool transcodeHardwareFullPipeline;
+
+    /// What decision was made on how to handle the audio stream.
+    @JsonKey(name: 'audio_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision audioDecision;
+
+    /// What decision was made on how to handle the video stream.
+    @JsonKey(name: 'video_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision videoDecision;
+
+    /// What decision was made on how to handle the subtitle stream.
+    @JsonKey(name: 'subtitle_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    final TautulliTranscodeDecision subtitleDecision;
+
+    /// Is the transcoder throttled?
+    @JsonKey(name: 'throttled', toJson: TautulliUtilities.booleanToString, fromJson: TautulliUtilities.stringToBoolean)
+    final bool throttled;
+
+    /// Is the transcoder using hardware acceleration for decoding?
+    @JsonKey(name: 'transcode_hw_decoding', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool transcodeHardwareDecoding;
+
+    /// Is the transcoder using hardware acceleration for encoding?
+    @JsonKey(name: 'transcode_hw_encoding', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool transcodeHardwareEncoding;
+
+    /// Container used for the final stream.
+    @JsonKey(name: 'stream_container')
+    final String streamContainer;
+
+    /// Bitrate of the final stream.
+    @JsonKey(name: 'stream_bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamBitrate;
+
+    /// Aspect ratio of the final video stream.
+    @JsonKey(name: 'stream_aspect_ratio', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
+    final double streamAspectRatio;
+
+    /// Codec of the final audio stream.
+    @JsonKey(name: 'stream_audio_codec')
+    final String streamAudioCodec;
+
+    /// Number of channels in the final audio stream.
+    @JsonKey(name: 'stream_audio_channels', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int streamAudioChannels;
+
+    /// The layout of the channels in the final audio stream.
+    @JsonKey(name: 'stream_audio_channel_layout')
+    final String streamAudioChannelLayout;
+
+    /// Codec of the final video stream.
+    @JsonKey(name: 'stream_video_codec')
+    final String streamVideoCodec;
+
+    /// Resolution of the final video stream.
+    @JsonKey(name: 'stream_video_resolution')
+    final String streamVideoResolution;
+
+    /// Framerate of the final video stream.
+    @JsonKey(name: 'stream_video_framerate')
+    final String streamVideoFramerate;
 
     TautulliSession({
         this.sessionKey,
@@ -671,6 +824,44 @@ class TautulliSession {
         this.player,
         this.machineId,
         this.state,
+        this.local,
+        this.relayed,
+        this.secure,
+        this.sessionId,
+        this.bandwidth,
+        this.location,
+        this.transcodeKey,
+        this.transcodeThrottled,
+        this.transcodeProgress,
+        this.transcodeSpeed,
+        this.transcodeAudioChannels,
+        this.transcodeAudioCodec,
+        this.transcodeVideoCodec,
+        this.transcodeWidth,
+        this.transcodeHeight,
+        this.transcodeContainer,
+        this.transcodeProtocol,
+        this.transcodeHardwareRequested,
+        this.transcodeHardwareDecode,
+        this.transcodeHardwareDecodeTitle,
+        this.transcodeHardwarEencode,
+        this.transcodeHardwarEencodeTitle,
+        this.transcodeHardwareFullPipeline,
+        this.audioDecision,
+        this.videoDecision,
+        this.subtitleDecision,
+        this.throttled,
+        this.transcodeHardwareDecoding,
+        this.transcodeHardwareEncoding,
+        this.streamContainer,
+        this.streamBitrate,
+        this.streamAspectRatio,
+        this.streamAudioCodec,
+        this.streamAudioChannels,
+        this.streamAudioChannelLayout,
+        this.streamVideoCodec,
+        this.streamVideoFramerate,
+        this.streamVideoResolution,
     });
 
     /// Returns a JSON-encoded string version of this object.
@@ -687,4 +878,10 @@ class TautulliSession {
 
     static TautulliSessionState _sessionStateToObject(String state) => TautulliSessionState.BUFFERING.from(state);
     static String _sessionStateToString(TautulliSessionState state) => state?.value ?? '';
+
+    static TautulliSessionLocation _sessionLocationToObject(String location) => TautulliSessionLocation.LAN.from(location);
+    static String _sessionLocationToString(TautulliSessionLocation location) => location?.value ?? '';
+
+    static TautulliTranscodeDecision _transcodeDecisionToObject(String decision) => TautulliTranscodeDecision.COPY.from(decision);
+    static String _transcodeDecisionToString(TautulliTranscodeDecision decision) => decision?.value ?? '';
 }

@@ -16,9 +16,23 @@ class TautulliUtilities {
     /// Converts an integer to a string. Returns an empty string on an invalid/null integer.
     static String integerToString(int value) => value?.toString() ?? '';
 
-    /** Integer <-> Boolean */
-    static bool integerToBoolean(int value) => value == 0 ? false : true;
-    static int booleanToInteger(bool value) => value ? 1 : 0;
+    /**
+     * Integer <-> Boolean
+     */
+
+    /// Converts an integer to a boolean. 0 is false, any other value is true.
+    static bool integerToBoolean(int value) => value == null ? null : value == 0 ? false : true;
+    /// Converts a boolean to an integer. False = 0, True = 1.
+    static int booleanToInteger(bool value) => value == null ? null : value ? 1 : 0;
+
+    /**
+     * String <-> Boolean 
+     */
+
+    /// Converts a string to a boolean. '0' is false, anything else is true.
+    static bool stringToBoolean(String value) => value == null || value == '' ? null : value == '0' ? false : true;
+    /// Converts a boolean to a string. False = '0', True = '1'
+    static String booleanToString(bool value) => value == null ? '' : value ? '1' : '0';
 
     /** 
      * String <-> Double

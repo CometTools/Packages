@@ -81,8 +81,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     aspectRatio:
         TautulliUtilities.stringToDouble(json['aspect_ratio'] as String),
     videoCodec: json['video_codec'] as String,
-    videoResolution:
-        TautulliUtilities.stringToInteger(json['video_resolution'] as String),
+    videoResolution: json['video_resolution'] as String,
     videoFullResolution: json['video_full_resolution'] as String,
     videoFramerate: json['video_framerate'] as String,
     videoProfile: json['video_profile'] as String,
@@ -170,6 +169,60 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     player: json['player'] as String,
     machineId: json['machine_id'] as String,
     state: TautulliSession._sessionStateToObject(json['state'] as String),
+    local: TautulliUtilities.integerToBoolean(json['local'] as int),
+    relayed: TautulliUtilities.integerToBoolean(json['relayed'] as int),
+    secure: TautulliUtilities.integerToBoolean(json['secure'] as int),
+    sessionId: json['session_id'] as String,
+    bandwidth: TautulliUtilities.stringToInteger(json['bandwidth'] as String),
+    location:
+        TautulliSession._sessionLocationToObject(json['location'] as String),
+    transcodeKey: json['transcode_key'] as String,
+    transcodeThrottled:
+        TautulliUtilities.integerToBoolean(json['transcode_throttled'] as int),
+    transcodeProgress: json['transcode_progress'] as int,
+    transcodeSpeed:
+        TautulliUtilities.stringToDouble(json['transcode_speed'] as String),
+    transcodeAudioChannels: TautulliUtilities.stringToInteger(
+        json['transcode_audio_channels'] as String),
+    transcodeAudioCodec: json['transcode_audio_codec'] as String,
+    transcodeVideoCodec: json['transcode_video_codec'] as String,
+    transcodeWidth:
+        TautulliUtilities.stringToInteger(json['transcode_width'] as String),
+    transcodeHeight:
+        TautulliUtilities.stringToInteger(json['transcode_height'] as String),
+    transcodeContainer: json['transcode_container'] as String,
+    transcodeProtocol: json['transcode_protocol'] as String,
+    transcodeHardwareRequested: TautulliUtilities.integerToBoolean(
+        json['transcode_hw_requested'] as int),
+    transcodeHardwareDecode: json['transcode_hw_decode'] as String,
+    transcodeHardwareDecodeTitle: json['transcode_hw_decode_title'] as String,
+    transcodeHardwarEencode: json['transcode_hw_encode'] as String,
+    transcodeHardwarEencodeTitle: json['transcode_hw_encode_title'] as String,
+    transcodeHardwareFullPipeline: TautulliUtilities.integerToBoolean(
+        json['transcode_hw_full_pipeline'] as int),
+    audioDecision: TautulliSession._transcodeDecisionToObject(
+        json['audio_decision'] as String),
+    videoDecision: TautulliSession._transcodeDecisionToObject(
+        json['video_decision'] as String),
+    subtitleDecision: TautulliSession._transcodeDecisionToObject(
+        json['subtitle_decision'] as String),
+    throttled: TautulliUtilities.stringToBoolean(json['throttled'] as String),
+    transcodeHardwareDecoding: TautulliUtilities.integerToBoolean(
+        json['transcode_hw_decoding'] as int),
+    transcodeHardwareEncoding: TautulliUtilities.integerToBoolean(
+        json['transcode_hw_encoding'] as int),
+    streamContainer: json['stream_container'] as String,
+    streamBitrate:
+        TautulliUtilities.stringToInteger(json['stream_bitrate'] as String),
+    streamAspectRatio:
+        TautulliUtilities.stringToDouble(json['stream_aspect_ratio'] as String),
+    streamAudioCodec: json['stream_audio_codec'] as String,
+    streamAudioChannels: TautulliUtilities.stringToInteger(
+        json['stream_audio_channels'] as String),
+    streamAudioChannelLayout: json['stream_audio_channel_layout'] as String,
+    streamVideoCodec: json['stream_video_codec'] as String,
+    streamVideoFramerate: json['stream_video_framerate'] as String,
+    streamVideoResolution: json['stream_video_resolution'] as String,
   );
 }
 
@@ -243,8 +296,7 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
       'width': TautulliUtilities.integerToString(instance.width),
       'aspect_ratio': TautulliUtilities.doubleToString(instance.aspectRatio),
       'video_codec': instance.videoCodec,
-      'video_resolution':
-          TautulliUtilities.integerToString(instance.videoResolution),
+      'video_resolution': instance.videoResolution,
       'video_full_resolution': instance.videoFullResolution,
       'video_framerate': instance.videoFramerate,
       'video_profile': instance.videoProfile,
@@ -325,4 +377,57 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
       'player': instance.player,
       'machine_id': instance.machineId,
       'state': TautulliSession._sessionStateToString(instance.state),
+      'local': TautulliUtilities.booleanToInteger(instance.local),
+      'relayed': TautulliUtilities.booleanToInteger(instance.relayed),
+      'secure': TautulliUtilities.booleanToInteger(instance.secure),
+      'session_id': instance.sessionId,
+      'bandwidth': TautulliUtilities.integerToString(instance.bandwidth),
+      'location': TautulliSession._sessionLocationToString(instance.location),
+      'transcode_key': instance.transcodeKey,
+      'transcode_throttled':
+          TautulliUtilities.booleanToInteger(instance.transcodeThrottled),
+      'transcode_progress': instance.transcodeProgress,
+      'transcode_speed':
+          TautulliUtilities.doubleToString(instance.transcodeSpeed),
+      'transcode_audio_channels':
+          TautulliUtilities.integerToString(instance.transcodeAudioChannels),
+      'transcode_audio_codec': instance.transcodeAudioCodec,
+      'transcode_video_codec': instance.transcodeVideoCodec,
+      'transcode_height':
+          TautulliUtilities.integerToString(instance.transcodeHeight),
+      'transcode_width':
+          TautulliUtilities.integerToString(instance.transcodeWidth),
+      'transcode_container': instance.transcodeContainer,
+      'transcode_protocol': instance.transcodeProtocol,
+      'transcode_hw_requested': TautulliUtilities.booleanToInteger(
+          instance.transcodeHardwareRequested),
+      'transcode_hw_decode': instance.transcodeHardwareDecode,
+      'transcode_hw_decode_title': instance.transcodeHardwareDecodeTitle,
+      'transcode_hw_encode': instance.transcodeHardwarEencode,
+      'transcode_hw_encode_title': instance.transcodeHardwarEencodeTitle,
+      'transcode_hw_full_pipeline': TautulliUtilities.booleanToInteger(
+          instance.transcodeHardwareFullPipeline),
+      'audio_decision':
+          TautulliSession._transcodeDecisionToString(instance.audioDecision),
+      'video_decision':
+          TautulliSession._transcodeDecisionToString(instance.videoDecision),
+      'subtitle_decision':
+          TautulliSession._transcodeDecisionToString(instance.subtitleDecision),
+      'throttled': TautulliUtilities.booleanToString(instance.throttled),
+      'transcode_hw_decoding': TautulliUtilities.booleanToInteger(
+          instance.transcodeHardwareDecoding),
+      'transcode_hw_encoding': TautulliUtilities.booleanToInteger(
+          instance.transcodeHardwareEncoding),
+      'stream_container': instance.streamContainer,
+      'stream_bitrate':
+          TautulliUtilities.integerToString(instance.streamBitrate),
+      'stream_aspect_ratio':
+          TautulliUtilities.doubleToString(instance.streamAspectRatio),
+      'stream_audio_codec': instance.streamAudioCodec,
+      'stream_audio_channels':
+          TautulliUtilities.integerToString(instance.streamAudioChannels),
+      'stream_audio_channel_layout': instance.streamAudioChannelLayout,
+      'stream_video_codec': instance.streamVideoCodec,
+      'stream_video_resolution': instance.streamVideoResolution,
+      'stream_video_framerate': instance.streamVideoFramerate,
     };

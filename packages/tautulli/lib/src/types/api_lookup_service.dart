@@ -5,6 +5,7 @@ enum TautulliAPILookupService {
     THEMOVIEDB,
     TVMAZE,
     MUSICBRAINZ,
+    NULL,
 }
 
 /// Extension on [TautulliAPILookupService] to implement extended functionality.
@@ -15,6 +16,7 @@ extension TautulliAPILookupServiceExtension on TautulliAPILookupService {
             case TautulliAPILookupService.THEMOVIEDB: return 'themoviedb';
             case TautulliAPILookupService.TVMAZE: return 'tvmaze';
             case TautulliAPILookupService.MUSICBRAINZ: return 'musicbrainz';
+            case TautulliAPILookupService.NULL: return '';
         }
         throw Exception('Invalid TautulliAPILookupService');
     }
