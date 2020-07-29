@@ -41,9 +41,9 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [download_plex_log][api:download_plex_log]                                        | X               | X |
 | [edit_library][api:edit_library]                                                  | X               | X |
 | [edit_user][api:edit_user]                                                        | X               | X |
-| [get_activity][api:get_activity]                                                  | X               | X |
+| [get_activity][api:get_activity]                                                  | `activity`      | `getActivity()` |
 | [get_apikey][api:get_apikey]                                                      | **N/A**         | **N/A** |
-| [get_date_formats][api:get_date_formats]                                          | X               | X |
+| [get_date_formats][api:get_date_formats]                                          | `miscellaneous` | `getDateFormats()` |
 | [get_geoip_lookup][api:get_geoip_lookup]                                          | X               | X |
 | [get_history][api:get_history]                                                    | X               | X |
 | [get_home_stats][api:get_home_stats]                                              | X               | X |
