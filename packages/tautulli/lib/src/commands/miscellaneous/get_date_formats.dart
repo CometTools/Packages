@@ -1,16 +1,16 @@
 part of tautulli_commands;
 
-Future<String> _commandArnold(Dio client) async {
+Future<TautulliDateFormat> _commandGetDateFormats(Dio client) async {
     try {
         Response response = await client.get('/',
             queryParameters: {
-                'cmd': 'arnold',
+                'cmd': 'get_date_formats',
             },
         );
         switch((response.data['response']['result'] as String)) {
-            case 'success': return response.data['response']['data'];
+            case 'success': return TautulliDateFormat.fromJson(response.data['response']['data']);
             case 'error':
-            default: throw Exception(throw Exception(response.data['response']['message']));
+            default: throw Exception(response.data['response']['message']);
         }
     } catch(error, stack) {
         return Future.error(error, stack);

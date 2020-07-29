@@ -13,4 +13,9 @@ class TautulliCommandHandler_Miscellaneous {
     /// 
     /// Get to the chopper!
     Future<String> arnold() async => _commandArnold(_client);
+
+    /// Handler for [get_date_formats](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_date_formats).
+    /// 
+    /// Get the date and time formats used by Tautulli.
+    Future<TautulliDateFormat> getDateFormats() async => _commandGetDateFormats(_client);
 }

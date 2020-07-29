@@ -13,7 +13,7 @@ enum TautulliMediaType {
 
 /// Extension on [TautulliMediaType] to implement extended functionality.
 extension TautulliMediaTypeExtension on TautulliMediaType {
-    /// Given a String, will return the correct [TautulliMediaType] object.
+    /// Given a String, will return the correct `TautulliMediaType` object.
     TautulliMediaType from(String name) {
         switch(name) {
             case 'movie': return TautulliMediaType.MOVIE;

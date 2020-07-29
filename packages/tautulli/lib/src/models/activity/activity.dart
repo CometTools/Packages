@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tautulli/models.dart';
+import 'package:tautulli/utilities.dart';
 import 'session.dart';
 
 part 'activity.g.dart';
@@ -15,7 +15,7 @@ class TautulliActivity {
     final List<TautulliSession> sessions;
     
     /// Total number of active streams.
-    @JsonKey(name: 'stream_count', fromJson: TautulliModelUtilities.stringToInteger, toJson: TautulliModelUtilities.integerToString)
+    @JsonKey(name: 'stream_count', fromJson: TautulliUtilities.stringToInteger, toJson: TautulliUtilities.integerToString)
     final int streamCount;
 
     /// Total number of _direct play_ active streams.

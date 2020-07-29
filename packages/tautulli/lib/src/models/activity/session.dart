@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tautulli/models.dart';
+import 'package:tautulli/utilities.dart';
 import 'package:tautulli/types.dart';
 
 part 'session.g.dart';
@@ -13,15 +13,15 @@ class TautulliSession {
     final TautulliMediaType mediaType;
 
     /// Session's key/identifier.
-    @JsonKey(name: 'session_key', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'session_key', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int sessionKey;
 
     /// _Unknown_: Somehow related to the progress percentage.
-    @JsonKey(name: 'view_offset', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'view_offset', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int viewOffset;
 
     /// How much of the content has been played.
-    @JsonKey(name: 'progress_percent', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'progress_percent', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int progressPercent;
 
     /// Quality profile of the stream.
@@ -45,7 +45,7 @@ class TautulliSession {
     final int channelStream;
 
     /// Plex section ID the content belongs to.
-    @JsonKey(name: 'section_id', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'section_id', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int sectionId;
 
     /// Name of the Plex library that the content belongs to.
@@ -53,15 +53,15 @@ class TautulliSession {
     final String libraryName;
 
     /// The content's unique ID from Plex.
-    @JsonKey(name: 'rating_key', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'rating_key', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int ratingKey;
 
     /// The content's parent's unique ID from Plex.
-    @JsonKey(name: 'parent_rating_key', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'parent_rating_key', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int parentRatingKey;
 
     /// The content's grandparent's unique ID from Plex.
-    @JsonKey(name: 'grandparent_rating_key', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'grandparent_rating_key', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int grandparentRatingKey;
 
     /// Title of the content.
@@ -85,11 +85,11 @@ class TautulliSession {
     final String sortTitle;
 
     /// The index of the content with respect to its parent (for example, track number in an album).
-    @JsonKey(name: 'media_index', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'media_index', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int mediaIndex;
 
     /// The index of the parent of the content.
-    @JsonKey(name: 'parent_media_index', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'parent_media_index', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int parentMediaIndex;
 
     /// The studio that made the content.
@@ -109,7 +109,7 @@ class TautulliSession {
     final String tagline;
 
     /// The critic rating of the content.
-    @JsonKey(name: 'rating', toJson: TautulliModelUtilities.doubleToString, fromJson: TautulliModelUtilities.stringToDouble)
+    @JsonKey(name: 'rating', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
     final double rating;
 
     /// Link to an image for the critic rating.
@@ -117,7 +117,7 @@ class TautulliSession {
     final String ratingImage;
 
     /// The audience rating of the content.
-    @JsonKey(name: 'audience_rating', toJson: TautulliModelUtilities.doubleToString, fromJson: TautulliModelUtilities.stringToDouble)
+    @JsonKey(name: 'audience_rating', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
     final double audienceRating;
 
     /// Link to an image for the audience rating.
@@ -125,15 +125,15 @@ class TautulliSession {
     final String audienceRatingImage;
 
     /// The user rating of the content.
-    @JsonKey(name: 'user_rating', toJson: TautulliModelUtilities.doubleToString, fromJson: TautulliModelUtilities.stringToDouble)
+    @JsonKey(name: 'user_rating', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
     final double userRating;
 
     /// Duration of the content, in milliseconds.
-    @JsonKey(name: 'duration', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'duration', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int duration;
 
     /// Year the content was released.
-    @JsonKey(name: 'year', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    @JsonKey(name: 'year', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int year;
 
     /// Thumbnail path for the content.
@@ -157,20 +157,22 @@ class TautulliSession {
     final String banner;
 
     /// The date on which the content was originally available on.
-    @JsonKey(name: 'originally_available_at', toJson: TautulliModelUtilities.dateTimeToStringYYYYMMDD, fromJson: TautulliModelUtilities.stringToDateTime)
-    final DateTime originallyAvailableAt;
+    /// Because of the custom formatting options, the DateTime is returned as a string.
+    /// You can use the miscellaneous call `getDateFormats()` to pull the date and time formatting strings.
+    @JsonKey(name: 'originally_available_at')
+    final String originallyAvailableAt;
 
     /// The date on which the content was added to Plex.
     /// This is typically read/stored as the file creation date within Plex.
-    @JsonKey(name: 'added_at', toJson: TautulliModelUtilities.dateTimeToStringMilliseconds, fromJson: TautulliModelUtilities.millisecondsStringToDateTime)
+    @JsonKey(name: 'added_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime addedAt;
 
     /// The date on which the content was last updated in Plex.
-    @JsonKey(name: 'updated_at', toJson: TautulliModelUtilities.dateTimeToStringMilliseconds, fromJson: TautulliModelUtilities.millisecondsStringToDateTime)
+    @JsonKey(name: 'updated_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime updatedAt;
 
     /// The date on which the content was last viewed on Plex.
-    @JsonKey(name: 'last_viewed_at', toJson: TautulliModelUtilities.dateTimeToStringMilliseconds, fromJson: TautulliModelUtilities.millisecondsStringToDateTime)
+    @JsonKey(name: 'last_viewed_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime lastViewedAt;
 
     TautulliSession({

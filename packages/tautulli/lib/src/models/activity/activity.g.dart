@@ -9,7 +9,7 @@ part of 'activity.dart';
 TautulliActivity _$TautulliActivityFromJson(Map<String, dynamic> json) {
   return TautulliActivity(
     streamCount:
-        TautulliModelUtilities.stringToInteger(json['stream_count'] as String),
+        TautulliUtilities.stringToInteger(json['stream_count'] as String),
     streamCountDirectPlay: json['stream_count_direct_play'] as int,
     streamCountDirectStream: json['stream_count_direct_stream'] as int,
     streamCountTranscode: json['stream_count_transcode'] as int,
@@ -23,8 +23,7 @@ TautulliActivity _$TautulliActivityFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$TautulliActivityToJson(TautulliActivity instance) =>
     <String, dynamic>{
       'sessions': TautulliActivity._sessionsToMap(instance.sessions),
-      'stream_count':
-          TautulliModelUtilities.integerToString(instance.streamCount),
+      'stream_count': TautulliUtilities.integerToString(instance.streamCount),
       'stream_count_direct_play': instance.streamCountDirectPlay,
       'stream_count_direct_stream': instance.streamCountDirectStream,
       'stream_count_transcode': instance.streamCountTranscode,

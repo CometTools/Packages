@@ -23,7 +23,6 @@ Future<void> _commandUpdateMetadataDetails(Dio client, {
             default: throw Exception(throw Exception(response.data['response']['message']));
         }
     } catch(error, stack) {
-        //Return the error as a [Future.error] 
         return Future.error(error, stack);
     }
 }
