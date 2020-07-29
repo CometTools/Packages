@@ -33,6 +33,24 @@ class TautulliCommandHandler_Notifications {
         agentId: agentId,
     );
 
+    /// Handler for [register_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#register_device).
+    /// 
+    /// Registers the Tautulli Android App for notifications.
+    /// 
+    /// `deviceName` **(required)**: The device name of the Tautulli Android App.
+    /// `deviceId` **(required)**: The OneSignal device id of the Tautulli Android App.
+    /// `friendlyName`: A friendly name to identify the mobile device
+    Future<void> registerDevice({
+        @required String deviceName,
+        @required String deviceId,
+        String friendlyName,
+    }) async => _commandRegisterDevice(
+        _client,
+        deviceId: deviceId,
+        deviceName: deviceName,
+        friendlyName: friendlyName,
+    );
+
     /// Handler for [set_mobile_device_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#set_mobile_device_config).
     /// 
     /// Configure an existing mobile device agent.

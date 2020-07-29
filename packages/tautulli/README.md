@@ -104,7 +104,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [pms_image_proxy][api:pms_image_proxy]                                            | X               | X |
 | [refresh_libraries_list][api:refresh_libraries_list]                              | X               | X |
 | [refresh_users_list][api:refresh_users_list]                                      | X               | X |
-| [register_device][api:register_device]                                            | X               | X |
+| [register_device][api:register_device]                                            | `notifications` | `registerDevice()` |
 | [restart][api:restart]                                                            | `system`        | `restart()` |
 | [search][api:search]                                                              | X               | X |
 | [set_mobile_device_config][api:set_mobile_device_config]                          | `notifications` | `setMobileDeviceConfig()` |

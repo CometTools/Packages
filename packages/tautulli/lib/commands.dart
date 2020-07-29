@@ -21,10 +21,11 @@ part 'src/commands/miscellaneous/get_date_formats.dart';
 // Notification
 part 'src/commands/notifications.dart';
 part 'src/commands/notifications/add_newsletter_config.dart';
-part 'src/commands/notifications/set_newsletter_config.dart';
 part 'src/commands/notifications/add_notifier_config.dart';
-part 'src/commands/notifications/set_notifier_config.dart';
+part 'src/commands/notifications/register_device.dart';
 part 'src/commands/notifications/set_mobile_device_config.dart';
+part 'src/commands/notifications/set_newsletter_config.dart';
+part 'src/commands/notifications/set_notifier_config.dart';
 // System
 part 'src/commands/system.dart';
 part 'src/commands/system/backup_config.dart';
