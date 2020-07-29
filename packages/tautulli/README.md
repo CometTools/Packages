@@ -1,4 +1,4 @@
-# tautulli (pre-release)
+# tautulli
 
 [![Pubdev][pubdev-shield]][pubdev]
 ![License][license-shield]

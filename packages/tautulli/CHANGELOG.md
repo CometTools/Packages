@@ -1,3 +1,18 @@
+# 0.0.1
+- Models: Full deserialization of `TautulliSession`
+- Commands: Combined Notifier & Newsletter handlers into Notifications
+- Commands: Implemented `add_newsletter_config`
+- Commands: Implemented `add_notifier_config`
+- Commands: Implemented `status`
+- Commands: Implemented `set_notifier_config`
+- Commands: Implemented `set_newsletter_config`
+- Commands: Implemented `set_mobile_device_config`
+- Commands: Implemented `register_device`
+- Commands: Implemented `delete_all_library_history`
+- Types: TautulliSessionState
+- Types: TautulliSessionLocation
+- Types: TautulliTranscodeDecision
+- Types: Added null/empty value safety
 # 0.0.1-pre.6
 - Implemented [backup_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#backup_config)
 - Implemented [backup_db](https://github.com/Tautulli/Tautulli/blob/master/API.md#backup_db)
