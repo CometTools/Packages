@@ -319,6 +319,225 @@ class TautulliSession {
     @JsonKey(name: 'type', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int type;
 
+    /// Codec level of the video stream.
+    @JsonKey(name: 'video_codec_level')
+    final String videoCodecLevel;
+
+    /// Bitrate of the video stream.
+    @JsonKey(name: 'video_bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int videoBitrate;
+
+    /// Bit depth of the video stream.
+    @JsonKey(name: 'video_bit_depth', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int videoBitDepth;
+
+    /// Chroma subsampling of the video stream.
+    @JsonKey(name: 'video_chroma_subsampling')
+    final String videoChromaSubsampling;
+
+    /// Color primaries of the video stream.
+    @JsonKey(name: 'video_color_primaries')
+    final String videoColorPrimaries;
+
+    /// Color range of the video stream.
+    @JsonKey(name: 'video_color_range')
+    final String videoColorRange;
+
+    /// Color space of the video stream.
+    @JsonKey(name: 'video_color_space')
+    final String videoColorSpace;
+
+    /// Color TRC of the video stream.
+    @JsonKey(name: 'video_color_trc')
+    final String videoColorTRC;
+
+    /// Frame rate of the video stream.
+    @JsonKey(name: 'video_frame_rate', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
+    final double videoFrameRate;
+
+    /// Reference frames in the video stream.
+    @JsonKey(name: 'video_ref_frames', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int videoRefFrames;
+
+    /// Height of the video stream.
+    @JsonKey(name: 'video_height', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int videoHeight;
+
+    /// Width of the video stream.
+    @JsonKey(name: 'video_width', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int videoWidth;
+
+    /// Language of the video stream.
+    @JsonKey(name: 'video_language')
+    final String videoLanguage;
+
+    /// Language code of the video stream.
+    @JsonKey(name: 'video_language_code')
+    final String videoLanguageCode;
+
+    /// Scan type of the video stream.
+    @JsonKey(name: 'video_scan_type')
+    final String videoScanType;
+    
+    /// Bitrate of the audio stream.
+    @JsonKey(name: 'audio_bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int audioBitrate;
+
+    /// Bitrate mode of the audio stream.
+    @JsonKey(name: 'audio_bitrate_mode')
+    final String audioBitrateMode;
+
+    /// Sample rate of the audio stream.
+    @JsonKey(name: 'audio_sample_rate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int audioSampleRate;
+
+    /// Language of the audio stream.
+    @JsonKey(name: 'audio_language')
+    final String audioLanguage;
+
+    /// Language code of the audio stream.
+    @JsonKey(name: 'audio_language_code')
+    final String audioLanguageCode;
+
+    /// Codec of the subtitle stream.
+    @JsonKey(name: 'subtitle_codec')
+    final String subtitleCodec;
+
+    /// Container of the subtitle stream.
+    @JsonKey(name: 'subtitle_container')
+    final String subtitleContainer;
+
+    /// Format of the subtitle stream.
+    @JsonKey(name: 'subtitle_format')
+    final String subtitleFormat;
+
+    /// Is the subtitle stream forced?
+    @JsonKey(name: 'subtitle_forced', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool subtitleForced;
+
+    /// Location of the subtitle stream.
+    @JsonKey(name: 'subtitle_location')
+    final String subtitleLocation;
+
+    /// Language of the subtitle stream.
+    @JsonKey(name: 'subtitle_language')
+    final String subtitleLanguage;
+
+    /// Language code of the subtitle stream.
+    @JsonKey(name: 'subtitle_language_code')
+    final String subtitleLanguageCode;
+
+    /// Row identifier of the streaming user.
+    @JsonKey(name: 'row_id')
+    final int rowId;
+
+    /// User identifier of the streaming user. 
+    @JsonKey(name: 'user_id')
+    final int userId;
+
+    /// Username of the streaming user.
+    @JsonKey(name: 'username')
+    final String username;
+
+    /// Friendly name of the streaming user.
+    @JsonKey(name: 'friendly_name')
+    final String friendlyName;
+
+    /// Thumbnail link of the streaming user.
+    @JsonKey(name: 'user_thumb')
+    final String userThumb;
+
+    /// Email of the streaming user.
+    @JsonKey(name: 'email')
+    final String email;
+
+    /// Is the user active?
+    @JsonKey(name: 'is_active', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isActive;
+
+    /// Is the user an admin?
+    @JsonKey(name: 'is_admin', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isAdmin;
+
+    /// Is the user a home user?
+    @JsonKey(name: 'is_home_user', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isHomeUser;
+
+    /// Is the user allowed to sync content?
+    @JsonKey(name: 'is_allow_sync', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isAllowSync;
+
+    /// Is the user restricted?
+    @JsonKey(name: 'is_restricted', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isRestricted;
+
+    /// Does the user get notified?
+    @JsonKey(name: 'do_notify', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool doNotify;
+
+    /// Is history enabled for the user?
+    @JsonKey(name: 'keep_history', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool keepHistory;
+
+    /// Is the user deleted?
+    @JsonKey(name: 'deleted_user', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool deletedUser;
+
+    /// Allow guest?
+    @JsonKey(name: 'allow_guest', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool allowGuest;
+
+    /// List of libraries that are shared with this user.
+    @JsonKey(name: 'shared_libraries', toJson: TautulliUtilities.integerListToStringList, fromJson: TautulliUtilities.stringListToIntegerList)
+    final List<int> sharedLibraries;
+
+    /// IP address of the streaming device.
+    @JsonKey(name: 'ip_address')
+    final String ipAddress;
+
+    /// Public IP address of the streaming device.
+    @JsonKey(name: 'ip_address_public')
+    final String ipAddressPublic;
+
+    /// Streaming device name.
+    @JsonKey(name: 'device')
+    final String device;
+
+    /// Platform of the streaming device.
+    @JsonKey(name: 'platform')
+    final String platform;
+
+    /// Name of the streaming device.
+    @JsonKey(name: 'platform_name')
+    final String platformName;
+
+    /// Version of the streaming device.
+    @JsonKey(name: 'platform_version')
+    final String platformVersion;
+
+    /// Plex product name on the streaming device.
+    @JsonKey(name: 'product')
+    final String product;
+
+    /// Plex product version on the streaming device.
+    @JsonKey(name: 'product_version')
+    final String productVersion;
+
+    /// Plex profile on the streaming device. 
+    @JsonKey(name: 'profile')
+    final String profile;
+
+    /// Name of the streaming device/player.
+    @JsonKey(name: 'player')
+    final String player;
+
+    /// Unique machine identifier key.
+    @JsonKey(name: 'machine_id')
+    final String machineId;
+
+    @JsonKey(name: 'state', toJson: _sessionStateToString, fromJson: _sessionStateToObject)
+    final TautulliSessionState state;
+
     TautulliSession({
         this.sessionKey,
         this.mediaType,
@@ -397,6 +616,61 @@ class TautulliSession {
         this.indexes,
         this.selected,
         this.type,
+        this.videoCodecLevel,
+        this.videoBitrate,
+        this.videoBitDepth,
+        this.videoChromaSubsampling,
+        this.videoColorPrimaries,
+        this.videoColorRange,
+        this.videoColorSpace,
+        this.videoColorTRC,
+        this.videoFrameRate,
+        this.videoRefFrames,
+        this.videoHeight,
+        this.videoWidth,
+        this.videoLanguage,
+        this.videoLanguageCode,
+        this.videoScanType,
+        this.audioBitrate,
+        this.audioBitrateMode,
+        this.audioSampleRate,
+        this.audioLanguage,
+        this.audioLanguageCode,
+        this.subtitleCodec,
+        this.subtitleContainer,
+        this.subtitleFormat,
+        this.subtitleForced,
+        this.subtitleLanguage,
+        this.subtitleLanguageCode,
+        this.subtitleLocation,
+        this.rowId,
+        this.userId,
+        this.username,
+        this.friendlyName,
+        this.userThumb,
+        this.email,
+        this.isActive,
+        this.isAdmin,
+        this.isHomeUser,
+        this.isAllowSync,
+        this.isRestricted,
+        this.doNotify,
+        this.keepHistory,
+        this.deletedUser,
+        this.allowGuest,
+        this.sharedLibraries,
+        this.ipAddress,
+        this.ipAddressPublic,
+        this.device,
+        this.platform,
+        this.platformName,
+        this.platformVersion,
+        this.product,
+        this.productVersion,
+        this.profile,
+        this.player,
+        this.machineId,
+        this.state,
     });
 
     /// Returns a JSON-encoded string version of this object.
@@ -410,4 +684,7 @@ class TautulliSession {
 
     static TautulliMediaType _mediaTypeToObject(String type) => TautulliMediaType.MOVIE.from(type);
     static String _mediaTypeToString(TautulliMediaType type) => type?.value ?? '';
+
+    static TautulliSessionState _sessionStateToObject(String state) => TautulliSessionState.BUFFERING.from(state);
+    static String _sessionStateToString(TautulliSessionState state) => state?.value ?? '';
 }
