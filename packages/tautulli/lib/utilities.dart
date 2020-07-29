@@ -7,19 +7,23 @@ library tautulli_utilities;
 class TautulliUtilities {
     TautulliUtilities._();
 
-    // String <-> Integer
+    /** String <-> Integer */
     /// Converts a string to an integer. Returns null on an invalid string.
     static int stringToInteger(String value) => int.tryParse(value);
     /// Converts an integer to a string. Returns an empty string on an invalid/null integer.
     static String integerToString(int value) => value?.toString() ?? '';
 
-    // String <-> Double
+    /** Integer <-> Boolean */
+    static bool integerToBoolean(int value) => value == 0 ? false : true;
+    static int booleanToInteger(bool value) => value ? 1 : 0;
+
+    /** String <-> Double */
     /// Converts a string to a double. Returns null on an invalid string.
     static double stringToDouble(String value) => double.tryParse(value);
     /// Converts a double to a string. Returns an empty string on an invalid/null double.
     static String doubleToString(double value) => value?.toString() ?? '';
 
-    // String <-> DateTime
+    /** String <-> DateTime */
     /// Converts a date-formatted string to a [DateTime] object. Returns null on a poorly formatted string.
     static DateTime stringToDateTime(String date) => DateTime.tryParse(date);
     /// Converts a String containing a unix/Epoch millisecond value to a [DateTime] object. Returns null on a poorly formatted string.

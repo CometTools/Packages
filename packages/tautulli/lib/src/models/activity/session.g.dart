@@ -60,6 +60,21 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
         json['updated_at'] as String),
     lastViewedAt: TautulliUtilities.millisecondsStringToDateTime(
         json['last_viewed_at'] as String),
+    guid: json['guid'] as String,
+    parentGuid: json['parent_guid'] as String,
+    grandparentGuid: json['grandparent_guid'] as String,
+    directors: (json['directors'] as List)?.map((e) => e as String)?.toList(),
+    actors: (json['actors'] as List)?.map((e) => e as String)?.toList(),
+    writers: (json['writers'] as List)?.map((e) => e as String)?.toList(),
+    genres: (json['genres'] as List)?.map((e) => e as String)?.toList(),
+    labels: (json['labels'] as List)?.map((e) => e as String)?.toList(),
+    collections:
+        (json['collections'] as List)?.map((e) => e as String)?.toList(),
+    fullTitle: json['full_title'] as String,
+    childrenCount: json['children_count'] as int,
+    live: TautulliUtilities.integerToBoolean(json['live'] as int),
+    id: TautulliUtilities.stringToInteger(json['id'] as String),
+    container: json['container'] as String,
   );
 }
 
@@ -114,4 +129,18 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
           TautulliUtilities.dateTimeToStringMilliseconds(instance.updatedAt),
       'last_viewed_at':
           TautulliUtilities.dateTimeToStringMilliseconds(instance.lastViewedAt),
+      'guid': instance.guid,
+      'parent_guid': instance.parentGuid,
+      'grandparent_guid': instance.grandparentGuid,
+      'directors': instance.directors,
+      'writers': instance.writers,
+      'actors': instance.actors,
+      'genres': instance.genres,
+      'labels': instance.labels,
+      'collections': instance.collections,
+      'full_title': instance.fullTitle,
+      'children_count': instance.childrenCount,
+      'live': TautulliUtilities.booleanToInteger(instance.live),
+      'id': TautulliUtilities.integerToString(instance.id),
+      'container': instance.container,
     };

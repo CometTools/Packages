@@ -167,13 +167,69 @@ class TautulliSession {
     @JsonKey(name: 'added_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime addedAt;
 
-    /// The date on which the content was last updated in Plex.
+    /// The date on which the content was last updated on Plex.
     @JsonKey(name: 'updated_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime updatedAt;
 
     /// The date on which the content was last viewed on Plex.
     @JsonKey(name: 'last_viewed_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime lastViewedAt;
+
+    /// The globally unique identifier for the content.
+    @JsonKey(name: 'guid')
+    final String guid;
+
+    /// The globally unique identifier for the content's parent.
+    @JsonKey(name: 'parent_guid')
+    final String parentGuid;
+
+    /// The globally unique identifier for the content's grandparent.
+    @JsonKey(name: 'grandparent_guid')
+    final String grandparentGuid;
+
+    /// List of director's names who directed the content.
+    @JsonKey(name: 'directors')
+    final List<String> directors;
+
+    /// List of writer's names who wrote the content.
+    @JsonKey(name: 'writers')
+    final List<String> writers;
+
+    /// List of actors's names who acted in the content.
+    @JsonKey(name: 'actors')
+    final List<String> actors;
+
+    /// List of genres of the content.
+    @JsonKey(name: 'genres')
+    final List<String> genres;
+
+    /// List of labels that have been attached on Plex.
+    @JsonKey(name: 'labels')
+    final List<String> labels;
+
+    /// List of collections the content is apart of on Plex.
+    @JsonKey(name: 'collections')
+    final List<String> collections;
+
+    /// The full title of the content.
+    @JsonKey(name: 'full_title')
+    final String fullTitle;
+
+    /// The amount of children this content has.
+    @JsonKey(name: 'children_count')
+    final int childrenCount;
+
+    /// Is this session live content?
+    @JsonKey(name: 'live', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool live;
+
+    /// The ID of the content.
+    @JsonKey(name: 'id', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int id;
+
+    /// The media container type of the content.
+    @JsonKey(name: 'container')
+    final String container;
 
     TautulliSession({
         this.sessionKey,
@@ -217,6 +273,20 @@ class TautulliSession {
         this.addedAt,
         this.updatedAt,
         this.lastViewedAt,
+        this.guid,
+        this.parentGuid,
+        this.grandparentGuid,
+        this.directors,
+        this.actors,
+        this.writers,
+        this.genres,
+        this.labels,
+        this.collections,
+        this.fullTitle,
+        this.childrenCount,
+        this.live,
+        this.id,
+        this.container,
     });
 
     /// Returns a JSON-encoded string version of this object.
