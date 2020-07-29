@@ -10,7 +10,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | API Method | Category | Command |
 | :--------- | :------: | ------: |
 | [add_newsletter_config][api:add_newsletter_config]                                | `newsletter`    | `addNewsletterConfig()` |
-| [add_notifier_config][api:add_notifier_config]                                    | X               | X |
+| [add_notifier_config][api:add_notifier_config]                                    | `notifier`      | `addNotifierConfig()` |
 | [arnold][api:arnold]                                                              | `miscellaneous` | `arnold()` |
 | [backup_config][api:backup_config]                                                | `system`        | `backupConfig()` |
 | [backup_db][api:backup_db]                                                        | `system`        | `backupDB()` |

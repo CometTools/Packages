@@ -8,4 +8,16 @@ class TautulliCommandHandler_Notifier {
 
     /// Create a notifier command handler using an initialized [Dio] client.
     TautulliCommandHandler_Notifier(this._client);
+
+    /// Handler for [add_notifier_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#add_notifier_config).
+    /// 
+    /// Add a new notification agent.
+    /// 
+    /// - `agentId` **(required)**: The ID of the agent.
+    Future<void> addNotifierConfig({
+        @required int agentId,
+    }) async => _commandAddNotifierConfig(
+        _client,
+        agentId: agentId,
+    );
 }
