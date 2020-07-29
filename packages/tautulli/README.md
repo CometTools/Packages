@@ -110,8 +110,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [set_mobile_device_config][api:set_mobile_device_config]                          | X               | X |
 | [set_newsletter_config][api:set_newsletter_config]                                | X               | X |
 | [set_notifier_config][api:set_notifier_config]                                    | X               | X |
-| [sql][api:sql]                                                                    | X               | X |
-| [status][api:status]                                                              | X               | X |
+| [sql][api:sql]                                                                    | **N/A**         | **N/A** |
+| [status][api:status]                                                              | `system`        | `status()` |
 | [terminate_session][api:terminate_session]                                        | `activity`      | `terminateSession()` |
 | [undelete_library][api:undelete_library]                                          | `library`       | `undeleteLibrary()` |
 | [undelete_user][api:undelete_user]                                                | `user`          | `undeleteUser()` |
