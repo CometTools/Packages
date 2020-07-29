@@ -20,4 +20,22 @@ class TautulliCommandHandler_Notifier {
         _client,
         agentId: agentId,
     );
+
+    /// Handler for [set_notifier_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#set_notifier_config).
+    /// 
+    /// Configure an existing notification agent.
+    /// 
+    /// - `agentId` **(required)**: The agent of the notifier.
+    /// - `notifierId` **(required)**: The notifier config to update.
+    /// - `notifierOptions` **(options)**: A map containing the configuration options for the notifier.
+    Future<void> setNotifierConfig({
+        @required int agentId,
+        @required int notifierId,
+        @required Map<String, dynamic> notifierOptions,
+    }) async => _commandSetNotifierConfig(
+        _client,
+        agentId: agentId,
+        notifierId: notifierId,
+        notifierOptions: notifierOptions,
+    );
 }

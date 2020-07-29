@@ -24,6 +24,7 @@ part 'src/commands/newsletter/add_newsletter_config.dart';
 // Notifier
 part 'src/commands/notifier.dart';
 part 'src/commands/notifier/add_notifier_config.dart';
+part 'src/commands/notifier/set_notifier_config.dart';
 // System
 part 'src/commands/system.dart';
 part 'src/commands/system/backup_config.dart';

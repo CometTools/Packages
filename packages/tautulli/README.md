@@ -83,7 +83,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_server_list][api:get_server_list]                                            | X               | X |
 | [get_server_pref][api:get_server_pref]                                            | X               | X |
 | [get_servers_info][api:get_servers_info]                                          | X               | X |
-| [get_settings][api:get_settings]                                                  | X               | X |
+| [get_settings][api:get_settings]                                                  | **N/A**         | **N/A** |
 | [get_stream_data][api:get_stream_data]                                            | X               | X |
 | [get_stream_type_by_top_10_platforms][api:get_stream_type_by_top_10_platforms]    | X               | X |
 | [get_stream_type_by_top_10_users][api:get_stream_type_by_top_10_users]            | X               | X |
@@ -109,7 +109,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [search][api:search]                                                              | X               | X |
 | [set_mobile_device_config][api:set_mobile_device_config]                          | X               | X |
 | [set_newsletter_config][api:set_newsletter_config]                                | X               | X |
-| [set_notifier_config][api:set_notifier_config]                                    | X               | X |
+| [set_notifier_config][api:set_notifier_config]                                    | `notifier`      | `setNotifierConfig()` |
 | [sql][api:sql]                                                                    | **N/A**         | **N/A** |
 | [status][api:status]                                                              | `system`        | `status()` |
 | [terminate_session][api:terminate_session]                                        | `activity`      | `terminateSession()` |
