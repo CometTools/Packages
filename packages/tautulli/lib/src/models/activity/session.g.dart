@@ -75,6 +75,29 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     live: TautulliUtilities.integerToBoolean(json['live'] as int),
     id: TautulliUtilities.stringToInteger(json['id'] as String),
     container: json['container'] as String,
+    bitrate: TautulliUtilities.stringToInteger(json['bitrate'] as String),
+    height: TautulliUtilities.stringToInteger(json['height'] as String),
+    width: TautulliUtilities.stringToInteger(json['width'] as String),
+    aspectRatio:
+        TautulliUtilities.stringToDouble(json['aspect_ratio'] as String),
+    videoCodec: json['video_codec'] as String,
+    videoResolution:
+        TautulliUtilities.stringToInteger(json['video_resolution'] as String),
+    videoFullResolution: json['video_full_resolution'] as String,
+    videoFramerate: json['video_framerate'] as String,
+    videoProfile: json['video_profile'] as String,
+    audioCodec: json['audio_codec'] as String,
+    audioChannels:
+        TautulliUtilities.stringToInteger(json['audio_channels'] as String),
+    audioChannelLayout: json['audio_channel_layout'] as String,
+    audioProfile: json['audio_profile'] as String,
+    optimizedVersion:
+        TautulliUtilities.integerToBoolean(json['optimized_version'] as int),
+    channelCallSign: json['channel_call_sign'] as String,
+    channelIdentifier: json['channel_identifier'] as String,
+    channelThumb: json['channel_thumb'] as String,
+    file: json['file'] as String,
+    fileSize: TautulliUtilities.stringToInteger(json['file_size'] as String),
   );
 }
 
@@ -143,4 +166,26 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
       'live': TautulliUtilities.booleanToInteger(instance.live),
       'id': TautulliUtilities.integerToString(instance.id),
       'container': instance.container,
+      'bitrate': TautulliUtilities.integerToString(instance.bitrate),
+      'height': TautulliUtilities.integerToString(instance.height),
+      'width': TautulliUtilities.integerToString(instance.width),
+      'aspect_ratio': TautulliUtilities.doubleToString(instance.aspectRatio),
+      'video_codec': instance.videoCodec,
+      'video_resolution':
+          TautulliUtilities.integerToString(instance.videoResolution),
+      'video_full_resolution': instance.videoFullResolution,
+      'video_framerate': instance.videoFramerate,
+      'video_profile': instance.videoProfile,
+      'audio_codec': instance.audioCodec,
+      'audio_channels':
+          TautulliUtilities.integerToString(instance.audioChannels),
+      'audio_channel_layout': instance.audioChannelLayout,
+      'audio_profile': instance.audioProfile,
+      'optimized_version':
+          TautulliUtilities.booleanToInteger(instance.optimizedVersion),
+      'channel_call_sign': instance.channelCallSign,
+      'channel_identifier': instance.channelIdentifier,
+      'channel_thumb': instance.channelThumb,
+      'file': instance.file,
+      'file_size': TautulliUtilities.integerToString(instance.fileSize),
     };

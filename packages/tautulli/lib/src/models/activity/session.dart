@@ -231,6 +231,82 @@ class TautulliSession {
     @JsonKey(name: 'container')
     final String container;
 
+    /// Bitrate of the content.
+    @JsonKey(name: 'bitrate', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int bitrate;
+
+    /// Height in pixels.
+    @JsonKey(name: 'height', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int height;
+
+    /// Width in pixels.
+    @JsonKey(name: 'width', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int width;
+
+    /// Aspect ratio of the content.
+    @JsonKey(name: 'aspect_ratio', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
+    final double aspectRatio;
+
+    /// Codec of the video stream.
+    @JsonKey(name: 'video_codec')
+    final String videoCodec;
+
+    /// Resolution of the video stream.
+    @JsonKey(name: 'video_resolution', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int videoResolution;
+
+    /// Full resoltuion of the video stream.
+    @JsonKey(name: 'video_full_resolution')
+    final String videoFullResolution;
+
+    /// Framerate of the video stream.
+    @JsonKey(name: 'video_framerate')
+    final String videoFramerate;
+
+    /// Profile of the video stream.
+    @JsonKey(name: 'video_profile')
+    final String videoProfile;
+
+    /// Codec of the audio stream.
+    @JsonKey(name: 'audio_codec')
+    final String audioCodec;
+
+    /// Number of channels in the audio stream.
+    @JsonKey(name: 'audio_channels', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int audioChannels;
+
+    /// The layout of the channels in the audio stream.
+    @JsonKey(name: 'audio_channel_layout')
+    final String audioChannelLayout;
+
+    /// Profile of the audio stream.
+    @JsonKey(name: 'audio_profile')
+    final String audioProfile;
+
+    /// Is this session using an optimized version?
+    @JsonKey(name: 'optimized_version', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool optimizedVersion;
+
+    /// The channel's callsign for live content.
+    @JsonKey(name: 'channel_call_sign')
+    final String channelCallSign;
+
+    /// The channel's identifier for live content.
+    @JsonKey(name: 'channel_identifier')
+    final String channelIdentifier;
+
+    /// The channel's thumbnail for live content.
+    @JsonKey(name: 'channel_thumb')
+    final String channelThumb;
+
+    /// The path to the file on your system.
+    @JsonKey(name: 'file')
+    final String file;
+
+    /// The size of the file, in bytes.
+    @JsonKey(name: 'file_size', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int fileSize;
+
     TautulliSession({
         this.sessionKey,
         this.mediaType,
@@ -287,6 +363,25 @@ class TautulliSession {
         this.live,
         this.id,
         this.container,
+        this.bitrate,
+        this.height,
+        this.width,
+        this.aspectRatio,
+        this.videoCodec,
+        this.videoResolution,
+        this.videoFullResolution,
+        this.videoFramerate,
+        this.videoProfile,
+        this.audioCodec,
+        this.audioChannels,
+        this.audioChannelLayout,
+        this.audioProfile,
+        this.optimizedVersion,
+        this.channelCallSign,
+        this.channelIdentifier,
+        this.channelThumb,
+        this.file,
+        this.fileSize,
     });
 
     /// Returns a JSON-encoded string version of this object.
