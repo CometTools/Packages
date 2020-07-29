@@ -307,6 +307,18 @@ class TautulliSession {
     @JsonKey(name: 'file_size', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int fileSize;
 
+    /// Does the file have generated index files? 
+    @JsonKey(name: 'indexes', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool indexes;
+
+    /// _Unknown_
+    @JsonKey(name: 'selected', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool selected;
+
+    /// _Unknown_
+    @JsonKey(name: 'type', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
+    final int type;
+
     TautulliSession({
         this.sessionKey,
         this.mediaType,
@@ -382,6 +394,9 @@ class TautulliSession {
         this.channelThumb,
         this.file,
         this.fileSize,
+        this.indexes,
+        this.selected,
+        this.type,
     });
 
     /// Returns a JSON-encoded string version of this object.

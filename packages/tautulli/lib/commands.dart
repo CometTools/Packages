@@ -20,6 +20,7 @@ part 'src/commands/miscellaneous/arnold.dart';
 part 'src/commands/miscellaneous/get_date_formats.dart';
 // Newsletter
 part 'src/commands/newsletter.dart';
+part 'src/commands/newsletter/add_newsletter_config.dart';
 // Notifier
 part 'src/commands/notifier.dart';
 // System

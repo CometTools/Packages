@@ -8,4 +8,16 @@ class TautulliCommandHandler_Newsletter {
 
     /// Create a newsletter command handler using an initialized [Dio] client.
     TautulliCommandHandler_Newsletter(this._client);
+
+    /// Handler for [add_newsletter_config](https://github.com/Tautulli/Tautulli/blob/master/API.md#add_newsletter_config).
+    /// 
+    /// Add a new notification agent.
+    /// 
+    /// - `agentId` **(required)**: The ID of the agent.
+    Future<void> addNewsletterConfig({
+        @required int agentId,
+    }) async => _commandAddNewsletterConfig(
+        _client,
+        agentId: agentId,
+    );
 }

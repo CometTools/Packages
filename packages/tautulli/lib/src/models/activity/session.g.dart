@@ -98,6 +98,9 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     channelThumb: json['channel_thumb'] as String,
     file: json['file'] as String,
     fileSize: TautulliUtilities.stringToInteger(json['file_size'] as String),
+    indexes: TautulliUtilities.integerToBoolean(json['indexes'] as int),
+    selected: TautulliUtilities.integerToBoolean(json['selected'] as int),
+    type: TautulliUtilities.stringToInteger(json['type'] as String),
   );
 }
 
@@ -188,4 +191,7 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
       'channel_thumb': instance.channelThumb,
       'file': instance.file,
       'file_size': TautulliUtilities.integerToString(instance.fileSize),
+      'indexes': TautulliUtilities.booleanToInteger(instance.indexes),
+      'selected': TautulliUtilities.booleanToInteger(instance.selected),
+      'type': TautulliUtilities.integerToString(instance.type),
     };
