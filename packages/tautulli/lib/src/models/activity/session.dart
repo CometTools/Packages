@@ -128,6 +128,51 @@ class TautulliSession {
     @JsonKey(name: 'user_rating', toJson: TautulliModelUtilities.doubleToString, fromJson: TautulliModelUtilities.stringToDouble)
     final double userRating;
 
+    /// Duration of the content, in milliseconds.
+    @JsonKey(name: 'duration', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    final int duration;
+
+    /// Year the content was released.
+    @JsonKey(name: 'year', toJson: TautulliModelUtilities.integerToString, fromJson: TautulliModelUtilities.stringToInteger)
+    final int year;
+
+    /// Thumbnail path for the content.
+    @JsonKey(name: 'thumb')
+    final String thumb;
+
+    /// Thumbnail path for the content's parent.
+    @JsonKey(name: 'parent_thumb')
+    final String parentThumb;
+
+    /// Thumbnail path for the content's grandparent.
+    @JsonKey(name: 'grandparent_thumb')
+    final String grandparentThumb;
+
+    /// Artwork path for the content.
+    @JsonKey(name: 'art')
+    final String art;
+
+    /// Banner path for the content.
+    @JsonKey(name: 'banner')
+    final String banner;
+
+    /// The date on which the content was originally available on.
+    @JsonKey(name: 'originally_available_at', toJson: TautulliModelUtilities.dateTimeToStringYYYYMMDD, fromJson: TautulliModelUtilities.stringToDateTime)
+    final DateTime originallyAvailableAt;
+
+    /// The date on which the content was added to Plex.
+    /// This is typically read/stored as the file creation date within Plex.
+    @JsonKey(name: 'added_at', toJson: TautulliModelUtilities.dateTimeToStringMilliseconds, fromJson: TautulliModelUtilities.millisecondsStringToDateTime)
+    final DateTime addedAt;
+
+    /// The date on which the content was last updated in Plex.
+    @JsonKey(name: 'updated_at', toJson: TautulliModelUtilities.dateTimeToStringMilliseconds, fromJson: TautulliModelUtilities.millisecondsStringToDateTime)
+    final DateTime updatedAt;
+
+    /// The date on which the content was last viewed on Plex.
+    @JsonKey(name: 'last_viewed_at', toJson: TautulliModelUtilities.dateTimeToStringMilliseconds, fromJson: TautulliModelUtilities.millisecondsStringToDateTime)
+    final DateTime lastViewedAt;
+
     TautulliSession({
         this.sessionKey,
         this.mediaType,
@@ -159,6 +204,17 @@ class TautulliSession {
         this.audienceRating,
         this.audienceRatingImage,
         this.userRating,
+        this.duration,
+        this.year,
+        this.thumb,
+        this.parentThumb,
+        this.grandparentThumb,
+        this.art,
+        this.banner,
+        this.originallyAvailableAt,
+        this.addedAt,
+        this.updatedAt,
+        this.lastViewedAt,
     });
 
     /// Returns a JSON-encoded string version of this object.

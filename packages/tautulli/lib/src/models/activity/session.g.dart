@@ -49,6 +49,22 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     audienceRatingImage: json['audience_rating_image'] as String,
     userRating:
         TautulliModelUtilities.stringToDouble(json['user_rating'] as String),
+    duration:
+        TautulliModelUtilities.stringToInteger(json['duration'] as String),
+    year: TautulliModelUtilities.stringToInteger(json['year'] as String),
+    thumb: json['thumb'] as String,
+    parentThumb: json['parent_thumb'] as String,
+    grandparentThumb: json['grandparent_thumb'] as String,
+    art: json['art'] as String,
+    banner: json['banner'] as String,
+    originallyAvailableAt: TautulliModelUtilities.stringToDateTime(
+        json['originally_available_at'] as String),
+    addedAt: TautulliModelUtilities.millisecondsStringToDateTime(
+        json['added_at'] as String),
+    updatedAt: TautulliModelUtilities.millisecondsStringToDateTime(
+        json['updated_at'] as String),
+    lastViewedAt: TautulliModelUtilities.millisecondsStringToDateTime(
+        json['last_viewed_at'] as String),
   );
 }
 
@@ -92,4 +108,20 @@ Map<String, dynamic> _$TautulliSessionToJson(TautulliSession instance) =>
           TautulliModelUtilities.doubleToString(instance.audienceRating),
       'audience_rating_image': instance.audienceRatingImage,
       'user_rating': TautulliModelUtilities.doubleToString(instance.userRating),
+      'duration': TautulliModelUtilities.integerToString(instance.duration),
+      'year': TautulliModelUtilities.integerToString(instance.year),
+      'thumb': instance.thumb,
+      'parent_thumb': instance.parentThumb,
+      'grandparent_thumb': instance.grandparentThumb,
+      'art': instance.art,
+      'banner': instance.banner,
+      'originally_available_at':
+          TautulliModelUtilities.dateTimeToStringYYYYMMDD(
+              instance.originallyAvailableAt),
+      'added_at':
+          TautulliModelUtilities.dateTimeToStringMilliseconds(instance.addedAt),
+      'updated_at': TautulliModelUtilities.dateTimeToStringMilliseconds(
+          instance.updatedAt),
+      'last_viewed_at': TautulliModelUtilities.dateTimeToStringMilliseconds(
+          instance.lastViewedAt),
     };
