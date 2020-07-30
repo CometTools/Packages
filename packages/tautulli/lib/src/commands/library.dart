@@ -22,6 +22,19 @@ class TautulliCommandHandler_Library {
         List<int> rowIds,
     }) async => _commandDeleteAllLibraryHistory(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
 
+    /// Handler for [delete_library](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_library).
+    /// 
+    /// Delete a library section from Tautulli. Also erases all history for the library.
+    /// 
+    /// - `sectionId` (required): The ID of the Plex library section.
+    /// - `serverId`: The Plex server identifier of the library section.
+    /// - `rowIds`: Optional list of row IDs to delete.
+    Future<void> deleteLibrary({
+        @required int sectionId,
+        String serverId,
+        List<int> rowIds,
+    }) async => _commandDeleteLibrary(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
+
     /// Handler for [update_metadata_details](https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details).
     /// 
     /// Update the metadata in the Tautulli database by matching rating keys. Also updates all parents or children of the media item if it is a show/season/episode or artist/album/track.

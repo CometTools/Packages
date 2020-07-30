@@ -20,7 +20,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [delete_history][api:delete_history]                                              | `history`       | `deleteHistory()` |
 | [delete_hosted_images][api:delete_hosted_images]                                  | `system`        | `deleteHostedImages()` |
 | [delete_image_cache][api:delete_image_cache]                                      | `system`        | `deleteImageCache()` |
-| [delete_library][api:delete_library]                                              | X               | X |
+| [delete_library][api:delete_library]                                              | `library`       | `deleteLibrary()` |
 | [delete_login_log][api:delete_login_log]                                          | `system`        | `deleteLoginLog()` |
 | [delete_lookup_info][api:delete_lookup_info]                                      | X               | X |
 | [delete_media_info_cache][api:delete_media_info_cache]                            | X               | X |
