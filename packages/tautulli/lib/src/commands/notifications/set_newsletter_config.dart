@@ -9,21 +9,17 @@ Future<void> _commandSetNewsletterConfig(Dio client, {
     assert(agentId != null, 'agentId cannot be null');
     assert(newsletterId != null, 'newsletterId cannot be null');
     assert(newsletterOptions != null, 'newsletterOptions cannot be null');
-    try {
-        Response response = await client.get('/',
-            queryParameters: {
-                'cmd': 'set_newsletter_config',
-                'agent_id': agentId,
-                'newsletter_id': newsletterId,
-                ...newsletterOptions,
-            },
-        );
-        switch((response.data['response']['result'] as String)) {
-            case 'success': return;
-            case 'error':
-            default: throw Exception(throw Exception(response.data['response']['message']));
-        }
-    } catch(error, stack) {
-        return Future.error(error, stack);
+    Response response = await client.get('/',
+        queryParameters: {
+            'cmd': 'set_newsletter_config',
+            'agent_id': agentId,
+            'newsletter_id': newsletterId,
+            ...newsletterOptions,
+        },
+    );
+    switch((response.data['response']['result'] as String)) {
+        case 'success': return;
+        case 'error':
+        default: throw Exception(throw Exception(response.data['response']['message']));
     }
 }
