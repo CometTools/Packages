@@ -37,9 +37,9 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// Registers the Tautulli Android App for notifications.
     /// 
-    /// `deviceName` (required): The device name of the Tautulli Android App.
-    /// `deviceId` (required): The OneSignal device id of the Tautulli Android App.
-    /// `friendlyName`: A friendly name to identify the mobile device
+    /// - `deviceName` (required): The device name of the Tautulli Android App.
+    /// - `deviceId` (required): The OneSignal device id of the Tautulli Android App.
+    /// - `friendlyName`: A friendly name to identify the mobile device
     Future<void> registerDevice({
         @required String deviceName,
         @required String deviceId,
