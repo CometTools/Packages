@@ -30,12 +30,27 @@ class TautulliCommandHandler_System {
     /// 
     /// - `ratingKey`: Identifier/rating key.
     /// - `service`: A [TautulliImageHostService] object of the hosting service to delete from.
-    /// - `deleteAll`: True to delete all images from the service
+    /// - `deleteAll`: True to delete all images from the service.
     Future<void> deleteHostedImages({
         int ratingKey,
         TautulliImageHostService service,
         bool deleteAll,
     }) async => _commandDeleteHostedImages(_client, ratingKey: ratingKey, service: service, deleteAll: deleteAll);
+
+    /// Handler for [delete_lookup_info](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_lookup_info).
+    /// 
+    /// Delete the 3rd party API lookup info.
+    /// 
+    /// - `ratingKey`: Identifier/rating key.
+    /// - `service`: A [TautulliImTautulliAPILookupServiceageHostService] object of the API lookup service to delete from.
+    /// - `deleteAll`: True to delete all info from the service.
+    Future<void> deleteLookupInfo({
+        int ratingKey,
+        TautulliAPILookupService service,
+        bool deleteAll,
+    }) async => _commandDeleteLookupInfo(_client, ratingKey: ratingKey, service: service, deleteAll: deleteAll);
+
+    ///
 
     /// Handler for [delete_image_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_image_cache).
     /// 
