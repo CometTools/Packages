@@ -5,7 +5,7 @@ Future<void> _commandDeleteAllLibraryHistory(Dio client, {
     String serverId,
     List<int> rowIds,
 }) async {
-    assert(sectionId != null, 'sectionId cannot be null');
+    assert(sectionId != null, 'sectionId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'delete_all_library_history',

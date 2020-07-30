@@ -4,7 +4,7 @@ Future<void> _commandDeleteAllUserHistory(Dio client, {
     @required int userId,
     List<int> rowIds,
 }) async {
-    assert(userId != null, 'userId cannot be null');
+    assert(userId != null, 'userId cannot be null.');
     try {
         Response response = await client.get('/',
             queryParameters: {

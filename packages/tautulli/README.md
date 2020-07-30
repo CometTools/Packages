@@ -7,8 +7,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 
 ## Implementation Status
 
-| API Method | Category | Command |
-| :--------- | :------: | ------: |
+| API Command | Category | Method |
+| :---------- | :------: | -----: |
 | [add_newsletter_config][api:add_newsletter_config]                                | `notifications` | `addNewsletterConfig()` |
 | [add_notifier_config][api:add_notifier_config]                                    | `notifications` | `addNotifierConfig()` |
 | [arnold][api:arnold]                                                              | `miscellaneous` | `arnold()` |
@@ -43,7 +43,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_activity][api:get_activity]                                                  | `activity`      | `getActivity()` |
 | [get_apikey][api:get_apikey]                                                      | **N/A**         | **N/A** |
 | [get_date_formats][api:get_date_formats]                                          | `miscellaneous` | `getDateFormats()` |
-| [get_geoip_lookup][api:get_geoip_lookup]                                          | X               | X |
+| [get_geoip_lookup][api:get_geoip_lookup]                                          | `miscellaneous` | `getGeoIPLookup()` |
 | [get_history][api:get_history]                                                    | X               | X |
 | [get_home_stats][api:get_home_stats]                                              | X               | X |
 | [get_libraries][api:get_libraries]                                                | X               | X |

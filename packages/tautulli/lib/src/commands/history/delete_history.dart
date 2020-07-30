@@ -3,8 +3,8 @@ part of tautulli_commands;
 Future<void> _commandDeleteHistory(Dio client, {
     @required List<int> rowIds,
 }) async {
-    assert(rowIds != null, 'rowIds cannot be null');
-    assert(rowIds.isNotEmpty, 'rowIds cannot be empty');
+    assert(rowIds != null, 'rowIds cannot be null.');
+    assert(rowIds.isNotEmpty, 'rowIds cannot be empty.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'delete_history',

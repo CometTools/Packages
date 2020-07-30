@@ -5,7 +5,8 @@ Future<void> _commandTerminateSession(Dio client, {
     @required String sessionId,
     String message,
 }) async {
-    assert(sessionKey != null && sessionId != null);
+    assert(sessionKey != null, 'sessionKey cannot be null.');
+    assert(sessionId != null, 'sessionId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'terminate_session',

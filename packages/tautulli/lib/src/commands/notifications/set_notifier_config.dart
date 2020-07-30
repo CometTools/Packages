@@ -6,9 +6,9 @@ Future<void> _commandSetNotifierConfig(Dio client, {
     @required Map<String, dynamic> notifierOptions,
 
 }) async {
-    assert(agentId != null, 'agentId cannot be null');
-    assert(notifierId != null, 'notifierId cannot be null');
-    assert(notifierOptions != null, 'notifierOptions cannot be null');
+    assert(agentId != null, 'agentId cannot be null.');
+    assert(notifierId != null, 'notifierId cannot be null.');
+    assert(notifierOptions != null, 'notifierOptions cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'set_notifier_config',

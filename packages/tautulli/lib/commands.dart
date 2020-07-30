@@ -23,6 +23,7 @@ part 'src/commands/library/undelete_library.dart';
 part 'src/commands/miscellaneous.dart';
 part 'src/commands/miscellaneous/arnold.dart';
 part 'src/commands/miscellaneous/get_date_formats.dart';
+part 'src/commands/miscellaneous/get_geoip_lookup.dart';
 // Notification
 part 'src/commands/notifications.dart';
 part 'src/commands/notifications/add_newsletter_config.dart';

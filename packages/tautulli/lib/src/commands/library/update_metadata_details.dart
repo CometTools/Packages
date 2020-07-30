@@ -5,9 +5,9 @@ Future<void> _commandUpdateMetadataDetails(Dio client, {
     @required String newRatingKey,
     @required TautulliMediaType mediaType,
 }) async {
-    assert(oldRatingKey != null, "oldRatingKey (String) cannot be null");
-    assert(newRatingKey != null, "newRatingKey (String) cannot be null");
-    assert(mediaType != null, "mediaType (TautulliMediaType) cannot be null");
+    assert(oldRatingKey != null, 'oldRatingKey (String) cannot be null.');
+    assert(newRatingKey != null, 'newRatingKey (String) cannot be null.');
+    assert(mediaType != null, 'mediaType (TautulliMediaType) cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'update_metadata_details',

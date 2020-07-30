@@ -6,9 +6,9 @@ Future<void> _commandSetNewsletterConfig(Dio client, {
     @required Map<String, dynamic> newsletterOptions,
 
 }) async {
-    assert(agentId != null, 'agentId cannot be null');
-    assert(newsletterId != null, 'newsletterId cannot be null');
-    assert(newsletterOptions != null, 'newsletterOptions cannot be null');
+    assert(agentId != null, 'agentId cannot be null.');
+    assert(newsletterId != null, 'newsletterId cannot be null.');
+    assert(newsletterOptions != null, 'newsletterOptions cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'set_newsletter_config',

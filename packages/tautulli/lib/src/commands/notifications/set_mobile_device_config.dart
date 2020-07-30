@@ -4,7 +4,7 @@ Future<void> _commandSetMobileDeviceConfig(Dio client, {
     @required int mobileDeviceId,
     String friendlyName,
 }) async {
-    assert(mobileDeviceId != null, 'mobileDeviceId cannot be null');
+    assert(mobileDeviceId != null, 'mobileDeviceId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'set_mobile_device_config',

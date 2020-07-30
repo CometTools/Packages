@@ -5,8 +5,8 @@ Future<void> _commandRegisterDevice(Dio client, {
     @required String deviceName,
     String friendlyName,
 }) async {
-    assert(deviceId != null, 'deviceId cannot be null');
-    assert(deviceName != null, 'deviceName cannot be null');
+    assert(deviceId != null, 'deviceId cannot be null.');
+    assert(deviceName != null, 'deviceName cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'register_device',
