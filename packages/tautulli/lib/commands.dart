@@ -12,6 +12,7 @@ part 'src/commands/activity/get_activity.dart';
 part 'src/commands/activity/terminate_session.dart';
 // History
 part 'src/commands/history.dart';
+part 'src/commands/history/delete_history.dart';
 // Library
 part 'src/commands/library.dart';
 part 'src/commands/library/delete_all_library_history.dart';
