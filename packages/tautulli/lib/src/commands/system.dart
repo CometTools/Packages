@@ -50,7 +50,14 @@ class TautulliCommandHandler_System {
         bool deleteAll,
     }) async => _commandDeleteLookupInfo(_client, ratingKey: ratingKey, service: service, deleteAll: deleteAll);
 
-    ///
+    /// Handler for [delete_media_info_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_media_info_cache).
+    /// 
+    /// Delete the media info table cache for a specific library.
+    /// 
+    /// - `sectionId` (required): The ID of the Plex library section.
+    Future<void> deleteMediaInfoCache({
+        @required int sectionId,
+    }) async => _commandDeleteMediaInfoCache(_client, sectionId: sectionId);
 
     /// Handler for [delete_image_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_image_cache).
     /// 
