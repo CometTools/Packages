@@ -26,7 +26,7 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case 'track': return TautulliMediaType.TRACK;
             case '': return TautulliMediaType.NULL;
         }
-        throw Exception('Unknown media type: ${type}');
+        return null;
     }
 
     /// The actual value/key for media types used in Tautulli.
@@ -41,6 +41,6 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case TautulliMediaType.TRACK: return 'track';
             case TautulliMediaType.NULL: return '';
         }
-        throw Exception('Invalid TautulliMediaType');
+        return null;
     }
 }

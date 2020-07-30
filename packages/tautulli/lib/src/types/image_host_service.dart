@@ -16,6 +16,6 @@ extension TautulliImageHostServiceExtension on TautulliImageHostService {
             case TautulliImageHostService.CLOUDINARY: return 'cloudinary';
             case TautulliImageHostService.NULL: return '';
         }
-        throw Exception('Invalid TautulliImageHostService');
+        return null;
     }
 }

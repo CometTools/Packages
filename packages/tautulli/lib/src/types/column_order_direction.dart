@@ -16,6 +16,6 @@ extension TautulliColumnOrderDirectionExtension on TautulliColumnOrderDirection 
             case TautulliColumnOrderDirection.DESCENDING: return 'desc';
             case TautulliColumnOrderDirection.NULL: return '';
         }
-        throw Exception('Invalid TautulliColumnOrderDirection');
+        return null;
     }
 }

@@ -18,7 +18,7 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case 'direct play': return TautulliTranscodeDecision.DIRECT_PLAY;
             case '': return TautulliTranscodeDecision.NULL;
         }
-        throw Exception('Unknown transcode decision: ${decision}');
+        return null;
     }
 
     /// The actual value/key for transcode decisions used in Tautulli.
@@ -29,6 +29,6 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case TautulliTranscodeDecision.DIRECT_PLAY: return 'direct play';
             case TautulliTranscodeDecision.NULL: return '';
         }
-        throw Exception('Invalid TautulliTranscodeDecision');
+        return null;
     }
 }

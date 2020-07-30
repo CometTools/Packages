@@ -35,6 +35,7 @@ part 'src/commands/system.dart';
 part 'src/commands/system/backup_config.dart';
 part 'src/commands/system/backup_db.dart';
 part 'src/commands/system/delete_cache.dart';
+part 'src/commands/system/delete_hosted_images.dart';
 part 'src/commands/system/delete_image_cache.dart';
 part 'src/commands/system/delete_login_log.dart';
 part 'src/commands/system/restart.dart';

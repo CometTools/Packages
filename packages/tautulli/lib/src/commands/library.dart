@@ -20,12 +20,7 @@ class TautulliCommandHandler_Library {
         @required int sectionId,
         String serverId,
         List<int> rowIds,
-    }) async => _commandDeleteAllLibraryHistory(
-        _client,
-        sectionId: sectionId,
-        serverId: serverId,
-        rowIds: rowIds,
-    );
+    }) async => _commandDeleteAllLibraryHistory(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
 
     /// Handler for [update_metadata_details](https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details).
     /// 
@@ -38,12 +33,7 @@ class TautulliCommandHandler_Library {
         @required String oldRatingKey,
         @required String newRatingKey,
         @required TautulliMediaType mediaType,
-    }) async => _commandUpdateMetadataDetails(
-        _client,
-        oldRatingKey: oldRatingKey,
-        newRatingKey: newRatingKey,
-        mediaType: mediaType,
-    );
+    }) async => _commandUpdateMetadataDetails(_client, oldRatingKey: oldRatingKey, newRatingKey: newRatingKey, mediaType: mediaType);
 
     /// Handler for [undelete_library](https://github.com/Tautulli/Tautulli/blob/master/API.md#undelete_library).
     /// 
@@ -54,9 +44,5 @@ class TautulliCommandHandler_Library {
     Future<void> undeleteLibrary({
         @required int sectionId,
         @required String sectionName,
-    }) async => _commandUndeleteLibrary(
-        _client,
-        sectionId: sectionId,
-        sectionName: sectionName,
-    );
+    }) async => _commandUndeleteLibrary(_client, sectionId: sectionId, sectionName: sectionName);
 }

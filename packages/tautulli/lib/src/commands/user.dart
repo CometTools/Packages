@@ -18,11 +18,7 @@ class TautulliCommandHandler_User {
     Future<void> deleteAllUserHistory({
         @required int userId,
         List<int> rowIds,
-    }) async => _commandDeleteAllUserHistory(
-        _client,
-        userId: userId,
-        rowIds: rowIds,
-    );
+    }) async => _commandDeleteAllUserHistory(_client, userId: userId, rowIds: rowIds);
 
     /// Handler for [undelete_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#undelete_user).
     /// 
@@ -33,9 +29,5 @@ class TautulliCommandHandler_User {
     Future<void> undeleteUser({
         @required String userId,
         @required String username,
-    }) async => _commandUndeleteUser(
-        _client,
-        userId: userId,
-        username: username,
-    );
+    }) async => _commandUndeleteUser(_client, userId: userId, username: username);
 }

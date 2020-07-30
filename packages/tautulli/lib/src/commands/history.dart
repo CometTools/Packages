@@ -16,8 +16,5 @@ class TautulliCommandHandler_History {
     /// - `rowIds` (required): List of row IDs to delete.
     Future<void> deleteHistory({
         @required List<int> rowIds,
-    }) async => _commandDeleteHistory(
-        _client,
-        rowIds: rowIds,
-    );
+    }) async => _commandDeleteHistory(_client, rowIds: rowIds);
 }

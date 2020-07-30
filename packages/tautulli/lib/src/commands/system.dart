@@ -24,6 +24,19 @@ class TautulliCommandHandler_System {
     /// Delete and recreate the cache directory.
     Future<void> deleteCache() async => _commandDeleteCache(_client);
 
+    /// Handler for [delete_hosted_images](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_hosted_images).
+    /// 
+    /// Delete the images uploaded to image hosting services.
+    /// 
+    /// - `ratingKey`: Identifier/rating key.
+    /// - `service`: A [TautulliImageHostService] object of the hosting service to delete from.
+    /// - `deleteAll`: True to delete all images from the service
+    Future<void> deleteHostedImages({
+        int ratingKey,
+        TautulliImageHostService service,
+        bool deleteAll,
+    }) async => _commandDeleteHostedImages(_client, ratingKey: ratingKey, service: service, deleteAll: deleteAll);
+
     /// Handler for [delete_image_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_image_cache).
     /// 
     /// Delete and recreate the image cache directory.
