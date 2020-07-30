@@ -15,7 +15,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [backup_config][api:backup_config]                                                | `system`        | `backupConfig()` |
 | [backup_db][api:backup_db]                                                        | `system`        | `backupDB()` |
 | [delete_all_library_history][api:delete_all_library_history]                      | `library`       | `deleteAllLibraryHistory()` |
-| [delete_all_user_history][api:delete_all_user_history]                            | X               | X |
+| [delete_all_user_history][api:delete_all_user_history]                            | `user`          | `deleteAllUserHistory()` |
 | [delete_cache][api:delete_cache]                                                  | `system`        | `deleteCache()` |
 | [delete_history][api:delete_history]                                              | X               | X |
 | [delete_hosted_images][api:delete_hosted_images]                                  | X               | X |

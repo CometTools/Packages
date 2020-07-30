@@ -10,6 +10,8 @@ import 'models.dart';
 part 'src/commands/activity.dart';
 part 'src/commands/activity/get_activity.dart';
 part 'src/commands/activity/terminate_session.dart';
+// History
+part 'src/commands/history.dart';
 // Library
 part 'src/commands/library.dart';
 part 'src/commands/library/delete_all_library_history.dart';
@@ -40,4 +42,5 @@ part 'src/commands/system/update.dart';
 part 'src/commands/system/update_check.dart';
 // User
 part 'src/commands/user.dart';
+part 'src/commands/user/delete_all_user_history.dart';
 part 'src/commands/user/undelete_user.dart';

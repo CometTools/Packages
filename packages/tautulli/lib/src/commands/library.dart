@@ -15,7 +15,7 @@ class TautulliCommandHandler_Library {
     /// 
     /// - `sectionId` (required): The ID of the Plex library section.
     /// - `serverId`: The Plex server identifier of the library section.
-    /// - `rowIds`: List of row IDs to delete.
+    /// - `rowIds`: Optional list of row IDs to delete.
     Future<void> deleteAllLibraryHistory({
         @required int sectionId,
         String serverId,

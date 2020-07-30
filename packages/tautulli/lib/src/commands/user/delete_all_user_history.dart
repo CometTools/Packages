@@ -1,17 +1,15 @@
 part of tautulli_commands;
 
-Future<void> _commandDeleteAllLibraryHistory(Dio client, {
-    @required int sectionId,
-    String serverId,
+Future<void> _commandDeleteAllUserHistory(Dio client, {
+    @required int userId,
     List<int> rowIds,
 }) async {
-    assert(sectionId != null, 'sectionId cannot be null');
+    assert(userId != null, 'userId cannot be null');
     try {
         Response response = await client.get('/',
             queryParameters: {
-                'cmd': 'delete_all_library_history',
-                'section_id': sectionId,
-                if(serverId != null) 'server_id': serverId,
+                'cmd': 'delete_all_user_history',
+                'user_id': userId,
                 if(rowIds != null && rowIds.isNotEmpty) 'row_ids': rowIds.join(","),
             },
         );
