@@ -1,3 +1,23 @@
+# 0.0.3
+- Commands: `refresh_users_list`
+- Commands: `refresh_libraries_list`
+- Commands: `delete_mobile_device`
+- Commands: `delete_newsletter`
+- Commands: `delete_newsletter_log`
+- Commands: `delete_notifier_log`
+- Commands: `delete_notifier`
+- Commands: `notify_recently_added`
+- Commands: `notify_newsletter`
+- Commands: `notify`
+- Commands: `get_whois_lookup`
+- Commands: `get_users_table`
+- Models: TautulliUsersTable
+- Models: TautulliUser
+- Models: TautulliWHOISInfo
+- Models: TautulliWHOISSubnet
+- Types: TautulliUsersOrderColumn
+- BREAKING: Changed `TautulliCommandHandler_User` to `TautulliCommandHandler_Users`
+- BREAKING: Changed `TautulliCommandHandler_Library` to `TautulliCommandHandler_Libraries`
 # 0.0.2
 - Commands: Added history command handler
 - Commands: `delete_all_user_history`
@@ -9,7 +29,7 @@
 - Commands: `get_geoip_lookup`
 - Commands: `get_histoy`
 - Models: TautulliHistory
-- Models: TautulliHistoryRecordgit push --set-upstream 
+- Models: TautulliHistoryRecord
 - Models: TautulliGeolocationInfo
 # 0.0.1
 - Models: Full deserialization of `TautulliSession`
