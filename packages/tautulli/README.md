@@ -24,7 +24,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [delete_login_log][api:delete_login_log]                                          | `system`        | `deleteLoginLog()` |
 | [delete_lookup_info][api:delete_lookup_info]                                      | `system`        | `deleteLookupInfo()` |
 | [delete_media_info_cache][api:delete_media_info_cache]                            | `system`        | `deleteMediaInfoCache()` |
-| [delete_mobile_device][api:delete_mobile_device]                                  | X               | X |
+| [delete_mobile_device][api:delete_mobile_device]                                  | `notifications` | `deleteMobileDevive()` |
 | [delete_newsletter][api:delete_newsletter]                                        | X               | X |
 | [delete_newsletter_log][api:delete_newsletter_log]                                | X               | X |
 | [delete_notification_log][api:delete_notification_log]                            | X               | X |

@@ -27,6 +27,15 @@ class TautulliCommandHandler_Notifications {
         @required int agentId,
     }) async => _commandAddNotifierConfig(_client, agentId: agentId);
 
+    /// Handler for [delete_mobile_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_mobile_device).
+    /// 
+    /// Remove a mobile device from the database.
+    /// 
+    /// - `mobileDeviceId` (required): The mobile device identifier to delete.
+    Future<void> deleteMobileDevice({
+        @required String mobileDeviceId,
+    }) async => _commandDeleteMobileDevice(_client, mobileDeviceId: mobileDeviceId);
+
     /// Handler for [register_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#register_device).
     /// 
     /// Registers the Tautulli Android App for notifications.
