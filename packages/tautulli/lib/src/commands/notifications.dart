@@ -54,6 +54,21 @@ class TautulliCommandHandler_Notifications {
         @required int notifierId,
     }) async => _commandDeleteNotifier(_client, notifierId: notifierId);
 
+    /// Handler for [notify_newsletter](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify_newsletter).
+    /// 
+    /// Send a newsletter using Tautulli.
+    /// 
+    /// - `newsletterId` (required): The newsletter identifier.
+    /// - `subject`: The subject of the newsletter.
+    /// - `body`: The body of the newsletter.
+    /// - `message`: The message of the newsletter.
+    Future<void> notifyNewsletter({
+        @required int newsletterId,
+        String subject,
+        String body,
+        String message,
+    }) async => _commandNotifyNewsletter(_client, newsletterId: newsletterId, subject: subject, body: body, message: message);
+
     /// Handler for [notify_recently_added](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify_recently_added).
     /// 
     /// Send a recently added notification using Tautulli.
