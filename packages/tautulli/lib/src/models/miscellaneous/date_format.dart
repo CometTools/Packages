@@ -23,8 +23,8 @@ class TautulliDateFormat {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
+    /// Deserialize a JSON map to a [TautulliDateFormat] object.
     factory TautulliDateFormat.fromJson(Map<String, dynamic> json) => _$TautulliDateFormatFromJson(json);
+    /// Serialize a [TautulliDateFormat] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliDateFormatToJson(this);
 }

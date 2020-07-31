@@ -17,11 +17,11 @@ class TautulliHistory {
     @JsonKey(name: 'draw')
     final int draw;
 
-    /// Total amount of records returned.
+    /// Total amount of records.
     @JsonKey(name: 'recordsTotal')
     final int recordsTotal;
 
-    /// The amount of records filtered.
+    /// The amount of records (filtered).
     @JsonKey(name: 'recordsFiltered')
     final int recordsFiltered;
 
@@ -46,9 +46,9 @@ class TautulliHistory {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
+    /// Deserialize a JSON map to a [TautulliHistory] object.
     factory TautulliHistory.fromJson(Map<String, dynamic> json) => _$TautulliHistoryFromJson(json);
+    /// Serialize a [TautulliHistory] to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliHistoryToJson(this);
 
     static List<TautulliHistoryRecord> _entriesToObjectArray(List<dynamic> entries) => entries.map((entry) => TautulliHistoryRecord.fromJson((entry as Map<String, dynamic>))).toList();

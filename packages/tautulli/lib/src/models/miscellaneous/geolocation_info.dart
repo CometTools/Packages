@@ -62,9 +62,9 @@ class TautulliGeolocationInfo {
     /// Returns a JSON-encoded string version of this object.
     @override
     String toString() => json.encode(this.toJson());
-
-    /** JSON (De)Serialization Related */
-
+    
+    /// Deserialize a JSON map to a [TautulliGeolocationInfo] object.
     factory TautulliGeolocationInfo.fromJson(Map<String, dynamic> json) => _$TautulliGeolocationInfoFromJson(json);
+    /// Serialize a [TautulliGeolocationInfo] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliGeolocationInfoToJson(this);
 }

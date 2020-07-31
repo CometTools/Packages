@@ -28,11 +28,11 @@ class Tautulli {
         @required this.httpClient,
         @required this.activity,
         @required this.history,
-        @required this.library,
+        @required this.libraries,
         @required this.miscellaneous,
         @required this.notifications,
         @required this.system,
-        @required this.user,
+        @required this.users,
     });
 
     /// Create a new Tautulli API connection manager to connection to your instance.
@@ -83,11 +83,11 @@ class Tautulli {
             httpClient: _dio,
             activity: TautulliCommandHandler_Activity(_dio),
             history: TautulliCommandHandler_History(_dio),
-            library: TautulliCommandHandler_Library(_dio),
+            libraries: TautulliCommandHandler_Libraries(_dio),
             miscellaneous: TautulliCommandHandler_Miscellaneous(_dio),
             notifications: TautulliCommandHandler_Notifications(_dio),
             system: TautulliCommandHandler_System(_dio),
-            user: TautulliCommandHandler_User(_dio),
+            users: TautulliCommandHandler_Users(_dio),
         );
     }
 
@@ -117,11 +117,11 @@ class Tautulli {
             httpClient: client,
             activity: TautulliCommandHandler_Activity(client),
             history: TautulliCommandHandler_History(client),
-            library: TautulliCommandHandler_Library(client),
+            libraries: TautulliCommandHandler_Libraries(client),
             miscellaneous: TautulliCommandHandler_Miscellaneous(client),
             notifications: TautulliCommandHandler_Notifications(client),
             system: TautulliCommandHandler_System(client),
-            user: TautulliCommandHandler_User(client),
+            users: TautulliCommandHandler_Users(client),
         );
     }
 
@@ -141,7 +141,7 @@ class Tautulli {
     /// Command handler for all library-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
-    final TautulliCommandHandler_Library library;
+    final TautulliCommandHandler_Libraries libraries;
     /// Command handler for all misc-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
@@ -157,5 +157,5 @@ class Tautulli {
     /// Command handler for all user-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
-    final TautulliCommandHandler_User user;
+    final TautulliCommandHandler_Users users;
 }

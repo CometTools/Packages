@@ -69,6 +69,16 @@ class TautulliCommandHandler_System {
     /// Delete the Tautulli login logs.
     Future<void> deleteLoginLog() async => _commandDeleteLoginLog(_client);
 
+    /// Handler for [delete_newsletter_log](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_newsletter_log).
+    /// 
+    /// Delete the Tautulli newsletter logs.
+    Future<void> deleteNewsletterLog() async => _commandDeleteNewsletterLog(_client);
+
+    /// Handler for [delete_notification_log](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_notification_log).
+    /// 
+    /// Delete the Tautulli notification logs.
+    Future<void> deleteNotificationLog() async => _commandDeleteNotificationLog(_client);
+
     /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
     /// 
     /// Restart Tautulli.

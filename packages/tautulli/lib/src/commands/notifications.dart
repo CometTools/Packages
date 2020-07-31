@@ -27,6 +27,76 @@ class TautulliCommandHandler_Notifications {
         @required int agentId,
     }) async => _commandAddNotifierConfig(_client, agentId: agentId);
 
+    /// Handler for [delete_mobile_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_mobile_device).
+    /// 
+    /// Remove a mobile device from the database.
+    /// 
+    /// - `mobileDeviceId` (required): The mobile device identifier to delete.
+    Future<void> deleteMobileDevice({
+        @required int mobileDeviceId,
+    }) async => _commandDeleteMobileDevice(_client, mobileDeviceId: mobileDeviceId);
+
+    /// Handler for [delete_newsletter](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_newsletter).
+    /// 
+    /// Remove a newsletter from the database.
+    /// 
+    /// - `newsletterId` (required): The newsletter identifier to delete.
+    Future<void> deleteNewsletter({
+        @required int newsletterId,
+    }) async => _commandDeleteNewsletter(_client, newsletterId: newsletterId);
+
+    /// Handler for [delete_notifier](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_notifier).
+    /// 
+    /// Remove a notifier from the database.
+    /// 
+    /// - `notifierId` (required): The notifier identifier to delete.
+    Future<void> deleteNotifier({
+        @required int notifierId,
+    }) async => _commandDeleteNotifier(_client, notifierId: notifierId);
+
+    /// Handler for [notify](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify).
+    /// 
+    /// Send a notification using Tautulli.
+    /// 
+    /// - `notifierId` (required): The notifier identifier.
+    /// - `subject` (required): The subject of the message.
+    /// - `body` (required): The body of the message.
+    /// - `headers`: The JSON headers for webhook notifications.
+    /// - `scriptArgs`: The arguments for script notifications.
+    Future<void> notify({
+        @required int notifierId,
+        @required String subject,
+        @required String body,
+        String headers,
+        String scriptArgs,
+    }) async => _commandNotify(_client, notifierId: notifierId, subject: subject, body: body, headers: headers, scriptArgs: scriptArgs);
+
+    /// Handler for [notify_newsletter](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify_newsletter).
+    /// 
+    /// Send a newsletter using Tautulli.
+    /// 
+    /// - `newsletterId` (required): The newsletter identifier.
+    /// - `subject`: The subject of the newsletter.
+    /// - `body`: The body of the newsletter.
+    /// - `message`: The message of the newsletter.
+    Future<void> notifyNewsletter({
+        @required int newsletterId,
+        String subject,
+        String body,
+        String message,
+    }) async => _commandNotifyNewsletter(_client, newsletterId: newsletterId, subject: subject, body: body, message: message);
+
+    /// Handler for [notify_recently_added](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify_recently_added).
+    /// 
+    /// Send a recently added notification using Tautulli.
+    /// 
+    /// - `ratingKey` (required): Identifier/rating key for the content that was added.
+    /// - `notifierId`: The identifier of the notification agent. If not supplied, the notification will send on all enabled agents.
+    Future<void> notifyRecentlyAdded({
+        @required int ratingKey,
+        int notifierId,
+    }) async => _commandNotifyRecentlyAdded(_client, ratingKey: ratingKey, notifierId: notifierId);
+
     /// Handler for [register_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#register_device).
     /// 
     /// Registers the Tautulli Android App for notifications.

@@ -2,12 +2,12 @@ part of tautulli_commands;
 
 /// Facilitates, encapsulates, and manages individual calls related to libraries within Tautulli.
 /// 
-/// [TautulliCommandHandler_Library] internally handles routing the HTTP client to the API calls.
-class TautulliCommandHandler_Library {
+/// [TautulliCommandHandler_Libraries] internally handles routing the HTTP client to the API calls.
+class TautulliCommandHandler_Libraries {
     final Dio _client;
 
     /// Create a library command handler using an initialized [Dio] client.
-    TautulliCommandHandler_Library(this._client);
+    TautulliCommandHandler_Libraries(this._client);
 
     /// Handler for [delete_all_library_history](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_all_library_history).
     /// 
@@ -34,6 +34,11 @@ class TautulliCommandHandler_Library {
         String serverId,
         List<int> rowIds,
     }) async => _commandDeleteLibrary(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
+
+    /// Handler for [refresh_libraries_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_libraries_list).
+    /// 
+    /// Refresh the Tautulli libraries list.
+    Future<void> refreshLibrariesList() async => _commandRefreshLibrariesList(_client);
 
     /// Handler for [update_metadata_details](https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details).
     /// 
