@@ -1,9 +1,14 @@
 part of tautulli_commands;
 
-Future<void> _commandUpdate(Dio client) async {
+Future<void> _commandDeleteHistory(Dio client, {
+    @required List<int> rowIds,
+}) async {
+    assert(rowIds != null, 'rowIds cannot be null.');
+    assert(rowIds.isNotEmpty, 'rowIds cannot be empty.');
     Response response = await client.get('/',
         queryParameters: {
-            'cmd': 'update',
+            'cmd': 'delete_history',
+            'row_ids': rowIds.join(","),
         },
     );
     switch((response.data['response']['result'] as String)) {

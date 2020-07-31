@@ -1,9 +1,12 @@
 part of tautulli_commands;
 
-Future<void> _commandUpdate(Dio client) async {
+Future<void> _commandDeleteMediaInfoCache(Dio client, {
+    @required int sectionId,
+}) async {
     Response response = await client.get('/',
         queryParameters: {
-            'cmd': 'update',
+            'cmd': 'delete_media_info_cache',
+            if(sectionId != null) 'section_id': sectionId,
         },
     );
     switch((response.data['response']['result'] as String)) {

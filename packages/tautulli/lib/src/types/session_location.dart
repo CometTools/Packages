@@ -16,7 +16,7 @@ extension TautulliSessionLocationExtension on TautulliSessionLocation {
             case 'wan': return TautulliSessionLocation.WAN;
             case '': return TautulliSessionLocation.NULL;
         }
-        throw Exception('Unknown session location: ${location}');
+        return null;
     }
 
     /// The actual value/key for session locations used in Tautulli.
@@ -26,6 +26,6 @@ extension TautulliSessionLocationExtension on TautulliSessionLocation {
             case TautulliSessionLocation.WAN: return 'wan';
             case TautulliSessionLocation.NULL: return '';
         }
-        throw Exception('Invalid TautulliSessionLocation');
+        return null;
     }
 }

@@ -19,11 +19,7 @@ class TautulliCommandHandler_Activity {
     Future<TautulliActivity> getActivity({
         int sessionKey,
         String sessionId,
-    }) async => _commandGetActivity(
-        _client,
-        sessionKey: sessionKey,
-        sessionId: sessionId,
-    );
+    }) async => _commandGetActivity(_client, sessionKey: sessionKey, sessionId: sessionId);
 
     /// Handler for [terminate_session](https://github.com/Tautulli/Tautulli/blob/master/API.md#terminate_session).
     /// 
@@ -36,10 +32,5 @@ class TautulliCommandHandler_Activity {
         @required int sessionKey,
         @required String sessionId,
         String message,
-    }) async => _commandTerminateSession(
-        _client,
-        sessionKey: sessionKey,
-        sessionId: sessionId,
-        message: message,
-    );
+    }) async => _commandTerminateSession(_client, sessionKey: sessionKey, sessionId: sessionId, message: message);
 }

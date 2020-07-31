@@ -20,6 +20,6 @@ extension TautulliSectionTypeExtension on TautulliSectionType {
             case TautulliSectionType.PHOTO: return 'photo';
             case TautulliSectionType.NULL: return '';
         }
-        throw Exception('Invalid TautulliSectionType');
+        return null;
     }
 }

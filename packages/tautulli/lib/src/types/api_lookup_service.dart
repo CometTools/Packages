@@ -16,8 +16,8 @@ extension TautulliAPILookupServiceExtension on TautulliAPILookupService {
             case TautulliAPILookupService.THEMOVIEDB: return 'themoviedb';
             case TautulliAPILookupService.TVMAZE: return 'tvmaze';
             case TautulliAPILookupService.MUSICBRAINZ: return 'musicbrainz';
-            case TautulliAPILookupService.NULL: return '';
+            case TautulliAPILookupService.NULL: return ''; 
         }
-        throw Exception('Invalid TautulliAPILookupService');
+        return null;
     }
 }

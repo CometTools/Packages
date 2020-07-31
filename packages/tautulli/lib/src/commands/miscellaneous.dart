@@ -18,4 +18,11 @@ class TautulliCommandHandler_Miscellaneous {
     /// 
     /// Get the date and time formats used by Tautulli.
     Future<TautulliDateFormat> getDateFormats() async => _commandGetDateFormats(_client);
+
+    /// Handler for [get_geoip_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_geoip_lookup).
+    /// 
+    /// Get the geolocation info for an IP address.
+    Future<TautulliGeolocationInfo> getGeoIPLookup({
+        @required String ipAddress,
+    }) async => _commandGetGeoIPLookup(_client, ipAddress: ipAddress);
 }

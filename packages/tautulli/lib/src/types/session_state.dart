@@ -18,7 +18,7 @@ extension TautulliSessionStateExtension on TautulliSessionState {
             case 'paused': return TautulliSessionState.PAUSED;
             case '': return TautulliSessionState.NULL;
         }
-        throw Exception('Unknown session state: ${state}');
+        return null;
     }
 
     /// The actual value/key for session states used in Tautulli.
@@ -29,6 +29,6 @@ extension TautulliSessionStateExtension on TautulliSessionState {
             case TautulliSessionState.BUFFERING: return 'buffering';
             case TautulliSessionState.NULL: return '';
         }
-        throw Exception('Invalid TautulliSessionState');
+        return null;
     }
 }

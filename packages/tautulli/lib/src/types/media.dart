@@ -9,6 +9,7 @@ enum TautulliMediaType {
     ARTIST,
     ALBUM,
     TRACK,
+    LIVE,
     NULL,
 }
 
@@ -24,9 +25,10 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case 'artist': return TautulliMediaType.ARTIST;
             case 'album': return TautulliMediaType.ALBUM;
             case 'track': return TautulliMediaType.TRACK;
+            case 'live': return TautulliMediaType.LIVE;
             case '': return TautulliMediaType.NULL;
         }
-        throw Exception('Unknown media type: ${type}');
+        return null;
     }
 
     /// The actual value/key for media types used in Tautulli.
@@ -39,8 +41,9 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case TautulliMediaType.ARTIST: return 'artist';
             case TautulliMediaType.ALBUM: return 'album';
             case TautulliMediaType.TRACK: return 'track';
+            case TautulliMediaType.LIVE: return 'live';
             case TautulliMediaType.NULL: return '';
         }
-        throw Exception('Invalid TautulliMediaType');
+        return null;
     }
 }

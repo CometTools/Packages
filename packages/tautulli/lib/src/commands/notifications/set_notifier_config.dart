@@ -6,24 +6,20 @@ Future<void> _commandSetNotifierConfig(Dio client, {
     @required Map<String, dynamic> notifierOptions,
 
 }) async {
-    assert(agentId != null, 'agentId cannot be null');
-    assert(notifierId != null, 'notifierId cannot be null');
-    assert(notifierOptions != null, 'notifierOptions cannot be null');
-    try {
-        Response response = await client.get('/',
-            queryParameters: {
-                'cmd': 'set_notifier_config',
-                'agent_id': agentId,
-                'notifier_id': notifierId,
-                ...notifierOptions,
-            },
-        );
-        switch((response.data['response']['result'] as String)) {
-            case 'success': return;
-            case 'error':
-            default: throw Exception(throw Exception(response.data['response']['message']));
-        }
-    } catch(error, stack) {
-        return Future.error(error, stack);
+    assert(agentId != null, 'agentId cannot be null.');
+    assert(notifierId != null, 'notifierId cannot be null.');
+    assert(notifierOptions != null, 'notifierOptions cannot be null.');
+    Response response = await client.get('/',
+        queryParameters: {
+            'cmd': 'set_notifier_config',
+            'agent_id': agentId,
+            'notifier_id': notifierId,
+            ...notifierOptions,
+        },
+    );
+    switch((response.data['response']['result'] as String)) {
+        case 'success': return;
+        case 'error':
+        default: throw Exception(throw Exception(response.data['response']['message']));
     }
 }

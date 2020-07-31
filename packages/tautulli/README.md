@@ -7,23 +7,23 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 
 ## Implementation Status
 
-| API Method | Category | Command |
-| :--------- | :------: | ------: |
+| API Command | Category | Method |
+| :---------- | :------: | -----: |
 | [add_newsletter_config][api:add_newsletter_config]                                | `notifications` | `addNewsletterConfig()` |
 | [add_notifier_config][api:add_notifier_config]                                    | `notifications` | `addNotifierConfig()` |
 | [arnold][api:arnold]                                                              | `miscellaneous` | `arnold()` |
 | [backup_config][api:backup_config]                                                | `system`        | `backupConfig()` |
 | [backup_db][api:backup_db]                                                        | `system`        | `backupDB()` |
 | [delete_all_library_history][api:delete_all_library_history]                      | `library`       | `deleteAllLibraryHistory()` |
-| [delete_all_user_history][api:delete_all_user_history]                            | X               | X |
+| [delete_all_user_history][api:delete_all_user_history]                            | `user`          | `deleteAllUserHistory()` |
 | [delete_cache][api:delete_cache]                                                  | `system`        | `deleteCache()` |
-| [delete_history][api:delete_history]                                              | X               | X |
-| [delete_hosted_images][api:delete_hosted_images]                                  | X               | X |
+| [delete_history][api:delete_history]                                              | `history`       | `deleteHistory()` |
+| [delete_hosted_images][api:delete_hosted_images]                                  | `system`        | `deleteHostedImages()` |
 | [delete_image_cache][api:delete_image_cache]                                      | `system`        | `deleteImageCache()` |
-| [delete_library][api:delete_library]                                              | X               | X |
+| [delete_library][api:delete_library]                                              | `library`       | `deleteLibrary()` |
 | [delete_login_log][api:delete_login_log]                                          | `system`        | `deleteLoginLog()` |
-| [delete_lookup_info][api:delete_lookup_info]                                      | X               | X |
-| [delete_media_info_cache][api:delete_media_info_cache]                            | X               | X |
+| [delete_lookup_info][api:delete_lookup_info]                                      | `system`        | `deleteLookupInfo()` |
+| [delete_media_info_cache][api:delete_media_info_cache]                            | `system`        | `deleteMediaInfoCache()` |
 | [delete_mobile_device][api:delete_mobile_device]                                  | X               | X |
 | [delete_newsletter][api:delete_newsletter]                                        | X               | X |
 | [delete_newsletter_log][api:delete_newsletter_log]                                | X               | X |
@@ -43,8 +43,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_activity][api:get_activity]                                                  | `activity`      | `getActivity()` |
 | [get_apikey][api:get_apikey]                                                      | **N/A**         | **N/A** |
 | [get_date_formats][api:get_date_formats]                                          | `miscellaneous` | `getDateFormats()` |
-| [get_geoip_lookup][api:get_geoip_lookup]                                          | X               | X |
-| [get_history][api:get_history]                                                    | X               | X |
+| [get_geoip_lookup][api:get_geoip_lookup]                                          | `miscellaneous` | `getGeoIPLookup()` |
+| [get_history][api:get_history]                                                    | `history`       | `getHistory()` |
 | [get_home_stats][api:get_home_stats]                                              | X               | X |
 | [get_libraries][api:get_libraries]                                                | X               | X |
 | [get_libraries_table][api:get_libraries_table]                                    | X               | X |
