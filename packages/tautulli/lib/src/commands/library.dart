@@ -35,6 +35,11 @@ class TautulliCommandHandler_Library {
         List<int> rowIds,
     }) async => _commandDeleteLibrary(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
 
+    /// Handler for [refresh_libraries_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_libraries_list).
+    /// 
+    /// Refresh the Tautulli libraries list.
+    Future<void> refreshLibrariesList() async => _commandRefreshLibrariesList(_client);
+
     /// Handler for [update_metadata_details](https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details).
     /// 
     /// Update the metadata in the Tautulli database by matching rating keys. Also updates all parents or children of the media item if it is a show/season/episode or artist/album/track.

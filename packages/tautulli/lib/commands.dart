@@ -19,6 +19,7 @@ part 'src/commands/history/get_history.dart';
 part 'src/commands/library.dart';
 part 'src/commands/library/delete_all_library_history.dart';
 part 'src/commands/library/delete_library.dart';
+part 'src/commands/library/refresh_libraries_list.dart';
 part 'src/commands/library/update_metadata_details.dart';
 part 'src/commands/library/undelete_library.dart';
 // Miscellaneous
