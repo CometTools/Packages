@@ -1,6 +1,6 @@
 part of tautulli_types;
 
-/// Enumerator to handle all API lookup services
+/// Enumerator to handle all API lookup services available in Tautulli.
 enum TautulliAPILookupService {
     THEMOVIEDB,
     TVMAZE,
