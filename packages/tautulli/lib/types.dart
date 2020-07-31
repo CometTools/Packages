@@ -11,3 +11,4 @@ part 'src/types/session_location.dart';
 part 'src/types/session_state.dart';
 part 'src/types/transcode_decision.dart';
 part 'src/types/watched_status.dart';
+part 'src/types/users_order_column.dart';

@@ -77,15 +77,15 @@ class TautulliHistoryRecord {
     final TautulliMediaType mediaType;
 
     /// The content's unique ID from Plex.
-    @JsonKey(name: 'rating_key', fromJson: _ensureIntegerFromJson, toJson: _originalTypeToJson)
+    @JsonKey(name: 'rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
     final int ratingKey;
 
     /// The content's parent's unique ID from Plex.
-    @JsonKey(name: 'parent_rating_key', fromJson: _ensureIntegerFromJson, toJson: _originalTypeToJson)
+    @JsonKey(name: 'parent_rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
     final int parentRatingKey;
 
     /// The content's grandparent's unique ID from Plex.
-    @JsonKey(name: 'grandparent_rating_key', fromJson: _ensureIntegerFromJson, toJson: _originalTypeToJson)
+    @JsonKey(name: 'grandparent_rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
     final int grandparentRatingKey;
 
     /// The full title of the content.
@@ -113,11 +113,11 @@ class TautulliHistoryRecord {
     final int year;
 
     /// The media index of the content.
-    @JsonKey(name: 'media_index', fromJson: _ensureIntegerFromJson, toJson: _originalTypeToJson)
+    @JsonKey(name: 'media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
     final int mediaIndex;
 
     /// The content's parent's media index.
-    @JsonKey(name: 'parent_media_index', fromJson: _ensureIntegerFromJson, toJson: _originalTypeToJson)
+    @JsonKey(name: 'parent_media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
     final int parentMediaIndex;
 
     /// Thumbnail path for the content.
@@ -212,14 +212,4 @@ class TautulliHistoryRecord {
     factory TautulliHistoryRecord.fromJson(Map<String, dynamic> json) => _$TautulliHistoryRecordFromJson(json);
     /// Serialize a [TautulliHistoryRecord] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliHistoryRecordToJson(this);
-
-    /// Ensures that the passed in value results in an integer.
-    static int _ensureIntegerFromJson(dynamic value) {
-        if(value.runtimeType == int) return value;
-        if(value.runtimeType == String) return int.tryParse(value);
-        return null;
-    }
-
-    /// Sometimes a string is returned when the integer value is null. This ensures when calling `toJson` the original value is returned.
-    static dynamic _originalTypeToJson(int value) => value != null ? value : '';
 }

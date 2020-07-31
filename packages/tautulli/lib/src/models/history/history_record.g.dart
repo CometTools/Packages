@@ -31,21 +31,20 @@ TautulliHistoryRecord _$TautulliHistoryRecordFromJson(
     live: TautulliUtilities.integerToBoolean(json['live'] as int),
     mediaType:
         TautulliUtilities.mediaTypeToObject(json['media_type'] as String),
-    ratingKey: TautulliHistoryRecord._ensureIntegerFromJson(json['rating_key']),
+    ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),
     parentRatingKey:
-        TautulliHistoryRecord._ensureIntegerFromJson(json['parent_rating_key']),
-    grandparentRatingKey: TautulliHistoryRecord._ensureIntegerFromJson(
-        json['grandparent_rating_key']),
+        TautulliUtilities.ensureIntegerFromJson(json['parent_rating_key']),
+    grandparentRatingKey:
+        TautulliUtilities.ensureIntegerFromJson(json['grandparent_rating_key']),
     fullTitle: json['full_title'] as String,
     title: json['title'] as String,
     parentTitle: json['parent_title'] as String,
     grandparentTitle: json['grandparent_title'] as String,
     originalTitle: json['original_title'] as String,
     year: json['year'] as int,
-    mediaIndex:
-        TautulliHistoryRecord._ensureIntegerFromJson(json['media_index']),
-    parentMediaIndex: TautulliHistoryRecord._ensureIntegerFromJson(
-        json['parent_media_index']),
+    mediaIndex: TautulliUtilities.ensureIntegerFromJson(json['media_index']),
+    parentMediaIndex:
+        TautulliUtilities.ensureIntegerFromJson(json['parent_media_index']),
     thumb: json['thumb'] as String,
     originallyAvailableAt: json['originally_available_at'] as String,
     guid: json['guid'] as String,
@@ -84,22 +83,17 @@ Map<String, dynamic> _$TautulliHistoryRecordToJson(
       'ip_address': instance.ipAddress,
       'live': TautulliUtilities.booleanToInteger(instance.live),
       'media_type': TautulliUtilities.mediaTypeToString(instance.mediaType),
-      'rating_key':
-          TautulliHistoryRecord._originalTypeToJson(instance.ratingKey),
-      'parent_rating_key':
-          TautulliHistoryRecord._originalTypeToJson(instance.parentRatingKey),
-      'grandparent_rating_key': TautulliHistoryRecord._originalTypeToJson(
-          instance.grandparentRatingKey),
+      'rating_key': instance.ratingKey,
+      'parent_rating_key': instance.parentRatingKey,
+      'grandparent_rating_key': instance.grandparentRatingKey,
       'full_title': instance.fullTitle,
       'title': instance.title,
       'parent_title': instance.parentTitle,
       'grandparent_title': instance.grandparentTitle,
       'original_title': instance.originalTitle,
       'year': instance.year,
-      'media_index':
-          TautulliHistoryRecord._originalTypeToJson(instance.mediaIndex),
-      'parent_media_index':
-          TautulliHistoryRecord._originalTypeToJson(instance.parentMediaIndex),
+      'media_index': instance.mediaIndex,
+      'parent_media_index': instance.parentMediaIndex,
       'thumb': instance.thumb,
       'originally_available_at': instance.originallyAvailableAt,
       'guid': instance.guid,

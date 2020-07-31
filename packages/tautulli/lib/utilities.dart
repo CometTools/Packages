@@ -145,4 +145,21 @@ class TautulliUtilities {
     static TautulliWatchedStatus watchedStatusToObject(num watched) => TautulliWatchedStatus.WATCHED.from(watched);
     /// Converts a [TautulliWatchedStatus] object back to its double representation.
     static num watchedStatusToDouble(TautulliWatchedStatus watched) => watched?.value;
+
+    /**
+     * Ensure typing
+     */
+
+    /// Ensures that the passed in value results in an integer.
+    /// 
+    /// - integer => original value
+    /// - string  => try parsing string, else null 
+    /// - boolean => true = 1, false = 0
+    /// - null => null
+    static int ensureIntegerFromJson(dynamic value) {
+        if(value.runtimeType == int) return value;
+        if(value.runtimeType == String) return int.tryParse(value);
+        if(value.runtimeType == bool) return value ? 1 : 0;
+        return null;
+    }
 }

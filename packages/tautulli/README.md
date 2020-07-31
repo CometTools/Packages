@@ -14,13 +14,13 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [arnold][api:arnold]                                                              | `miscellaneous`       | `arnold()` |
 | [backup_config][api:backup_config]                                                | `system`              | `backupConfig()` |
 | [backup_db][api:backup_db]                                                        | `system`              | `backupDB()` |
-| [delete_all_library_history][api:delete_all_library_history]                      | `library`             | `deleteAllLibraryHistory()` |
-| [delete_all_user_history][api:delete_all_user_history]                            | `user`                | `deleteAllUserHistory()` |
+| [delete_all_library_history][api:delete_all_library_history]                      | `libraries`           | `deleteAllLibraryHistory()` |
+| [delete_all_user_history][api:delete_all_user_history]                            | `users`               | `deleteAllUserHistory()` |
 | [delete_cache][api:delete_cache]                                                  | `system`              | `deleteCache()` |
 | [delete_history][api:delete_history]                                              | `history`             | `deleteHistory()` |
 | [delete_hosted_images][api:delete_hosted_images]                                  | `system`              | `deleteHostedImages()` |
 | [delete_image_cache][api:delete_image_cache]                                      | `system`              | `deleteImageCache()` |
-| [delete_library][api:delete_library]                                              | `library`             | `deleteLibrary()` |
+| [delete_library][api:delete_library]                                              | `libraries`           | `deleteLibrary()` |
 | [delete_login_log][api:delete_login_log]                                          | `system`              | `deleteLoginLog()` |
 | [delete_lookup_info][api:delete_lookup_info]                                      | `system`              | `deleteLookupInfo()` |
 | [delete_media_info_cache][api:delete_media_info_cache]                            | `system`              | `deleteMediaInfoCache()` |
@@ -95,15 +95,15 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_user_player_stats][api:get_user_player_stats]                                | X                     | X |
 | [get_user_watch_time_stats][api:get_user_watch_time_stats]                        | X                     | X |
 | [get_users][api:get_users]                                                        | X                     | X |
-| [get_users_table][api:get_users_table]                                            | X                     | X |
+| [get_users_table][api:get_users_table]                                            | `users`               | `getUsersTable()` |
 | [get_whois_lookup][api:get_whois_lookup]                                          | `miscellaneous`       | `getWHOISLookup()` |
 | [import_database][api:import_database]                                            | **No Implementation** | **No Implementation** |
 | [notify][api:notify]                                                              | `notifications`       | `notify()` |
 | [notify_newsletter][api:notify_newsletter]                                        | `notifications`       | `notifyNewsletter()` |
 | [notify_recently_added][api:notify_recently_added]                                | `notifications`       | `notifyRecentlyAdded()` |
 | [pms_image_proxy][api:pms_image_proxy]                                            | X                     | X |
-| [refresh_libraries_list][api:refresh_libraries_list]                              | `library`             | `refreshLibrariesList()` |
-| [refresh_users_list][api:refresh_users_list]                                      | `user`                | `refreshUsersList()` |
+| [refresh_libraries_list][api:refresh_libraries_list]                              | `libraries`           | `refreshLibrariesList()` |
+| [refresh_users_list][api:refresh_users_list]                                      | `users`               | `refreshUsersList()` |
 | [register_device][api:register_device]                                            | `notifications`       | `registerDevice()` |
 | [restart][api:restart]                                                            | `system`              | `restart()` |
 | [search][api:search]                                                              | X                     | X |
@@ -113,11 +113,11 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [sql][api:sql]                                                                    | **No Implementation** | **No Implementation** |
 | [status][api:status]                                                              | `system`              | `status()` |
 | [terminate_session][api:terminate_session]                                        | `activity`            | `terminateSession()` |
-| [undelete_library][api:undelete_library]                                          | `library`             | `undeleteLibrary()` |
-| [undelete_user][api:undelete_user]                                                | `user`                | `undeleteUser()` |
+| [undelete_library][api:undelete_library]                                          | `libraries`           | `undeleteLibrary()` |
+| [undelete_user][api:undelete_user]                                                | `users`               | `undeleteUser()` |
 | [update][api:update]                                                              | `system`              | `update()` |
 | [update_check][api:update_check]                                                  | `system`              | `updateCheck()` |
-| [update_metadata_details][api:update_metadata_details]                            | `library`             | `updateMetadataDetails()` |
+| [update_metadata_details][api:update_metadata_details]                            | `libraries`           | `updateMetadataDetails()` |
 
 [api:add_newsletter_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_newsletter_config
 [api:add_notifier_config]: https://github.com/Tautulli/Tautulli/blob/master/API.md#add_notifier_config

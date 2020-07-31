@@ -57,8 +57,6 @@ class TautulliActivity {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
     /// Deserialize a JSON map to a [TautulliActivity] object.
     factory TautulliActivity.fromJson(Map<String, dynamic> json) => _$TautulliActivityFromJson(json);
     /// Serialize a [TautulliActivity] object to a JSON map.

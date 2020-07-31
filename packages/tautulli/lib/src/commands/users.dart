@@ -2,12 +2,12 @@ part of tautulli_commands;
 
 /// Facilitates, encapsulates, and manages individual calls related to users within Tautulli.
 /// 
-/// [TautulliCommandHandler_User] internally handles routing the HTTP client to the API calls.
-class TautulliCommandHandler_User {
+/// [TautulliCommandHandler_Users] internally handles routing the HTTP client to the API calls.
+class TautulliCommandHandler_Users {
     final Dio _client;
 
     /// Create a user command handler using an initialized [Dio] client.
-    TautulliCommandHandler_User(this._client);
+    TautulliCommandHandler_Users(this._client);
 
     /// Handler for [delete_all_user_history](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_all_user_history).
     /// 
@@ -19,6 +19,33 @@ class TautulliCommandHandler_User {
         @required int userId,
         List<int> rowIds,
     }) async => _commandDeleteAllUserHistory(_client, userId: userId, rowIds: rowIds);
+
+    /// Handler for [get_users_table](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_users_table).
+    /// 
+    /// Get the data on Tautulli users table.
+    /// 
+    /// - `grouping`: Group users.
+    /// - `orderColumn`: The column order key for sorting the user records.
+    /// - `orderDirection`: The direction inwhich to sort the user records.
+    /// - `start`: Which row to start at (default: 0).
+    /// - `length`: Number of records to return (default: 25).
+    /// - `search`: A string to search for.
+    Future<TautulliUsersTable> getUsersTable({
+        bool grouping,
+        TautulliUsersOrderColumn orderColumn,
+        TautulliOrderDirection orderDirection,
+        int start,
+        int length,
+        String search,
+    }) async => _commandGetUsersTable(
+        _client,
+        grouping: grouping,
+        orderColumn: orderColumn,
+        orderDirection: orderDirection,
+        start: start,
+        length: length,
+        search: search,
+    );
 
     /// Handler for [refresh_users_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_users_list).
     /// 

@@ -26,8 +26,6 @@ class TautulliWHOISInfo {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
     /// Deserialize a JSON map to a [TautulliWHOISInfo] object.
     factory TautulliWHOISInfo.fromJson(Map<String, dynamic> json) => _$TautulliWHOISInfoFromJson(json);
     /// Serialize a [TautulliWHOISInfo] object to a JSON map.

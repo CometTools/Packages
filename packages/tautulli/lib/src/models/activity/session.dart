@@ -488,7 +488,7 @@ class TautulliSession {
     @JsonKey(name: 'deleted_user', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
     final bool deletedUser;
 
-    /// Allow guest?
+    /// Does the user have guest access to Tautulli?
     @JsonKey(name: 'allow_guest', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
     final bool allowGuest;
 
