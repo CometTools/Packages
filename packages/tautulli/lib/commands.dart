@@ -47,6 +47,8 @@ part 'src/commands/system/delete_image_cache.dart';
 part 'src/commands/system/delete_login_log.dart';
 part 'src/commands/system/delete_lookup_info.dart';
 part 'src/commands/system/delete_media_info_cache.dart';
+part 'src/commands/system/delete_newsletter_log.dart';
+part 'src/commands/system/delete_notification_log.dart';
 part 'src/commands/system/restart.dart';
 part 'src/commands/system/status.dart';
 part 'src/commands/system/update.dart';
