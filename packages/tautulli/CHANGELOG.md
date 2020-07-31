@@ -1,5 +1,5 @@
 # 0.0.2
-- Commands: `Added history command handler`
+- Commands: Added history command handler
 - Commands: `delete_all_user_history`
 - Commands: `delete_history`
 - Commands: `delete_hosted_images`
