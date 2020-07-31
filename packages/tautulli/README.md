@@ -96,8 +96,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_user_watch_time_stats][api:get_user_watch_time_stats]                        | X                     | X |
 | [get_users][api:get_users]                                                        | X                     | X |
 | [get_users_table][api:get_users_table]                                            | X                     | X |
-| [get_whois_lookup][api:get_whois_lookup]                                          | X                     | X |
-| [import_database][api:import_database]                                            | X                     | X |
+| [get_whois_lookup][api:get_whois_lookup]                                          | `miscellaneous`       | `getWHOISLookup()` |
+| [import_database][api:import_database]                                            | **No Implementation** | **No Implementation** |
 | [notify][api:notify]                                                              | `notifications`       | `notify()` |
 | [notify_newsletter][api:notify_newsletter]                                        | `notifications`       | `notifyNewsletter()` |
 | [notify_recently_added][api:notify_recently_added]                                | `notifications`       | `notifyRecentlyAdded()` |

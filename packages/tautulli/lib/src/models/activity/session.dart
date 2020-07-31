@@ -1079,8 +1079,8 @@ class TautulliSession {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
+    /// Deserialize a JSON map to a [TautulliSession] object.
     factory TautulliSession.fromJson(Map<String, dynamic> json) => _$TautulliSessionFromJson(json);
+    /// Serialize a [TautulliSession] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliSessionToJson(this);
 }

@@ -46,9 +46,9 @@ class TautulliHistory {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
+    /// Deserialize a JSON map to a [TautulliHistory] object.
     factory TautulliHistory.fromJson(Map<String, dynamic> json) => _$TautulliHistoryFromJson(json);
+    /// Serialize a [TautulliHistory] to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliHistoryToJson(this);
 
     static List<TautulliHistoryRecord> _entriesToObjectArray(List<dynamic> entries) => entries.map((entry) => TautulliHistoryRecord.fromJson((entry as Map<String, dynamic>))).toList();

@@ -5,7 +5,7 @@ import 'package:tautulli/types.dart';
 
 /// [TautulliUtilities] gives access to static, functional operations. These are mainly used for the (de)serialization of received JSON data.
 /// 
-/// [TautulliUtilities] can not be initialized, all available functions are available statically.
+/// [TautulliUtilities] cannot be initialized, all available functions are available statically.
 class TautulliUtilities {
     TautulliUtilities._();
 

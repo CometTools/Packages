@@ -59,7 +59,9 @@ class TautulliActivity {
 
     /** JSON (De)Serialization Related */
 
+    /// Deserialize a JSON map to a [TautulliActivity] object.
     factory TautulliActivity.fromJson(Map<String, dynamic> json) => _$TautulliActivityFromJson(json);
+    /// Serialize a [TautulliActivity] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliActivityToJson(this);
 
     static List<TautulliSession> _sessionsToObjectArray(List<dynamic> sessions) => sessions.map((session) => TautulliSession.fromJson((session as Map<String, dynamic>))).toList();

@@ -22,7 +22,18 @@ class TautulliCommandHandler_Miscellaneous {
     /// Handler for [get_geoip_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_geoip_lookup).
     /// 
     /// Get the geolocation info for an IP address.
+    /// 
+    /// - `ipAddress` (required): The IP address to lookup.
     Future<TautulliGeolocationInfo> getGeoIPLookup({
         @required String ipAddress,
     }) async => _commandGetGeoIPLookup(_client, ipAddress: ipAddress);
+
+    /// Handler for [get_whois_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_whois_lookup).
+    /// 
+    /// Get the connection info for an IP address.
+    /// 
+    /// - `ipAddress` (required): The IP address to lookup.
+    Future<TautulliWHOISInfo> getWHOISLookup({
+        @required String ipAddress,
+    }) async => _commandGetWHOISLookup(_client, ipAddress: ipAddress);
 }

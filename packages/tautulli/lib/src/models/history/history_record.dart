@@ -208,9 +208,9 @@ class TautulliHistoryRecord {
     @override
     String toString() => json.encode(this.toJson());
 
-    /** JSON (De)Serialization Related */
-
+    /// Deserialize a JSON map to a [TautulliHistoryRecord] object.
     factory TautulliHistoryRecord.fromJson(Map<String, dynamic> json) => _$TautulliHistoryRecordFromJson(json);
+    /// Serialize a [TautulliHistoryRecord] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliHistoryRecordToJson(this);
 
     /// Ensures that the passed in value results in an integer.
