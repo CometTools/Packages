@@ -9,7 +9,7 @@ part 'session.g.dart';
 @JsonSerializable()
 class TautulliSession {
     /// Type of media in this session.
-    @JsonKey(name: 'media_type', toJson: _mediaTypeToString, fromJson: _mediaTypeToObject)
+    @JsonKey(name: 'media_type', toJson: TautulliUtilities.mediaTypeToString, fromJson: TautulliUtilities.mediaTypeToObject)
     final TautulliMediaType mediaType;
 
     /// Session's key/identifier.
@@ -128,9 +128,9 @@ class TautulliSession {
     @JsonKey(name: 'user_rating', toJson: TautulliUtilities.doubleToString, fromJson: TautulliUtilities.stringToDouble)
     final double userRating;
 
-    /// Duration of the content, in milliseconds.
-    @JsonKey(name: 'duration', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
-    final int duration;
+    /// Duration of the content.
+    @JsonKey(name: 'duration', toJson: TautulliUtilities.durationToMillisecondsString, fromJson: TautulliUtilities.millisecondsStringToDuration)
+    final Duration duration;
 
     /// Year the content was released.
     @JsonKey(name: 'year', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
@@ -165,15 +165,15 @@ class TautulliSession {
 
     /// The date on which the content was added to Plex.
     /// This is typically read/stored as the file creation date within Plex.
-    @JsonKey(name: 'added_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
+    @JsonKey(name: 'added_at', toJson: TautulliUtilities.dateTimeToMillisecondsString, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime addedAt;
 
     /// The date on which the content was last updated on Plex.
-    @JsonKey(name: 'updated_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
+    @JsonKey(name: 'updated_at', toJson: TautulliUtilities.dateTimeToMillisecondsString, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime updatedAt;
 
     /// The date on which the content was last viewed on Plex.
-    @JsonKey(name: 'last_viewed_at', toJson: TautulliUtilities.dateTimeToStringMilliseconds, fromJson: TautulliUtilities.millisecondsStringToDateTime)
+    @JsonKey(name: 'last_viewed_at', toJson: TautulliUtilities.dateTimeToMillisecondsString, fromJson: TautulliUtilities.millisecondsStringToDateTime)
     final DateTime lastViewedAt;
 
     /// The globally unique identifier for the content.
@@ -541,7 +541,7 @@ class TautulliSession {
     final String machineId;
 
     /// Current state of the session.
-    @JsonKey(name: 'state', toJson: _sessionStateToString, fromJson: _sessionStateToObject)
+    @JsonKey(name: 'state', toJson: TautulliUtilities.sessionStateToString, fromJson: TautulliUtilities.sessionStateToObject)
     final TautulliSessionState state;
 
     /// Is it a local stream?
@@ -565,7 +565,7 @@ class TautulliSession {
     final int bandwidth;
 
     /// Location of the stream session (LAN or WAN).
-    @JsonKey(name: 'location', toJson: _sessionLocationToString, fromJson: _sessionLocationToObject)
+    @JsonKey(name: 'location', toJson: TautulliUtilities.sessionLocationToString, fromJson: TautulliUtilities.sessionLocationToObject)
     final TautulliSessionLocation location;
 
     /// Transcoder key/identifier for the session.
@@ -637,15 +637,15 @@ class TautulliSession {
     final bool transcodeHardwareFullPipeline;
 
     /// What decision was made on how to handle the audio stream.
-    @JsonKey(name: 'audio_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'audio_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision audioDecision;
 
     /// What decision was made on how to handle the video stream.
-    @JsonKey(name: 'video_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'video_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision videoDecision;
 
     /// What decision was made on how to handle the subtitle stream.
-    @JsonKey(name: 'subtitle_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'subtitle_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision subtitleDecision;
 
     /// Is the transcoder throttled?
@@ -708,12 +708,12 @@ class TautulliSession {
     @JsonKey(name: 'stream_video_width', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
     final int streamVideoWidth;
 
-    /// Duration of the final stream, in milliseconds.
-    @JsonKey(name: 'stream_duration', toJson: TautulliUtilities.integerToString, fromJson: TautulliUtilities.stringToInteger)
-    final int streamDuration;
+    /// Duration of the final stream.
+    @JsonKey(name: 'stream_duration', toJson: TautulliUtilities.durationToMillisecondsString, fromJson: TautulliUtilities.millisecondsStringToDuration)
+    final Duration streamDuration;
 
     /// What decision was made on how to handle the final container of the stream.
-    @JsonKey(name: 'stream_container_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'stream_container_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision streamContainerDecision;
 
     /// Optimized version title.
@@ -733,7 +733,7 @@ class TautulliSession {
     final String bifThumb;
 
     /// What decision was made on how to handle the content.
-    @JsonKey(name: 'transcode_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'transcode_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision transcodeDecision;
 
     /// Are subtitles being used for this session?
@@ -797,7 +797,7 @@ class TautulliSession {
     final String streamVideoScanType;
 
     /// What decision was made on how to handle the final video stream.
-    @JsonKey(name: 'stream_video_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'stream_video_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision streamVideoDecision;
 
     /// Bitrate of the final audio stream.
@@ -821,7 +821,7 @@ class TautulliSession {
     final String streamAudioLanguageCode;
 
     /// What decision was made on how to handle the final video stream.
-    @JsonKey(name: 'stream_audio_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'stream_audio_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision streamAudioDecision;
 
     /// Codec of the final subtitle stream.
@@ -857,7 +857,7 @@ class TautulliSession {
     final bool streamSubtitleTransient;
 
     /// What decision was made on how to handle the final subtitle stream.
-    @JsonKey(name: 'stream_subtitle_decision', toJson: _transcodeDecisionToString, fromJson: _transcodeDecisionToObject)
+    @JsonKey(name: 'stream_subtitle_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
     final TautulliTranscodeDecision streamSubtitleDecision;
 
     TautulliSession({
@@ -1083,16 +1083,4 @@ class TautulliSession {
 
     factory TautulliSession.fromJson(Map<String, dynamic> json) => _$TautulliSessionFromJson(json);
     Map<String, dynamic> toJson() => _$TautulliSessionToJson(this);
-
-    static TautulliMediaType _mediaTypeToObject(String type) => TautulliMediaType.MOVIE.from(type);
-    static String _mediaTypeToString(TautulliMediaType type) => type?.value ?? '';
-
-    static TautulliSessionState _sessionStateToObject(String state) => TautulliSessionState.BUFFERING.from(state);
-    static String _sessionStateToString(TautulliSessionState state) => state?.value ?? '';
-
-    static TautulliSessionLocation _sessionLocationToObject(String location) => TautulliSessionLocation.LAN.from(location);
-    static String _sessionLocationToString(TautulliSessionLocation location) => location?.value ?? '';
-
-    static TautulliTranscodeDecision _transcodeDecisionToObject(String decision) => TautulliTranscodeDecision.COPY.from(decision);
-    static String _transcodeDecisionToString(TautulliTranscodeDecision decision) => decision?.value ?? '';
 }

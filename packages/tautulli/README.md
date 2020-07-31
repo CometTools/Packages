@@ -44,7 +44,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_apikey][api:get_apikey]                                                      | **N/A**         | **N/A** |
 | [get_date_formats][api:get_date_formats]                                          | `miscellaneous` | `getDateFormats()` |
 | [get_geoip_lookup][api:get_geoip_lookup]                                          | `miscellaneous` | `getGeoIPLookup()` |
-| [get_history][api:get_history]                                                    | X               | X |
+| [get_history][api:get_history]                                                    | `history`       | `getHistory()` |
 | [get_home_stats][api:get_home_stats]                                              | X               | X |
 | [get_libraries][api:get_libraries]                                                | X               | X |
 | [get_libraries_table][api:get_libraries_table]                                    | X               | X |

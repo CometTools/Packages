@@ -3,6 +3,7 @@ library tautulli_commands;
 
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
+import 'package:tautulli/utilities.dart';
 import 'types.dart';
 import 'models.dart';
 
@@ -13,6 +14,7 @@ part 'src/commands/activity/terminate_session.dart';
 // History
 part 'src/commands/history.dart';
 part 'src/commands/history/delete_history.dart';
+part 'src/commands/history/get_history.dart';
 // Library
 part 'src/commands/library.dart';
 part 'src/commands/library/delete_all_library_history.dart';
