@@ -20,6 +20,11 @@ class TautulliCommandHandler_User {
         List<int> rowIds,
     }) async => _commandDeleteAllUserHistory(_client, userId: userId, rowIds: rowIds);
 
+    /// Handler for [refresh_users_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_users_list).
+    /// 
+    /// Refresh the Tautulli users list.
+    Future<void> refreshUsersList() async => _commandRefreshUsersList(_client);
+
     /// Handler for [undelete_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#undelete_user).
     /// 
     /// Restore a deleted user to Tautulli.

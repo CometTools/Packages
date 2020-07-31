@@ -9,7 +9,7 @@
 - Commands: `get_geoip_lookup`
 - Commands: `get_histoy`
 - Models: TautulliHistory
-- Models: TautulliHistoryRecord
+- Models: TautulliHistoryRecordgit push --set-upstream 
 - Models: TautulliGeolocationInfo
 # 0.0.1
 - Models: Full deserialization of `TautulliSession`

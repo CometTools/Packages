@@ -17,11 +17,11 @@ class TautulliHistory {
     @JsonKey(name: 'draw')
     final int draw;
 
-    /// Total amount of records returned.
+    /// Total amount of records.
     @JsonKey(name: 'recordsTotal')
     final int recordsTotal;
 
-    /// The amount of records filtered.
+    /// The amount of records (filtered).
     @JsonKey(name: 'recordsFiltered')
     final int recordsFiltered;
 
