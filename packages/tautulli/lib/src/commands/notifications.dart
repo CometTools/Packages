@@ -54,6 +54,23 @@ class TautulliCommandHandler_Notifications {
         @required int notifierId,
     }) async => _commandDeleteNotifier(_client, notifierId: notifierId);
 
+    /// Handler for [notify](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify).
+    /// 
+    /// Send a notification using Tautulli.
+    /// 
+    /// - `notifierId` (required): The notifier identifier.
+    /// - `subject` (required): The subject of the message.
+    /// - `body` (required): The body of the message.
+    /// - `headers`: The JSON headers for webhook notifications.
+    /// - `scriptArgs`: The arguments for script notifications.
+    Future<void> notify({
+        @required int notifierId,
+        @required String subject,
+        @required String body,
+        String headers,
+        String scriptArgs,
+    }) async => _commandNotify(_client, notifierId: notifierId, subject: subject, body: body, headers: headers, scriptArgs: scriptArgs);
+
     /// Handler for [notify_newsletter](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify_newsletter).
     /// 
     /// Send a newsletter using Tautulli.

@@ -98,7 +98,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_users_table][api:get_users_table]                                            | X                     | X |
 | [get_whois_lookup][api:get_whois_lookup]                                          | X                     | X |
 | [import_database][api:import_database]                                            | X                     | X |
-| [notify][api:notify]                                                              | X                     | X |
+| [notify][api:notify]                                                              | `notifications`       | `notify()` |
 | [notify_newsletter][api:notify_newsletter]                                        | `notifications`       | `notifyNewsletter()` |
 | [notify_recently_added][api:notify_recently_added]                                | `notifications`       | `notifyRecentlyAdded()` |
 | [pms_image_proxy][api:pms_image_proxy]                                            | X                     | X |
