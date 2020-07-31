@@ -1,13 +1,13 @@
 part of tautulli_commands;
 
-Future<void> _commandDeleteNewsletter(Dio client, {
-    @required int newsletterId,
+Future<void> _commandDeleteNotifier(Dio client, {
+    @required int notifierId,
 }) async {
-    assert(newsletterId != null, 'newsletterId cannot be null.');
+    assert(notifierId != null, 'notifierId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
-            'cmd': 'delete_newsletter',
-            'newsletter_id': newsletterId,
+            'cmd': 'delete_notifier',
+            'notifier_id': notifierId,
         },
     );
     switch((response.data['response']['result'] as String)) {

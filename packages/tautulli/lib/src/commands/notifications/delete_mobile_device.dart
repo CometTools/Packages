@@ -1,7 +1,7 @@
 part of tautulli_commands;
 
 Future<void> _commandDeleteMobileDevice(Dio client, {
-    @required String mobileDeviceId,
+    @required int mobileDeviceId,
 }) async {
     assert(mobileDeviceId != null, 'mobileDeviceId cannot be null.');
     Response response = await client.get('/',

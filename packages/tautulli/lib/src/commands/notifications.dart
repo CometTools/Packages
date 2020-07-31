@@ -33,7 +33,7 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// - `mobileDeviceId` (required): The mobile device identifier to delete.
     Future<void> deleteMobileDevice({
-        @required String mobileDeviceId,
+        @required int mobileDeviceId,
     }) async => _commandDeleteMobileDevice(_client, mobileDeviceId: mobileDeviceId);
 
     /// Handler for [delete_newsletter](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_newsletter).
@@ -42,8 +42,17 @@ class TautulliCommandHandler_Notifications {
     /// 
     /// - `newsletterId` (required): The newsletter identifier to delete.
     Future<void> deleteNewsletter({
-        @required String newsletterId,
+        @required int newsletterId,
     }) async => _commandDeleteNewsletter(_client, newsletterId: newsletterId);
+
+    /// Handler for [delete_notifier](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_notifier).
+    /// 
+    /// Remove a notifier from the database.
+    /// 
+    /// - `notifierId` (required): The notifier identifier to delete.
+    Future<void> deleteNotifier({
+        @required int notifierId,
+    }) async => _commandDeleteNotifier(_client, notifierId: notifierId);
 
     /// Handler for [register_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#register_device).
     /// 
