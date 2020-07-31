@@ -143,7 +143,7 @@ class TautulliHistoryRecord {
     @JsonKey(name: 'percent_complete')
     final int percentComplete;
 
-    /// Has the session been marked as watched? Typically 0, 0.5, or 1. 0 is no, 0.5 is partially, and 1
+    /// The watch status of the history record.
     @JsonKey(name: 'watched_status', toJson: TautulliUtilities.watchedStatusToDouble, fromJson: TautulliUtilities.watchedStatusToObject)
     final TautulliWatchedStatus watchedStatus;
 

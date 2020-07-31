@@ -42,7 +42,7 @@ class TautulliCommandHandler_System {
     /// Delete the 3rd party API lookup info.
     /// 
     /// - `ratingKey`: Identifier/rating key.
-    /// - `service`: A [TautulliImTautulliAPILookupServiceageHostService] object of the API lookup service to delete from.
+    /// - `service`: A [TautulliAPILookupService] object of the API lookup service to delete from.
     /// - `deleteAll`: True to delete all info from the service.
     Future<void> deleteLookupInfo({
         int ratingKey,
