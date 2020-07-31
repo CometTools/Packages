@@ -9,6 +9,6 @@ Future<String> _commandArnold(Dio client) async {
     switch((response.data['response']['result'] as String)) {
         case 'success': return response.data['response']['data'];
         case 'error':
-        default: throw Exception(throw Exception(response.data['response']['message']));
+        default: throw Exception(response.data['response']['message']);
     }
 }

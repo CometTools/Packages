@@ -1,3 +1,6 @@
+# 0.0.3+1
+- Fixed Exception throwing
+- Fixed some comments
 # 0.0.3
 - Commands: `refresh_users_list`
 - Commands: `refresh_libraries_list`

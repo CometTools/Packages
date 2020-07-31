@@ -156,7 +156,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 [api:get_geoip_lookup]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_geoip_lookup
 [api:get_history]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_history
 [api:get_home_stats]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_home_stats
-[api:get_libraries]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_libraries=
+[api:get_libraries]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_libraries
 [api:get_libraries_table]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_libraries_table
 [api:get_library]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_library
 [api:get_library_media_info]: https://github.com/Tautulli/Tautulli/blob/master/API.md#get_library_media_info

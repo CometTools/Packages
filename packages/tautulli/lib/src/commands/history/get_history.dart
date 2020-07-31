@@ -41,6 +41,6 @@ Future<TautulliHistory> _commandGetHistory(Dio client, {
     switch((response.data['response']['result'] as String)) {
         case 'success': return TautulliHistory.fromJson(response.data['response']['data']);
         case 'error':
-        default: throw Exception(throw Exception(response.data['response']['message']));
+        default: throw Exception(response.data['response']['message']);
     }
 }
