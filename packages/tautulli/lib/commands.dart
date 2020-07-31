@@ -34,6 +34,7 @@ part 'src/commands/notifications/add_notifier_config.dart';
 part 'src/commands/notifications/delete_mobile_device.dart';
 part 'src/commands/notifications/delete_newsletter.dart';
 part 'src/commands/notifications/delete_notifier.dart';
+part 'src/commands/notifications/notify_recently_added.dart';
 part 'src/commands/notifications/register_device.dart';
 part 'src/commands/notifications/set_mobile_device_config.dart';
 part 'src/commands/notifications/set_newsletter_config.dart';

@@ -100,7 +100,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [import_database][api:import_database]                                            | X                     | X |
 | [notify][api:notify]                                                              | X                     | X |
 | [notify_newsletter][api:notify_newsletter]                                        | X                     | X |
-| [notify_recently_added][api:notify_recently_added]                                | X                     | X |
+| [notify_recently_added][api:notify_recently_added]                                | `notifications`       | `notifyRecentlyAdded()` |
 | [pms_image_proxy][api:pms_image_proxy]                                            | X                     | X |
 | [refresh_libraries_list][api:refresh_libraries_list]                              | `library`             | `refreshLibrariesList()` |
 | [refresh_users_list][api:refresh_users_list]                                      | `user`                | `refreshUsersList()` |

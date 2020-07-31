@@ -54,6 +54,17 @@ class TautulliCommandHandler_Notifications {
         @required int notifierId,
     }) async => _commandDeleteNotifier(_client, notifierId: notifierId);
 
+    /// Handler for [notify_recently_added](https://github.com/Tautulli/Tautulli/blob/master/API.md#notify_recently_added).
+    /// 
+    /// Send a recently added notification using Tautulli.
+    /// 
+    /// - `ratingKey` (required): Identifier/rating key for the content that was added.
+    /// - `notifierId`: The identifier of the notification agent. If not supplied, the notification will send on all enabled agents.
+    Future<void> notifyRecentlyAdded({
+        @required int ratingKey,
+        int notifierId,
+    }) async => _commandNotifyRecentlyAdded(_client, ratingKey: ratingKey, notifierId: notifierId);
+
     /// Handler for [register_device](https://github.com/Tautulli/Tautulli/blob/master/API.md#register_device).
     /// 
     /// Registers the Tautulli Android App for notifications.
