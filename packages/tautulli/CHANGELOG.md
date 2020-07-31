@@ -1,3 +1,16 @@
+# 0.0.2
+- Commands: `Added history command handler`
+- Commands: `delete_all_user_history`
+- Commands: `delete_history`
+- Commands: `delete_hosted_images`
+- Commands: `delete_library`
+- Commands: `delete_lookup_info`
+- Commands: `delete_media_info_cache`
+- Commands: `get_geoip_lookup`
+- Commands: `get_histoy`
+- Models: TautulliHistory
+- Models: TautulliHistoryRecord
+- Models: TautulliGeolocationInfo
 # 0.0.1
 - Models: Full deserialization of `TautulliSession`
 - Commands: Combined Notifier & Newsletter handlers into Notifications
