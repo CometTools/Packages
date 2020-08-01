@@ -20,6 +20,17 @@ class TautulliCommandHandler_Users {
         List<int> rowIds,
     }) async => _commandDeleteAllUserHistory(_client, userId: userId, rowIds: rowIds);
 
+    /// Handler for [delete_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_user).
+    /// 
+    /// Delete a user from Tautulli. Also erases all history for the user.
+    /// 
+    /// - `userId` (required): The ID of the Plex user.
+    /// - `rowIds`: Optional list of row IDs to delete.
+    Future<void> deleteUser({
+        @required int userId,
+        List<int> rowIds,
+    }) async => _commandDeleteUser(_client, userId: userId, rowIds: rowIds);
+
     /// Handler for [get_users_table](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_users_table).
     /// 
     /// Get the data on Tautulli users table.
@@ -56,10 +67,10 @@ class TautulliCommandHandler_Users {
     /// 
     /// Restore a deleted user to Tautulli.
     /// 
-    /// - `userId` (required): String identifier of the Plex user
-    /// - `username` (required): String username of the Plex user
+    /// - `userId` (required): Identifier of the Plex user
+    /// - `username` (required): Username of the Plex user
     Future<void> undeleteUser({
-        @required String userId,
+        @required int userId,
         @required String username,
     }) async => _commandUndeleteUser(_client, userId: userId, username: username);
 }

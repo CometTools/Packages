@@ -51,10 +51,10 @@ class TautulliCommandHandler_Libraries {
     /// 
     /// - `oldRatingKey` (required): Identifier key for the old rating key.
     /// - `newRatingKey` (required): Identifier key for the new rating key.
-    /// - `mediaType`: **(rquired)**: [TautulliMediaType] value for the media type.
+    /// - `mediaType`: (required): [TautulliMediaType] value for the media type.
     Future<void> updateMetadataDetails({
-        @required String oldRatingKey,
-        @required String newRatingKey,
+        @required int oldRatingKey,
+        @required int newRatingKey,
         @required TautulliMediaType mediaType,
     }) async => _commandUpdateMetadataDetails(_client, oldRatingKey: oldRatingKey, newRatingKey: newRatingKey, mediaType: mediaType);
 
