@@ -79,6 +79,47 @@ class TautulliCommandHandler_System {
     /// Delete the Tautulli notification logs.
     Future<void> deleteNotificationLog() async => _commandDeleteNotificationLog(_client);
 
+    /// Handler for [pms_image_proxy](https://github.com/Tautulli/Tautulli/blob/master/API.md#pms_image_proxy).
+    /// 
+    /// Gets an image from the PMS and saves it to the image cache directory. Returns a Uint8List of the image buffer.
+    /// 
+    /// One of `image` or `ratingKey` are required, but both cannot be defined.
+    /// 
+    /// - `image` (required*): Path to the image to download from Plex, OR
+    /// - `ratingKey` (required*): Rating key of the content.
+    /// - `width`: Width to scale the image to.
+    /// - `height`: Height to scale the image to.
+    /// - `opacity`: Set the opacity of the image to (0 to 100).
+    /// - `background`: Set the background color (HEX colors, e.g. 282828).
+    /// - `blur`: How much to the blur the image.
+    /// - `imageFormat`: The format to download the image as (jpg, png, etc.).
+    /// - `fallbackImage`: A fallback image to return if there is no image.
+    /// - `refresh`: Whether to refresh the image cache first.
+    Future<Uint8List> pmsImageProxy({
+        String image,
+        int ratingKey,
+        int width,
+        int height,
+        int opacity,
+        String background,
+        int blur,
+        String imageFormat,
+        TautulliFallbackImage fallbackImage,
+        bool refresh,
+    }) async => _commandPMSImageProxy(
+        _client,
+        image: image,
+        ratingKey: ratingKey,
+        width: width,
+        height: height,
+        opacity: opacity,
+        background: background,
+        blur: blur,
+        imageFormat: imageFormat,
+        fallbackImage: fallbackImage,
+        refresh: refresh,
+    );
+
     /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
     /// 
     /// Restart Tautulli.

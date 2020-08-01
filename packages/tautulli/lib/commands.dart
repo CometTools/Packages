@@ -1,6 +1,7 @@
 /// Library containing all logic and accessors to make calls to Tautulli's API through this package.
 library tautulli_commands;
 
+import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 import 'package:tautulli/utilities.dart';
@@ -56,6 +57,7 @@ part 'src/commands/system/delete_lookup_info.dart';
 part 'src/commands/system/delete_media_info_cache.dart';
 part 'src/commands/system/delete_newsletter_log.dart';
 part 'src/commands/system/delete_notification_log.dart';
+part 'src/commands/system/pms_image_proxy.dart';
 part 'src/commands/system/restart.dart';
 part 'src/commands/system/status.dart';
 part 'src/commands/system/update.dart';
