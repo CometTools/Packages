@@ -31,6 +31,7 @@ part 'src/commands/miscellaneous/arnold.dart';
 part 'src/commands/miscellaneous/get_date_formats.dart';
 part 'src/commands/miscellaneous/get_geoip_lookup.dart';
 part 'src/commands/miscellaneous/get_whois_lookup.dart';
+part 'src/commands/miscellaneous/pms_image_proxy.dart';
 // Notification
 part 'src/commands/notifications.dart';
 part 'src/commands/notifications/add_newsletter_config.dart';
@@ -57,7 +58,6 @@ part 'src/commands/system/delete_lookup_info.dart';
 part 'src/commands/system/delete_media_info_cache.dart';
 part 'src/commands/system/delete_newsletter_log.dart';
 part 'src/commands/system/delete_notification_log.dart';
-part 'src/commands/system/pms_image_proxy.dart';
 part 'src/commands/system/restart.dart';
 part 'src/commands/system/status.dart';
 part 'src/commands/system/update.dart';
