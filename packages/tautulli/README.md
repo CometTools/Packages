@@ -29,8 +29,8 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [delete_newsletter_log][api:delete_newsletter_log]                                | `system`              | `deleteNewsletterLog()` |
 | [delete_notification_log][api:delete_notification_log]                            | `system`              | `deleteNotificationLog()` |
 | [delete_notifier][api:delete_notifier]                                            | `notifications`       | `deleteNotifier()` |
-| [delete_recently_added][api:delete_recently_added]                                | X                     | X |
-| [delete_temp_sessions][api:delete_temp_sessions]                                  | X                     | X |
+| [delete_recently_added][api:delete_recently_added]                                | `libraries`           | `deleteRecentlyAdded()` |
+| [delete_temp_sessions][api:delete_temp_sessions]                                  | `activity`            | `deleteTempSessions()` |
 | [delete_user][api:delete_user]                                                    | X                     | X |
 | [docs][api:docs]                                                                  | **No Implementation** | **No Implementation** |
 | [docs_md][api:docs_md]                                                            | **No Implementation** | **No Implementation** |

@@ -35,6 +35,11 @@ class TautulliCommandHandler_Libraries {
         List<int> rowIds,
     }) async => _commandDeleteLibrary(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
 
+    /// Handler for [delete_recently_added](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_recently_added).
+    /// 
+    /// Flush out all of the recently added items in the database.
+    Future<void> deleteRecentlyAdded() async => _commandDeleteRecentlyAdded(_client);
+
     /// Handler for [refresh_libraries_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_libraries_list).
     /// 
     /// Refresh the Tautulli libraries list.
