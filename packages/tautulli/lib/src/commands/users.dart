@@ -31,6 +31,23 @@ class TautulliCommandHandler_Users {
         List<int> rowIds,
     }) async => _commandDeleteUser(_client, userId: userId, rowIds: rowIds);
 
+    /// Handler for [edit_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#edit_user).
+    /// 
+    /// Update a user on Tautulli.
+    /// 
+    /// - `userId` (required): The ID of the Plex user.
+    /// - `friendlyName`: A friendly name to set for the user.
+    /// - `customThumb`: A URL to set the custom thumbnail to.
+    /// - `keepHistory`: Set if you should keep the history for the user.
+    /// - `allowGuest`: Set if you want to allow Tautulli guest access for the user.
+    Future<void> editUser({
+        @required int userId,
+        String friendlyName,
+        String customThumb,
+        bool keepHistory,
+        bool allowGuest,
+    }) async => _commandEditUser(_client, userId: userId, friendlyName: friendlyName, customThumb: customThumb, keepHistory: keepHistory, allowGuest: allowGuest);
+
     /// Handler for [get_users_table](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_users_table).
     /// 
     /// Get the data on Tautulli users table.
