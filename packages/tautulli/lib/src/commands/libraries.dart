@@ -40,6 +40,21 @@ class TautulliCommandHandler_Libraries {
     /// Flush out all of the recently added items in the database.
     Future<void> deleteRecentlyAdded() async => _commandDeleteRecentlyAdded(_client);
 
+    /// Handler for [edit_library](https://github.com/Tautulli/Tautulli/blob/master/API.md#edit_library).
+    /// 
+    /// Update a library section on Tautulli.
+    /// 
+    /// - `sectionId` (required): The ID of the Plex library section.
+    /// - `customThumb`: URL to a custom thumbnail art.
+    /// - `customArt`: URL to a custom background art.
+    /// - `keepHistory`: Should history be tracked for this library section?
+    Future<void> editLibrary({
+        @required int sectionId,
+        String customThumb,
+        String customArt,
+        bool keepHistory,
+    }) async => _commandEditLibrary(_client, sectionId: sectionId, customThumb: customThumb, customArt: customArt, keepHistory: keepHistory);
+
     /// Handler for [refresh_libraries_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_libraries_list).
     /// 
     /// Refresh the Tautulli libraries list.

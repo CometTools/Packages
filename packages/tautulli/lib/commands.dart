@@ -22,6 +22,7 @@ part 'src/commands/libraries.dart';
 part 'src/commands/libraries/delete_all_library_history.dart';
 part 'src/commands/libraries/delete_library.dart';
 part 'src/commands/libraries/delete_recently_added.dart';
+part 'src/commands/libraries/edit_library.dart';
 part 'src/commands/libraries/refresh_libraries_list.dart';
 part 'src/commands/libraries/update_metadata_details.dart';
 part 'src/commands/libraries/undelete_library.dart';

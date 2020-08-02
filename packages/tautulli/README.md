@@ -38,7 +38,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [download_database][api:download_database]                                        | **N/A**         | **N/A** |
 | [download_log][api:download_log]                                                  | **N/A**         | **N/A** |
 | [download_plex_log][api:download_plex_log]                                        | **N/A**         | **N/A** |
-| [edit_library][api:edit_library]                                                  | X               | X |
+| [edit_library][api:edit_library]                                                  | `libraries`     | `editLibrary()` |
 | [edit_user][api:edit_user]                                                        | `users`         | `editUser()` |
 | [get_activity][api:get_activity]                                                  | `activity`      | `getActivity()` |
 | [get_apikey][api:get_apikey]                                                      | **N/A**         | **N/A** |
