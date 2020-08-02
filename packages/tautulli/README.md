@@ -77,7 +77,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_pms_token][api:get_pms_token]                                                | X               | X |
 | [get_pms_update][api:get_pms_update]                                              | X               | X |
 | [get_recently_added][api:get_recently_added]                                      | X               | X |
-| [get_server_friendly_name][api:get_server_friendly_name]                          | X               | X |
+| [get_server_friendly_name][api:get_server_friendly_name]                          | `miscellaneous` | `getServerFriendlyName()` |
 | [get_server_id][api:get_server_id]                                                | X               | X |
 | [get_server_identity][api:get_server_identity]                                    | X               | X |
 | [get_server_list][api:get_server_list]                                            | X               | X |

@@ -28,6 +28,11 @@ class TautulliCommandHandler_Miscellaneous {
         @required String ipAddress,
     }) async => _commandGetGeoIPLookup(_client, ipAddress: ipAddress);
 
+    /// Handler for [get_server_friendly_name](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_server_friendly_name).
+    /// 
+    /// Get the name of the Plex Media Server.
+    Future<String> getServerFriendlyName() async => _commandGetServerFriendlyName(_client);
+
     /// Handler for [get_whois_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_whois_lookup).
     /// 
     /// Get the connection info for an IP address.
