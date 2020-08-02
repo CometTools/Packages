@@ -33,6 +33,7 @@ part 'src/commands/miscellaneous/get_date_formats.dart';
 part 'src/commands/miscellaneous/get_geoip_lookup.dart';
 part 'src/commands/miscellaneous/get_server_friendly_name.dart';
 part 'src/commands/miscellaneous/get_server_id.dart';
+part 'src/commands/miscellaneous/get_server_identity.dart';
 part 'src/commands/miscellaneous/get_whois_lookup.dart';
 part 'src/commands/miscellaneous/pms_image_proxy.dart';
 // Notification

@@ -43,6 +43,11 @@ class TautulliCommandHandler_Miscellaneous {
         bool remote,
     }) async => _commandGetServerID(_client, hostname: hostname, port: port, ssl: ssl, remote: remote);
 
+    /// Handler for [get_server_identity](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_server_identity).
+    /// 
+    /// Get info about the local server.
+    Future<TautulliServerIdentity> getServerIdentity() async => _commandGetServerIdentity(_client);
+
     /// Handler for [get_whois_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_whois_lookup).
     /// 
     /// Get the connection info for an IP address.
