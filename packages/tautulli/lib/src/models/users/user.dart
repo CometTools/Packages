@@ -5,6 +5,12 @@ import 'package:tautulli/utilities.dart';
 part 'user.g.dart';
 
 /// Model for a single Tautulli user's data in Tautulli.
+/// 
+/// Depending on how the [TautulliUser] object was created, the user thumbnail will be in either:
+/// - `thumb` from `getUsers()`
+/// - `userThumb` from `getUser(userId)`
+/// 
+/// The filtered strings and the server token will be null when fetching a single user via `getUser()`.
 @JsonSerializable(explicitToJson: true)
 class TautulliUser {
     /// The row identifier of the user.
@@ -22,6 +28,10 @@ class TautulliUser {
     /// Thumbnail link of the user.
     @JsonKey(name: 'thumb')
     final String thumb;
+
+    /// Thumbnail link of the user.
+    @JsonKey(name: 'user_thumb')
+    final String userThumb;
 
     /// Email of the user.
     @JsonKey(name: 'email')
@@ -92,6 +102,7 @@ class TautulliUser {
         this.userId,
         this.friendlyName,
         this.thumb,
+        this.userThumb,
         this.email,
         this.isActive,
         this.isAdmin,
@@ -119,6 +130,10 @@ class TautulliUser {
     /// Serialize a [TautulliUser] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliUserToJson(this);
 
-    static List<String> _sharedLibrariesFromJson(String list) => list.split(';');
+    static List<String> _sharedLibrariesFromJson(dynamic list) {
+        if(list is List) return List<String>.from(list);
+        return list.split(';');
+    }
+    
     static String _sharedLibrariesToJson(List<String> list) => list?.join(";") ?? '';
 }

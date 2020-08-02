@@ -12,6 +12,7 @@ TautulliUser _$TautulliUserFromJson(Map<String, dynamic> json) {
     userId: json['user_id'] as int,
     friendlyName: json['friendly_name'] as String,
     thumb: json['thumb'] as String,
+    userThumb: json['user_thumb'] as String,
     email: json['email'] as String,
     isActive: TautulliUtilities.integerToBoolean(json['is_active'] as int),
     isAdmin: TautulliUtilities.integerToBoolean(json['is_admin'] as int),
@@ -25,8 +26,8 @@ TautulliUser _$TautulliUserFromJson(Map<String, dynamic> json) {
         TautulliUtilities.integerToBoolean(json['keep_history'] as int),
     allowGuest: TautulliUtilities.integerToBoolean(json['allow_guest'] as int),
     serverToken: json['server_token'] as String,
-    sharedLibraries: TautulliUser._sharedLibrariesFromJson(
-        json['shared_libraries'] as String),
+    sharedLibraries:
+        TautulliUser._sharedLibrariesFromJson(json['shared_libraries']),
     filterAll: json['filter_all'] as String,
     filterMovies: json['filter_movies'] as String,
     filterTv: json['filter_tv'] as String,
@@ -41,6 +42,7 @@ Map<String, dynamic> _$TautulliUserToJson(TautulliUser instance) =>
       'user_id': instance.userId,
       'friendly_name': instance.friendlyName,
       'thumb': instance.thumb,
+      'user_thumb': instance.userThumb,
       'email': instance.email,
       'is_active': TautulliUtilities.booleanToInteger(instance.isActive),
       'is_admin': TautulliUtilities.booleanToInteger(instance.isAdmin),

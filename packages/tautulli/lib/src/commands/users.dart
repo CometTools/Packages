@@ -48,6 +48,13 @@ class TautulliCommandHandler_Users {
         bool allowGuest,
     }) async => _commandEditUser(_client, userId: userId, friendlyName: friendlyName, customThumb: customThumb, keepHistory: keepHistory, allowGuest: allowGuest);
 
+    /// Handler for [get_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_user).
+    /// 
+    /// Get a user's details.
+    Future<TautulliUser> getUser({
+        @required int userId,
+    }) async => _commandGetUser(_client, userId: userId);
+
     /// Handler for [get_users](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_users).
     /// 
     /// Get a list of all users that have access to your server.
