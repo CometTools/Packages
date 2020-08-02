@@ -31,6 +31,7 @@ part 'src/commands/miscellaneous.dart';
 part 'src/commands/miscellaneous/arnold.dart';
 part 'src/commands/miscellaneous/get_date_formats.dart';
 part 'src/commands/miscellaneous/get_geoip_lookup.dart';
+part 'src/commands/miscellaneous/get_pms_token.dart';
 part 'src/commands/miscellaneous/get_server_friendly_name.dart';
 part 'src/commands/miscellaneous/get_server_id.dart';
 part 'src/commands/miscellaneous/get_server_identity.dart';

@@ -28,6 +28,17 @@ class TautulliCommandHandler_Miscellaneous {
         @required String ipAddress,
     }) async => _commandGetGeoIPLookup(_client, ipAddress: ipAddress);
 
+    /// Handler for [get_pms_token](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_pms_token).
+    /// 
+    /// Get the user's Plex token used for Tautulli.
+    /// 
+    /// - `username` (required): Your Plex username.
+    /// - `password` (required): Your Plex password.
+    Future<String> getPMSToken({
+        @required String username,
+        @required String password,
+    }) async => _commandGetPMSToken(_client, username: username, password: password);
+
     /// Handler for [get_server_friendly_name](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_server_friendly_name).
     /// 
     /// Get the name of the Plex Media Server.
