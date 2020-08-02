@@ -33,6 +33,16 @@ class TautulliCommandHandler_Miscellaneous {
     /// Get the name of the Plex Media Server.
     Future<String> getServerFriendlyName() async => _commandGetServerFriendlyName(_client);
 
+    /// Handler for [get_server_id](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_server_id).
+    /// 
+    /// Get the Plex Media Server identifier.
+    Future<String> getServerID({
+        @required String hostname,
+        @required int port,
+        bool ssl,
+        bool remote,
+    }) async => _commandGetServerID(_client, hostname: hostname, port: port, ssl: ssl, remote: remote);
+
     /// Handler for [get_whois_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_whois_lookup).
     /// 
     /// Get the connection info for an IP address.
