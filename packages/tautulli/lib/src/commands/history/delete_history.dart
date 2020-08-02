@@ -14,6 +14,6 @@ Future<void> _commandDeleteHistory(Dio client, {
     switch((response.data['response']['result'] as String)) {
         case 'success': return;
         case 'error':
-        default: throw Exception(throw Exception(response.data['response']['message']));
+        default: throw Exception(response.data['response']['message']);
     }
 }

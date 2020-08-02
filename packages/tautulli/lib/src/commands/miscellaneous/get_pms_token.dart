@@ -1,9 +1,16 @@
 part of tautulli_commands;
 
-Future<String> _commandArnold(Dio client) async {
+Future<String> _commandGetPMSToken(Dio client, {
+    @required String username,
+    @required String password,
+}) async {
+    assert(username != null, 'username cannot be null.');
+    assert(password != null, 'password cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
-            'cmd': 'arnold',
+            'cmd': 'get_pms_token',
+            'username': username,
+            'password': password,
         },
     );
     switch((response.data['response']['result'] as String)) {

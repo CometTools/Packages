@@ -1,3 +1,18 @@
+# 0.0.4
+- Commands: `delete_recently_added`
+- Commands: `delete_temp_sessions`
+- Commands: `delete_user`
+- Commands: `edit_library`
+- Commands: `edit_user`
+- Commands: `get_pms_token`
+- Commands: `get_server_friendly_name`
+- Commands: `get_server_id`
+- Commands: `pms_image_proxy`
+- Models: TautulliServerIdentity
+- Types: TautulliFallbackImage
+# 0.0.3+1
+- Fixed Exception throwing
+- Fixed some comments
 # 0.0.3
 - Commands: `refresh_users_list`
 - Commands: `refresh_libraries_list`

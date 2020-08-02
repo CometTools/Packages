@@ -1,6 +1,6 @@
 part of tautulli_types;
 
-/// Enumerator to handle all image hosting services
+/// Enumerator to handle all image hosting services available in Tautulli.
 enum TautulliImageHostService {
     IMGUR,
     CLOUDINARY,

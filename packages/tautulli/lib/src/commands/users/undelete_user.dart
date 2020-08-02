@@ -1,7 +1,7 @@
 part of tautulli_commands;
 
 Future<void> _commandUndeleteUser(Dio client, {
-    @required String userId,
+    @required int userId,
     @required String username,
 }) async {
     assert(userId != null, 'userId cannot be null.');

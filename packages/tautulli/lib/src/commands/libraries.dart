@@ -35,6 +35,26 @@ class TautulliCommandHandler_Libraries {
         List<int> rowIds,
     }) async => _commandDeleteLibrary(_client, sectionId: sectionId, serverId: serverId, rowIds: rowIds);
 
+    /// Handler for [delete_recently_added](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_recently_added).
+    /// 
+    /// Flush out all of the recently added items in the database.
+    Future<void> deleteRecentlyAdded() async => _commandDeleteRecentlyAdded(_client);
+
+    /// Handler for [edit_library](https://github.com/Tautulli/Tautulli/blob/master/API.md#edit_library).
+    /// 
+    /// Update a library section on Tautulli.
+    /// 
+    /// - `sectionId` (required): The ID of the Plex library section.
+    /// - `customThumb`: URL to a custom thumbnail art.
+    /// - `customArt`: URL to a custom background art.
+    /// - `keepHistory`: Should history be tracked for this library section?
+    Future<void> editLibrary({
+        @required int sectionId,
+        String customThumb,
+        String customArt,
+        bool keepHistory,
+    }) async => _commandEditLibrary(_client, sectionId: sectionId, customThumb: customThumb, customArt: customArt, keepHistory: keepHistory);
+
     /// Handler for [refresh_libraries_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_libraries_list).
     /// 
     /// Refresh the Tautulli libraries list.
@@ -46,10 +66,10 @@ class TautulliCommandHandler_Libraries {
     /// 
     /// - `oldRatingKey` (required): Identifier key for the old rating key.
     /// - `newRatingKey` (required): Identifier key for the new rating key.
-    /// - `mediaType`: **(rquired)**: [TautulliMediaType] value for the media type.
+    /// - `mediaType`: (required): [TautulliMediaType] value for the media type.
     Future<void> updateMetadataDetails({
-        @required String oldRatingKey,
-        @required String newRatingKey,
+        @required int oldRatingKey,
+        @required int newRatingKey,
         @required TautulliMediaType mediaType,
     }) async => _commandUpdateMetadataDetails(_client, oldRatingKey: oldRatingKey, newRatingKey: newRatingKey, mediaType: mediaType);
 

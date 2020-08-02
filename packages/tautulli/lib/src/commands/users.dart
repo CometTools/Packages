@@ -20,6 +20,34 @@ class TautulliCommandHandler_Users {
         List<int> rowIds,
     }) async => _commandDeleteAllUserHistory(_client, userId: userId, rowIds: rowIds);
 
+    /// Handler for [delete_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_user).
+    /// 
+    /// Delete a user from Tautulli. Also erases all history for the user.
+    /// 
+    /// - `userId` (required): The ID of the Plex user.
+    /// - `rowIds`: Optional list of row IDs to delete.
+    Future<void> deleteUser({
+        @required int userId,
+        List<int> rowIds,
+    }) async => _commandDeleteUser(_client, userId: userId, rowIds: rowIds);
+
+    /// Handler for [edit_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#edit_user).
+    /// 
+    /// Update a user on Tautulli.
+    /// 
+    /// - `userId` (required): The ID of the Plex user.
+    /// - `friendlyName`: A friendly name to set for the user.
+    /// - `customThumb`: A URL to set the custom thumbnail to.
+    /// - `keepHistory`: Set if you should keep the history for the user.
+    /// - `allowGuest`: Set if you want to allow Tautulli guest access for the user.
+    Future<void> editUser({
+        @required int userId,
+        String friendlyName,
+        String customThumb,
+        bool keepHistory,
+        bool allowGuest,
+    }) async => _commandEditUser(_client, userId: userId, friendlyName: friendlyName, customThumb: customThumb, keepHistory: keepHistory, allowGuest: allowGuest);
+
     /// Handler for [get_users_table](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_users_table).
     /// 
     /// Get the data on Tautulli users table.
@@ -56,10 +84,10 @@ class TautulliCommandHandler_Users {
     /// 
     /// Restore a deleted user to Tautulli.
     /// 
-    /// - `userId` (required): String identifier of the Plex user
-    /// - `username` (required): String username of the Plex user
+    /// - `userId` (required): Identifier of the Plex user
+    /// - `username` (required): Username of the Plex user
     Future<void> undeleteUser({
-        @required String userId,
+        @required int userId,
         @required String username,
     }) async => _commandUndeleteUser(_client, userId: userId, username: username);
 }

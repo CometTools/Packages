@@ -2,6 +2,7 @@
 library tautulli_types;
 
 part 'src/types/api_lookup_service.dart';
+part 'src/types/fallback_image.dart';
 part 'src/types/image_host_service.dart';
 part 'src/types/history_order_column.dart';
 part 'src/types/media.dart';

@@ -1,13 +1,13 @@
 part of tautulli_commands;
 
-Future<void> _commandRestart(Dio client) async {
+Future<TautulliServerIdentity> _commandGetServerIdentity(Dio client) async {
     Response response = await client.get('/',
         queryParameters: {
-            'cmd': 'restart',
+            'cmd': 'get_server_identity',
         },
     );
     switch((response.data['response']['result'] as String)) {
-        case 'success': return;
+        case 'success': return TautulliServerIdentity.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);
     }
