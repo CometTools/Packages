@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'user.dart';
+import 'table_user.dart';
 
 part 'users_table.g.dart';
 
@@ -11,7 +11,7 @@ part 'users_table.g.dart';
 class TautulliUsersTable {
     /// List of [TautulliUser], each storing a single Tautulli user data.
     @JsonKey(name: 'data', fromJson: _usersToObjectArray, toJson: _usersToMap)
-    final List<TautulliUser> users;
+    final List<TautulliTableUser> users;
 
     /// _Unknown_
     @JsonKey(name: 'draw')
@@ -41,6 +41,6 @@ class TautulliUsersTable {
     /// Serialize a [TautulliUsersTable] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliUsersTableToJson(this);
 
-    static List<TautulliUser> _usersToObjectArray(List<dynamic> users) => users.map((user) => TautulliUser.fromJson((user as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _usersToMap(List<TautulliUser> users) => users.map((user) => user.toJson()).toList();
+    static List<TautulliTableUser> _usersToObjectArray(List<dynamic> users) => users.map((user) => TautulliTableUser.fromJson((user as Map<String, dynamic>))).toList();
+    static List<Map<String, dynamic>> _usersToMap(List<TautulliTableUser> users) => users.map((user) => user.toJson()).toList();
 }

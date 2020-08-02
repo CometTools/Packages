@@ -94,7 +94,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_user_names][api:get_user_names]                                              | X               | X |
 | [get_user_player_stats][api:get_user_player_stats]                                | X               | X |
 | [get_user_watch_time_stats][api:get_user_watch_time_stats]                        | X               | X |
-| [get_users][api:get_users]                                                        | X               | X |
+| [get_users][api:get_users]                                                        | `users`         | `getUsers()` |
 | [get_users_table][api:get_users_table]                                            | `users`         | `getUsersTable()` |
 | [get_whois_lookup][api:get_whois_lookup]                                          | `miscellaneous` | `getWHOISLookup()` |
 | [import_database][api:import_database]                                            | **N/A**         | **N/A** |

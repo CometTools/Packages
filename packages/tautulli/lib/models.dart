@@ -17,5 +17,6 @@ export 'src/models/miscellaneous/whois_info.dart';
 // Notifications
 // System
 // Users
+export 'src/models/users/table_user.dart';
 export 'src/models/users/user.dart';
 export 'src/models/users/users_table.dart';

@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tautulli/types.dart';
 import 'package:tautulli/utilities.dart';
 
 part 'user.g.dart';
@@ -21,132 +20,94 @@ class TautulliUser {
     final String friendlyName;
 
     /// Thumbnail link of the user.
-    @JsonKey(name: 'user_thumb')
-    final String userThumb;
-
-    /// Total number of plays by this user.
-    @JsonKey(name: 'plays')
-    final int plays;
-
-    /// The total duration this user has viewed from your server(s).
-    @JsonKey(name: 'duration', toJson: TautulliUtilities.durationToSecondsInteger, fromJson: TautulliUtilities.secondsIntegerToDuration)
-    final Duration duration;
-
-    /// The date/time that the user was last seen.
-    @JsonKey(name: 'last_seen', toJson: TautulliUtilities.dateTimeToIntegerMilliseconds, fromJson: TautulliUtilities.millisecondsIntegerToDateTime)
-    final DateTime lastSeen;
-
-    /// The title of the content that was last played.
-    @JsonKey(name: 'last_played')
-    final String lastPlayed;
-    
-    /// The history row identifier of the last session.
-    @JsonKey(name: 'history_row_id')
-    final int historyRowId;
-
-    /// The last recorded IP address of the user.
-    @JsonKey(name: 'ip_address')
-    final String ipAddress;
-
-    /// The platform that was last used by the user.
-    @JsonKey(name: 'platform')
-    final String platform;
-
-    /// The name of the player that was last used by the user.
-    @JsonKey(name: 'player')
-    final String player;
-
-    /// The rating key for the content of the last session.
-    @JsonKey(name: 'rating_key')
-    final int ratingKey;
-
-    /// The media type of the last session.
-    @JsonKey(name: 'media_type', toJson: TautulliUtilities.mediaTypeToString, fromJson: TautulliUtilities.mediaTypeToObject)
-    final TautulliMediaType mediaType;
-
-    /// The thumbnail path for the last session's content.
     @JsonKey(name: 'thumb')
     final String thumb;
 
-    /// The title of the parent of the last session's content.
-    @JsonKey(name: 'parent_title')
-    final String parentTitle;
-
-    /// The release year of the last session's content.
-    @JsonKey(name: 'year')
-    final int year;
-
-    /// The media index of the last session's content (for example, the track # or the season #).
-    @JsonKey(name: 'media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int mediaIndex;
-
-    /// The media index of the last session's content's parent (for example, the album or the season #).
-    @JsonKey(name: 'parent_media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentMediaIndex;
-
-    /// Was the user's last session live content?
-    @JsonKey(name: 'live', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
-    final bool live;
-
-    /// The date on which the last session's content was originally available on.
-    /// 
-    /// Because of the custom formatting options, the DateTime is returned as a string.
-    /// You can use the miscellaneous call `getDateFormats()` to pull the date and time formatting strings.
-    @JsonKey(name: 'originally_available_at')
-    final String originallyAvailableAt;
-
-    /// The Plex GUID of the last session's content.
-    @JsonKey(name: 'guid')
-    final String guid;
-
-    /// What decision was made on how to handle the last session's content.
-    @JsonKey(name: 'transcode_decision', toJson: TautulliUtilities.transcodeDecisionToString, fromJson: TautulliUtilities.transcodeDecisionToObject)
-    final TautulliTranscodeDecision transcodeDecision;
-
-    /// Does the user have notifications enabled?
-    @JsonKey(name: 'do_notify', toJson: _booleanToStringChecked, fromJson: _stringToBooleanChecked)
-    final bool doNotify;
-
-    /// Is history tracking enabled for this user?
-    @JsonKey(name: 'keep_history', toJson: _booleanToStringChecked, fromJson: _stringToBooleanChecked)
-    final bool keepHistory;
-
-    /// Does the user have guest access to Tautulli?
-    @JsonKey(name: 'allow_guest', toJson: _booleanToStringChecked, fromJson: _stringToBooleanChecked)
-    final bool allowGuest;
+    /// Email of the user.
+    @JsonKey(name: 'email')
+    final String email;
 
     /// Is the user active?
     @JsonKey(name: 'is_active', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
     final bool isActive;
 
+    /// Is the user an admin?
+    @JsonKey(name: 'is_admin', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isAdmin;
+
+    /// Is the user a home user?
+    @JsonKey(name: 'is_home_user', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isHomeUser;
+
+    /// Is the user allowed to sync content?
+    @JsonKey(name: 'is_allow_sync', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isAllowSync;
+
+    /// Is the user restricted?
+    @JsonKey(name: 'is_restricted', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool isRestricted;
+
+    /// Does the user have notifications enabled?
+    @JsonKey(name: 'do_notify', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool doNotify;
+
+    /// Is history being tracked for the user?
+    @JsonKey(name: 'keep_history', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool keepHistory;
+
+    /// Is the user allowed guest access to Tautulli?
+    @JsonKey(name: 'allow_guest', toJson: TautulliUtilities.booleanToInteger, fromJson: TautulliUtilities.integerToBoolean)
+    final bool allowGuest;
+
+    /// The user's server token.
+    @JsonKey(name: 'server_token')
+    final String serverToken;
+
+    /// List of libraries that are shared with the user.
+    @JsonKey(name: 'shared_libraries', toJson: _sharedLibrariesToJson, fromJson: _sharedLibrariesFromJson)
+    final List<String> sharedLibraries;
+
+    /// Filters applied to all libraries for this user.
+    @JsonKey(name: 'filter_all')
+    final String filterAll;
+
+    /// Filters applied to movie libraries for this user.
+    @JsonKey(name: 'filter_movies')
+    final String filterMovies;
+
+    /// Filters applied to television libraries for this user.
+    @JsonKey(name: 'filter_tv')
+    final String filterTv;
+    
+    /// Filters applied to music libraries for this user.
+    @JsonKey(name: 'filter_music')
+    final String filterMusic;
+
+    /// Filters applied to photos libraries for this user.
+    @JsonKey(name: 'filter_photos')
+    final String filterPhotos;
+
     TautulliUser({
         this.rowId,
         this.userId,
         this.friendlyName,
-        this.userThumb,
-        this.plays,
-        this.duration,
-        this.lastSeen,
-        this.lastPlayed,
-        this.historyRowId,
-        this.ipAddress,
-        this.platform,
-        this.player,
-        this.ratingKey,
-        this.mediaType,
         this.thumb,
-        this.parentTitle,
-        this.year,
-        this.mediaIndex,
-        this.parentMediaIndex,
-        this.live,
-        this.originallyAvailableAt,
-        this.guid,
-        this.transcodeDecision,
+        this.email,
+        this.isActive,
+        this.isAdmin,
+        this.isHomeUser,
+        this.isAllowSync,
+        this.isRestricted,
         this.doNotify,
         this.keepHistory,
         this.allowGuest,
-        this.isActive,
+        this.serverToken,
+        this.sharedLibraries,
+        this.filterAll,
+        this.filterMovies,
+        this.filterTv,
+        this.filterMusic,
+        this.filterPhotos,
     });
 
     /// Returns a JSON-encoded string version of this object.
@@ -158,8 +119,6 @@ class TautulliUser {
     /// Serialize a [TautulliUser] object to a JSON map.
     Map<String, dynamic> toJson() => _$TautulliUserToJson(this);
 
-    /// This converts the boolean back to the "Checked" for true and "" for false format.
-    static String _booleanToStringChecked(bool keep) => keep ? 'Checked' : '';
-    /// Some values are returned as "Checked" as true, and "" as false. This is just a helper for String -> Boolean.
-    static bool _stringToBooleanChecked(String keep) => keep == 'Checked' ? true : false;
+    static List<String> _sharedLibrariesFromJson(String list) => list.split(';');
+    static String _sharedLibrariesToJson(List<String> list) => list?.join(";") ?? '';
 }

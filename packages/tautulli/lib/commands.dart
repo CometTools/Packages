@@ -72,6 +72,7 @@ part 'src/commands/users.dart';
 part 'src/commands/users/delete_all_user_history.dart';
 part 'src/commands/users/delete_user.dart';
 part 'src/commands/users/edit_user.dart';
+part 'src/commands/users/get_users.dart';
 part 'src/commands/users/get_users_table.dart';
 part 'src/commands/users/refresh_users_list.dart';
 part 'src/commands/users/undelete_user.dart';
