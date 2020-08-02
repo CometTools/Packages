@@ -87,7 +87,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_stream_data][api:get_stream_data]                                            | X               | X |
 | [get_stream_type_by_top_10_platforms][api:get_stream_type_by_top_10_platforms]    | X               | X |
 | [get_stream_type_by_top_10_users][api:get_stream_type_by_top_10_users]            | X               | X |
-| [get_synced_items][api:get_synced_items]                                          | X               | X |
+| [get_synced_items][api:get_synced_items]                                          | `libraries`     | `getSyncedItems()` |
 | [get_user][api:get_user]                                                          | `users`         | `getUser()` |
 | [get_user_ips][api:get_user_ips]                                                  | X               | X |
 | [get_user_logins][api:get_user_logins]                                            | X               | X |

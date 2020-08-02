@@ -55,6 +55,17 @@ class TautulliCommandHandler_Libraries {
         bool keepHistory,
     }) async => _commandEditLibrary(_client, sectionId: sectionId, customThumb: customThumb, customArt: customArt, keepHistory: keepHistory);
 
+    /// Handler for [get_synced_items](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_synced_items).
+    /// 
+    /// Get a list of synced items on the Plex Media Server.
+    /// 
+    /// - `machineId` (required): The machine identifier to check for synced items.
+    /// - `userId`: The user ID to fetch synced items for.
+    Future<List<TautulliSyncedItem>> getSyncedItems({
+        @required String machineId,
+        int userId,
+    }) async => _commandGetSyncedItems(_client, machineId: machineId, userId: userId);
+
     /// Handler for [refresh_libraries_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#refresh_libraries_list).
     /// 
     /// Refresh the Tautulli libraries list.

@@ -51,6 +51,8 @@ class TautulliCommandHandler_Users {
     /// Handler for [get_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_user).
     /// 
     /// Get a user's details.
+    /// 
+    /// - `userId` (required): The user's ID.
     Future<TautulliUser> getUser({
         @required int userId,
     }) async => _commandGetUser(_client, userId: userId);
