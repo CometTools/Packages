@@ -1,3 +1,17 @@
+# 0.0.5
+- Commands: `get_library_names`
+- Commands: `get_library`
+- Commands: `get_libraries`
+- Commands: `get_server_list`
+- Commands: `get_synced_items`
+- Commands: `get_user`
+- Commands: `get_users`
+- Types: TautulliLibraryName
+- Types: TautulliLibrary
+- Types: TautulliSingleLibrary
+- Types: TautulliSyncedItem
+- Types: TautulliTableUser
+- 
 # 0.0.4
 - Commands: `delete_recently_added`
 - Commands: `delete_temp_sessions`
