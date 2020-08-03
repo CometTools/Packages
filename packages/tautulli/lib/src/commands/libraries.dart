@@ -55,6 +55,11 @@ class TautulliCommandHandler_Libraries {
         bool keepHistory,
     }) async => _commandEditLibrary(_client, sectionId: sectionId, customThumb: customThumb, customArt: customArt, keepHistory: keepHistory);
 
+    /// Handler for [get_libraries](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_libraries).
+    /// 
+    /// Get a list of all libraries on your server.
+    Future<List<TautulliLibrary>> getLibraries() async => _commandGetLibraries(_client);
+
     /// Handler for [get_synced_items](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_synced_items).
     /// 
     /// Get a list of synced items on the Plex Media Server.

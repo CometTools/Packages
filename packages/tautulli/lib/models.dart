@@ -8,6 +8,7 @@ export 'src/models/activity/session.dart';
 export 'src/models/history/history.dart';
 export 'src/models/history/history_record.dart';
 // Libraries
+export 'src/models/libraries/library.dart';
 export 'src/models/libraries/synced_item.dart';
 // Miscellaneous
 export 'src/models/miscellaneous/date_format.dart';

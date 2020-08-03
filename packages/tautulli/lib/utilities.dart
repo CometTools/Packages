@@ -14,7 +14,7 @@ class TautulliUtilities {
      */
 
     /// Converts a string to an integer. Returns null on an invalid string.
-    static int stringToInteger(String value) => int.tryParse(value);
+    static int stringToInteger(String value) => value == null ? null : int.tryParse(value);
     /// Converts an integer to a string. Returns an empty string on an invalid/null integer.
     static String integerToString(int value) => value?.toString() ?? '';
 
@@ -120,6 +120,11 @@ class TautulliUtilities {
     /**
      * Tautulli types <-> String
      */
+
+    /// Converts a string to a [TautulliSectionType] object.
+    static TautulliSectionType sectionTypeToObject(String type) => TautulliSectionType.MOVIE.from(type);
+    /// Converts a [TautulliSectionType] object back to its string representation.
+    static String sectionTypeToString(TautulliSectionType type) => type?.value;
 
     /// Converts a string to a [TautulliMediaType] object.
     static TautulliMediaType mediaTypeToObject(String type) => TautulliMediaType.MOVIE.from(type);

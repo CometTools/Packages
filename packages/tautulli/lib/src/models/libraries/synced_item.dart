@@ -95,6 +95,7 @@ class TautulliSyncedItem {
     @JsonKey(name: 'client_id')
     final String clientId;
 
+    /// The sync ID.
     @JsonKey(name: 'sync_id')
     final String syncId;
 
