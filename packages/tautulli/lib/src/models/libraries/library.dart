@@ -6,6 +6,9 @@ import 'package:tautulli/utilities.dart';
 part 'library.g.dart';
 
 /// Model to store data about a library from Plex.
+/// 
+/// This model is typically fetched using `getLibraries()`, and retrieves slightly different data than `getLibrary()`.
+/// A single library through `getLibrary()` will return a [TautulliSingleLibrary] object.
 @JsonSerializable()
 class TautulliLibrary {
     /// The library's section ID.

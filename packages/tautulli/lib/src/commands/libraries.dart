@@ -60,6 +60,15 @@ class TautulliCommandHandler_Libraries {
     /// Get a list of all libraries on your server.
     Future<List<TautulliLibrary>> getLibraries() async => _commandGetLibraries(_client);
 
+    /// Handler for [get_library](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_library).
+    /// 
+    /// Get a library's details.
+    /// 
+    /// - `sectionId` (required): The library section ID in Plex.
+    Future<TautulliSingleLibrary> getLibrary({
+        @required int sectionId,
+    }) async => _commandGetLibrary(_client, sectionId: sectionId);
+
     /// Handler for [get_synced_items](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_synced_items).
     /// 
     /// Get a list of synced items on the Plex Media Server.
