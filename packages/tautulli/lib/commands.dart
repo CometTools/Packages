@@ -36,6 +36,7 @@ part 'src/commands/miscellaneous/get_pms_token.dart';
 part 'src/commands/miscellaneous/get_server_friendly_name.dart';
 part 'src/commands/miscellaneous/get_server_id.dart';
 part 'src/commands/miscellaneous/get_server_identity.dart';
+part 'src/commands/miscellaneous/get_server_list.dart';
 part 'src/commands/miscellaneous/get_whois_lookup.dart';
 part 'src/commands/miscellaneous/pms_image_proxy.dart';
 // Notification

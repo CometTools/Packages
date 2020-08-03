@@ -59,6 +59,11 @@ class TautulliCommandHandler_Miscellaneous {
     /// Get info about the local server.
     Future<TautulliServerIdentity> getServerIdentity() async => _commandGetServerIdentity(_client);
 
+    /// Handler for [get_server_list](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_server_list).
+    /// 
+    /// Get all your servers that are published to Plex.tv.
+    Future<List<TautulliServer>> getServerList() async => _commandGetServerList(_client);
+
     /// Handler for [get_whois_lookup](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_whois_lookup).
     /// 
     /// Get the connection info for an IP address.

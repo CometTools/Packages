@@ -12,6 +12,7 @@ export 'src/models/libraries/synced_item.dart';
 // Miscellaneous
 export 'src/models/miscellaneous/date_format.dart';
 export 'src/models/miscellaneous/geolocation_info.dart';
+export 'src/models/miscellaneous/server.dart';
 export 'src/models/miscellaneous/server_identity.dart';
 export 'src/models/miscellaneous/whois_subnet.dart';
 export 'src/models/miscellaneous/whois_info.dart';
