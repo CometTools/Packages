@@ -11,7 +11,6 @@
 - Types: TautulliSingleLibrary
 - Types: TautulliSyncedItem
 - Types: TautulliTableUser
-- 
 # 0.0.4
 - Commands: `delete_recently_added`
 - Commands: `delete_temp_sessions`
