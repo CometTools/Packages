@@ -50,7 +50,7 @@ Dart library package to facilitate the connection to and from [Tautulli](https:/
 | [get_libraries_table][api:get_libraries_table]                                    | X               | X |
 | [get_library][api:get_library]                                                    | `libraries`     | `getLibrary()` |
 | [get_library_media_info][api:get_library_media_info]                              | X               | X |
-| [get_library_names][api:get_library_names]                                        | X               | X |
+| [get_library_names][api:get_library_names]                                        | `libraries`     | `getLibraryNames()` |
 | [get_library_user_stats][api:get_library_user_stats]                              | X               | X |
 | [get_library_watch_time_stats][api:get_library_watch_time_stats]                  | X               | X |
 | [get_logs][api:get_logs]                                                          | X               | X |

@@ -25,6 +25,7 @@ part 'src/commands/libraries/delete_recently_added.dart';
 part 'src/commands/libraries/edit_library.dart';
 part 'src/commands/libraries/get_libraries.dart';
 part 'src/commands/libraries/get_library.dart';
+part 'src/commands/libraries/get_library_names.dart';
 part 'src/commands/libraries/get_synced_items.dart';
 part 'src/commands/libraries/refresh_libraries_list.dart';
 part 'src/commands/libraries/update_metadata_details.dart';

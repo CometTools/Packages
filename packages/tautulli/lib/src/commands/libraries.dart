@@ -69,6 +69,11 @@ class TautulliCommandHandler_Libraries {
         @required int sectionId,
     }) async => _commandGetLibrary(_client, sectionId: sectionId);
 
+    /// Handler for [get_library_names](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_library_names).
+    /// 
+    /// Get a list of library sections and IDs on the Plex Media Server.
+    Future<List<TautulliLibraryName>> getLibraryNames() async => _commandGetLibraryNames(_client);
+
     /// Handler for [get_synced_items](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_synced_items).
     /// 
     /// Get a list of synced items on the Plex Media Server.
