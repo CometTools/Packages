@@ -1,0 +1,18 @@
+name: tautulli
+description: Facilitate the communication to and from Tautulli's API, a Python based monitoring and tracking tool for Plex Media Server.
+version: 1.1.0
+homepage: https://github.com/CometTools/tautulli
+repository: https://github.com/CometTools/tautulli
+issue_tracker: https://github.com/CometTools/tautulli/issues
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+dependencies:
+  dio: ^3.0.9
+  json_annotation: ^3.0.1
+  meta: ^1.1.8
+dev_dependencies:
+  build_runner: ^1.10.0
+  json_serializable: ^3.3.0
+  test: ^1.15.1
+scripts:
+  build: pub run build_runner build --delete-conflicting-outputs
