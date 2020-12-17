@@ -1,3 +1,5 @@
+# 1.1.0+1
+- Updated pubspec.yaml to include new references to GitHub repository
 # 1.1.0
 - Added `TautulliUpdateCheck` model
 - BREAKING: `updateCheck()` now returns `TautulliUpdateCheck` object instead of a boolean
