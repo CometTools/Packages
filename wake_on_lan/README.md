@@ -1,7 +1,6 @@
 # wake_on_lan
 
 [![Pubdev][pubdev-shield]][pubdev]
-[![Code Coverage][codecov-shield]][codecov]
 ![License][license-shield]
 
 Dart library package to easily send [Wake-on-LAN](https://en.wikipedia.org/wiki/Wake-on-LAN) magic packets to devices on your local network.
@@ -76,7 +75,5 @@ if(MACAddress.validate(mac) && IPv4Address.validate(ipv4)) {
 Because wake-on-LAN packets are sent over UDP, beyond the successful creation of a datagram socket and sending the data over the network, there is no way to confirm that the machine has been awoken beyond pinging the machine after waking it (**This functionality is not implemented in this package**). This is because of the nature of UDP sockets which do not need to establish the connection for the data to be sent.
 
 [license-shield]: https://img.shields.io/github/license/CometTools/wake_on_lan?style=for-the-badge
-[codecov]: https://codecov.io/gh/CometTools/wake_on_lan
-[codecov-shield]: https://img.shields.io/codecov/c/gh/CometTools/wake_on_lan?style=for-the-badge
 [pubdev]: https://pub.dev/packages/wake_on_lan/
 [pubdev-shield]: https://img.shields.io/pub/v/wake_on_lan.svg?style=for-the-badge

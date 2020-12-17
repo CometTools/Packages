@@ -1,3 +1,5 @@
+# 1.1.1+3
+- Updated pubspec.yaml to include new repository links
 # 1.1.1+2
 - Improved documentation relating to `IPv4Address` and which address to use within your network
 # 1.1.1+1
