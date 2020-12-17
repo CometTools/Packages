@@ -1,4 +1,4 @@
-# sonarr (prerelease)
+# sonarr
 
 [![Pubdev][pubdev-shield]][pubdev]
 ![License][license-shield]

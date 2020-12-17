@@ -1,3 +1,5 @@
+# 1.0.0
+- Updated pubspec.yaml to include new repository links
 # 0.0.5
 - Removed `language` from `SonarrRelease` to allow cross-compatibility with Sonarr v2 and v3
 # 0.0.4
