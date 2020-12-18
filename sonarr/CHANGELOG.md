@@ -1,3 +1,5 @@
+# 1.0.0+1
+- Updated LICENSE link for shield
 # 1.0.0
 - Updated pubspec.yaml to include new repository links
 # 0.0.5
