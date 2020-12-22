@@ -12,7 +12,7 @@ Future<SonarrHistory> _commandGetHistory(Dio client, {
         'sortKey': sortKey.value,
         if(page != null) 'page': page,
         if(pageSize != null) 'pageSize': pageSize,
-        if(sortDirection != null) 'sortDirection': sortDirection.value,
+        if(sortDirection != null) 'sortDir': sortDirection.value,
         if(episodeId != null) 'episodeId': episodeId,
     });
     return SonarrHistory.fromJson(response.data);
