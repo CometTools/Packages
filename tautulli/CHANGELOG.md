@@ -1,3 +1,5 @@
+# 1.1.0+3
+- Updated GitHub repository information
 # 1.1.0+2
 - Updated LICENSE link for shield
 # 1.1.0+1

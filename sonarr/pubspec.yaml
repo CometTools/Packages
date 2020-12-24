@@ -1,9 +1,9 @@
 name: sonarr
 description: Facilitate the communication to and from Sonarr's API, a smart PVR for newsgroup and bittorrent users.
-version: 1.0.1
-homepage: https://github.com/CometTools/Packages/tree/master/sonarr
-repository: https://github.com/CometTools/Packages
-issue_tracker: https://github.com/CometTools/Packages/issues
+version: 1.0.1+1
+homepage: https://github.com/CometTools/Dart-Packages/tree/master/sonarr
+repository: https://github.com/CometTools/Dart-Packages
+issue_tracker: https://github.com/CometTools/Dart-Packages/issues
 environment:
   sdk: ">=2.9.0 <3.0.0"
 dependencies:

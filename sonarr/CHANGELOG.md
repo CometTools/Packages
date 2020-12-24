@@ -1,3 +1,5 @@
+# 1.0.1+1
+- Updated GitHub repository information
 # 1.0.1
 - Fixed bug in `getHistory()` where sorting direction would not get set
 # 1.0.0+1

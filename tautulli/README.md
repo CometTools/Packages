@@ -389,6 +389,6 @@ All commands that have not been implemented by this package.
 [api:update_check]: https://github.com/Tautulli/Tautulli/blob/master/API.md#update_check
 [api:update_metadata_details]: https://github.com/Tautulli/Tautulli/blob/master/API.md#update_metadata_details
 
-[license-shield]: https://img.shields.io/github/license/CometTools/Packages?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/CometTools/Dart-Packages?style=for-the-badge
 [pubdev]: https://pub.dev/packages/tautulli/
 [pubdev-shield]: https://img.shields.io/pub/v/tautulli.svg?style=for-the-badge
