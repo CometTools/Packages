@@ -1,3 +1,5 @@
+# 1.1.0+1
+- Remove unneeded imports to improve compatability
 # 1.1.0
 - Removed the option to disable strictTLS when creating a new `Sonarr` instance -- if you want to disable strict TLS, you should configure the HTTPClient yourself
 # 1.0.1+1
