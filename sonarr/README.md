@@ -33,18 +33,6 @@ Sonarr(
 );
 ```
 
-### `strictTLS` | Boolean (default: true)
-
-Allows you to disable strict TLS validation. Strict TLS validation ensures that the SSL certificate on the host machine is valid by checking it against your device's certificate authorities (CAs). Disabling this feature will allow for successful connections to machines with self-signed SSL certificates, but should be left enabled when possible.
-
-```dart
-Sonarr(
-    host: '<your instance URL>',
-    apiKey: '<your API key>',
-    strictTLS: false, // Disables strict TLS
-);
-```
-
 ### `followRedirects` | Boolean (default: true)
 
 Allows you to define if the HTTP client should follow redirects.
