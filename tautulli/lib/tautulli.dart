@@ -5,10 +5,8 @@
 library tautulli;
 
 // Imports
-import 'dart:io';
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
-import 'package:dio/adapter.dart';
 import 'commands.dart';
 
 // Exports
@@ -44,14 +42,12 @@ class Tautulli {
     /// 
     /// Optional Parameters:
     /// - `headers`: Map that contains additional headers that should be attached to all requests
-    /// - `strictTLS`: If the HTTP client should validate that the SSL/TLS certificate is valid against the device's CA
     /// - `followRedirects`: If the HTTP client should follow URL redirects
     /// - `maxRedirects`: The maximum amount of redirects the client should follow (does nothing if `followRedirects` is false)
     factory Tautulli({
         @required String host,
         @required String apiKey,
         Map<String, dynamic> headers,
-        bool strictTLS = true,
         bool followRedirects = true,
         int maxRedirects = 5,
     }) {
@@ -59,7 +55,6 @@ class Tautulli {
         // If you do not want to set them, all optional parameters have default values.
         assert(host != null, 'host cannot be null.');
         assert(apiKey != null, 'apiKey cannot be null.');
-        assert(strictTLS != null, 'strictTLS cannot be null.');
         assert(followRedirects != null, 'followsRedirects cannot be null.');
         assert(maxRedirects != null, 'maxRedirects cannot be null.');
         // Build the HTTP client
@@ -76,12 +71,6 @@ class Tautulli {
                 maxRedirects: maxRedirects,
             ),
         );
-        // If the user wants to disable strict TLS...
-        if(!strictTLS) {
-            (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (client) {
-                client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
-            };
-        }
         return Tautulli._internal(
             httpClient: _dio,
             activity: TautulliCommandHandler_Activity(_dio),
