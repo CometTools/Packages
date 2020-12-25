@@ -7,7 +7,6 @@ library sonarr;
 // Imports
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
-import 'package:dio/adapter.dart';
 import 'commands.dart';
 
 // Exports
