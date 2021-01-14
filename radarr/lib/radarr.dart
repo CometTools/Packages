@@ -9,6 +9,13 @@ library radarr;
 // Imports
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
+import 'commands.dart';
+
+// Exports
+export 'commands.dart';
+export 'models.dart';
+export 'types.dart';
+export 'utilities.dart';
 
 /// The core class to handle all connections to Radarr.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
@@ -19,6 +26,7 @@ class Radarr {
     /// Internal constructor
     Radarr._internal({
         @required this.httpClient,
+        @required this.movie,
     });
 
     /// Create a new Radarr API connection manager to connection to your instance.
@@ -49,8 +57,8 @@ class Radarr {
         Dio _dio = Dio(
             BaseOptions(
                 baseUrl: host.endsWith('/')
-                    ? '${host}api/'
-                    : '$host/api/',
+                    ? '${host}api/v3/'
+                    : '$host/api/v3/',
                 queryParameters: {
                     'apikey': apiKey,
                 },
@@ -61,6 +69,7 @@ class Radarr {
         );
         return Radarr._internal(
             httpClient: _dio,
+            movie: RadarrCommandHandler_Movie(_dio),
         );
     }
 
@@ -88,6 +97,7 @@ class Radarr {
         assert(client != null, 'client cannot be null.');
         return Radarr._internal(
             httpClient: client,
+            movie: RadarrCommandHandler_Movie(client),
         );
     }
 
@@ -96,4 +106,9 @@ class Radarr {
     /// Making changes to the [Dio] client should propogate to the command handlers, but is not recommended.
     /// The recommended way to make changes to the HTTP client is to use the `.from()` factory to build your own [Dio] HTTP client.
     final Dio httpClient;
+
+    /// Command handler for all movie-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Movie movie;
 }

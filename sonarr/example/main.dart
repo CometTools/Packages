@@ -8,4 +8,5 @@ void main() async {
     String key = '<apikey>';
     Sonarr api = Sonarr(host: host, apiKey: key);
     // Run your commands
+    api.series.getSeries(seriesId: 1).then((data) => print(data));
 }

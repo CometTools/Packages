@@ -3,9 +3,9 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'rating.g.dart';
 
-/// Model for series' rating values.
+/// Model for movies rating values.
 @JsonSerializable(explicitToJson: true)
-class SonarrSeriesRating {
+class RadarrMovieRating {
     /// Number of votes for the rating score
     @JsonKey(name: 'votes')
     int votes;
@@ -14,7 +14,7 @@ class SonarrSeriesRating {
     @JsonKey(name: 'value')
     double value;
 
-    SonarrSeriesRating({
+    RadarrMovieRating({
         this.votes,
         this.value,
     });
@@ -23,8 +23,8 @@ class SonarrSeriesRating {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [SonarrSeriesRating] object.
-    factory SonarrSeriesRating.fromJson(Map<String, dynamic> json) => _$SonarrSeriesRatingFromJson(json);
-    /// Serialize a [SonarrSeriesRating] object to a JSON map.
-    Map<String, dynamic> toJson() => _$SonarrSeriesRatingToJson(this);
+    /// Deserialize a JSON map to a [RadarrMovieRating] object.
+    factory RadarrMovieRating.fromJson(Map<String, dynamic> json) => _$RadarrMovieRatingFromJson(json);
+    /// Serialize a [RadarrMovieRating] object to a JSON map.
+    Map<String, dynamic> toJson() => _$RadarrMovieRatingToJson(this);
 }
