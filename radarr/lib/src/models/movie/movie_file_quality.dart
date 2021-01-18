@@ -8,11 +8,9 @@ part 'movie_file_quality.g.dart';
 /// Model for an movie file's quality profile.
 @JsonSerializable(explicitToJson: true)
 class RadarrMovieFileQuality {
-    /// [RadarrMovieFileQualityQuality] object containing the quality profile
     @JsonKey(name: 'quality')
     RadarrMovieFileQualityQuality quality;
 
-    /// [RadarrMovieFileQualityRevision] object containing the revision information
     @JsonKey(name: 'revision')
     RadarrMovieFileQualityRevision revision;
 

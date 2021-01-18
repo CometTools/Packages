@@ -6,11 +6,9 @@ part 'collection.g.dart';
 /// Store details about a collection the movie is apart of.
 @JsonSerializable(explicitToJson: true)
 class RadarrMovieCollection {
-    /// Collection title
     @JsonKey(name: 'name')
     String name;
 
-    /// TMDB identifier
     @JsonKey(name: 'tmdbId')
     int tmdbId;
 

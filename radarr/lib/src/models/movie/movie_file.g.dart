@@ -26,7 +26,7 @@ RadarrMovieFile _$RadarrMovieFileFromJson(Map<String, dynamic> json) {
     languages: (json['languages'] as List)
         ?.map((e) => e == null
             ? null
-            : RadarrMovieLanguage.fromJson(e as Map<String, dynamic>))
+            : RadarrLanguage.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     edition: json['edition'] as String,
     id: json['id'] as int,

@@ -3,18 +3,16 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'language.g.dart';
 
-/// Store details about the language of the movie.
+/// Store details about a language.
 @JsonSerializable(explicitToJson: true)
-class RadarrMovieLanguage {
-    /// Language identifier
+class RadarrLanguage {
     @JsonKey(name: 'id')
     int id;
 
-    /// Language name
     @JsonKey(name: 'name')
     String name;
 
-    RadarrMovieLanguage({
+    RadarrLanguage({
         this.id,
         this.name,
     });
@@ -24,7 +22,7 @@ class RadarrMovieLanguage {
     String toString() => json.encode(this.toJson());
 
     /// Deserialize a JSON map to a [SonarrSeries] object.
-    factory RadarrMovieLanguage.fromJson(Map<String, dynamic> json) => _$RadarrMovieLanguageFromJson(json);
-    /// Serialize a [RadarrMovieLanguage] object to a JSON map.
-    Map<String, dynamic> toJson() => _$RadarrMovieLanguageToJson(this);
+    factory RadarrLanguage.fromJson(Map<String, dynamic> json) => _$RadarrLanguageFromJson(json);
+    /// Serialize a [RadarrLanguage] object to a JSON map.
+    Map<String, dynamic> toJson() => _$RadarrLanguageToJson(this);
 }

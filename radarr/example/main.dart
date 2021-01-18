@@ -8,5 +8,5 @@ void main() async {
     String key = '<apikey>';
     Radarr api = Radarr(host: host, apiKey: key);
     // Run your commands
-    api.movie.getMovie(movieId: 1).then((data) => print(data));
+    api.movie.get(movieId: 1).then((data) => print(data));
 }

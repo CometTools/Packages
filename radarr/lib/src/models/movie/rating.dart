@@ -6,11 +6,9 @@ part 'rating.g.dart';
 /// Model for movies rating values.
 @JsonSerializable(explicitToJson: true)
 class RadarrMovieRating {
-    /// Number of votes for the rating score
     @JsonKey(name: 'votes')
     int votes;
 
-    /// Final score/value of the rating
     @JsonKey(name: 'value')
     double value;
 

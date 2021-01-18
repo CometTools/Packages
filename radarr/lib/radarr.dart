@@ -27,6 +27,7 @@ class Radarr {
     Radarr._internal({
         @required this.httpClient,
         @required this.movie,
+        @required this.qualityProfile,
     });
 
     /// Create a new Radarr API connection manager to connection to your instance.
@@ -70,6 +71,7 @@ class Radarr {
         return Radarr._internal(
             httpClient: _dio,
             movie: RadarrCommandHandler_Movie(_dio),
+            qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
         );
     }
 
@@ -98,6 +100,7 @@ class Radarr {
         return Radarr._internal(
             httpClient: client,
             movie: RadarrCommandHandler_Movie(client),
+            qualityProfile: RadarrCommandHandler_QualityProfile(client),
         );
     }
 
@@ -111,4 +114,9 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_Movie movie;
+
+    /// Command handler for all quality profile-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_QualityProfile qualityProfile;
 }

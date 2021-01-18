@@ -1,40 +1,33 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'language.dart';
+import '../qualityprofile/language.dart';
 
 part 'alternate_titles.g.dart';
 
 /// Store details about alternate titles available for a movie.
 @JsonSerializable(explicitToJson: true)
 class RadarrMovieAlternateTitles {
-    /// Title source
     @JsonKey(name: 'sourceType')
     String sourceType;
 
-    /// Movie ID
     @JsonKey(name: 'movieId')
     int movieId;
 
-    /// Alternative movie title
     @JsonKey(name: 'title')
     String title;
 
-    /// Source title identifier
     @JsonKey(name: 'sourceId')
     int sourceId;
 
-    /// Votes
     @JsonKey(name: 'votes')
     int votes;
 
-    /// Vote count
     @JsonKey(name: 'voteCount')
     int voteCount;
 
     @JsonKey(name: 'language')
-    RadarrMovieLanguage language;
+    RadarrLanguage language;
 
-    /// Radarr identifier for the alternative title
     @JsonKey(name: 'id')
     int id;
 

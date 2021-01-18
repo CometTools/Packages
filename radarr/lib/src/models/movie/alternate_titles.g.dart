@@ -17,8 +17,7 @@ RadarrMovieAlternateTitles _$RadarrMovieAlternateTitlesFromJson(
     voteCount: json['voteCount'] as int,
     language: json['language'] == null
         ? null
-        : RadarrMovieLanguage.fromJson(
-            json['language'] as Map<String, dynamic>),
+        : RadarrLanguage.fromJson(json['language'] as Map<String, dynamic>),
     id: json['id'] as int,
   );
 }

@@ -6,15 +6,14 @@ part of 'language.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-RadarrMovieLanguage _$RadarrMovieLanguageFromJson(Map<String, dynamic> json) {
-  return RadarrMovieLanguage(
+RadarrLanguage _$RadarrLanguageFromJson(Map<String, dynamic> json) {
+  return RadarrLanguage(
     id: json['id'] as int,
     name: json['name'] as String,
   );
 }
 
-Map<String, dynamic> _$RadarrMovieLanguageToJson(
-        RadarrMovieLanguage instance) =>
+Map<String, dynamic> _$RadarrLanguageToJson(RadarrLanguage instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

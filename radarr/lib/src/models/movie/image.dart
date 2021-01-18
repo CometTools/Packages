@@ -6,15 +6,12 @@ part 'image.g.dart';
 /// Model for a movies' image from Radarr.
 @JsonSerializable(explicitToJson: true)
 class RadarrMovieImage {
-    /// Type of image (banner, poster, etc.)
     @JsonKey(name: 'coverType')
     String coverType;
 
-    /// Direct URL to the image
     @JsonKey(name: 'url')
     String url;
     
-    /// Remote URL to the image
     @JsonKey(name: 'remoteUrl')
     String remoteUrl;
 
