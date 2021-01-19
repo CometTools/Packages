@@ -18,7 +18,7 @@ RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
     secondaryYearSourceId: json['secondaryYearSourceId'] as int,
     sortTitle: json['sortTitle'] as String,
     sizeOnDisk: json['sizeOnDisk'] as int,
-    status: json['status'] as String,
+    status: RadarrUtilities.availabilityFromJson(json['status'] as String),
     overview: json['overview'] as String,
     inCinemas: RadarrUtilities.dateTimeFromJson(json['inCinemas'] as String),
     physicalRelease:
@@ -38,7 +38,8 @@ RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
     path: json['path'] as String,
     qualityProfileId: json['qualityProfileId'] as int,
     monitored: json['monitored'] as bool,
-    minimumAvailability: json['minimumAvailability'] as String,
+    minimumAvailability: RadarrUtilities.availabilityFromJson(
+        json['minimumAvailability'] as String),
     isAvailable: json['isAvailable'] as bool,
     folderName: json['folderName'] as String,
     runtime: json['runtime'] as int,
@@ -73,7 +74,7 @@ Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) =>
       'secondaryYearSourceId': instance.secondaryYearSourceId,
       'sortTitle': instance.sortTitle,
       'sizeOnDisk': instance.sizeOnDisk,
-      'status': instance.status,
+      'status': RadarrUtilities.availabilityToJson(instance.status),
       'overview': instance.overview,
       'inCinemas': RadarrUtilities.dateTimeToJson(instance.inCinemas),
       'physicalRelease':
@@ -88,7 +89,8 @@ Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) =>
       'path': instance.path,
       'qualityProfileId': instance.qualityProfileId,
       'monitored': instance.monitored,
-      'minimumAvailability': instance.minimumAvailability,
+      'minimumAvailability':
+          RadarrUtilities.availabilityToJson(instance.minimumAvailability),
       'isAvailable': instance.isAvailable,
       'folderName': instance.folderName,
       'runtime': instance.runtime,

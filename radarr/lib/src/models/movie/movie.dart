@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:radarr/utilities.dart';
+import '../../../types.dart';
 import 'alternate_titles.dart';
 import 'collection.dart';
 import 'image.dart';
@@ -30,9 +31,8 @@ class RadarrMovie {
     @JsonKey(name: 'sizeOnDisk')
     int sizeOnDisk;
 
-    /// TODO
-    @JsonKey(name: 'status')
-    String status;
+    @JsonKey(name: 'status', toJson: RadarrUtilities.availabilityToJson, fromJson: RadarrUtilities.availabilityFromJson)
+    RadarrAvailability status;
 
     @JsonKey(name: 'overview')
     String overview;
@@ -73,9 +73,8 @@ class RadarrMovie {
     @JsonKey(name: 'monitored')
     bool monitored;
 
-    /// TODO
-    @JsonKey(name: 'minimumAvailability')
-    String minimumAvailability;
+    @JsonKey(name: 'minimumAvailability', toJson: RadarrUtilities.availabilityToJson, fromJson: RadarrUtilities.availabilityFromJson)
+    RadarrAvailability minimumAvailability;
 
     @JsonKey(name: 'isAvailable')
     bool isAvailable;
