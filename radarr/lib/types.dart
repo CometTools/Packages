@@ -2,3 +2,4 @@
 library radarr_types;
 
 part 'src/types/availability.dart';
+part 'src/types/credit_type.dart';

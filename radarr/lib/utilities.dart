@@ -20,4 +20,9 @@ class RadarrUtilities {
     static RadarrAvailability availabilityFromJson(String type) => RadarrAvailability.ANNOUNCED.from(type);
     /// Converts a [RadarrAvailability] object back to its string representation.
     static String availabilityToJson(RadarrAvailability type) => type?.value;
+
+    /// Converts a string to a [RadarrCreditType] object.
+    static RadarrCreditType creditTypeFromJson(String type) => RadarrCreditType.CREW.from(type);
+    /// Converts a [RadarrCreditType] object back to its string representation.
+    static String creditTypeToJson(RadarrCreditType type) => type?.value;
 }

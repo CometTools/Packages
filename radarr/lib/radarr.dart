@@ -26,6 +26,7 @@ class Radarr {
     /// Internal constructor
     Radarr._internal({
         @required this.httpClient,
+        @required this.credits,
         @required this.movie,
         @required this.qualityProfile,
     });
@@ -70,6 +71,7 @@ class Radarr {
         );
         return Radarr._internal(
             httpClient: _dio,
+            credits: RadarrCommandHandler_Credits(_dio),
             movie: RadarrCommandHandler_Movie(_dio),
             qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
         );
@@ -99,6 +101,7 @@ class Radarr {
         assert(client != null, 'client cannot be null.');
         return Radarr._internal(
             httpClient: client,
+            credits: RadarrCommandHandler_Credits(client),
             movie: RadarrCommandHandler_Movie(client),
             qualityProfile: RadarrCommandHandler_QualityProfile(client),
         );
@@ -109,6 +112,11 @@ class Radarr {
     /// Making changes to the [Dio] client should propogate to the command handlers, but is not recommended.
     /// The recommended way to make changes to the HTTP client is to use the `.from()` factory to build your own [Dio] HTTP client.
     final Dio httpClient;
+
+    /// Command handler for all movie credits-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Credits credits;
 
     /// Command handler for all movie-related API calls.
     /// 

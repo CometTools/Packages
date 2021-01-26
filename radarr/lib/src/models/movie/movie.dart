@@ -4,9 +4,9 @@ import 'package:radarr/utilities.dart';
 import '../../../types.dart';
 import 'alternate_titles.dart';
 import 'collection.dart';
-import 'image.dart';
 import 'movie_file.dart';
 import 'rating.dart';
+import '../image.dart';
 
 part 'movie.g.dart';
 
@@ -47,7 +47,7 @@ class RadarrMovie {
     DateTime digitalRelease;
 
     @JsonKey(name: 'images')
-    List<RadarrMovieImage> images;
+    List<RadarrImage> images;
 
     @JsonKey(name: 'website')
     String website;

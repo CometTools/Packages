@@ -26,9 +26,8 @@ RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
     digitalRelease:
         RadarrUtilities.dateTimeFromJson(json['digitalRelease'] as String),
     images: (json['images'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrMovieImage.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : RadarrImage.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     website: json['website'] as String,
     year: json['year'] as int,

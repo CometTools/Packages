@@ -1,10 +1,13 @@
 /// Library containing all model definitions for Radarr data.
 library radarr_models;
 
+/// Shared
+export 'src/models/image.dart';
+
 /// Movie
 export 'src/models/movie/alternate_titles.dart';
 export 'src/models/movie/collection.dart';
-export 'src/models/movie/image.dart';
+export 'src/models/movie/credits.dart';
 export 'src/models/movie/movie.dart';
 export 'src/models/movie/movie_file.dart';
 export 'src/models/movie/movie_file_media_info.dart';

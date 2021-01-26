@@ -5,6 +5,10 @@ import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 import 'models.dart';
 
+// Credits
+part 'src/commands/credits.dart';
+part 'src/commands/credits/get_credits.dart';
+
 // Movie
 part 'src/commands/movie.dart';
 part 'src/commands/movie/get_movie.dart';
