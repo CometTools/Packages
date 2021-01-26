@@ -18,6 +18,10 @@ part 'src/commands/movie.dart';
 part 'src/commands/movie/get_movie.dart';
 part 'src/commands/movie/get_all_movies.dart';
 
+// Movie File
+part 'src/commands/moviefile.dart';
+part 'src/commands/moviefile/get_movie_file.dart';
+
 // Quality Profile
 part 'src/commands/qualityprofile.dart';
 part 'src/commands/qualityprofile/get_quality_profile.dart';

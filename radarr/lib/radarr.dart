@@ -29,6 +29,7 @@ class Radarr {
         @required this.credits,
         @required this.extraFile,
         @required this.movie,
+        @required this.movieFile,
         @required this.qualityProfile,
     });
 
@@ -75,6 +76,7 @@ class Radarr {
             credits: RadarrCommandHandler_Credits(_dio),
             extraFile: RadarrCommandHandler_ExtraFile(_dio),
             movie: RadarrCommandHandler_Movie(_dio),
+            movieFile: RadarrCommandHandler_MovieFile(_dio),
             qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
         );
     }
@@ -106,6 +108,7 @@ class Radarr {
             credits: RadarrCommandHandler_Credits(client),
             extraFile: RadarrCommandHandler_ExtraFile(client),
             movie: RadarrCommandHandler_Movie(client),
+            movieFile: RadarrCommandHandler_MovieFile(client),
             qualityProfile: RadarrCommandHandler_QualityProfile(client),
         );
     }
@@ -130,6 +133,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_Movie movie;
+
+    /// Command handler for all movie file-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_MovieFile movieFile;
 
     /// Command handler for all quality profile-related API calls.
     /// 

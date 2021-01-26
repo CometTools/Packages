@@ -4,6 +4,7 @@ import 'package:radarr/utilities.dart';
 import 'movie_file_quality.dart';
 import 'movie_file_media_info.dart';
 import '../qualityprofile/language.dart';
+import '../customformat/custom_format.dart';
 
 part 'movie_file.g.dart';
 
@@ -31,6 +32,9 @@ class RadarrMovieFile {
     @JsonKey(name: 'quality')
     RadarrMovieFileQuality quality;
 
+    @JsonKey(name: 'customFormats')
+    List<RadarrCustomFormat> customFormats;
+
     @JsonKey(name: 'mediaInfo')
     RadarrMovieFileMediaInfo mediaInfo;
 
@@ -54,6 +58,7 @@ class RadarrMovieFile {
         this.dateAdded,
         this.indexerFlags,
         this.quality,
+        this.customFormats,
         this.mediaInfo,
         this.qualityCutoffNotMet,
         this.languages,

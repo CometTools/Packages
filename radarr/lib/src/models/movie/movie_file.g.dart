@@ -18,6 +18,11 @@ RadarrMovieFile _$RadarrMovieFileFromJson(Map<String, dynamic> json) {
         ? null
         : RadarrMovieFileQuality.fromJson(
             json['quality'] as Map<String, dynamic>),
+    customFormats: (json['customFormats'] as List)
+        ?.map((e) => e == null
+            ? null
+            : RadarrCustomFormat.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     mediaInfo: json['mediaInfo'] == null
         ? null
         : RadarrMovieFileMediaInfo.fromJson(
@@ -42,6 +47,8 @@ Map<String, dynamic> _$RadarrMovieFileToJson(RadarrMovieFile instance) =>
       'dateAdded': RadarrUtilities.dateTimeToJson(instance.dateAdded),
       'indexerFlags': instance.indexerFlags,
       'quality': instance.quality?.toJson(),
+      'customFormats':
+          instance.customFormats?.map((e) => e?.toJson())?.toList(),
       'mediaInfo': instance.mediaInfo?.toJson(),
       'qualityCutoffNotMet': instance.qualityCutoffNotMet,
       'languages': instance.languages?.map((e) => e?.toJson())?.toList(),
