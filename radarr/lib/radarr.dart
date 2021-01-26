@@ -27,6 +27,7 @@ class Radarr {
     Radarr._internal({
         @required this.httpClient,
         @required this.credits,
+        @required this.extraFile,
         @required this.movie,
         @required this.qualityProfile,
     });
@@ -72,6 +73,7 @@ class Radarr {
         return Radarr._internal(
             httpClient: _dio,
             credits: RadarrCommandHandler_Credits(_dio),
+            extraFile: RadarrCommandHandler_ExtraFile(_dio),
             movie: RadarrCommandHandler_Movie(_dio),
             qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
         );
@@ -102,6 +104,7 @@ class Radarr {
         return Radarr._internal(
             httpClient: client,
             credits: RadarrCommandHandler_Credits(client),
+            extraFile: RadarrCommandHandler_ExtraFile(client),
             movie: RadarrCommandHandler_Movie(client),
             qualityProfile: RadarrCommandHandler_QualityProfile(client),
         );
@@ -117,6 +120,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_Credits credits;
+
+    /// Command handler for all movie extra files-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_ExtraFile extraFile;
 
     /// Command handler for all movie-related API calls.
     /// 

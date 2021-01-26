@@ -9,6 +9,10 @@ import 'models.dart';
 part 'src/commands/credits.dart';
 part 'src/commands/credits/get_credits.dart';
 
+// Extra File
+part 'src/commands/extrafile.dart';
+part 'src/commands/extrafile/get_extra_files.dart';
+
 // Movie
 part 'src/commands/movie.dart';
 part 'src/commands/movie/get_movie.dart';

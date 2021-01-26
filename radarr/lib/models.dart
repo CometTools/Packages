@@ -4,6 +4,9 @@ library radarr_models;
 /// Shared
 export 'src/models/image.dart';
 
+/// Extra File
+export 'src/models/extrafile/extra_file.dart';
+
 /// Movie
 export 'src/models/movie/alternate_titles.dart';
 export 'src/models/movie/collection.dart';
