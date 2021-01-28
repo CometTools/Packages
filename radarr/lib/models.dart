@@ -12,6 +12,9 @@ export 'src/models/customformat/custom_format_specifications_fields.dart';
 /// Extra File
 export 'src/models/extrafile/extra_file.dart';
 
+/// History
+export 'src/models/history/history_record.dart';
+
 /// Movie
 export 'src/models/movie/alternate_titles.dart';
 export 'src/models/movie/collection.dart';

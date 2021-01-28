@@ -13,6 +13,10 @@ part 'src/commands/credits/get_credits.dart';
 part 'src/commands/extrafile.dart';
 part 'src/commands/extrafile/get_extra_files.dart';
 
+// Credits
+part 'src/commands/history.dart';
+part 'src/commands/history/get_movie_history.dart';
+
 // Movie
 part 'src/commands/movie.dart';
 part 'src/commands/movie/get_movie.dart';

@@ -25,4 +25,9 @@ class RadarrUtilities {
     static RadarrCreditType creditTypeFromJson(String type) => RadarrCreditType.CREW.from(type);
     /// Converts a [RadarrCreditType] object back to its string representation.
     static String creditTypeToJson(RadarrCreditType type) => type?.value;
+
+    /// Converts a string to a [RadarrEventType] object.
+    static RadarrEventType eventTypeFromJson(String type) => RadarrEventType.GRABBED.from(type);
+    /// Converts a [RadarrEventType] object back to its string representation.
+    static String eventTypeToJson(RadarrEventType type) => type?.value;
 }
