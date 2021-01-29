@@ -33,3 +33,6 @@ export 'src/models/qualityprofile/item.dart';
 export 'src/models/qualityprofile/item_quality.dart';
 export 'src/models/qualityprofile/language.dart';
 export 'src/models/qualityprofile/quality_profile.dart';
+
+/// Tag
+export 'src/models/tag/tag.dart';

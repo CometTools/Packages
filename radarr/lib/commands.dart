@@ -30,3 +30,11 @@ part 'src/commands/moviefile/get_movie_file.dart';
 part 'src/commands/qualityprofile.dart';
 part 'src/commands/qualityprofile/get_quality_profile.dart';
 part 'src/commands/qualityprofile/get_all_quality_profiles.dart';
+
+// Tags
+part 'src/commands/tag.dart';
+part 'src/commands/tag/add_tag.dart';
+part 'src/commands/tag/delete_tag.dart';
+part 'src/commands/tag/get_all_tags.dart';
+part 'src/commands/tag/get_tag.dart';
+part 'src/commands/tag/update_tag.dart';
