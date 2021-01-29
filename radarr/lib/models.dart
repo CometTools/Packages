@@ -4,6 +4,10 @@ library radarr_models;
 /// Shared
 export 'src/models/image.dart';
 
+/// Commands
+export 'src/models/command/command.dart';
+export 'src/models/command/command_body.dart';
+
 /// Custom Formats
 export 'src/models/customformat/custom_format.dart';
 export 'src/models/customformat/custom_format_specifications.dart';

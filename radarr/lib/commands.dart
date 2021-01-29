@@ -5,6 +5,12 @@ import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 import 'models.dart';
 
+// Commands
+part 'src/commands/command.dart';
+part 'src/commands/command/backup.dart';
+part 'src/commands/command/refresh_movie.dart';
+part 'src/commands/command/rss_sync.dart';
+
 // Credits
 part 'src/commands/credits.dart';
 part 'src/commands/credits/get_credits.dart';
@@ -13,7 +19,7 @@ part 'src/commands/credits/get_credits.dart';
 part 'src/commands/extrafile.dart';
 part 'src/commands/extrafile/get_extra_files.dart';
 
-// Credits
+// History
 part 'src/commands/history.dart';
 part 'src/commands/history/get_movie_history.dart';
 
