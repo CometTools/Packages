@@ -14,6 +14,21 @@ class RadarrCommandHandler_Command {
     /// Trigger a backup routine.
     Future<RadarrCommand> backup() async => _commandBackup(_client);
 
+    /// Handler for [command (MissingMoviesSearch)](https://radarr.video/docs/api/#/Command/post-command).
+    /// 
+    /// Triggers a search of all missing movies.
+    Future<RadarrCommand> missingMovieSearch() async => _commandMissingMovieSearch(_client);
+
+    /// Handler for [command (MoviesSearch)](https://radarr.video/docs/api/#/Command/post-command).
+    /// 
+    /// Triggers a search for the given list of movies.
+    /// 
+    /// Required Parameters:
+    /// - `movieIds`: List of movie IDs to search for.
+    Future<RadarrCommand> moviesSearch({
+        @required List<int> movieIds,
+    }) async => _commandMoviesSearch(_client, movieIds: movieIds);
+
     /// Handler for [command (RefreshMovie)](https://radarr.video/docs/api/#/Command/post-command).
     /// 
     /// Trigger a refresh / scan of library.

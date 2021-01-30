@@ -8,6 +8,8 @@ import 'models.dart';
 // Commands
 part 'src/commands/command.dart';
 part 'src/commands/command/backup.dart';
+part 'src/commands/command/missing_movie_search.dart';
+part 'src/commands/command/movies_search.dart';
 part 'src/commands/command/refresh_movie.dart';
 part 'src/commands/command/rss_sync.dart';
 
