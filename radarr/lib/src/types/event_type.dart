@@ -43,11 +43,11 @@ extension RadarrEventTypeExtension on RadarrEventType {
         switch(this) {
             case RadarrEventType.GRABBED: return 'Grabbed';
             case RadarrEventType.DOWNLOAD_FAILED: return 'Download Failed';
-            case RadarrEventType.DOWNLOAD_FOLDER_IMPORTED: return 'Download Folder Imported';
+            case RadarrEventType.DOWNLOAD_FOLDER_IMPORTED: return 'Movie Imported';
             case RadarrEventType.DOWNLOAD_IGNORED: return 'Download Ignored';
             case RadarrEventType.MOVIE_FILE_DELETED: return 'Movie File Deleted';
             case RadarrEventType.MOVIE_FILE_RENAMED: return 'Movie File Renamed';
-            case RadarrEventType.MOVIE_FOLDER_IMPORTED: return 'Movie Folder Imported';
+            case RadarrEventType.MOVIE_FOLDER_IMPORTED: return 'Movie Imported';
         }
         return null;
     }
