@@ -1,12 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:radarr/utilities.dart';
-import '../../../types.dart';
-import 'alternate_titles.dart';
-import 'collection.dart';
-import 'movie_file.dart';
-import 'rating.dart';
-import '../image.dart';
+import 'package:radarr/radarr.dart';
 
 part 'movie.g.dart';
 
@@ -51,6 +45,9 @@ class RadarrMovie {
 
     @JsonKey(name: 'website')
     String website;
+
+    @JsonKey(name: 'remotePoster')
+    String remotePoster;
 
     @JsonKey(name: 'year')
     int year;
@@ -135,6 +132,7 @@ class RadarrMovie {
         this.digitalRelease,
         this.images,
         this.website,
+        this.remotePoster,
         this.year,
         this.hasFile,
         this.youTubeTrailerId,

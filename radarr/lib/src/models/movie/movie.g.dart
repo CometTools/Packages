@@ -30,6 +30,7 @@ RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
             e == null ? null : RadarrImage.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     website: json['website'] as String,
+    remotePoster: json['remotePoster'] as String,
     year: json['year'] as int,
     hasFile: json['hasFile'] as bool,
     youTubeTrailerId: json['youTubeTrailerId'] as String,
@@ -81,6 +82,7 @@ Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) =>
       'digitalRelease': RadarrUtilities.dateTimeToJson(instance.digitalRelease),
       'images': instance.images?.map((e) => e?.toJson())?.toList(),
       'website': instance.website,
+      'remotePoster': instance.remotePoster,
       'year': instance.year,
       'hasFile': instance.hasFile,
       'youTubeTrailerId': instance.youTubeTrailerId,
