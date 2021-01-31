@@ -13,6 +13,9 @@ export 'src/models/customformat/custom_format.dart';
 export 'src/models/customformat/custom_format_specifications.dart';
 export 'src/models/customformat/custom_format_specifications_fields.dart';
 
+/// Exclusions
+export 'src/models/exclusions/exclusion.dart';
+
 /// Extra File
 export 'src/models/extrafile/extra_file.dart';
 

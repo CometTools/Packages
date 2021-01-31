@@ -17,6 +17,11 @@ part 'src/commands/command/rss_sync.dart';
 part 'src/commands/credits.dart';
 part 'src/commands/credits/get_credits.dart';
 
+// Exclusions
+part 'src/commands/exclusions.dart';
+part 'src/commands/exclusions/get_exclusion.dart';
+part 'src/commands/exclusions/get_all_exclusions.dart';
+
 // Extra File
 part 'src/commands/extrafile.dart';
 part 'src/commands/extrafile/get_extra_files.dart';
