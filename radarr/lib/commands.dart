@@ -39,6 +39,10 @@ part 'src/commands/qualityprofile.dart';
 part 'src/commands/qualityprofile/get_quality_profile.dart';
 part 'src/commands/qualityprofile/get_all_quality_profiles.dart';
 
+// Root Folder
+part 'src/commands/root_folder.dart';
+part 'src/commands/root_folder/get_root_folders.dart';
+
 // Tags
 part 'src/commands/tag.dart';
 part 'src/commands/tag/add_tag.dart';

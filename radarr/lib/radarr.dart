@@ -33,6 +33,7 @@ class Radarr {
         @required this.movie,
         @required this.movieFile,
         @required this.qualityProfile,
+        @required this.rootFolder,
         @required this.tag,
     });
 
@@ -83,6 +84,7 @@ class Radarr {
             movie: RadarrCommandHandler_Movie(_dio),
             movieFile: RadarrCommandHandler_MovieFile(_dio),
             qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
+            rootFolder: RadarrCommandHandler_RootFolder(_dio),
             tag: RadarrCommandHandler_Tag(_dio),
         );
     }
@@ -118,6 +120,7 @@ class Radarr {
             movie: RadarrCommandHandler_Movie(client),
             movieFile: RadarrCommandHandler_MovieFile(client),
             qualityProfile: RadarrCommandHandler_QualityProfile(client),
+            rootFolder: RadarrCommandHandler_RootFolder(client),
             tag: RadarrCommandHandler_Tag(client),
         );
     }
@@ -162,6 +165,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_QualityProfile qualityProfile;
+
+    /// Command handler for all root folder-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_RootFolder rootFolder;
 
     /// Command handler for all tag-related API calls.
     /// 

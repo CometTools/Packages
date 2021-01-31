@@ -38,5 +38,9 @@ export 'src/models/qualityprofile/item_quality.dart';
 export 'src/models/qualityprofile/language.dart';
 export 'src/models/qualityprofile/quality_profile.dart';
 
+/// Root Folder
+export 'src/models/root_folder/root_folder.dart';
+export 'src/models/root_folder/unmapped_folder.dart';
+
 /// Tag
 export 'src/models/tag/tag.dart';
