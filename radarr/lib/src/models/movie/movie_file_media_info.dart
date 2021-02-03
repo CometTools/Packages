@@ -69,7 +69,7 @@ class RadarrMovieFileMediaInfo {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [SonarrSeries] object.
+    /// Deserialize a JSON map to a [RadarrMovieFileMediaInfo] object.
     factory RadarrMovieFileMediaInfo.fromJson(Map<String, dynamic> json) => _$RadarrMovieFileMediaInfoFromJson(json);
     /// Serialize a [RadarrMovieFileMediaInfo] object to a JSON map.
     Map<String, dynamic> toJson() => _$RadarrMovieFileMediaInfoToJson(this);

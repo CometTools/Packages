@@ -21,7 +21,7 @@ class RadarrLanguage {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [SonarrSeries] object.
+    /// Deserialize a JSON map to a [RadarrLanguage] object.
     factory RadarrLanguage.fromJson(Map<String, dynamic> json) => _$RadarrLanguageFromJson(json);
     /// Serialize a [RadarrLanguage] object to a JSON map.
     Map<String, dynamic> toJson() => _$RadarrLanguageToJson(this);

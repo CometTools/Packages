@@ -33,7 +33,7 @@ class RadarrQualityProfileItemQuality {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [SonarrSeries] object.
+    /// Deserialize a JSON map to a [RadarrQualityProfileItemQuality] object.
     factory RadarrQualityProfileItemQuality.fromJson(Map<String, dynamic> json) => _$RadarrQualityProfileItemQualityFromJson(json);
     /// Serialize a [RadarrQualityProfileItemQuality] object to a JSON map.
     Map<String, dynamic> toJson() => _$RadarrQualityProfileItemQualityToJson(this);

@@ -3,6 +3,7 @@ library radarr_commands;
 
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
+import 'package:radarr/radarr.dart';
 import 'models.dart';
 
 // Commands
@@ -28,6 +29,7 @@ part 'src/commands/extra_file/get_extra_files.dart';
 
 // History
 part 'src/commands/history.dart';
+part 'src/commands/history/get_history.dart';
 part 'src/commands/history/get_movie_history.dart';
 
 // Movie

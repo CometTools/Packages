@@ -30,4 +30,14 @@ class RadarrUtilities {
     static RadarrEventType eventTypeFromJson(String type) => RadarrEventType.GRABBED.from(type);
     /// Converts a [RadarrEventType] object back to its string representation.
     static String eventTypeToJson(RadarrEventType type) => type?.value;
+
+    /// Converts a string to a [RadarrHistorySortKey] object.
+    static RadarrHistorySortKey historySortKeyFromJson(String type) => RadarrHistorySortKey.DATE.from(type);
+    /// Converts a [RadarrHistorySortKey] object back to its string representation.
+    static String historySortKeyToJson(RadarrHistorySortKey type) => type?.value;
+
+    /// Converts a string to a [RadarrSortDirection] object.
+    static RadarrSortDirection sortDirectionFromJson(String type) => RadarrSortDirection.ASCENDING.from(type);
+    /// Converts a [RadarrSortDirection] object back to its string representation.
+    static String sortDirectionToJson(RadarrSortDirection type) => type?.value;
 }

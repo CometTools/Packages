@@ -46,7 +46,7 @@ class RadarrMovieAlternateTitles {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [SonarrSeries] object.
+    /// Deserialize a JSON map to a [RadarrMovieAlternateTitles] object.
     factory RadarrMovieAlternateTitles.fromJson(Map<String, dynamic> json) => _$RadarrMovieAlternateTitlesFromJson(json);
     /// Serialize a [RadarrMovieAlternateTitles] object to a JSON map.
     Map<String, dynamic> toJson() => _$RadarrMovieAlternateTitlesToJson(this);

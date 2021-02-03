@@ -9,6 +9,21 @@ class RadarrCommandHandler_History {
     /// Create a series command handler using an initialized [Dio] client.
     RadarrCommandHandler_History(this._client);
 
+    /// Handler for `history`.
+    /// 
+    /// Returns a list of items in your history.
+    /// 
+    /// Optional Parameters:
+    /// - `page`: Page to return (Default: 1)
+    /// - `pageSize`: Amount of history items in the page (Default: 20)
+    /// - `sortDirection`: Direction to sort the history entries (Default: descending)
+    /// - `sortKey`: Key used to sort the history items (Default: date)
+    Future<RadarrHistory> get({
+        int page,
+        int pageSize,
+        RadarrSortDirection sortDirection,
+        RadarrHistorySortKey sortKey,
+    }) async => _commandGetHistory(_client, page: page, pageSize: pageSize, sortDirection: sortDirection, sortKey: sortKey);
 
     /// Handler for `history/movie/{id}`.
     /// 

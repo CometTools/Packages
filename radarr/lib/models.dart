@@ -20,6 +20,7 @@ export 'src/models/exclusions/exclusion.dart';
 export 'src/models/extrafile/extra_file.dart';
 
 /// History
+export 'src/models/history/history.dart';
 export 'src/models/history/history_record.dart';
 
 /// Movie

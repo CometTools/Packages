@@ -17,7 +17,7 @@ Once initialized, you can access any of the command handlers to quickly and easi
 
 ## Optional Parameters
 
-There are a few optional parameters when initializing a Sonarr instance.
+There are a few optional parameters when initializing a Radarr instance.
 
 ### `headers` | Map<dynamic, String> (default: null)
 
