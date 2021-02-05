@@ -9,9 +9,9 @@ export 'src/models/command/command.dart';
 export 'src/models/command/command_body.dart';
 
 /// Custom Formats
-export 'src/models/customformat/custom_format.dart';
-export 'src/models/customformat/custom_format_specifications.dart';
-export 'src/models/customformat/custom_format_specifications_fields.dart';
+export 'src/models/custom_format/custom_format.dart';
+export 'src/models/custom_format/custom_format_specifications.dart';
+export 'src/models/custom_format/custom_format_specifications_fields.dart';
 
 /// Exclusions
 export 'src/models/exclusions/exclusion.dart';
@@ -36,11 +36,11 @@ export 'src/models/movie/movie_file_quality_quality.dart';
 export 'src/models/movie/rating.dart';
 
 /// Quality Profile
-export 'src/models/qualityprofile/format_item.dart';
-export 'src/models/qualityprofile/item.dart';
-export 'src/models/qualityprofile/item_quality.dart';
-export 'src/models/qualityprofile/language.dart';
-export 'src/models/qualityprofile/quality_profile.dart';
+export 'src/models/quality_profile/format_item.dart';
+export 'src/models/quality_profile/item.dart';
+export 'src/models/quality_profile/item_quality.dart';
+export 'src/models/quality_profile/language.dart';
+export 'src/models/quality_profile/quality_profile.dart';
 
 /// Root Folder
 export 'src/models/root_folder/root_folder.dart';

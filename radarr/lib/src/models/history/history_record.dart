@@ -2,9 +2,7 @@ import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
 import '../../../types.dart';
 import '../../../utilities.dart';
-import '../qualityprofile/language.dart';
-import '../movie/movie_file_quality.dart';
-import '../customformat/custom_format.dart';
+import '../../../models.dart';
 
 part 'history_record.g.dart';
 

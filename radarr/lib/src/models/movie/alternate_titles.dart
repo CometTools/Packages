@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import '../qualityprofile/language.dart';
+import '../../../models.dart';
 
 part 'alternate_titles.g.dart';
 

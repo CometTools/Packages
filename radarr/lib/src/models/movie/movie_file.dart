@@ -3,8 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:radarr/utilities.dart';
 import 'movie_file_quality.dart';
 import 'movie_file_media_info.dart';
-import '../qualityprofile/language.dart';
-import '../customformat/custom_format.dart';
+import '../../../models.dart';
 
 part 'movie_file.g.dart';
 
