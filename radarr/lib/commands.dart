@@ -36,6 +36,7 @@ part 'src/commands/history/get_movie_history.dart';
 part 'src/commands/movie.dart';
 part 'src/commands/movie/get_movie.dart';
 part 'src/commands/movie/get_all_movies.dart';
+part 'src/commands/movie/update_movie.dart';
 
 // Movie File
 part 'src/commands/movie_file.dart';
@@ -53,6 +54,10 @@ part 'src/commands/quality_profile/get_all_quality_profiles.dart';
 // Root Folder
 part 'src/commands/root_folder.dart';
 part 'src/commands/root_folder/get_root_folders.dart';
+
+// System
+part 'src/commands/system.dart';
+part 'src/commands/system/get_status.dart';
 
 // Tags
 part 'src/commands/tag.dart';

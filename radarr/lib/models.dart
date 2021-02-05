@@ -46,5 +46,8 @@ export 'src/models/qualityprofile/quality_profile.dart';
 export 'src/models/root_folder/root_folder.dart';
 export 'src/models/root_folder/unmapped_folder.dart';
 
+/// System
+export 'src/models/system/status.dart';
+
 /// Tag
 export 'src/models/tag/tag.dart';

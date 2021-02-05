@@ -21,4 +21,12 @@ class RadarrCommandHandler_Movie {
     /// Required Parameters:
     /// - `movieId`: Movie identifier
     Future<RadarrMovie> get({ @required int movieId }) async => _commandGetMovie(_client, movieId: movieId);
+
+    /// Handler for [movie](https://radarr.video/docs/api/#/Movie/put_movie).
+    /// 
+    /// Updates a movie.
+    /// 
+    /// Required Parameters:
+    /// - `movie`: [RadarrMovie] object with the updated information
+    Future<RadarrMovie> update({ @required RadarrMovie movie }) async => _commandUpdateMovie(_client, movie: movie);
 }
