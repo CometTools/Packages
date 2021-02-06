@@ -28,6 +28,7 @@ class Radarr {
         @required this.httpClient,
         @required this.command,
         @required this.credits,
+        @required this.diskSpace,
         @required this.exclusions,
         @required this.extraFile,
         @required this.history,
@@ -82,6 +83,7 @@ class Radarr {
             httpClient: _dio,
             command: RadarrCommandHandler_Command(_dio),
             credits: RadarrCommandHandler_Credits(_dio),
+            diskSpace: RadarrCommandHandler_DiskSpace(_dio),
             exclusions: RadarrCommandHandler_Exclusions(_dio),
             extraFile: RadarrCommandHandler_ExtraFile(_dio),
             history: RadarrCommandHandler_History(_dio),
@@ -121,6 +123,7 @@ class Radarr {
             httpClient: client,
             command: RadarrCommandHandler_Command(client),
             credits: RadarrCommandHandler_Credits(client),
+            diskSpace: RadarrCommandHandler_DiskSpace(client),
             exclusions: RadarrCommandHandler_Exclusions(client),
             extraFile: RadarrCommandHandler_ExtraFile(client),
             history: RadarrCommandHandler_History(client),
@@ -149,6 +152,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_Credits credits;
+
+    /// Command handler for all disk space-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_DiskSpace diskSpace;
 
     /// Command handler for all movie exclusions-related API calls.
     /// 

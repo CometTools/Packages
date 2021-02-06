@@ -18,6 +18,10 @@ part 'src/commands/command/rss_sync.dart';
 part 'src/commands/credits.dart';
 part 'src/commands/credits/get_credits.dart';
 
+// Disk Space
+part 'src/commands/disk_space.dart';
+part 'src/commands/disk_space/get_all_disk_spaces.dart';
+
 // Exclusions
 part 'src/commands/exclusions.dart';
 part 'src/commands/exclusions/get_exclusion.dart';
