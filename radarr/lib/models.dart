@@ -45,6 +45,9 @@ export 'src/models/quality_profile/item_quality.dart';
 export 'src/models/quality_profile/language.dart';
 export 'src/models/quality_profile/quality_profile.dart';
 
+/// Release
+export 'src/models/release/release.dart';
+
 /// Root Folder
 export 'src/models/root_folder/root_folder.dart';
 export 'src/models/root_folder/unmapped_folder.dart';

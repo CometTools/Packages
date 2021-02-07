@@ -40,4 +40,9 @@ class RadarrUtilities {
     static RadarrSortDirection sortDirectionFromJson(String type) => RadarrSortDirection.ASCENDING.from(type);
     /// Converts a [RadarrSortDirection] object back to its string representation.
     static String sortDirectionToJson(RadarrSortDirection type) => type?.value;
+
+    /// Converts a string to a [RadarrProtocol] object.
+    static RadarrProtocol protocolFromJson(String protocol) => RadarrProtocol.USENET.from(protocol);
+    /// Converts a [RadarrProtocol] object back to its string representation.
+    static String protocolToJson(RadarrProtocol protocol) => protocol?.value;
 }
