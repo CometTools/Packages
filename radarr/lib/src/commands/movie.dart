@@ -29,4 +29,37 @@ class RadarrCommandHandler_Movie {
     /// Required Parameters:
     /// - `movie`: [RadarrMovie] object with the updated information
     Future<RadarrMovie> update({ @required RadarrMovie movie }) async => _commandUpdateMovie(_client, movie: movie);
+
+    /// Handler for [movie](https://radarr.video/docs/api/#/Movie/post_movie).
+    /// 
+    /// Adds a new movie.
+    /// 
+    /// Required Parameters:
+    /// - `movie`: [RadarrMovie] object, usually fetched using movie lookup
+    /// - `rootFolder`: [RadarrRootFolder] for the root folder to use for the movie
+    /// - `monitored`: Should the movie be added as monitored?
+    /// - `minimumAvailability`: [RadarrAvailability] for the movie
+    /// - `qualityProfile`: [RadarrQualityProfile] for the movie
+    /// 
+    /// Optional Parameters:
+    /// - `tags`: List of [RadarrTag]s to be assigned to the movie
+    /// - `searchForMovie` Should a search for the movie be started after being added?
+    Future<RadarrMovie> create({
+        @required RadarrMovie movie,
+        @required RadarrRootFolder rootFolder,
+        @required bool monitored,
+        @required RadarrAvailability minimumAvailability,
+        @required RadarrQualityProfile qualityProfile,
+        List<RadarrTag> tags,
+        bool searchForMovie = false,
+    }) async => _commandAddMovie(
+        _client,
+        movie: movie,
+        rootFolder: rootFolder,
+        monitored: monitored,
+        minimumAvailability: minimumAvailability,
+        qualityProfile: qualityProfile,
+        tags: tags,
+        searchForMovie: searchForMovie,
+    );
 }
