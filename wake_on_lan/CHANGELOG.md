@@ -1,3 +1,5 @@
+# 1.1.1+6
+- Fixed formatting of README that caused an invalid URL link
 # 1.1.1+5
 - Updated GitHub repository information
 # 1.1.1+4

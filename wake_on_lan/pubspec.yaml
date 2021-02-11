@@ -1,6 +1,6 @@
 name: wake_on_lan
 description: Send wake on LAN magic packets to devices on your local network.
-version: 1.1.1+5
+version: 1.1.1+6
 homepage: https://github.com/CometTools/Dart-Packages/tree/master/wake_on_lan
 repository: https://github.com/CometTools/Dart-Packages
 issue_tracker: https://github.com/CometTools/Dart-Packages/issues

@@ -19,7 +19,7 @@ import 'package:wake_on_lan/wake_on_lan.dart';
 
 The class has a static function, `validate(String address)` which allows easy validation that an IPv4 address string is correctly formatted.
 
-Create an `IPv4Address` instance by using the factory `IPv4Address.from(address)` where `address` is a string representation of the broadcast address of the network (http://jodies.de/ipcalc). The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
+Create an `IPv4Address` instance by using the factory `IPv4Address.from(address)` where `address` is a string representation of the broadcast address of the network ([easily find your broadcast address using this tool](http://jodies.de/ipcalc)). The factory will call the validation function mentioned above, but will throw a `FormatException` on a poorly constructed string, so it is recommended to validate it first.
 
 ```dart
 String address = '192.168.1.1';
