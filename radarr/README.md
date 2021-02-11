@@ -1,4 +1,4 @@
-# radarr (prerelease)
+# radarr
 
 [![Pubdev][pubdev-shield]][pubdev]
 ![License][license-shield]
