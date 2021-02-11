@@ -8,10 +8,15 @@ All packages are available on Comet.Tools' [verified publisher pub](https://pub.
 
 | Package | Pub Listing |
 | :-----: | :---------: |
+| [overseerr][overseerr:github]     | [![pub package][overseerr:shield]][overseerr:pubdev]     |
 | [radarr][radarr:github]           | [![pub package][radarr:shield]][radarr:pubdev]           |
 | [sonarr][sonarr:github]           | [![pub package][sonarr:shield]][sonarr:pubdev]           |
 | [tautulli][tautulli:github]       | [![pub package][tautulli:shield]][tautulli:pubdev]       |
 | [wake_on_lan][wake_on_lan:github] | [![pub package][wake_on_lan:shield]][wake_on_lan:pubdev] |
+
+[overseerr:github]: https://github.com/CometTools/Dart-Packages/tree/master/overseerr
+[overseerr:shield]: https://img.shields.io/pub/v/overseerr.svg?style=for-the-badge
+[overseerr:pubdev]: https://pub.dev/packages/overseerr/
 
 [radarr:github]: https://github.com/CometTools/Dart-Packages/tree/master/radarr
 [radarr:shield]: https://img.shields.io/pub/v/radarr.svg?style=for-the-badge
