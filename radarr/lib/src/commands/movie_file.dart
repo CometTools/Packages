@@ -16,4 +16,12 @@ class RadarrCommandHandler_MovieFile {
     /// Required Parameters:
     /// - `movieId`: Movie identifier
     Future<List<RadarrMovieFile>> get({ @required int movieId }) async => _commandGetMovieFile(_client, movieId: movieId);
+
+    /// Handler for [moviefile/${id}](https://radarr.video/docs/api/#/MovieFile/delete-moviefile-id).
+    /// 
+    /// Delete a movie by its ID in the database.
+    /// 
+    /// Required Parameters:
+    /// - `movieFileId`: Movie file identifier
+    Future<void> delete({ @required int movieFileId }) async => _commandDeleteMovieFile(_client, movieFileId: movieFileId);
 }

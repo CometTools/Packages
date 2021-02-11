@@ -39,12 +39,14 @@ part 'src/commands/history/get_movie_history.dart';
 // Movie
 part 'src/commands/movie.dart';
 part 'src/commands/movie/add_movie.dart';
+part 'src/commands/movie/delete_movie.dart';
 part 'src/commands/movie/get_movie.dart';
 part 'src/commands/movie/get_all_movies.dart';
 part 'src/commands/movie/update_movie.dart';
 
 // Movie File
 part 'src/commands/movie_file.dart';
+part 'src/commands/movie_file/delete_movie_file.dart';
 part 'src/commands/movie_file/get_movie_file.dart';
 
 // Movie Lookup
