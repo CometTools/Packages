@@ -13,7 +13,7 @@ In order to use this package, you need to have to fetch your API key from within
 Sonarr sonarr = Sonarr(host: '<your instance URL>', apiKey: '<your API key>');
 ```
 
-Once initialized, you can access any of the command handlers ([detailed below](#commands)) to quickly and easily make calls to Sonarr. For most calls that return data, model definitions have been created. Typings have also been created for parameters that have a set, finite list of options.
+Once initialized, you can access any of the command handlers to quickly and easily make calls to Sonarr. For most calls that return data, model definitions have been created. Typings have also been created for parameters that have a set, finite list of options.
 
 ## Optional Parameters
 

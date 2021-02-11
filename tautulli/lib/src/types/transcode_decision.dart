@@ -5,6 +5,7 @@ enum TautulliTranscodeDecision {
     TRANSCODE,
     COPY,
     DIRECT_PLAY,
+    BURN,
     NULL,
 }
 
@@ -16,6 +17,7 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case 'transcode': return TautulliTranscodeDecision.TRANSCODE;
             case 'copy': return TautulliTranscodeDecision.COPY;
             case 'direct play': return TautulliTranscodeDecision.DIRECT_PLAY;
+            case 'burn': return TautulliTranscodeDecision.BURN;
             case '': return TautulliTranscodeDecision.NULL;
         }
         return null;
@@ -27,6 +29,7 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case TautulliTranscodeDecision.TRANSCODE: return 'transcode';
             case TautulliTranscodeDecision.COPY: return 'copy';
             case TautulliTranscodeDecision.DIRECT_PLAY: return 'direct play';
+            case TautulliTranscodeDecision.BURN: return 'burn';
             case TautulliTranscodeDecision.NULL: return '';
         }
         return null;
@@ -38,6 +41,7 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case TautulliTranscodeDecision.TRANSCODE: return 'Transcode';
             case TautulliTranscodeDecision.COPY: return 'Direct Stream';
             case TautulliTranscodeDecision.DIRECT_PLAY: return 'Direct Play';
+            case TautulliTranscodeDecision.BURN: return 'Burn';
             case TautulliTranscodeDecision.NULL: return 'None';
         }
         return null;

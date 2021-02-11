@@ -9,6 +9,13 @@ library radarr;
 // Imports
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
+import 'commands.dart';
+
+// Exports
+export 'commands.dart';
+export 'models.dart';
+export 'types.dart';
+export 'utilities.dart';
 
 /// The core class to handle all connections to Radarr.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
@@ -19,6 +26,20 @@ class Radarr {
     /// Internal constructor
     Radarr._internal({
         @required this.httpClient,
+        @required this.command,
+        @required this.credits,
+        @required this.diskSpace,
+        @required this.exclusions,
+        @required this.extraFile,
+        @required this.history,
+        @required this.movie,
+        @required this.movieFile,
+        @required this.movieLookup,
+        @required this.qualityProfile,
+        @required this.release,
+        @required this.rootFolder,
+        @required this.system,
+        @required this.tag,
     });
 
     /// Create a new Radarr API connection manager to connection to your instance.
@@ -49,8 +70,8 @@ class Radarr {
         Dio _dio = Dio(
             BaseOptions(
                 baseUrl: host.endsWith('/')
-                    ? '${host}api/'
-                    : '$host/api/',
+                    ? '${host}api/v3/'
+                    : '$host/api/v3/',
                 queryParameters: {
                     'apikey': apiKey,
                 },
@@ -61,6 +82,20 @@ class Radarr {
         );
         return Radarr._internal(
             httpClient: _dio,
+            command: RadarrCommandHandler_Command(_dio),
+            credits: RadarrCommandHandler_Credits(_dio),
+            diskSpace: RadarrCommandHandler_DiskSpace(_dio),
+            exclusions: RadarrCommandHandler_Exclusions(_dio),
+            extraFile: RadarrCommandHandler_ExtraFile(_dio),
+            history: RadarrCommandHandler_History(_dio),
+            movie: RadarrCommandHandler_Movie(_dio),
+            movieFile: RadarrCommandHandler_MovieFile(_dio),
+            movieLookup: RadarrCommandHandler_MovieLookup(_dio),
+            qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
+            release: RadarrCommandHandler_Release(_dio),
+            rootFolder: RadarrCommandHandler_RootFolder(_dio),
+            system: RadarrCommandHandler_System(_dio),
+            tag: RadarrCommandHandler_Tag(_dio),
         );
     }
 
@@ -88,6 +123,20 @@ class Radarr {
         assert(client != null, 'client cannot be null.');
         return Radarr._internal(
             httpClient: client,
+            command: RadarrCommandHandler_Command(client),
+            credits: RadarrCommandHandler_Credits(client),
+            diskSpace: RadarrCommandHandler_DiskSpace(client),
+            exclusions: RadarrCommandHandler_Exclusions(client),
+            extraFile: RadarrCommandHandler_ExtraFile(client),
+            history: RadarrCommandHandler_History(client),
+            movie: RadarrCommandHandler_Movie(client),
+            movieFile: RadarrCommandHandler_MovieFile(client),
+            movieLookup: RadarrCommandHandler_MovieLookup(client),
+            qualityProfile: RadarrCommandHandler_QualityProfile(client),
+            release: RadarrCommandHandler_Release(client),
+            rootFolder: RadarrCommandHandler_RootFolder(client),
+            system: RadarrCommandHandler_System(client),
+            tag: RadarrCommandHandler_Tag(client),
         );
     }
 
@@ -96,4 +145,74 @@ class Radarr {
     /// Making changes to the [Dio] client should propogate to the command handlers, but is not recommended.
     /// The recommended way to make changes to the HTTP client is to use the `.from()` factory to build your own [Dio] HTTP client.
     final Dio httpClient;
+
+    /// Command handler for all movie command-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Command command;
+
+    /// Command handler for all movie credits-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Credits credits;
+
+    /// Command handler for all disk space-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_DiskSpace diskSpace;
+
+    /// Command handler for all movie exclusions-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Exclusions exclusions;
+
+    /// Command handler for all movie extra files-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_ExtraFile extraFile;
+
+    /// Command handler for all history-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_History history;
+
+    /// Command handler for all movie-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Movie movie;
+
+    /// Command handler for all movie file-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_MovieFile movieFile;
+
+    /// Command handler for all movie lookup-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_MovieLookup movieLookup;
+
+    /// Command handler for all quality profile-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_QualityProfile qualityProfile;
+
+    /// Command handler for all release-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Release release;
+
+    /// Command handler for all root folder-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_RootFolder rootFolder;
+
+    /// Command handler for all system-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_System system;
+
+    /// Command handler for all tag-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Tag tag;
 }

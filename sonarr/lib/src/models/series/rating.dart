@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'rating.g.dart';
 
-/// Model for series' alternate title from Sonarr.
+/// Model for series' rating values.
 @JsonSerializable(explicitToJson: true)
 class SonarrSeriesRating {
     /// Number of votes for the rating score

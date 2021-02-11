@@ -1,3 +1,5 @@
+# 1.2.1
+- Added "Burn" transcode decision to `TautulliTranscodeDecision`
 # 1.2.0
 - Removed the option to disable strictTLS when creating a new `Tautulli` instance -- if you want to disable strict TLS, you should configure the HTTPClient yourself
 # 1.1.0+3
