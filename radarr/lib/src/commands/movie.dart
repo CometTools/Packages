@@ -30,6 +30,22 @@ class RadarrCommandHandler_Movie {
     /// - `movie`: [RadarrMovie] object with the updated information
     Future<RadarrMovie> update({ @required RadarrMovie movie }) async => _commandUpdateMovie(_client, movie: movie);
 
+    /// Handler for [movie/{id}](https://radarr.video/docs/api/#/Movie/deleteMovie).
+    /// 
+    /// Delete a single movie.
+    /// 
+    /// Required Parameters:
+    /// - `movieId`: Movie identifier in Radarr
+    /// 
+    /// Optional Parameters:
+    /// - `addImportExclusion`: If true, adds the movie to Radarr's exclusion list for import lists
+    /// - `deleteFiles`: If true, deletes all files as well
+    Future<void> delete({
+        @required int movieId,
+        bool addImportExclusion = false,
+        bool deleteFiles = false,
+    }) => _commandDeleteMovie(_client, movieId: movieId, addImportExclusion: addImportExclusion, deleteFiles: deleteFiles);
+
     /// Handler for [movie](https://radarr.video/docs/api/#/Movie/post_movie).
     /// 
     /// Adds a new movie.

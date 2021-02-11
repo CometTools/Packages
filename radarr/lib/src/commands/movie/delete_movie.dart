@@ -1,6 +1,6 @@
 part of radarr_commands;
 
-Future<void> deleteMovie(Dio client, {
+Future<void> _commandDeleteMovie(Dio client, {
     @required int movieId,
     bool addImportExclusion = false,
     bool deleteFiles = false,
