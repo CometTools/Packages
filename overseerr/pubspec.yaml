@@ -1,0 +1,19 @@
+name: overseerr
+description: Facilitate the communication to and from Overseerr's API, a request management and media discovery tool for the Plex ecosystem
+version: 0.0.1-pre.1
+homepage: https://github.com/CometTools/Dart-Packages/tree/master/overseerr
+repository: https://github.com/CometTools/Dart-Packages
+issue_tracker: https://github.com/CometTools/Dart-Packages/issues
+environment:
+  sdk: ">=2.9.0 <3.0.0"
+dependencies:
+  dio: ^3.0.10
+  intl: ^0.16.1
+  json_annotation: ^3.1.1
+  meta: ^1.2.4
+dev_dependencies:
+  build_runner: ^1.11.1
+  json_serializable: ^3.5.1
+  test: ^1.15.7
+scripts:
+  build: pub run build_runner build --delete-conflicting-outputs
