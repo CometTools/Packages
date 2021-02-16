@@ -56,6 +56,7 @@ part 'src/commands/movie_lookup/get_movie_lookup.dart';
 // Releases
 part 'src/commands/release.dart';
 part 'src/commands/release/get_releases.dart';
+part 'src/commands/release/push_release.dart';
 
 // Quality Profile
 part 'src/commands/quality_profile.dart';

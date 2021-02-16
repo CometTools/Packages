@@ -13,7 +13,7 @@ class RadarrRelease {
     String guid;
 
     @JsonKey(name: 'quality')
-    RadarrQualityProfile quality;
+    RadarrMovieFileQuality quality;
 
     @JsonKey(name: 'customFormats')
     List<RadarrCustomFormat> customFormats;
