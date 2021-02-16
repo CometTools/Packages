@@ -6,5 +6,6 @@ void main() async {
     String host = 'http://192.168.1.111:5055';
     // Your key can be fetched from the Overseerr web GUI
     String key = '<apikey>';
+    // ignore: unused_local_variable
     Overseerr api = Overseerr(host: host, apiKey: key);
 }

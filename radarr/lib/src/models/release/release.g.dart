@@ -11,7 +11,7 @@ RadarrRelease _$RadarrReleaseFromJson(Map<String, dynamic> json) {
     guid: json['guid'] as String,
     quality: json['quality'] == null
         ? null
-        : RadarrQualityProfile.fromJson(
+        : RadarrMovieFileQuality.fromJson(
             json['quality'] as Map<String, dynamic>),
     customFormats: (json['customFormats'] as List)
         ?.map((e) => e == null
