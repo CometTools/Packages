@@ -1,6 +1,6 @@
 name: radarr
 description: Facilitate the communication to and from Radarr's API, a movie collection manager for Usenet and BitTorrent users.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/CometTools/Dart-Packages/tree/master/radarr
 repository: https://github.com/CometTools/Dart-Packages
 issue_tracker: https://github.com/CometTools/Dart-Packages/issues

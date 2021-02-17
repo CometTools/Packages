@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import '../image.dart';
+import '../../../models.dart';
 import '../../../types.dart';
 import '../../../utilities.dart';
 
