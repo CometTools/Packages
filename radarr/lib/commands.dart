@@ -36,6 +36,12 @@ part 'src/commands/history.dart';
 part 'src/commands/history/get_history.dart';
 part 'src/commands/history/get_movie_history.dart';
 
+// Import List
+part 'src/commands/import_list.dart';
+part 'src/commands/import_list/get_all_import_lists.dart';
+part 'src/commands/import_list/get_import_list.dart';
+part 'src/commands/import_list/get_movies_from_list.dart';
+
 // Movie
 part 'src/commands/movie.dart';
 part 'src/commands/movie/add_movie.dart';

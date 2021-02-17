@@ -9,7 +9,6 @@ class RadarrCommandHandler_ExtraFile {
     /// Create a series command handler using an initialized [Dio] client.
     RadarrCommandHandler_ExtraFile(this._client);
 
-
     /// Handler for `extraFile/{id}`.
     /// 
     /// Returns a list of any extra files for a movie.

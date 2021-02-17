@@ -1,9 +1,6 @@
 /// Library containing all model definitions for Radarr data.
 library radarr_models;
 
-/// Shared
-export 'src/models/image.dart';
-
 /// Commands
 export 'src/models/command/command.dart';
 export 'src/models/command/command_body.dart';
@@ -25,6 +22,12 @@ export 'src/models/extrafile/extra_file.dart';
 /// History
 export 'src/models/history/history.dart';
 export 'src/models/history/history_record.dart';
+
+/// Images
+export 'src/models/image/image.dart';
+
+/// Import List
+export 'src/models/import_list/import_list.dart';
 
 /// Movie
 export 'src/models/movie/alternate_titles.dart';

@@ -32,6 +32,7 @@ class Radarr {
         @required this.exclusions,
         @required this.extraFile,
         @required this.history,
+        @required this.importList,
         @required this.movie,
         @required this.movieFile,
         @required this.movieLookup,
@@ -88,6 +89,7 @@ class Radarr {
             exclusions: RadarrCommandHandler_Exclusions(_dio),
             extraFile: RadarrCommandHandler_ExtraFile(_dio),
             history: RadarrCommandHandler_History(_dio),
+            importList: RadarrCommandHandler_ImportList(_dio),
             movie: RadarrCommandHandler_Movie(_dio),
             movieFile: RadarrCommandHandler_MovieFile(_dio),
             movieLookup: RadarrCommandHandler_MovieLookup(_dio),
@@ -129,6 +131,7 @@ class Radarr {
             exclusions: RadarrCommandHandler_Exclusions(client),
             extraFile: RadarrCommandHandler_ExtraFile(client),
             history: RadarrCommandHandler_History(client),
+            importList: RadarrCommandHandler_ImportList(client),
             movie: RadarrCommandHandler_Movie(client),
             movieFile: RadarrCommandHandler_MovieFile(client),
             movieLookup: RadarrCommandHandler_MovieLookup(client),
@@ -175,6 +178,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_History history;
+
+    /// Command handler for all import list-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_ImportList importList;
 
     /// Command handler for all movie-related API calls.
     /// 
