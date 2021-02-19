@@ -5,7 +5,7 @@ import 'custom_format_specifications_fields.dart';
 part 'custom_format_specifications.g.dart';
 
 /// Model for a custom format from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCustomFormatSpecifications {
     @JsonKey(name: 'name')
     String name;

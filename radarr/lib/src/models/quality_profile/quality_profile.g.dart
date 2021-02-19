@@ -32,15 +32,24 @@ RadarrQualityProfile _$RadarrQualityProfileFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$RadarrQualityProfileToJson(
-        RadarrQualityProfile instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'upgradeAllowed': instance.upgradeAllowed,
-      'cutoff': instance.cutoff,
-      'items': instance.items?.map((e) => e?.toJson())?.toList(),
-      'minFormatScore': instance.minFormatScore,
-      'cutoffFormatScore': instance.cutoffFormatScore,
-      'formatItems': instance.formatItems?.map((e) => e?.toJson())?.toList(),
-      'language': instance.language?.toJson(),
-      'id': instance.id,
-    };
+    RadarrQualityProfile instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('upgradeAllowed', instance.upgradeAllowed);
+  writeNotNull('cutoff', instance.cutoff);
+  writeNotNull('items', instance.items?.map((e) => e?.toJson())?.toList());
+  writeNotNull('minFormatScore', instance.minFormatScore);
+  writeNotNull('cutoffFormatScore', instance.cutoffFormatScore);
+  writeNotNull(
+      'formatItems', instance.formatItems?.map((e) => e?.toJson())?.toList());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('id', instance.id);
+  return val;
+}

@@ -14,9 +14,17 @@ RadarrImage _$RadarrImageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrImageToJson(RadarrImage instance) =>
-    <String, dynamic>{
-      'coverType': instance.coverType,
-      'url': instance.url,
-      'remoteUrl': instance.remoteUrl,
-    };
+Map<String, dynamic> _$RadarrImageToJson(RadarrImage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('coverType', instance.coverType);
+  writeNotNull('url', instance.url);
+  writeNotNull('remoteUrl', instance.remoteUrl);
+  return val;
+}

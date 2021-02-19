@@ -27,20 +27,28 @@ RadarrMovieFileMediaInfo _$RadarrMovieFileMediaInfoFromJson(
 }
 
 Map<String, dynamic> _$RadarrMovieFileMediaInfoToJson(
-        RadarrMovieFileMediaInfo instance) =>
-    <String, dynamic>{
-      'audioAdditionalFeatures': instance.audioAdditionalFeatures,
-      'audioBitrate': instance.audioBitrate,
-      'audioChannels': instance.audioChannels,
-      'audioCodec': instance.audioCodec,
-      'audioLanguages': instance.audioLanguages,
-      'audioStreamCount': instance.audioStreamCount,
-      'videoBitDepth': instance.videoBitDepth,
-      'videoBitrate': instance.videoBitrate,
-      'videoCodec': instance.videoCodec,
-      'videoFps': instance.videoFps,
-      'resolution': instance.resolution,
-      'runTime': instance.runTime,
-      'scanType': instance.scanType,
-      'subtitles': instance.subtitles,
-    };
+    RadarrMovieFileMediaInfo instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('audioAdditionalFeatures', instance.audioAdditionalFeatures);
+  writeNotNull('audioBitrate', instance.audioBitrate);
+  writeNotNull('audioChannels', instance.audioChannels);
+  writeNotNull('audioCodec', instance.audioCodec);
+  writeNotNull('audioLanguages', instance.audioLanguages);
+  writeNotNull('audioStreamCount', instance.audioStreamCount);
+  writeNotNull('videoBitDepth', instance.videoBitDepth);
+  writeNotNull('videoBitrate', instance.videoBitrate);
+  writeNotNull('videoCodec', instance.videoCodec);
+  writeNotNull('videoFps', instance.videoFps);
+  writeNotNull('resolution', instance.resolution);
+  writeNotNull('runTime', instance.runTime);
+  writeNotNull('scanType', instance.scanType);
+  writeNotNull('subtitles', instance.subtitles);
+  return val;
+}

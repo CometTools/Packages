@@ -13,8 +13,16 @@ RadarrLanguage _$RadarrLanguageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrLanguageToJson(RadarrLanguage instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+Map<String, dynamic> _$RadarrLanguageToJson(RadarrLanguage instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  return val;
+}

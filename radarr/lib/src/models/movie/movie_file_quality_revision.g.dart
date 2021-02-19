@@ -16,9 +16,17 @@ RadarrMovieFileQualityRevision _$RadarrMovieFileQualityRevisionFromJson(
 }
 
 Map<String, dynamic> _$RadarrMovieFileQualityRevisionToJson(
-        RadarrMovieFileQualityRevision instance) =>
-    <String, dynamic>{
-      'version': instance.version,
-      'real': instance.real,
-      'isRepack': instance.isRepack,
-    };
+    RadarrMovieFileQualityRevision instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('version', instance.version);
+  writeNotNull('real', instance.real);
+  writeNotNull('isRepack', instance.isRepack);
+  return val;
+}

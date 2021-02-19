@@ -7,7 +7,7 @@ import '../../../models.dart';
 part 'history_record.g.dart';
 
 /// Model for a history record from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrHistoryRecord {
     @JsonKey(name: 'movieId')
     int movieId;

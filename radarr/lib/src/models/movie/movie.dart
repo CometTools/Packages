@@ -5,7 +5,7 @@ import 'package:radarr/radarr.dart';
 part 'movie.g.dart';
 
 /// Model for a single movie data from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovie {
     @JsonKey(name: 'title')
     String title;

@@ -21,8 +21,16 @@ RadarrMovieFileQuality _$RadarrMovieFileQualityFromJson(
 }
 
 Map<String, dynamic> _$RadarrMovieFileQualityToJson(
-        RadarrMovieFileQuality instance) =>
-    <String, dynamic>{
-      'quality': instance.quality?.toJson(),
-      'revision': instance.revision?.toJson(),
-    };
+    RadarrMovieFileQuality instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('quality', instance.quality?.toJson());
+  writeNotNull('revision', instance.revision?.toJson());
+  return val;
+}

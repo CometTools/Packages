@@ -5,7 +5,7 @@ import './unmapped_folder.dart';
 part 'root_folder.g.dart';
 
 /// Model for root folders from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrRootFolder {
     @JsonKey(name: 'path')
     String path;

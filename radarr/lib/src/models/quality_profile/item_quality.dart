@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'item_quality.g.dart';
 
 /// Store details about a quality profile item.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQualityProfileItemQuality {
     @JsonKey(name: 'id')
     int id;

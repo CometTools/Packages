@@ -55,39 +55,49 @@ RadarrRelease _$RadarrReleaseFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrReleaseToJson(RadarrRelease instance) =>
-    <String, dynamic>{
-      'guid': instance.guid,
-      'quality': instance.quality?.toJson(),
-      'customFormats':
-          instance.customFormats?.map((e) => e?.toJson())?.toList(),
-      'customFormatScore': instance.customFormatScore,
-      'qualityWeight': instance.qualityWeight,
-      'age': instance.age,
-      'ageHours': instance.ageHours,
-      'ageMinutes': instance.ageMinutes,
-      'size': instance.size,
-      'indexerId': instance.indexerId,
-      'indexer': instance.indexer,
-      'releaseGroup': instance.releaseGroup,
-      'releaseHash': instance.releaseHash,
-      'title': instance.title,
-      'sceneSource': instance.sceneSource,
-      'movieTitle': instance.movieTitle,
-      'languages': instance.languages?.map((e) => e?.toJson())?.toList(),
-      'approved': instance.approved,
-      'temporarilyRejected': instance.temporarilyRejected,
-      'rejected': instance.rejected,
-      'imdbId': instance.imdbId,
-      'rejections': instance.rejections,
-      'publishDate': RadarrUtilities.dateTimeToJson(instance.publishDate),
-      'commentUrl': instance.commentUrl,
-      'downloadUrl': instance.downloadUrl,
-      'infoUrl': instance.infoUrl,
-      'downloadAllowed': instance.downloadAllowed,
-      'releaseWeight': instance.releaseWeight,
-      'edition': instance.edition,
-      'seeders': instance.seeders,
-      'leechers': instance.leechers,
-      'protocol': RadarrUtilities.protocolToJson(instance.protocol),
-    };
+Map<String, dynamic> _$RadarrReleaseToJson(RadarrRelease instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('guid', instance.guid);
+  writeNotNull('quality', instance.quality?.toJson());
+  writeNotNull('customFormats',
+      instance.customFormats?.map((e) => e?.toJson())?.toList());
+  writeNotNull('customFormatScore', instance.customFormatScore);
+  writeNotNull('qualityWeight', instance.qualityWeight);
+  writeNotNull('age', instance.age);
+  writeNotNull('ageHours', instance.ageHours);
+  writeNotNull('ageMinutes', instance.ageMinutes);
+  writeNotNull('size', instance.size);
+  writeNotNull('indexerId', instance.indexerId);
+  writeNotNull('indexer', instance.indexer);
+  writeNotNull('releaseGroup', instance.releaseGroup);
+  writeNotNull('releaseHash', instance.releaseHash);
+  writeNotNull('title', instance.title);
+  writeNotNull('sceneSource', instance.sceneSource);
+  writeNotNull('movieTitle', instance.movieTitle);
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e?.toJson())?.toList());
+  writeNotNull('approved', instance.approved);
+  writeNotNull('temporarilyRejected', instance.temporarilyRejected);
+  writeNotNull('rejected', instance.rejected);
+  writeNotNull('imdbId', instance.imdbId);
+  writeNotNull('rejections', instance.rejections);
+  writeNotNull(
+      'publishDate', RadarrUtilities.dateTimeToJson(instance.publishDate));
+  writeNotNull('commentUrl', instance.commentUrl);
+  writeNotNull('downloadUrl', instance.downloadUrl);
+  writeNotNull('infoUrl', instance.infoUrl);
+  writeNotNull('downloadAllowed', instance.downloadAllowed);
+  writeNotNull('releaseWeight', instance.releaseWeight);
+  writeNotNull('edition', instance.edition);
+  writeNotNull('seeders', instance.seeders);
+  writeNotNull('leechers', instance.leechers);
+  writeNotNull('protocol', RadarrUtilities.protocolToJson(instance.protocol));
+  return val;
+}

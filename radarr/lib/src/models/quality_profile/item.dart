@@ -5,7 +5,7 @@ import 'item_quality.dart';
 part 'item.g.dart';
 
 /// Store details about a quality profile item.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQualityProfileItem {
     @JsonKey(name: 'name')
     String name;

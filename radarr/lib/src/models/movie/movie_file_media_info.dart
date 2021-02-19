@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'movie_file_media_info.g.dart';
 
 /// Store details about the language of the movie.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFileMediaInfo {
     @JsonKey(name: 'audioAdditionalFeatures')
     String audioAdditionalFeatures;

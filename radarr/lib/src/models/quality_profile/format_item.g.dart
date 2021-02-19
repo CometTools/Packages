@@ -16,9 +16,17 @@ RadarrQualityProfileFormatItem _$RadarrQualityProfileFormatItemFromJson(
 }
 
 Map<String, dynamic> _$RadarrQualityProfileFormatItemToJson(
-        RadarrQualityProfileFormatItem instance) =>
-    <String, dynamic>{
-      'format': instance.format,
-      'name': instance.name,
-      'score': instance.score,
-    };
+    RadarrQualityProfileFormatItem instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('format', instance.format);
+  writeNotNull('name', instance.name);
+  writeNotNull('score', instance.score);
+  return val;
+}

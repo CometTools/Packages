@@ -6,7 +6,7 @@ import 'command_body.dart';
 part 'command.g.dart';
 
 /// Model for the response for executing a command in Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCommand {
     @JsonKey(name: 'name')
     String name;

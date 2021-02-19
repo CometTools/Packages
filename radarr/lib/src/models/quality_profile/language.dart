@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'language.g.dart';
 
 /// Store details about a language.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrLanguage {
     @JsonKey(name: 'id')
     int id;

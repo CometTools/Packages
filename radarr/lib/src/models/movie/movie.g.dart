@@ -65,46 +65,55 @@ RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) =>
-    <String, dynamic>{
-      'title': instance.title,
-      'originalTitle': instance.originalTitle,
-      'alternateTitles':
-          instance.alternateTitles?.map((e) => e?.toJson())?.toList(),
-      'secondaryYearSourceId': instance.secondaryYearSourceId,
-      'sortTitle': instance.sortTitle,
-      'sizeOnDisk': instance.sizeOnDisk,
-      'status': RadarrUtilities.availabilityToJson(instance.status),
-      'overview': instance.overview,
-      'inCinemas': RadarrUtilities.dateTimeToJson(instance.inCinemas),
-      'physicalRelease':
-          RadarrUtilities.dateTimeToJson(instance.physicalRelease),
-      'digitalRelease': RadarrUtilities.dateTimeToJson(instance.digitalRelease),
-      'images': instance.images?.map((e) => e?.toJson())?.toList(),
-      'website': instance.website,
-      'remotePoster': instance.remotePoster,
-      'year': instance.year,
-      'hasFile': instance.hasFile,
-      'youTubeTrailerId': instance.youTubeTrailerId,
-      'studio': instance.studio,
-      'path': instance.path,
-      'qualityProfileId': instance.qualityProfileId,
-      'monitored': instance.monitored,
-      'minimumAvailability':
-          RadarrUtilities.availabilityToJson(instance.minimumAvailability),
-      'isAvailable': instance.isAvailable,
-      'folderName': instance.folderName,
-      'runtime': instance.runtime,
-      'cleanTitle': instance.cleanTitle,
-      'imdbId': instance.imdbId,
-      'tmdbId': instance.tmdbId,
-      'titleSlug': instance.titleSlug,
-      'certification': instance.certification,
-      'genres': instance.genres,
-      'tags': instance.tags,
-      'added': RadarrUtilities.dateTimeToJson(instance.added),
-      'ratings': instance.ratings?.toJson(),
-      'movieFile': instance.movieFile?.toJson(),
-      'collection': instance.collection?.toJson(),
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('title', instance.title);
+  writeNotNull('originalTitle', instance.originalTitle);
+  writeNotNull('alternateTitles',
+      instance.alternateTitles?.map((e) => e?.toJson())?.toList());
+  writeNotNull('secondaryYearSourceId', instance.secondaryYearSourceId);
+  writeNotNull('sortTitle', instance.sortTitle);
+  writeNotNull('sizeOnDisk', instance.sizeOnDisk);
+  writeNotNull('status', RadarrUtilities.availabilityToJson(instance.status));
+  writeNotNull('overview', instance.overview);
+  writeNotNull('inCinemas', RadarrUtilities.dateTimeToJson(instance.inCinemas));
+  writeNotNull('physicalRelease',
+      RadarrUtilities.dateTimeToJson(instance.physicalRelease));
+  writeNotNull('digitalRelease',
+      RadarrUtilities.dateTimeToJson(instance.digitalRelease));
+  writeNotNull('images', instance.images?.map((e) => e?.toJson())?.toList());
+  writeNotNull('website', instance.website);
+  writeNotNull('remotePoster', instance.remotePoster);
+  writeNotNull('year', instance.year);
+  writeNotNull('hasFile', instance.hasFile);
+  writeNotNull('youTubeTrailerId', instance.youTubeTrailerId);
+  writeNotNull('studio', instance.studio);
+  writeNotNull('path', instance.path);
+  writeNotNull('qualityProfileId', instance.qualityProfileId);
+  writeNotNull('monitored', instance.monitored);
+  writeNotNull('minimumAvailability',
+      RadarrUtilities.availabilityToJson(instance.minimumAvailability));
+  writeNotNull('isAvailable', instance.isAvailable);
+  writeNotNull('folderName', instance.folderName);
+  writeNotNull('runtime', instance.runtime);
+  writeNotNull('cleanTitle', instance.cleanTitle);
+  writeNotNull('imdbId', instance.imdbId);
+  writeNotNull('tmdbId', instance.tmdbId);
+  writeNotNull('titleSlug', instance.titleSlug);
+  writeNotNull('certification', instance.certification);
+  writeNotNull('genres', instance.genres);
+  writeNotNull('tags', instance.tags);
+  writeNotNull('added', RadarrUtilities.dateTimeToJson(instance.added));
+  writeNotNull('ratings', instance.ratings?.toJson());
+  writeNotNull('movieFile', instance.movieFile?.toJson());
+  writeNotNull('collection', instance.collection?.toJson());
+  writeNotNull('id', instance.id);
+  return val;
+}

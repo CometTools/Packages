@@ -5,7 +5,7 @@ import '../../../models.dart';
 part 'alternate_titles.g.dart';
 
 /// Store details about alternate titles available for a movie.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieAlternateTitles {
     @JsonKey(name: 'sourceType')
     String sourceType;

@@ -30,23 +30,31 @@ RadarrCommand _$RadarrCommandFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrCommandToJson(RadarrCommand instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'commandName': instance.commandName,
-      'message': instance.message,
-      'body': instance.body?.toJson(),
-      'priority': instance.priority,
-      'status': instance.status,
-      'queued': RadarrUtilities.dateTimeToJson(instance.queued),
-      'started': RadarrUtilities.dateTimeToJson(instance.started),
-      'ended': RadarrUtilities.dateTimeToJson(instance.ended),
-      'trigger': instance.trigger,
-      'stateChangeTime':
-          RadarrUtilities.dateTimeToJson(instance.stateChangeTime),
-      'sendUpdatesToClient': instance.sendUpdatesToClient,
-      'updateScheduledTask': instance.updateScheduledTask,
-      'lastExecutionTime':
-          RadarrUtilities.dateTimeToJson(instance.lastExecutionTime),
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrCommandToJson(RadarrCommand instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('commandName', instance.commandName);
+  writeNotNull('message', instance.message);
+  writeNotNull('body', instance.body?.toJson());
+  writeNotNull('priority', instance.priority);
+  writeNotNull('status', instance.status);
+  writeNotNull('queued', RadarrUtilities.dateTimeToJson(instance.queued));
+  writeNotNull('started', RadarrUtilities.dateTimeToJson(instance.started));
+  writeNotNull('ended', RadarrUtilities.dateTimeToJson(instance.ended));
+  writeNotNull('trigger', instance.trigger);
+  writeNotNull('stateChangeTime',
+      RadarrUtilities.dateTimeToJson(instance.stateChangeTime));
+  writeNotNull('sendUpdatesToClient', instance.sendUpdatesToClient);
+  writeNotNull('updateScheduledTask', instance.updateScheduledTask);
+  writeNotNull('lastExecutionTime',
+      RadarrUtilities.dateTimeToJson(instance.lastExecutionTime));
+  writeNotNull('id', instance.id);
+  return val;
+}

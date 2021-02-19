@@ -23,14 +23,22 @@ RadarrMovieAlternateTitles _$RadarrMovieAlternateTitlesFromJson(
 }
 
 Map<String, dynamic> _$RadarrMovieAlternateTitlesToJson(
-        RadarrMovieAlternateTitles instance) =>
-    <String, dynamic>{
-      'sourceType': instance.sourceType,
-      'movieId': instance.movieId,
-      'title': instance.title,
-      'sourceId': instance.sourceId,
-      'votes': instance.votes,
-      'voteCount': instance.voteCount,
-      'language': instance.language?.toJson(),
-      'id': instance.id,
-    };
+    RadarrMovieAlternateTitles instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('sourceType', instance.sourceType);
+  writeNotNull('movieId', instance.movieId);
+  writeNotNull('title', instance.title);
+  writeNotNull('sourceId', instance.sourceId);
+  writeNotNull('votes', instance.votes);
+  writeNotNull('voteCount', instance.voteCount);
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('id', instance.id);
+  return val;
+}

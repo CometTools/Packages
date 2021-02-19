@@ -6,7 +6,7 @@ import '../../../utilities.dart';
 part 'import_list.g.dart';
 
 /// Model for an import list from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrImportList {
     @JsonKey(name: 'enabled')
     bool enabled;

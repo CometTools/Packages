@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'command_body.g.dart';
 
 /// Model for the body for executing a command in Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCommandBody {
     @JsonKey(name: 'type')
     String type;

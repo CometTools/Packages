@@ -15,10 +15,18 @@ RadarrExclusion _$RadarrExclusionFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrExclusionToJson(RadarrExclusion instance) =>
-    <String, dynamic>{
-      'tmdbId': instance.tmdbId,
-      'movieTitle': instance.movieTitle,
-      'movieYear': instance.movieYear,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrExclusionToJson(RadarrExclusion instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('tmdbId', instance.tmdbId);
+  writeNotNull('movieTitle', instance.movieTitle);
+  writeNotNull('movieYear', instance.movieYear);
+  writeNotNull('id', instance.id);
+  return val;
+}

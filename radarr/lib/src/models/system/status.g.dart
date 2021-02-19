@@ -39,34 +39,42 @@ RadarrSystemStatus _$RadarrSystemStatusFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrSystemStatusToJson(RadarrSystemStatus instance) =>
-    <String, dynamic>{
-      'version': instance.version,
-      'buildTime': instance.buildTime,
-      'isDebug': instance.isDebug,
-      'isProduction': instance.isProduction,
-      'isAdmin': instance.isAdmin,
-      'isUserInteractive': instance.isUserInteractive,
-      'startupPath': instance.startupPath,
-      'appData': instance.appData,
-      'osName': instance.osName,
-      'osVersion': instance.osVersion,
-      'isNetCore': instance.isNetCore,
-      'isMono': instance.isMono,
-      'isLinux': instance.isLinux,
-      'isOsx': instance.isOsx,
-      'isWindows': instance.isWindows,
-      'isDocker': instance.isDocker,
-      'mode': instance.mode,
-      'branch': instance.branch,
-      'authentication': instance.authentication,
-      'sqliteVersion': instance.sqliteVersion,
-      'migrationVersion': instance.migrationVersion,
-      'urlBase': instance.urlBase,
-      'runtimeVersion': instance.runtimeVersion,
-      'runtimeName': instance.runtimeName,
-      'startTime': instance.startTime,
-      'packageVersion': instance.packageVersion,
-      'packageAuthor': instance.packageAuthor,
-      'packageUpdateMechanism': instance.packageUpdateMechanism,
-    };
+Map<String, dynamic> _$RadarrSystemStatusToJson(RadarrSystemStatus instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('version', instance.version);
+  writeNotNull('buildTime', instance.buildTime);
+  writeNotNull('isDebug', instance.isDebug);
+  writeNotNull('isProduction', instance.isProduction);
+  writeNotNull('isAdmin', instance.isAdmin);
+  writeNotNull('isUserInteractive', instance.isUserInteractive);
+  writeNotNull('startupPath', instance.startupPath);
+  writeNotNull('appData', instance.appData);
+  writeNotNull('osName', instance.osName);
+  writeNotNull('osVersion', instance.osVersion);
+  writeNotNull('isNetCore', instance.isNetCore);
+  writeNotNull('isMono', instance.isMono);
+  writeNotNull('isLinux', instance.isLinux);
+  writeNotNull('isOsx', instance.isOsx);
+  writeNotNull('isWindows', instance.isWindows);
+  writeNotNull('isDocker', instance.isDocker);
+  writeNotNull('mode', instance.mode);
+  writeNotNull('branch', instance.branch);
+  writeNotNull('authentication', instance.authentication);
+  writeNotNull('sqliteVersion', instance.sqliteVersion);
+  writeNotNull('migrationVersion', instance.migrationVersion);
+  writeNotNull('urlBase', instance.urlBase);
+  writeNotNull('runtimeVersion', instance.runtimeVersion);
+  writeNotNull('runtimeName', instance.runtimeName);
+  writeNotNull('startTime', instance.startTime);
+  writeNotNull('packageVersion', instance.packageVersion);
+  writeNotNull('packageAuthor', instance.packageAuthor);
+  writeNotNull('packageUpdateMechanism', instance.packageUpdateMechanism);
+  return val;
+}

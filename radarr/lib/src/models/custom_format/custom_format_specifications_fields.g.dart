@@ -20,12 +20,20 @@ RadarrCustomFormatSpecificationsFields
 }
 
 Map<String, dynamic> _$RadarrCustomFormatSpecificationsFieldsToJson(
-        RadarrCustomFormatSpecificationsFields instance) =>
-    <String, dynamic>{
-      'order': instance.order,
-      'name': instance.name,
-      'label': instance.label,
-      'value': instance.value,
-      'type': instance.type,
-      'advanced': instance.advanced,
-    };
+    RadarrCustomFormatSpecificationsFields instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('order', instance.order);
+  writeNotNull('name', instance.name);
+  writeNotNull('label', instance.label);
+  writeNotNull('value', instance.value);
+  writeNotNull('type', instance.type);
+  writeNotNull('advanced', instance.advanced);
+  return val;
+}

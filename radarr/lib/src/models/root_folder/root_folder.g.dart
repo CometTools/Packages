@@ -20,12 +20,20 @@ RadarrRootFolder _$RadarrRootFolderFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrRootFolderToJson(RadarrRootFolder instance) =>
-    <String, dynamic>{
-      'path': instance.path,
-      'accessible': instance.accessible,
-      'freeSpace': instance.freeSpace,
-      'unmappedFolders':
-          instance.unmappedFolders?.map((e) => e?.toJson())?.toList(),
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrRootFolderToJson(RadarrRootFolder instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('path', instance.path);
+  writeNotNull('accessible', instance.accessible);
+  writeNotNull('freeSpace', instance.freeSpace);
+  writeNotNull('unmappedFolders',
+      instance.unmappedFolders?.map((e) => e?.toJson())?.toList());
+  writeNotNull('id', instance.id);
+  return val;
+}

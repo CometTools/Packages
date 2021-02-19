@@ -31,24 +31,32 @@ RadarrImportList _$RadarrImportListFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrImportListToJson(RadarrImportList instance) =>
-    <String, dynamic>{
-      'enabled': instance.enabled,
-      'enableAuto': instance.enableAuto,
-      'shouldMonitor': instance.shouldMonitor,
-      'rootFolderPath': instance.rootFolderPath,
-      'qualityProfileId': instance.qualityProfileId,
-      'searchOnAdd': instance.searchOnAdd,
-      'minimumAvailability':
-          RadarrUtilities.availabilityToJson(instance.minimumAvailability),
-      'listType': instance.listType,
-      'listOrder': instance.listOrder,
-      'name': instance.name,
-      'fields': instance.fields,
-      'implementationName': instance.implementationName,
-      'implementation': instance.implementation,
-      'configContract': instance.configContract,
-      'infoLink': instance.infoLink,
-      'tags': instance.tags,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrImportListToJson(RadarrImportList instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('enabled', instance.enabled);
+  writeNotNull('enableAuto', instance.enableAuto);
+  writeNotNull('shouldMonitor', instance.shouldMonitor);
+  writeNotNull('rootFolderPath', instance.rootFolderPath);
+  writeNotNull('qualityProfileId', instance.qualityProfileId);
+  writeNotNull('searchOnAdd', instance.searchOnAdd);
+  writeNotNull('minimumAvailability',
+      RadarrUtilities.availabilityToJson(instance.minimumAvailability));
+  writeNotNull('listType', instance.listType);
+  writeNotNull('listOrder', instance.listOrder);
+  writeNotNull('name', instance.name);
+  writeNotNull('fields', instance.fields);
+  writeNotNull('implementationName', instance.implementationName);
+  writeNotNull('implementation', instance.implementation);
+  writeNotNull('configContract', instance.configContract);
+  writeNotNull('infoLink', instance.infoLink);
+  writeNotNull('tags', instance.tags);
+  writeNotNull('id', instance.id);
+  return val;
+}

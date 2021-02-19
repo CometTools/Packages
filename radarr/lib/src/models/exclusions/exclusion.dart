@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'exclusion.g.dart';
 
 /// Model for exclusion details from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrExclusion {
     @JsonKey(name: 'tmdbId')
     int tmdbId;

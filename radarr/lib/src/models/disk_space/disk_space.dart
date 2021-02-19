@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'disk_space.g.dart';
 
 /// Model for disk space details from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrDiskSpace {
     @JsonKey(name: 'path')
     String path;

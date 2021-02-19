@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'collection.g.dart';
 
 /// Store details about a collection the movie is apart of.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieCollection {
     @JsonKey(name: 'name')
     String name;

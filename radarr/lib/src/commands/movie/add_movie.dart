@@ -15,6 +15,7 @@ Future<RadarrMovie> _commandAddMovie(Dio client, {
     assert(minimumAvailability != null, 'minimumAvailability cannot be null');
     assert(qualityProfile != null, 'qualityProfile cannot be null');
     // Updating movie
+    movie.id = 0;
     movie.monitored = monitored;
     movie.qualityProfileId = qualityProfile.id;
     movie.minimumAvailability = minimumAvailability;

@@ -25,11 +25,19 @@ RadarrQualityProfileItem _$RadarrQualityProfileItemFromJson(
 }
 
 Map<String, dynamic> _$RadarrQualityProfileItemToJson(
-        RadarrQualityProfileItem instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'quality': instance.quality?.toJson(),
-      'items': instance.items?.map((e) => e?.toJson())?.toList(),
-      'allowed': instance.allowed,
-      'id': instance.id,
-    };
+    RadarrQualityProfileItem instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('quality', instance.quality?.toJson());
+  writeNotNull('items', instance.items?.map((e) => e?.toJson())?.toList());
+  writeNotNull('allowed', instance.allowed);
+  writeNotNull('id', instance.id);
+  return val;
+}

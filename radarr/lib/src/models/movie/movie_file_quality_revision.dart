@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'movie_file_quality_revision.g.dart';
 
 /// Model for an movie file's quality profile's revision.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFileQualityRevision {
     @JsonKey(name: 'version')
     int version;

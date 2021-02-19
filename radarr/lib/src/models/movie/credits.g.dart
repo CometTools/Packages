@@ -25,17 +25,25 @@ RadarrMovieCredits _$RadarrMovieCreditsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrMovieCreditsToJson(RadarrMovieCredits instance) =>
-    <String, dynamic>{
-      'personName': instance.personName,
-      'creditTmdbId': instance.creditTmdbId,
-      'personTmdbId': instance.personTmdbId,
-      'movieId': instance.movieId,
-      'images': instance.images?.map((e) => e?.toJson())?.toList(),
-      'character': instance.character,
-      'department': instance.department,
-      'job': instance.job,
-      'order': instance.order,
-      'type': RadarrUtilities.creditTypeToJson(instance.type),
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrMovieCreditsToJson(RadarrMovieCredits instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('personName', instance.personName);
+  writeNotNull('creditTmdbId', instance.creditTmdbId);
+  writeNotNull('personTmdbId', instance.personTmdbId);
+  writeNotNull('movieId', instance.movieId);
+  writeNotNull('images', instance.images?.map((e) => e?.toJson())?.toList());
+  writeNotNull('character', instance.character);
+  writeNotNull('department', instance.department);
+  writeNotNull('job', instance.job);
+  writeNotNull('order', instance.order);
+  writeNotNull('type', RadarrUtilities.creditTypeToJson(instance.type));
+  writeNotNull('id', instance.id);
+  return val;
+}

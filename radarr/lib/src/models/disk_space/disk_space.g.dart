@@ -15,10 +15,18 @@ RadarrDiskSpace _$RadarrDiskSpaceFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrDiskSpaceToJson(RadarrDiskSpace instance) =>
-    <String, dynamic>{
-      'path': instance.path,
-      'label': instance.label,
-      'freeSpace': instance.freeSpace,
-      'totalSpace': instance.totalSpace,
-    };
+Map<String, dynamic> _$RadarrDiskSpaceToJson(RadarrDiskSpace instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('path', instance.path);
+  writeNotNull('label', instance.label);
+  writeNotNull('freeSpace', instance.freeSpace);
+  writeNotNull('totalSpace', instance.totalSpace);
+  return val;
+}

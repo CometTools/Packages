@@ -25,13 +25,21 @@ RadarrCustomFormatSpecifications _$RadarrCustomFormatSpecificationsFromJson(
 }
 
 Map<String, dynamic> _$RadarrCustomFormatSpecificationsToJson(
-        RadarrCustomFormatSpecifications instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'implementation': instance.implementation,
-      'implementationName': instance.implementationName,
-      'infoLink': instance.infoLink,
-      'negate': instance.negate,
-      'required': instance.required,
-      'fields': instance.fields?.map((e) => e?.toJson())?.toList(),
-    };
+    RadarrCustomFormatSpecifications instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('implementation', instance.implementation);
+  writeNotNull('implementationName', instance.implementationName);
+  writeNotNull('infoLink', instance.infoLink);
+  writeNotNull('negate', instance.negate);
+  writeNotNull('required', instance.required);
+  writeNotNull('fields', instance.fields?.map((e) => e?.toJson())?.toList());
+  return val;
+}

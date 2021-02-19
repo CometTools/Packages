@@ -7,7 +7,7 @@ import '../../../utilities.dart';
 part 'release.g.dart';
 
 /// Model for a movie release from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrRelease {
     @JsonKey(name: 'guid')
     String guid;

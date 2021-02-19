@@ -38,20 +38,29 @@ RadarrMovieFile _$RadarrMovieFileFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrMovieFileToJson(RadarrMovieFile instance) =>
-    <String, dynamic>{
-      'movieId': instance.movieId,
-      'relativePath': instance.relativePath,
-      'path': instance.path,
-      'size': instance.size,
-      'dateAdded': RadarrUtilities.dateTimeToJson(instance.dateAdded),
-      'indexerFlags': instance.indexerFlags,
-      'quality': instance.quality?.toJson(),
-      'customFormats':
-          instance.customFormats?.map((e) => e?.toJson())?.toList(),
-      'mediaInfo': instance.mediaInfo?.toJson(),
-      'qualityCutoffNotMet': instance.qualityCutoffNotMet,
-      'languages': instance.languages?.map((e) => e?.toJson())?.toList(),
-      'edition': instance.edition,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrMovieFileToJson(RadarrMovieFile instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('movieId', instance.movieId);
+  writeNotNull('relativePath', instance.relativePath);
+  writeNotNull('path', instance.path);
+  writeNotNull('size', instance.size);
+  writeNotNull('dateAdded', RadarrUtilities.dateTimeToJson(instance.dateAdded));
+  writeNotNull('indexerFlags', instance.indexerFlags);
+  writeNotNull('quality', instance.quality?.toJson());
+  writeNotNull('customFormats',
+      instance.customFormats?.map((e) => e?.toJson())?.toList());
+  writeNotNull('mediaInfo', instance.mediaInfo?.toJson());
+  writeNotNull('qualityCutoffNotMet', instance.qualityCutoffNotMet);
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e?.toJson())?.toList());
+  writeNotNull('edition', instance.edition);
+  writeNotNull('id', instance.id);
+  return val;
+}

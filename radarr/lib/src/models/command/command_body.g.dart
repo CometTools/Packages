@@ -21,16 +21,24 @@ RadarrCommandBody _$RadarrCommandBodyFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrCommandBodyToJson(RadarrCommandBody instance) =>
-    <String, dynamic>{
-      'type': instance.type,
-      'sendUpdatesToClient': instance.sendUpdatesToClient,
-      'updateScheduledTask': instance.updateScheduledTask,
-      'completionMessage': instance.completionMessage,
-      'requiresDiskAccess': instance.requiresDiskAccess,
-      'isExclusive': instance.isExclusive,
-      'isTypeExclusive': instance.isTypeExclusive,
-      'name': instance.name,
-      'trigger': instance.trigger,
-      'suppressMessages': instance.suppressMessages,
-    };
+Map<String, dynamic> _$RadarrCommandBodyToJson(RadarrCommandBody instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type', instance.type);
+  writeNotNull('sendUpdatesToClient', instance.sendUpdatesToClient);
+  writeNotNull('updateScheduledTask', instance.updateScheduledTask);
+  writeNotNull('completionMessage', instance.completionMessage);
+  writeNotNull('requiresDiskAccess', instance.requiresDiskAccess);
+  writeNotNull('isExclusive', instance.isExclusive);
+  writeNotNull('isTypeExclusive', instance.isTypeExclusive);
+  writeNotNull('name', instance.name);
+  writeNotNull('trigger', instance.trigger);
+  writeNotNull('suppressMessages', instance.suppressMessages);
+  return val;
+}

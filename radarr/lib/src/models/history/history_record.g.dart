@@ -33,19 +33,28 @@ RadarrHistoryRecord _$RadarrHistoryRecordFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrHistoryRecordToJson(
-        RadarrHistoryRecord instance) =>
-    <String, dynamic>{
-      'movieId': instance.movieId,
-      'sourceTitle': instance.sourceTitle,
-      'languages': instance.languages?.map((e) => e?.toJson())?.toList(),
-      'quality': instance.quality?.toJson(),
-      'customFormats':
-          instance.customFormats?.map((e) => e?.toJson())?.toList(),
-      'qualityCutoffNotMet': instance.qualityCutoffNotMet,
-      'date': RadarrUtilities.dateTimeToJson(instance.date),
-      'downloadId': instance.downloadId,
-      'eventType': RadarrUtilities.eventTypeToJson(instance.eventType),
-      'data': instance.data,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrHistoryRecordToJson(RadarrHistoryRecord instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('movieId', instance.movieId);
+  writeNotNull('sourceTitle', instance.sourceTitle);
+  writeNotNull(
+      'languages', instance.languages?.map((e) => e?.toJson())?.toList());
+  writeNotNull('quality', instance.quality?.toJson());
+  writeNotNull('customFormats',
+      instance.customFormats?.map((e) => e?.toJson())?.toList());
+  writeNotNull('qualityCutoffNotMet', instance.qualityCutoffNotMet);
+  writeNotNull('date', RadarrUtilities.dateTimeToJson(instance.date));
+  writeNotNull('downloadId', instance.downloadId);
+  writeNotNull(
+      'eventType', RadarrUtilities.eventTypeToJson(instance.eventType));
+  writeNotNull('data', instance.data);
+  writeNotNull('id', instance.id);
+  return val;
+}

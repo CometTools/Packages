@@ -13,7 +13,16 @@ RadarrTag _$RadarrTagFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrTagToJson(RadarrTag instance) => <String, dynamic>{
-      'id': instance.id,
-      'label': instance.label,
-    };
+Map<String, dynamic> _$RadarrTagToJson(RadarrTag instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('label', instance.label);
+  return val;
+}

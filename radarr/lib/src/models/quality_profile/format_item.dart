@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'format_item.g.dart';
 
 /// Store details about a quality profile's format item.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQualityProfileFormatItem {
     @JsonKey(name: 'format')
     int format;

@@ -15,8 +15,16 @@ RadarrMovieCollection _$RadarrMovieCollectionFromJson(
 }
 
 Map<String, dynamic> _$RadarrMovieCollectionToJson(
-        RadarrMovieCollection instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'tmdbId': instance.tmdbId,
-    };
+    RadarrMovieCollection instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('tmdbId', instance.tmdbId);
+  return val;
+}

@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'rating.g.dart';
 
 /// Model for movies rating values.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieRating {
     @JsonKey(name: 'votes')
     int votes;

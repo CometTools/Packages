@@ -1,3 +1,6 @@
+# 1.1.0
+- Do not write null values when converting models back to a JSON
+- Set `id` to 0 when creating a new movie object in the Radarr database
 # 1.0.2
 - Ability to fetch import lists
 - Ability to fetch movies from import lists

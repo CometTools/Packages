@@ -13,8 +13,16 @@ RadarrMovieRating _$RadarrMovieRatingFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrMovieRatingToJson(RadarrMovieRating instance) =>
-    <String, dynamic>{
-      'votes': instance.votes,
-      'value': instance.value,
-    };
+Map<String, dynamic> _$RadarrMovieRatingToJson(RadarrMovieRating instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('votes', instance.votes);
+  writeNotNull('value', instance.value);
+  return val;
+}

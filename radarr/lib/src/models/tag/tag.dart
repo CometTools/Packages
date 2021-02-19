@@ -4,7 +4,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'tag.g.dart';
 
 /// Model for a series tag from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrTag {
     /// Tag identifier
     @JsonKey(name: 'id')

@@ -8,7 +8,7 @@ import '../../../models.dart';
 part 'movie_file.g.dart';
 
 /// Model for a movies' file information
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFile {
     @JsonKey(name: 'movieId')
     int movieId;

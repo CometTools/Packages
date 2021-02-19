@@ -7,7 +7,7 @@ import '../../../utilities.dart';
 part 'credits.g.dart';
 
 /// Store details about credits for a person who has worked on the movie.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieCredits {
     @JsonKey(name: 'personName')
     String personName;

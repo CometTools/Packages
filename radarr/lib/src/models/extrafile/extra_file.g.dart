@@ -17,12 +17,20 @@ RadarrExtraFile _$RadarrExtraFileFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$RadarrExtraFileToJson(RadarrExtraFile instance) =>
-    <String, dynamic>{
-      'movieId': instance.movieId,
-      'movieFileId': instance.movieFileId,
-      'relativePath': instance.relativePath,
-      'extension': instance.extension,
-      'type': instance.type,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$RadarrExtraFileToJson(RadarrExtraFile instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('movieId', instance.movieId);
+  writeNotNull('movieFileId', instance.movieFileId);
+  writeNotNull('relativePath', instance.relativePath);
+  writeNotNull('extension', instance.extension);
+  writeNotNull('type', instance.type);
+  writeNotNull('id', instance.id);
+  return val;
+}

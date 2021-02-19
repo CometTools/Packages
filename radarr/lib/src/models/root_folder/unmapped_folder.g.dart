@@ -14,8 +14,16 @@ RadarrUnmappedFolder _$RadarrUnmappedFolderFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$RadarrUnmappedFolderToJson(
-        RadarrUnmappedFolder instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'path': instance.path,
-    };
+    RadarrUnmappedFolder instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('path', instance.path);
+  return val;
+}

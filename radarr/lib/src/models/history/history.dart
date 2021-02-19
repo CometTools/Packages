@@ -7,7 +7,7 @@ import '../../../utilities.dart';
 part 'history.g.dart';
 
 /// Model for history content from Radarr.
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrHistory {
     @JsonKey(name: 'page')
     int page;
