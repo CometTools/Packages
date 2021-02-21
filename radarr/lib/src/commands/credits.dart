@@ -6,7 +6,7 @@ part of radarr_commands;
 class RadarrCommandHandler_Credits {
     final Dio _client;
 
-    /// Create a series command handler using an initialized [Dio] client.
+    /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_Credits(this._client);
 
 

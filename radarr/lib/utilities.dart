@@ -45,4 +45,9 @@ class RadarrUtilities {
     static RadarrProtocol protocolFromJson(String protocol) => RadarrProtocol.USENET.from(protocol);
     /// Converts a [RadarrProtocol] object back to its string representation.
     static String protocolToJson(RadarrProtocol protocol) => protocol?.value;
+
+    /// Converts a string to a [RadarrHealthCheckType] object.
+    static RadarrHealthCheckType healthCheckTypeFromJson(String health) => RadarrHealthCheckType.NOTICE.from(health);
+    /// Converts a [RadarrHealthCheckType] object back to its string representation.
+    static String healthCheckTypeToJson(RadarrHealthCheckType health) => health?.value;
 }

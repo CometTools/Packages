@@ -6,7 +6,7 @@ part of radarr_commands;
 class RadarrCommandHandler_QualityProfile {
     final Dio _client;
 
-    /// Create a series command handler using an initialized [Dio] client.
+    /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_QualityProfile(this._client);
 
     /// Handler for [qualityprofile/{id}](https://radarr.video/docs/api/#/Quality/get-add-discover).

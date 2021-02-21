@@ -31,6 +31,7 @@ class Radarr {
         @required this.diskSpace,
         @required this.exclusions,
         @required this.extraFile,
+        @required this.healthCheck,
         @required this.history,
         @required this.importList,
         @required this.movie,
@@ -88,6 +89,7 @@ class Radarr {
             diskSpace: RadarrCommandHandler_DiskSpace(_dio),
             exclusions: RadarrCommandHandler_Exclusions(_dio),
             extraFile: RadarrCommandHandler_ExtraFile(_dio),
+            healthCheck: RadarrCommandHandler_HealthCheck(_dio),
             history: RadarrCommandHandler_History(_dio),
             importList: RadarrCommandHandler_ImportList(_dio),
             movie: RadarrCommandHandler_Movie(_dio),
@@ -130,6 +132,7 @@ class Radarr {
             diskSpace: RadarrCommandHandler_DiskSpace(client),
             exclusions: RadarrCommandHandler_Exclusions(client),
             extraFile: RadarrCommandHandler_ExtraFile(client),
+            healthCheck: RadarrCommandHandler_HealthCheck(client),
             history: RadarrCommandHandler_History(client),
             importList: RadarrCommandHandler_ImportList(client),
             movie: RadarrCommandHandler_Movie(client),
@@ -173,6 +176,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_ExtraFile extraFile;
+
+    /// Command handler for all health check-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_HealthCheck healthCheck;
 
     /// Command handler for all history-related API calls.
     /// 

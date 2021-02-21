@@ -6,7 +6,7 @@ part of radarr_commands;
 class RadarrCommandHandler_MovieLookup {
     final Dio _client;
 
-    /// Create a series command handler using an initialized [Dio] client.
+    /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_MovieLookup(this._client);
 
     /// Handler for [movie/lookup](https://radarr.video/docs/api/#/Movie/get-movie-lookup).

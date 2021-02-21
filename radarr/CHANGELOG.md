@@ -1,3 +1,5 @@
+# 1.1.1
+- Ability to fetch details about the health of your Radarr instance
 # 1.1.0
 - Do not write null values when converting models back to a JSON
 - Set `id` to 0 when creating a new movie object in the Radarr database

@@ -6,7 +6,7 @@ part of radarr_commands;
 class RadarrCommandHandler_ImportList {
     final Dio _client;
 
-    /// Create a series command handler using an initialized [Dio] client.
+    /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_ImportList(this._client);
 
     /// Handler for [importlist/{id}](https://radarr.video/docs/api/#/Import%20Lists/get-importlist-id).
