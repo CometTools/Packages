@@ -31,6 +31,10 @@ part 'src/commands/exclusions/get_all_exclusions.dart';
 part 'src/commands/extra_file.dart';
 part 'src/commands/extra_file/get_extra_files.dart';
 
+// Health Check
+part 'src/commands/health_check.dart';
+part 'src/commands/health_check/get_all_health_checks.dart';
+
 // History
 part 'src/commands/history.dart';
 part 'src/commands/history/get_history.dart';

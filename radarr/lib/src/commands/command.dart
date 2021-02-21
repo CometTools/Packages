@@ -6,7 +6,7 @@ part of radarr_commands;
 class RadarrCommandHandler_Command {
     final Dio _client;
 
-    /// Create a series command handler using an initialized [Dio] client.
+    /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_Command(this._client);
 
     /// Handler for [command (Backup)](https://radarr.video/docs/api/#/Command/post-command).

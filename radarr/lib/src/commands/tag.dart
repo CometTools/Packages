@@ -6,7 +6,7 @@ part of radarr_commands;
 class RadarrCommandHandler_Tag {
     final Dio _client;
 
-    /// Create a series command handler using an initialized [Dio] client.
+    /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_Tag(this._client);
 
     /// Handler for [tag](https://radarr.video/docs/api/#/Tag/post_tag).

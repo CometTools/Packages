@@ -19,6 +19,9 @@ export 'src/models/exclusions/exclusion.dart';
 /// Extra File
 export 'src/models/extrafile/extra_file.dart';
 
+/// Health Check
+export 'src/models/health_check/health_check.dart';
+
 /// History
 export 'src/models/history/history.dart';
 export 'src/models/history/history_record.dart';
