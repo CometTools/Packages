@@ -1,3 +1,5 @@
+# 1.1.3
+- Removed indexerFlag from `RadarrMovieFile`
 # 1.1.2
 - Removed `RadarrCustomFormatSpecificationsFields` and replaced `fields` with a generic `Map<dynamic, dynamic>` as the data can be very dynamic
 # 1.1.1

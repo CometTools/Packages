@@ -25,9 +25,6 @@ class RadarrMovieFile {
     @JsonKey(name: 'dateAdded', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
     DateTime dateAdded;
 
-    @JsonKey(name: 'indexerFlags')
-    int indexerFlags;
-
     @JsonKey(name: 'quality')
     RadarrMovieFileQuality quality;
 
@@ -55,7 +52,6 @@ class RadarrMovieFile {
         this.path,
         this.size,
         this.dateAdded,
-        this.indexerFlags,
         this.quality,
         this.customFormats,
         this.mediaInfo,

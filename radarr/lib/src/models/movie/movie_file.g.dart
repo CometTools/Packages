@@ -13,7 +13,6 @@ RadarrMovieFile _$RadarrMovieFileFromJson(Map<String, dynamic> json) {
     path: json['path'] as String,
     size: json['size'] as int,
     dateAdded: RadarrUtilities.dateTimeFromJson(json['dateAdded'] as String),
-    indexerFlags: json['indexerFlags'] as int,
     quality: json['quality'] == null
         ? null
         : RadarrMovieFileQuality.fromJson(
@@ -52,7 +51,6 @@ Map<String, dynamic> _$RadarrMovieFileToJson(RadarrMovieFile instance) {
   writeNotNull('path', instance.path);
   writeNotNull('size', instance.size);
   writeNotNull('dateAdded', RadarrUtilities.dateTimeToJson(instance.dateAdded));
-  writeNotNull('indexerFlags', instance.indexerFlags);
   writeNotNull('quality', instance.quality?.toJson());
   writeNotNull('customFormats',
       instance.customFormats?.map((e) => e?.toJson())?.toList());
