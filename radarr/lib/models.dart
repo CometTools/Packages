@@ -8,7 +8,6 @@ export 'src/models/command/command_body.dart';
 /// Custom Formats
 export 'src/models/custom_format/custom_format.dart';
 export 'src/models/custom_format/custom_format_specifications.dart';
-export 'src/models/custom_format/custom_format_specifications_fields.dart';
 
 /// Disk Space
 export 'src/models/disk_space/disk_space.dart';

@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'custom_format_specifications_fields.dart';
 
 part 'custom_format_specifications.g.dart';
 
@@ -26,7 +25,7 @@ class RadarrCustomFormatSpecifications {
     bool required;
 
     @JsonKey(name: 'fields')
-    List<RadarrCustomFormatSpecificationsFields> fields;
+    List<Map<dynamic, dynamic>> fields;
 
     RadarrCustomFormatSpecifications({
         this.name,

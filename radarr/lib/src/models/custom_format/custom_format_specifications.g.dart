@@ -16,10 +16,7 @@ RadarrCustomFormatSpecifications _$RadarrCustomFormatSpecificationsFromJson(
     negate: json['negate'] as bool,
     required: json['required'] as bool,
     fields: (json['fields'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrCustomFormatSpecificationsFields.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) => e as Map<String, dynamic>)
         ?.toList(),
   );
 }
@@ -40,6 +37,6 @@ Map<String, dynamic> _$RadarrCustomFormatSpecificationsToJson(
   writeNotNull('infoLink', instance.infoLink);
   writeNotNull('negate', instance.negate);
   writeNotNull('required', instance.required);
-  writeNotNull('fields', instance.fields?.map((e) => e?.toJson())?.toList());
+  writeNotNull('fields', instance.fields);
   return val;
 }

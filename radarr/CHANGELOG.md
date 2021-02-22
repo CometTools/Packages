@@ -1,3 +1,5 @@
+# 1.1.2
+- Removed `RadarrCustomFormatSpecificationsFields` and replaced `fields` with a generic `Map<dynamic, dynamic>` as the data can be very dynamic
 # 1.1.1
 - Ability to fetch details about the health of your Radarr instance
 # 1.1.0
