@@ -50,6 +50,9 @@ export 'src/models/quality_profile/item_quality.dart';
 export 'src/models/quality_profile/language.dart';
 export 'src/models/quality_profile/quality_profile.dart';
 
+/// Queue
+export 'src/models/queue/queue_status.dart';
+
 /// Release
 export 'src/models/release/release.dart';
 

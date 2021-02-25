@@ -73,6 +73,10 @@ part 'src/commands/quality_profile.dart';
 part 'src/commands/quality_profile/get_quality_profile.dart';
 part 'src/commands/quality_profile/get_all_quality_profiles.dart';
 
+// Queue
+part 'src/commands/queue.dart';
+part 'src/commands/queue/get_queue_status.dart';
+
 // Root Folder
 part 'src/commands/root_folder.dart';
 part 'src/commands/root_folder/get_root_folders.dart';
