@@ -28,7 +28,7 @@ class Radarr {
         @required this.httpClient,
         @required this.command,
         @required this.credits,
-        @required this.diskSpace,
+        @required this.fileSystem,
         @required this.exclusions,
         @required this.extraFile,
         @required this.healthCheck,
@@ -87,7 +87,7 @@ class Radarr {
             httpClient: _dio,
             command: RadarrCommandHandler_Command(_dio),
             credits: RadarrCommandHandler_Credits(_dio),
-            diskSpace: RadarrCommandHandler_DiskSpace(_dio),
+            fileSystem: RadarrCommandHandler_FileSystem(_dio),
             exclusions: RadarrCommandHandler_Exclusions(_dio),
             extraFile: RadarrCommandHandler_ExtraFile(_dio),
             healthCheck: RadarrCommandHandler_HealthCheck(_dio),
@@ -131,7 +131,7 @@ class Radarr {
             httpClient: client,
             command: RadarrCommandHandler_Command(client),
             credits: RadarrCommandHandler_Credits(client),
-            diskSpace: RadarrCommandHandler_DiskSpace(client),
+            fileSystem: RadarrCommandHandler_FileSystem(client),
             exclusions: RadarrCommandHandler_Exclusions(client),
             extraFile: RadarrCommandHandler_ExtraFile(client),
             healthCheck: RadarrCommandHandler_HealthCheck(client),
@@ -165,11 +165,6 @@ class Radarr {
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_Credits credits;
 
-    /// Command handler for all disk space-related API calls.
-    /// 
-    /// _Check the documentation to see all API calls that fall under this category._
-    final RadarrCommandHandler_DiskSpace diskSpace;
-
     /// Command handler for all movie exclusions-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
@@ -179,6 +174,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_ExtraFile extraFile;
+
+    /// Command handler for all filesystem-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_FileSystem fileSystem;
 
     /// Command handler for all health check-related API calls.
     /// 

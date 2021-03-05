@@ -50,4 +50,9 @@ class RadarrUtilities {
     static RadarrHealthCheckType healthCheckTypeFromJson(String health) => RadarrHealthCheckType.NOTICE.from(health);
     /// Converts a [RadarrHealthCheckType] object back to its string representation.
     static String healthCheckTypeToJson(RadarrHealthCheckType health) => health?.value;
+
+    /// Converts a string to a [RadarrFileSystemType] object.
+    static RadarrFileSystemType fileSystemTypeFromJson(String type) => RadarrFileSystemType.FOLDER.from(type);
+    /// Converts a [RadarrFileSystemType] object back to its string representation.
+    static String fileSystemTypeToJson(RadarrFileSystemType type) => type?.value;
 }
