@@ -1,3 +1,7 @@
+# 1.1.2+1
+- Updated packages
+# 1.1.2
+- Updated packages
 # 1.1.1+6
 - Fixed formatting of README that caused an invalid URL link
 # 1.1.1+5
