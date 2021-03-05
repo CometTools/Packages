@@ -1,3 +1,5 @@
+# 1.2.2
+- Updated packages
 # 1.2.1
 - Added "Burn" transcode decision to `TautulliTranscodeDecision`
 # 1.2.0
