@@ -1,3 +1,5 @@
+# 1.1.4
+- Updated packages
 # 1.1.3
 - Removed indexerFlag from `RadarrMovieFile`
 # 1.1.2
