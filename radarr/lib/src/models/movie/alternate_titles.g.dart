@@ -9,16 +9,16 @@ part of 'alternate_titles.dart';
 RadarrMovieAlternateTitles _$RadarrMovieAlternateTitlesFromJson(
     Map<String, dynamic> json) {
   return RadarrMovieAlternateTitles(
-    sourceType: json['sourceType'] as String,
-    movieId: json['movieId'] as int,
-    title: json['title'] as String,
-    sourceId: json['sourceId'] as int,
-    votes: json['votes'] as int,
-    voteCount: json['voteCount'] as int,
+    sourceType: json['sourceType'] as String?,
+    movieId: json['movieId'] as int?,
+    title: json['title'] as String?,
+    sourceId: json['sourceId'] as int?,
+    votes: json['votes'] as int?,
+    voteCount: json['voteCount'] as int?,
     language: json['language'] == null
         ? null
         : RadarrLanguage.fromJson(json['language'] as Map<String, dynamic>),
-    id: json['id'] as int,
+    id: json['id'] as int?,
   );
 }
 

@@ -7,7 +7,6 @@
 library radarr;
 
 // Imports
-import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
 import 'commands.dart';
 
@@ -25,23 +24,24 @@ export 'utilities.dart';
 class Radarr {
     /// Internal constructor
     Radarr._internal({
-        @required this.httpClient,
-        @required this.command,
-        @required this.credits,
-        @required this.diskSpace,
-        @required this.exclusions,
-        @required this.extraFile,
-        @required this.healthCheck,
-        @required this.history,
-        @required this.importList,
-        @required this.movie,
-        @required this.movieFile,
-        @required this.movieLookup,
-        @required this.qualityProfile,
-        @required this.release,
-        @required this.rootFolder,
-        @required this.system,
-        @required this.tag,
+        required this.httpClient,
+        required this.command,
+        required this.credits,
+        required this.fileSystem,
+        required this.exclusions,
+        required this.extraFile,
+        required this.healthCheck,
+        required this.history,
+        required this.importList,
+        required this.movie,
+        required this.movieFile,
+        required this.movieLookup,
+        required this.qualityProfile,
+        required this.queue,
+        required this.release,
+        required this.rootFolder,
+        required this.system,
+        required this.tag,
     });
 
     /// Create a new Radarr API connection manager to connection to your instance.
@@ -56,18 +56,12 @@ class Radarr {
     /// - `followRedirects`: If the HTTP client should follow URL redirects
     /// - `maxRedirects`: The maximum amount of redirects the client should follow (does nothing if `followRedirects` is false)
     factory Radarr({
-        @required String host,
-        @required String apiKey,
-        Map<String, dynamic> headers,
+        required String host,
+        required String apiKey,
+        Map<String, dynamic>? headers,
         bool followRedirects = true,
         int maxRedirects = 5,
     }) {
-        // Ensure none of the fields (but headers) are null.
-        // If you do not want to set them, all optional parameters have default values.
-        assert(host != null, 'host cannot be null.');
-        assert(apiKey != null, 'apiKey cannot be null.');
-        assert(followRedirects != null, 'followsRedirects cannot be null.');
-        assert(maxRedirects != null, 'maxRedirects cannot be null.');
         // Build the HTTP client
         Dio _dio = Dio(
             BaseOptions(
@@ -86,7 +80,7 @@ class Radarr {
             httpClient: _dio,
             command: RadarrCommandHandler_Command(_dio),
             credits: RadarrCommandHandler_Credits(_dio),
-            diskSpace: RadarrCommandHandler_DiskSpace(_dio),
+            fileSystem: RadarrCommandHandler_FileSystem(_dio),
             exclusions: RadarrCommandHandler_Exclusions(_dio),
             extraFile: RadarrCommandHandler_ExtraFile(_dio),
             healthCheck: RadarrCommandHandler_HealthCheck(_dio),
@@ -96,6 +90,7 @@ class Radarr {
             movieFile: RadarrCommandHandler_MovieFile(_dio),
             movieLookup: RadarrCommandHandler_MovieLookup(_dio),
             qualityProfile: RadarrCommandHandler_QualityProfile(_dio),
+            queue: RadarrCommandHandler_Queue(_dio),
             release: RadarrCommandHandler_Release(_dio),
             rootFolder: RadarrCommandHandler_RootFolder(_dio),
             system: RadarrCommandHandler_System(_dio),
@@ -122,14 +117,13 @@ class Radarr {
     /// );
     /// ```
     factory Radarr.from({
-        @required Dio client,
+        required Dio client,
     }) {
-        assert(client != null, 'client cannot be null.');
         return Radarr._internal(
             httpClient: client,
             command: RadarrCommandHandler_Command(client),
             credits: RadarrCommandHandler_Credits(client),
-            diskSpace: RadarrCommandHandler_DiskSpace(client),
+            fileSystem: RadarrCommandHandler_FileSystem(client),
             exclusions: RadarrCommandHandler_Exclusions(client),
             extraFile: RadarrCommandHandler_ExtraFile(client),
             healthCheck: RadarrCommandHandler_HealthCheck(client),
@@ -139,6 +133,7 @@ class Radarr {
             movieFile: RadarrCommandHandler_MovieFile(client),
             movieLookup: RadarrCommandHandler_MovieLookup(client),
             qualityProfile: RadarrCommandHandler_QualityProfile(client),
+            queue: RadarrCommandHandler_Queue(client),
             release: RadarrCommandHandler_Release(client),
             rootFolder: RadarrCommandHandler_RootFolder(client),
             system: RadarrCommandHandler_System(client),
@@ -162,11 +157,6 @@ class Radarr {
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_Credits credits;
 
-    /// Command handler for all disk space-related API calls.
-    /// 
-    /// _Check the documentation to see all API calls that fall under this category._
-    final RadarrCommandHandler_DiskSpace diskSpace;
-
     /// Command handler for all movie exclusions-related API calls.
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
@@ -176,6 +166,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_ExtraFile extraFile;
+
+    /// Command handler for all filesystem-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_FileSystem fileSystem;
 
     /// Command handler for all health check-related API calls.
     /// 
@@ -211,6 +206,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_QualityProfile qualityProfile;
+
+    /// Command handler for all queue-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_Queue queue;
 
     /// Command handler for all release-related API calls.
     /// 

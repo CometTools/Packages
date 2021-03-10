@@ -8,28 +8,28 @@ part 'alternate_titles.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieAlternateTitles {
     @JsonKey(name: 'sourceType')
-    String sourceType;
+    String? sourceType;
 
     @JsonKey(name: 'movieId')
-    int movieId;
+    int? movieId;
 
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     @JsonKey(name: 'sourceId')
-    int sourceId;
+    int? sourceId;
 
     @JsonKey(name: 'votes')
-    int votes;
+    int? votes;
 
     @JsonKey(name: 'voteCount')
-    int voteCount;
+    int? voteCount;
 
     @JsonKey(name: 'language')
-    RadarrLanguage language;
+    RadarrLanguage? language;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrMovieAlternateTitles({
         this.sourceType,

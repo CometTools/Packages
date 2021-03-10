@@ -8,8 +8,8 @@ part of 'unmapped_folder.dart';
 
 RadarrUnmappedFolder _$RadarrUnmappedFolderFromJson(Map<String, dynamic> json) {
   return RadarrUnmappedFolder(
-    name: json['name'] as String,
-    path: json['path'] as String,
+    name: json['name'] as String?,
+    path: json['path'] as String?,
   );
 }
 

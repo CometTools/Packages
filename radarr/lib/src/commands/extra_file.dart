@@ -15,5 +15,5 @@ class RadarrCommandHandler_ExtraFile {
     /// 
     /// Required Parameters:
     /// - `movieId`: Movie identifier
-    Future<List<RadarrExtraFile>> get({ @required int movieId }) async => _commandGetExtraFiles(_client, movieId: movieId);
+    Future<List<RadarrExtraFile>> get({ required int movieId }) async => _commandGetExtraFiles(_client, movieId: movieId);
 }

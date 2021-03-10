@@ -7,13 +7,13 @@ part 'movie_file_quality_revision.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFileQualityRevision {
     @JsonKey(name: 'version')
-    int version;
+    int? version;
 
     @JsonKey(name: 'real')
-    int real;
+    int? real;
 
     @JsonKey(name: 'isRepack')
-    bool isRepack;
+    bool? isRepack;
 
     RadarrMovieFileQualityRevision({
         this.version,

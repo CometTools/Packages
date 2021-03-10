@@ -8,49 +8,48 @@ part of 'movie.dart';
 
 RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
   return RadarrMovie(
-    title: json['title'] as String,
-    originalTitle: json['originalTitle'] as String,
-    alternateTitles: (json['alternateTitles'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrMovieAlternateTitles.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    secondaryYearSourceId: json['secondaryYearSourceId'] as int,
-    sortTitle: json['sortTitle'] as String,
-    sizeOnDisk: json['sizeOnDisk'] as int,
-    status: RadarrUtilities.availabilityFromJson(json['status'] as String),
-    overview: json['overview'] as String,
-    inCinemas: RadarrUtilities.dateTimeFromJson(json['inCinemas'] as String),
-    physicalRelease:
-        RadarrUtilities.dateTimeFromJson(json['physicalRelease'] as String),
-    digitalRelease:
-        RadarrUtilities.dateTimeFromJson(json['digitalRelease'] as String),
-    images: (json['images'] as List)
+    title: json['title'] as String?,
+    originalTitle: json['originalTitle'] as String?,
+    alternateTitles: (json['alternateTitles'] as List<dynamic>?)
         ?.map((e) =>
-            e == null ? null : RadarrImage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    website: json['website'] as String,
-    remotePoster: json['remotePoster'] as String,
-    year: json['year'] as int,
-    hasFile: json['hasFile'] as bool,
-    youTubeTrailerId: json['youTubeTrailerId'] as String,
-    studio: json['studio'] as String,
-    path: json['path'] as String,
-    qualityProfileId: json['qualityProfileId'] as int,
-    monitored: json['monitored'] as bool,
+            RadarrMovieAlternateTitles.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    secondaryYearSourceId: json['secondaryYearSourceId'] as int?,
+    sortTitle: json['sortTitle'] as String?,
+    sizeOnDisk: json['sizeOnDisk'] as int?,
+    status: RadarrUtilities.availabilityFromJson(json['status'] as String?),
+    overview: json['overview'] as String?,
+    inCinemas: RadarrUtilities.dateTimeFromJson(json['inCinemas'] as String?),
+    physicalRelease:
+        RadarrUtilities.dateTimeFromJson(json['physicalRelease'] as String?),
+    digitalRelease:
+        RadarrUtilities.dateTimeFromJson(json['digitalRelease'] as String?),
+    images: (json['images'] as List<dynamic>?)
+        ?.map((e) => RadarrImage.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    website: json['website'] as String?,
+    remotePoster: json['remotePoster'] as String?,
+    year: json['year'] as int?,
+    hasFile: json['hasFile'] as bool?,
+    youTubeTrailerId: json['youTubeTrailerId'] as String?,
+    studio: json['studio'] as String?,
+    path: json['path'] as String?,
+    qualityProfileId: json['qualityProfileId'] as int?,
+    monitored: json['monitored'] as bool?,
     minimumAvailability: RadarrUtilities.availabilityFromJson(
-        json['minimumAvailability'] as String),
-    isAvailable: json['isAvailable'] as bool,
-    folderName: json['folderName'] as String,
-    runtime: json['runtime'] as int,
-    cleanTitle: json['cleanTitle'] as String,
-    imdbId: json['imdbId'] as String,
-    tmdbId: json['tmdbId'] as int,
-    titleSlug: json['titleSlug'] as String,
-    certification: json['certification'] as String,
-    genres: (json['genres'] as List)?.map((e) => e as String)?.toList(),
-    tags: (json['tags'] as List)?.map((e) => e as int)?.toList(),
-    added: RadarrUtilities.dateTimeFromJson(json['added'] as String),
+        json['minimumAvailability'] as String?),
+    isAvailable: json['isAvailable'] as bool?,
+    folderName: json['folderName'] as String?,
+    runtime: json['runtime'] as int?,
+    cleanTitle: json['cleanTitle'] as String?,
+    imdbId: json['imdbId'] as String?,
+    tmdbId: json['tmdbId'] as int?,
+    titleSlug: json['titleSlug'] as String?,
+    certification: json['certification'] as String?,
+    genres:
+        (json['genres'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    tags: (json['tags'] as List<dynamic>?)?.map((e) => e as int?).toList(),
+    added: RadarrUtilities.dateTimeFromJson(json['added'] as String?),
     ratings: json['ratings'] == null
         ? null
         : RadarrMovieRating.fromJson(json['ratings'] as Map<String, dynamic>),
@@ -61,7 +60,7 @@ RadarrMovie _$RadarrMovieFromJson(Map<String, dynamic> json) {
         ? null
         : RadarrMovieCollection.fromJson(
             json['collection'] as Map<String, dynamic>),
-    id: json['id'] as int,
+    id: json['id'] as int?,
   );
 }
 
@@ -77,7 +76,7 @@ Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) {
   writeNotNull('title', instance.title);
   writeNotNull('originalTitle', instance.originalTitle);
   writeNotNull('alternateTitles',
-      instance.alternateTitles?.map((e) => e?.toJson())?.toList());
+      instance.alternateTitles?.map((e) => e.toJson()).toList());
   writeNotNull('secondaryYearSourceId', instance.secondaryYearSourceId);
   writeNotNull('sortTitle', instance.sortTitle);
   writeNotNull('sizeOnDisk', instance.sizeOnDisk);
@@ -88,7 +87,7 @@ Map<String, dynamic> _$RadarrMovieToJson(RadarrMovie instance) {
       RadarrUtilities.dateTimeToJson(instance.physicalRelease));
   writeNotNull('digitalRelease',
       RadarrUtilities.dateTimeToJson(instance.digitalRelease));
-  writeNotNull('images', instance.images?.map((e) => e?.toJson())?.toList());
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
   writeNotNull('website', instance.website);
   writeNotNull('remotePoster', instance.remotePoster);
   writeNotNull('year', instance.year);

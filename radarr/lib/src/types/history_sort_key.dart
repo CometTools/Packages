@@ -10,7 +10,7 @@ enum RadarrHistorySortKey {
 /// Extension on [RadarrHistorySortKey] to implement extended functionality.
 extension RadarrHistorySortKeyExtension on RadarrHistorySortKey {
     /// Given a String, will return the correct `RadarrHistorySortKey` object.
-    RadarrHistorySortKey from(String type) {
+    RadarrHistorySortKey? from(String? type) {
         switch(type) {
             case 'date': return RadarrHistorySortKey.DATE;
             case 'movies.sortTitle': return RadarrHistorySortKey.MOVIES_TITLE;
@@ -21,7 +21,7 @@ extension RadarrHistorySortKeyExtension on RadarrHistorySortKey {
     }
 
     /// The actual value/key for sorting directions used in Radarr.
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrHistorySortKey.DATE: return 'date';
             case RadarrHistorySortKey.MOVIES_TITLE: return 'movies.sortTitle';

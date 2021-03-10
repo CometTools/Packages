@@ -16,5 +16,5 @@ class RadarrCommandHandler_Credits {
     /// 
     /// Required Parameters:
     /// - `movieId`: Movie identifier
-    Future<List<RadarrMovieCredits>> get({ @required int movieId }) async => _commandGetCredits(_client, movieId: movieId);
+    Future<List<RadarrMovieCredits>> get({ required int movieId }) async => _commandGetCredits(_client, movieId: movieId);
 }

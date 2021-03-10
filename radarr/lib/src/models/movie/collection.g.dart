@@ -9,8 +9,8 @@ part of 'collection.dart';
 RadarrMovieCollection _$RadarrMovieCollectionFromJson(
     Map<String, dynamic> json) {
   return RadarrMovieCollection(
-    name: json['name'] as String,
-    tmdbId: json['tmdbId'] as int,
+    name: json['name'] as String?,
+    tmdbId: json['tmdbId'] as int?,
   );
 }
 

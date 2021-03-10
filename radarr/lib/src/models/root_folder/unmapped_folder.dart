@@ -7,10 +7,10 @@ part 'unmapped_folder.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrUnmappedFolder {
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     RadarrUnmappedFolder({
         this.name,

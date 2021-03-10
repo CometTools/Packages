@@ -10,100 +10,100 @@ part 'release.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrRelease {
     @JsonKey(name: 'guid')
-    String guid;
+    String? guid;
 
     @JsonKey(name: 'quality')
-    RadarrMovieFileQuality quality;
+    RadarrMovieFileQuality? quality;
 
     @JsonKey(name: 'customFormats')
-    List<RadarrCustomFormat> customFormats;
+    List<RadarrCustomFormat>? customFormats;
 
     @JsonKey(name: 'customFormatScore')
-    int customFormatScore;
+    int? customFormatScore;
 
     @JsonKey(name: 'qualityWeight')
-    int qualityWeight;
+    int? qualityWeight;
 
     @JsonKey(name: 'age')
-    int age;
+    int? age;
 
     @JsonKey(name: 'ageHours')
-    double ageHours;
+    double? ageHours;
 
     @JsonKey(name: 'ageMinutes')
-    double ageMinutes;
+    double? ageMinutes;
 
     @JsonKey(name: 'size')
-    int size;
+    int? size;
 
     @JsonKey(name: 'indexerId')
-    int indexerId;
+    int? indexerId;
 
     @JsonKey(name: 'indexer')
-    String indexer;
+    String? indexer;
 
     @JsonKey(name: 'releaseGroup')
-    String releaseGroup;
+    String? releaseGroup;
 
     @JsonKey(name: 'releaseHash')
-    String releaseHash;
+    String? releaseHash;
 
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     @JsonKey(name: 'sceneSource')
-    bool sceneSource;
+    bool? sceneSource;
 
     @JsonKey(name: 'movieTitle')
-    String movieTitle;
+    String? movieTitle;
 
     @JsonKey(name: 'languages')
-    List<RadarrLanguage> languages;
+    List<RadarrLanguage>? languages;
 
     @JsonKey(name: 'approved')
-    bool approved;
+    bool? approved;
 
     @JsonKey(name: 'temporarilyRejected')
-    bool temporarilyRejected;
+    bool? temporarilyRejected;
 
     @JsonKey(name: 'rejected')
-    bool rejected;
+    bool? rejected;
 
     @JsonKey(name: 'imdbId')
-    int imdbId;
+    int? imdbId;
 
     @JsonKey(name: 'rejections')
-    List<String> rejections;
+    List<String>? rejections;
 
     @JsonKey(name: 'publishDate', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime publishDate;
+    DateTime? publishDate;
     
     @JsonKey(name: 'commentUrl')
-    String commentUrl;
+    String? commentUrl;
 
     @JsonKey(name: 'downloadUrl')
-    String downloadUrl;
+    String? downloadUrl;
 
     @JsonKey(name: 'infoUrl')
-    String infoUrl;
+    String? infoUrl;
 
     @JsonKey(name: 'downloadAllowed')
-    bool downloadAllowed;
+    bool? downloadAllowed;
 
     @JsonKey(name: 'releaseWeight')
-    int releaseWeight;
+    int? releaseWeight;
 
     @JsonKey(name: 'edition')
-    String edition;
+    String? edition;
 
     @JsonKey(name: 'seeders')
-    int seeders;
+    int? seeders;
 
     @JsonKey(name: 'leechers')
-    int leechers;
+    int? leechers;
 
     @JsonKey(name: 'protocol', toJson: RadarrUtilities.protocolToJson, fromJson: RadarrUtilities.protocolFromJson)
-    RadarrProtocol protocol;
+    RadarrProtocol? protocol;
 
     RadarrRelease({
         this.guid,

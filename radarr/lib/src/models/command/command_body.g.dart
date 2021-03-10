@@ -8,16 +8,16 @@ part of 'command_body.dart';
 
 RadarrCommandBody _$RadarrCommandBodyFromJson(Map<String, dynamic> json) {
   return RadarrCommandBody(
-    type: json['type'] as String,
-    sendUpdatesToClient: json['sendUpdatesToClient'] as bool,
-    updateScheduledTask: json['updateScheduledTask'] as bool,
-    completionMessage: json['completionMessage'] as String,
-    requiresDiskAccess: json['requiresDiskAccess'] as bool,
-    isExclusive: json['isExclusive'] as bool,
-    isTypeExclusive: json['isTypeExclusive'] as bool,
-    name: json['name'] as String,
-    trigger: json['trigger'] as String,
-    suppressMessages: json['suppressMessages'] as bool,
+    type: json['type'] as String?,
+    sendUpdatesToClient: json['sendUpdatesToClient'] as bool?,
+    updateScheduledTask: json['updateScheduledTask'] as bool?,
+    completionMessage: json['completionMessage'] as String?,
+    requiresDiskAccess: json['requiresDiskAccess'] as bool?,
+    isExclusive: json['isExclusive'] as bool?,
+    isTypeExclusive: json['isTypeExclusive'] as bool?,
+    name: json['name'] as String?,
+    trigger: json['trigger'] as String?,
+    suppressMessages: json['suppressMessages'] as bool?,
   );
 }
 

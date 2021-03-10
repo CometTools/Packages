@@ -12,7 +12,7 @@ enum RadarrAvailability {
 /// Extension on [RadarrAvailability] to implement extended functionality.
 extension RadarrAvailabilityExtension on RadarrAvailability {
     /// Given a String, will return the correct [RadarrAvailability] object.
-    RadarrAvailability from(String type) {
+    RadarrAvailability? from(String? type) {
         switch(type) {
             case 'announced': return RadarrAvailability.ANNOUNCED;
             case 'inCinemas': return RadarrAvailability.IN_CINEMAS;
@@ -23,7 +23,7 @@ extension RadarrAvailabilityExtension on RadarrAvailability {
         }
     }
 
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrAvailability.ANNOUNCED: return 'announced';
             case RadarrAvailability.IN_CINEMAS: return 'inCinemas';
@@ -34,7 +34,7 @@ extension RadarrAvailabilityExtension on RadarrAvailability {
         }
     }
 
-    String get readable {
+    String? get readable {
         switch(this) {
             case RadarrAvailability.ANNOUNCED: return 'Announced';
             case RadarrAvailability.IN_CINEMAS: return 'In Cinemas';

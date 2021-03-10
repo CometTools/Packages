@@ -8,10 +8,10 @@ part of 'exclusion.dart';
 
 RadarrExclusion _$RadarrExclusionFromJson(Map<String, dynamic> json) {
   return RadarrExclusion(
-    tmdbId: json['tmdbId'] as int,
-    movieTitle: json['movieTitle'] as String,
-    movieYear: json['movieYear'] as int,
-    id: json['id'] as int,
+    tmdbId: json['tmdbId'] as int?,
+    movieTitle: json['movieTitle'] as String?,
+    movieYear: json['movieYear'] as int?,
+    id: json['id'] as int?,
   );
 }
 

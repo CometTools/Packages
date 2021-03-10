@@ -10,37 +10,37 @@ part 'history_record.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrHistoryRecord {
     @JsonKey(name: 'movieId')
-    int movieId;
+    int? movieId;
 
     @JsonKey(name: 'sourceTitle')
-    String sourceTitle;
+    String? sourceTitle;
     
     @JsonKey(name: 'languages')
-    List<RadarrLanguage> languages;
+    List<RadarrLanguage>? languages;
 
     @JsonKey(name: 'quality')
-    RadarrMovieFileQuality quality;
+    RadarrMovieFileQuality? quality;
 
     @JsonKey(name: 'customFormats')
-    List<RadarrCustomFormat> customFormats;
+    List<RadarrCustomFormat>? customFormats;
 
     @JsonKey(name: 'qualityCutoffNotMet')
-    bool qualityCutoffNotMet;
+    bool? qualityCutoffNotMet;
 
     @JsonKey(name: 'date', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime date;
+    DateTime? date;
 
     @JsonKey(name: 'downloadId')
-    String downloadId;
+    String? downloadId;
 
     @JsonKey(name: 'eventType', toJson: RadarrUtilities.eventTypeToJson, fromJson: RadarrUtilities.eventTypeFromJson)
-    RadarrEventType eventType;
+    RadarrEventType? eventType;
 
     @JsonKey(name: 'data')
-    Map<String, dynamic> data;
+    Map<String, dynamic>? data;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrHistoryRecord({
         this.movieId,

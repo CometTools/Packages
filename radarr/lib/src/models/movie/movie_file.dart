@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:radarr/utilities.dart';
-import 'movie_file_quality.dart';
-import 'movie_file_media_info.dart';
 import '../../../models.dart';
+import '../../../utilities.dart';
 
 part 'movie_file.g.dart';
 
@@ -11,40 +9,40 @@ part 'movie_file.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFile {
     @JsonKey(name: 'movieId')
-    int movieId;
+    int? movieId;
 
     @JsonKey(name: 'relativePath')
-    String relativePath;
+    String? relativePath;
     
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     @JsonKey(name: 'size')
-    int size;
+    int? size;
 
     @JsonKey(name: 'dateAdded', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime dateAdded;
+    DateTime? dateAdded;
 
     @JsonKey(name: 'quality')
-    RadarrMovieFileQuality quality;
+    RadarrMovieFileQuality? quality;
 
     @JsonKey(name: 'customFormats')
-    List<RadarrCustomFormat> customFormats;
+    List<RadarrCustomFormat>? customFormats;
 
     @JsonKey(name: 'mediaInfo')
-    RadarrMovieFileMediaInfo mediaInfo;
+    RadarrMovieFileMediaInfo? mediaInfo;
 
     @JsonKey(name: 'qualityCutoffNotMet')
-    bool qualityCutoffNotMet;
+    bool? qualityCutoffNotMet;
 
     @JsonKey(name: 'languages')
-    List<RadarrLanguage> languages;
+    List<RadarrLanguage>? languages;
 
     @JsonKey(name: 'edition')
-    String edition;
+    String? edition;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrMovieFile({
         this.movieId,

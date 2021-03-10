@@ -9,16 +9,16 @@ part 'health_check.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrHealthCheck {
     @JsonKey(name: 'source')
-    String source;
+    String? source;
 
     @JsonKey(name: 'type', toJson: RadarrUtilities.healthCheckTypeToJson, fromJson: RadarrUtilities.healthCheckTypeFromJson)
-    RadarrHealthCheckType type;
+    RadarrHealthCheckType? type;
 
     @JsonKey(name: 'message')
-    String message;
+    String? message;
 
     @JsonKey(name: 'wikiUrl')
-    String wikiUrl;
+    String? wikiUrl;
 
     RadarrHealthCheck({
         this.source,

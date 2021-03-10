@@ -8,8 +8,8 @@ part of 'rating.dart';
 
 RadarrMovieRating _$RadarrMovieRatingFromJson(Map<String, dynamic> json) {
   return RadarrMovieRating(
-    votes: json['votes'] as int,
-    value: (json['value'] as num)?.toDouble(),
+    votes: json['votes'] as int?,
+    value: (json['value'] as num?)?.toDouble(),
   );
 }
 

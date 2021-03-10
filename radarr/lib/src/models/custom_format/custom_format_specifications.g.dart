@@ -9,15 +9,15 @@ part of 'custom_format_specifications.dart';
 RadarrCustomFormatSpecifications _$RadarrCustomFormatSpecificationsFromJson(
     Map<String, dynamic> json) {
   return RadarrCustomFormatSpecifications(
-    name: json['name'] as String,
-    implementation: json['implementation'] as String,
-    implementationName: json['implementationName'] as String,
-    infoLink: json['infoLink'] as String,
-    negate: json['negate'] as bool,
-    required: json['required'] as bool,
-    fields: (json['fields'] as List)
+    name: json['name'] as String?,
+    implementation: json['implementation'] as String?,
+    implementationName: json['implementationName'] as String?,
+    infoLink: json['infoLink'] as String?,
+    negate: json['negate'] as bool?,
+    required: json['required'] as bool?,
+    fields: (json['fields'] as List<dynamic>?)
         ?.map((e) => e as Map<String, dynamic>)
-        ?.toList(),
+        .toList(),
   );
 }
 

@@ -8,11 +8,11 @@ part 'tag.g.dart';
 class RadarrTag {
     /// Tag identifier
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     /// Label of the tag
     @JsonKey(name: 'label')
-    String label;
+    String? label;
 
     RadarrTag({
         this.id,

@@ -8,19 +8,19 @@ part 'root_folder.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrRootFolder {
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     @JsonKey(name: 'accessible')
-    bool accessible;
+    bool? accessible;
 
     @JsonKey(name: 'freeSpace')
-    int freeSpace;
+    int? freeSpace;
 
     @JsonKey(name: 'unmappedFolders')
-    List<RadarrUnmappedFolder> unmappedFolders;
+    List<RadarrUnmappedFolder>? unmappedFolders;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrRootFolder({
         this.path,

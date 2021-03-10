@@ -7,88 +7,88 @@ part 'status.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrSystemStatus {
     @JsonKey(name: 'version')
-    String version;
+    String? version;
 
     @JsonKey(name: 'buildTime')
-    String buildTime;
+    String? buildTime;
 
     @JsonKey(name: 'isDebug')
-    bool isDebug;
+    bool? isDebug;
 
     @JsonKey(name: 'isProduction')
-    bool isProduction;
+    bool? isProduction;
 
     @JsonKey(name: 'isAdmin')
-    bool isAdmin;
+    bool? isAdmin;
 
     @JsonKey(name: 'isUserInteractive')
-    bool isUserInteractive;
+    bool? isUserInteractive;
 
     @JsonKey(name: 'startupPath')
-    String startupPath;
+    String? startupPath;
 
     @JsonKey(name: 'appData')
-    String appData;
+    String? appData;
 
     @JsonKey(name: 'osName')
-    String osName;
+    String? osName;
 
     @JsonKey(name: 'osVersion')
-    String osVersion;
+    String? osVersion;
 
     @JsonKey(name: 'isNetCore')
-    bool isNetCore;
+    bool? isNetCore;
 
     @JsonKey(name: 'isMono')
-    bool isMono;
+    bool? isMono;
 
     @JsonKey(name: 'isLinux')
-    bool isLinux;
+    bool? isLinux;
 
     @JsonKey(name: 'isOsx')
-    bool isOsx;
+    bool? isOsx;
 
     @JsonKey(name: 'isWindows')
-    bool isWindows;
+    bool? isWindows;
 
     @JsonKey(name: 'isDocker')
-    bool isDocker;
+    bool? isDocker;
 
     @JsonKey(name: 'mode')
-    String mode;
+    String? mode;
 
     @JsonKey(name: 'branch')
-    String branch;
+    String? branch;
 
     @JsonKey(name: 'authentication')
-    String authentication;
+    String? authentication;
 
     @JsonKey(name: 'sqliteVersion')
-    String sqliteVersion;
+    String? sqliteVersion;
 
     @JsonKey(name: 'migrationVersion')
-    int migrationVersion;
+    int? migrationVersion;
 
     @JsonKey(name: 'urlBase')
-    String urlBase;
+    String? urlBase;
 
     @JsonKey(name: 'runtimeVersion')
-    String runtimeVersion;
+    String? runtimeVersion;
 
     @JsonKey(name: 'runtimeName')
-    String runtimeName;
+    String? runtimeName;
 
     @JsonKey(name: 'startTime')
-    String startTime;
+    String? startTime;
 
     @JsonKey(name: 'packageVersion')
-    String packageVersion;
+    String? packageVersion;
 
     @JsonKey(name: 'packageAuthor')
-    String packageAuthor;
+    String? packageAuthor;
 
     @JsonKey(name: 'packageUpdateMechanism')
-    String packageUpdateMechanism;
+    String? packageUpdateMechanism;
 
     RadarrSystemStatus({
         this.version,

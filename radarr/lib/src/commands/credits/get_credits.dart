@@ -1,9 +1,8 @@
 part of radarr_commands;
 
 Future<List<RadarrMovieCredits>> _commandGetCredits(Dio client, {
-    @required int movieId,
+    required int movieId,
 }) async {
-    assert(movieId != null, 'movieId cannot be null.');
     Response response = await client.get('credit', queryParameters: {
         'movieId': movieId,
     });

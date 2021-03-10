@@ -9,8 +9,11 @@ export 'src/models/command/command_body.dart';
 export 'src/models/custom_format/custom_format.dart';
 export 'src/models/custom_format/custom_format_specifications.dart';
 
-/// Disk Space
-export 'src/models/disk_space/disk_space.dart';
+/// Filesystem
+export 'src/models/filesystem/directory.dart';
+export 'src/models/filesystem/disk_space.dart';
+export 'src/models/filesystem/file.dart';
+export 'src/models/filesystem/filesystem.dart';
 
 /// Exclusions
 export 'src/models/exclusions/exclusion.dart';
@@ -49,6 +52,11 @@ export 'src/models/quality_profile/item.dart';
 export 'src/models/quality_profile/item_quality.dart';
 export 'src/models/quality_profile/language.dart';
 export 'src/models/quality_profile/quality_profile.dart';
+
+/// Queue
+export 'src/models/queue/queue.dart';
+export 'src/models/queue/queue_record.dart';
+export 'src/models/queue/queue_status.dart';
 
 /// Release
 export 'src/models/release/release.dart';

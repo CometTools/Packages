@@ -2,9 +2,8 @@
 library radarr_commands;
 
 import 'package:dio/dio.dart';
-import 'package:meta/meta.dart';
-import 'package:radarr/radarr.dart';
 import 'models.dart';
+import 'types.dart';
 
 // Commands
 part 'src/commands/command.dart';
@@ -17,11 +16,6 @@ part 'src/commands/command/rss_sync.dart';
 // Credits
 part 'src/commands/credits.dart';
 part 'src/commands/credits/get_credits.dart';
-
-// Disk Space
-part 'src/commands/disk_space.dart';
-part 'src/commands/disk_space/get_all_disk_spaces.dart';
-
 // Exclusions
 part 'src/commands/exclusions.dart';
 part 'src/commands/exclusions/get_exclusion.dart';
@@ -30,6 +24,11 @@ part 'src/commands/exclusions/get_all_exclusions.dart';
 // Extra File
 part 'src/commands/extra_file.dart';
 part 'src/commands/extra_file/get_extra_files.dart';
+
+// Filesystem
+part 'src/commands/filesystem.dart';
+part 'src/commands/filesystem/get_all_disk_spaces.dart';
+part 'src/commands/filesystem/get_filesystem.dart';
 
 // Health Check
 part 'src/commands/health_check.dart';
@@ -72,6 +71,10 @@ part 'src/commands/release/push_release.dart';
 part 'src/commands/quality_profile.dart';
 part 'src/commands/quality_profile/get_quality_profile.dart';
 part 'src/commands/quality_profile/get_all_quality_profiles.dart';
+
+// Queue
+part 'src/commands/queue.dart';
+part 'src/commands/queue/get_queue_status.dart';
 
 // Root Folder
 part 'src/commands/root_folder.dart';

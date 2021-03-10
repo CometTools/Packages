@@ -7,46 +7,46 @@ part 'movie_file_media_info.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFileMediaInfo {
     @JsonKey(name: 'audioAdditionalFeatures')
-    String audioAdditionalFeatures;
+    String? audioAdditionalFeatures;
 
     @JsonKey(name: 'audioBitrate')
-    int audioBitrate;
+    int? audioBitrate;
 
     @JsonKey(name: 'audioChannels')
-    double audioChannels;
+    double? audioChannels;
 
     @JsonKey(name: 'audioCodec')
-    String audioCodec;
+    String? audioCodec;
 
     @JsonKey(name: 'audioLanguages')
-    String audioLanguages;
+    String? audioLanguages;
 
     @JsonKey(name: 'audioStreamCount')
-    int audioStreamCount;
+    int? audioStreamCount;
 
     @JsonKey(name: 'videoBitDepth')
-    int videoBitDepth;
+    int? videoBitDepth;
 
     @JsonKey(name: 'videoBitrate')
-    int videoBitrate;
+    int? videoBitrate;
 
     @JsonKey(name: 'videoCodec')
-    String videoCodec;
+    String? videoCodec;
 
     @JsonKey(name: 'videoFps')
-    double videoFps;
+    double? videoFps;
 
     @JsonKey(name: 'resolution')
-    String resolution;
+    String? resolution;
 
     @JsonKey(name: 'runTime')
-    String runTime;
+    String? runTime;
 
     @JsonKey(name: 'scanType')
-    String scanType;
+    String? scanType;
 
     @JsonKey(name: 'subtitles')
-    String subtitles;
+    String? subtitles;
 
     RadarrMovieFileMediaInfo({
         this.audioAdditionalFeatures,

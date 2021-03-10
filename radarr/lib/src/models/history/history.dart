@@ -10,22 +10,22 @@ part 'history.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrHistory {
     @JsonKey(name: 'page')
-    int page;
+    int? page;
 
     @JsonKey(name: 'pageSize')
-    int pageSize;
+    int? pageSize;
 
     @JsonKey(name: 'sortKey', toJson: RadarrUtilities.historySortKeyToJson, fromJson: RadarrUtilities.historySortKeyFromJson)
-    RadarrHistorySortKey sortKey;
+    RadarrHistorySortKey? sortKey;
 
     @JsonKey(name: 'sortDirection', toJson: RadarrUtilities.sortDirectionToJson, fromJson: RadarrUtilities.sortDirectionFromJson)
-    RadarrSortDirection sortDirection;
+    RadarrSortDirection? sortDirection;
 
     @JsonKey(name: 'totalRecords')
-    int totalRecords;
+    int? totalRecords;
 
     @JsonKey(name: 'records')
-    List<RadarrHistoryRecord> records;
+    List<RadarrHistoryRecord>? records;
 
     RadarrHistory({
         this.page,

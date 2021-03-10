@@ -8,9 +8,9 @@ part of 'image.dart';
 
 RadarrImage _$RadarrImageFromJson(Map<String, dynamic> json) {
   return RadarrImage(
-    coverType: json['coverType'] as String,
-    url: json['url'] as String,
-    remoteUrl: json['remoteUrl'] as String,
+    coverType: json['coverType'] as String?,
+    url: json['url'] as String?,
+    remoteUrl: json['remoteUrl'] as String?,
   );
 }
 

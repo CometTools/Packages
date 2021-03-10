@@ -15,7 +15,7 @@ class RadarrCommandHandler_Release {
     /// 
     /// Required Parameters:
     /// - `movieId`: Movie identifier for the movie to search for
-    Future<List<RadarrRelease>> get({ @required int movieId }) async => _commandGetReleases(_client, movieId: movieId);
+    Future<List<RadarrRelease>> get({ required int movieId }) async => _commandGetReleases(_client, movieId: movieId);
 
     /// Handler for `release/${id}`.
     /// 
@@ -24,5 +24,5 @@ class RadarrCommandHandler_Release {
     /// Required Parameters:
     /// - `guid`: GUID of the release
     /// - `indexerId`: Indexer ID of the release
-    Future<void> push({ @required String guid, @required int indexerId }) async => _commandPushRelease(_client, indexerId: indexerId, guid: guid);
+    Future<void> push({ required String guid, required int indexerId }) async => _commandPushRelease(_client, indexerId: indexerId, guid: guid);
 }

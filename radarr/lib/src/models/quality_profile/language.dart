@@ -7,10 +7,10 @@ part 'language.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrLanguage {
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     RadarrLanguage({
         this.id,

@@ -1,7 +1,7 @@
 part of radarr_commands;
 
 Future<List<RadarrMovie>> _commandGetImportListMovies(Dio client, {
-    bool includeRecommendations,
+    bool? includeRecommendations,
 }) async {
     Response response = await client.get('importlist/movie', queryParameters: {
         if(includeRecommendations != null) 'includeRecommendations': includeRecommendations,

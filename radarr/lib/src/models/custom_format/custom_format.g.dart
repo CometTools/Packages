@@ -8,16 +8,14 @@ part of 'custom_format.dart';
 
 RadarrCustomFormat _$RadarrCustomFormatFromJson(Map<String, dynamic> json) {
   return RadarrCustomFormat(
-    id: json['id'] as int,
-    name: json['name'] as String,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
     includeCustomFormatWhenRenaming:
-        json['includeCustomFormatWhenRenaming'] as bool,
-    specifications: (json['specifications'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrCustomFormatSpecifications.fromJson(
-                e as Map<String, dynamic>))
-        ?.toList(),
+        json['includeCustomFormatWhenRenaming'] as bool?,
+    specifications: (json['specifications'] as List<dynamic>?)
+        ?.map((e) => RadarrCustomFormatSpecifications.fromJson(
+            e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -35,6 +33,6 @@ Map<String, dynamic> _$RadarrCustomFormatToJson(RadarrCustomFormat instance) {
   writeNotNull('includeCustomFormatWhenRenaming',
       instance.includeCustomFormatWhenRenaming);
   writeNotNull('specifications',
-      instance.specifications?.map((e) => e?.toJson())?.toList());
+      instance.specifications?.map((e) => e.toJson()).toList());
   return val;
 }

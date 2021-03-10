@@ -16,7 +16,7 @@ class RadarrCommandHandler_Exclusions {
     /// Required Parameters:
     /// - `exclusionId`: Identifier for the exclusion rule
     Future<RadarrExclusion> get({
-        @required int exclusionId,
+        required int exclusionId,
     }) async => _commandGetExclusions(_client, exclusionId: exclusionId);
 
 

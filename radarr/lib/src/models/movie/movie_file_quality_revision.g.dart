@@ -9,9 +9,9 @@ part of 'movie_file_quality_revision.dart';
 RadarrMovieFileQualityRevision _$RadarrMovieFileQualityRevisionFromJson(
     Map<String, dynamic> json) {
   return RadarrMovieFileQualityRevision(
-    version: json['version'] as int,
-    real: json['real'] as int,
-    isRepack: json['isRepack'] as bool,
+    version: json['version'] as int?,
+    real: json['real'] as int?,
+    isRepack: json['isRepack'] as bool?,
   );
 }
 

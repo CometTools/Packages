@@ -9,9 +9,9 @@ part of 'format_item.dart';
 RadarrQualityProfileFormatItem _$RadarrQualityProfileFormatItemFromJson(
     Map<String, dynamic> json) {
   return RadarrQualityProfileFormatItem(
-    format: json['format'] as int,
-    name: json['name'] as String,
-    score: json['score'] as int,
+    format: json['format'] as int?,
+    name: json['name'] as String?,
+    score: json['score'] as int?,
   );
 }
 

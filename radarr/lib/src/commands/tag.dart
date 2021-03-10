@@ -16,7 +16,7 @@ class RadarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `label`: Tag label
     Future<RadarrTag> create({
-        @required String label,
+        required String label,
     }) async => _commandAddTag(_client, label: label);
 
     /// Handler for [tag/{id}](https://radarr.video/docs/api/#/Tag/delete_tag__id_).
@@ -26,7 +26,7 @@ class RadarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `id`: Tag identifier
     Future<void> delete({
-        @required int id,
+        required int id,
     }) async => _commandDeleteTag(_client, id: id);
 
     /// Handler for [tag/{id}](https://radarr.video/docs/api/#/Tag/get_tag__id_).
@@ -36,7 +36,7 @@ class RadarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `id`: Tag identifier
     Future<void> get({
-        @required int id,
+        required int id,
     }) async => _commandGetTag(_client, id: id);
 
     /// Handler for [tag](https://radarr.video/docs/api/#/Tag/get_tag).
@@ -51,6 +51,6 @@ class RadarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `tag`: A modified [RadarrTag] object
     Future<RadarrTag> update({
-        @required RadarrTag tag,
+        required RadarrTag tag,
     }) async => _commandUpdateTag(_client, tag: tag);
 }

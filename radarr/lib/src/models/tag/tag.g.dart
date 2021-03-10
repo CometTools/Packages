@@ -8,8 +8,8 @@ part of 'tag.dart';
 
 RadarrTag _$RadarrTagFromJson(Map<String, dynamic> json) {
   return RadarrTag(
-    id: json['id'] as int,
-    label: json['label'] as String,
+    id: json['id'] as int?,
+    label: json['label'] as String?,
   );
 }
 

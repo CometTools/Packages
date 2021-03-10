@@ -8,115 +8,115 @@ part 'movie.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovie {
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     @JsonKey(name: 'originalTitle')
-    String originalTitle;
+    String? originalTitle;
 
     @JsonKey(name: 'alternateTitles')
-    List<RadarrMovieAlternateTitles> alternateTitles;
+    List<RadarrMovieAlternateTitles>? alternateTitles;
 
     @JsonKey(name: 'secondaryYearSourceId')
-    int secondaryYearSourceId;
+    int? secondaryYearSourceId;
     
     @JsonKey(name: 'sortTitle')
-    String sortTitle;
+    String? sortTitle;
 
     @JsonKey(name: 'sizeOnDisk')
-    int sizeOnDisk;
+    int? sizeOnDisk;
 
     @JsonKey(name: 'status', toJson: RadarrUtilities.availabilityToJson, fromJson: RadarrUtilities.availabilityFromJson)
-    RadarrAvailability status;
+    RadarrAvailability? status;
 
     @JsonKey(name: 'overview')
-    String overview;
+    String? overview;
 
     @JsonKey(name: 'inCinemas', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime inCinemas;
+    DateTime? inCinemas;
 
     @JsonKey(name: 'physicalRelease', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime physicalRelease;
+    DateTime? physicalRelease;
 
     @JsonKey(name: 'digitalRelease', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime digitalRelease;
+    DateTime? digitalRelease;
 
     @JsonKey(name: 'images')
-    List<RadarrImage> images;
+    List<RadarrImage>? images;
 
     @JsonKey(name: 'website')
-    String website;
+    String? website;
 
     @JsonKey(name: 'remotePoster')
-    String remotePoster;
+    String? remotePoster;
 
     @JsonKey(name: 'year')
-    int year;
+    int? year;
 
     @JsonKey(name: 'hasFile')
-    bool hasFile;
+    bool? hasFile;
 
     @JsonKey(name: 'youTubeTrailerId')
-    String youTubeTrailerId;
+    String? youTubeTrailerId;
 
     @JsonKey(name: 'studio')
-    String studio;
+    String? studio;
 
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     @JsonKey(name: 'qualityProfileId')
-    int qualityProfileId;
+    int? qualityProfileId;
 
     @JsonKey(name: 'monitored')
-    bool monitored;
+    bool? monitored;
 
     @JsonKey(name: 'minimumAvailability', toJson: RadarrUtilities.availabilityToJson, fromJson: RadarrUtilities.availabilityFromJson)
-    RadarrAvailability minimumAvailability;
+    RadarrAvailability? minimumAvailability;
 
     @JsonKey(name: 'isAvailable')
-    bool isAvailable;
+    bool? isAvailable;
 
     @JsonKey(name: 'folderName')
-    String folderName;
+    String? folderName;
 
     @JsonKey(name: 'runtime')
-    int runtime;
+    int? runtime;
 
     @JsonKey(name: 'cleanTitle')
-    String cleanTitle;
+    String? cleanTitle;
 
     @JsonKey(name: 'imdbId')
-    String imdbId;
+    String? imdbId;
 
     @JsonKey(name: 'tmdbId')
-    int tmdbId;
+    int? tmdbId;
 
     @JsonKey(name: 'titleSlug')
-    String titleSlug;
+    String? titleSlug;
 
     @JsonKey(name: 'certification')
-    String certification;
+    String? certification;
 
     @JsonKey(name: 'genres')
-    List<String> genres;
+    List<String>? genres;
 
     @JsonKey(name: 'tags')
-    List<int> tags;
+    List<int?>? tags;
 
     @JsonKey(name: 'added', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime added;
+    DateTime? added;
 
     @JsonKey(name: 'ratings')
-    RadarrMovieRating ratings;
+    RadarrMovieRating? ratings;
 
     @JsonKey(name: 'movieFile')
-    RadarrMovieFile movieFile;
+    RadarrMovieFile? movieFile;
 
     @JsonKey(name: 'collection')
-    RadarrMovieCollection collection;
+    RadarrMovieCollection? collection;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrMovie({
         this.title,

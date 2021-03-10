@@ -8,7 +8,7 @@ enum RadarrSortDirection {
 /// Extension on [RadarrSortDirection] to implement extended functionality.
 extension RadarrSortDirectionExtension on RadarrSortDirection {
     /// Given a String, will return the correct `RadarrSortDirection` object.
-    RadarrSortDirection from(String type) {
+    RadarrSortDirection? from(String? type) {
         switch(type) {
             case 'ascending': return RadarrSortDirection.ASCENDING;
             case 'descending': return RadarrSortDirection.DESCENDING;
@@ -17,7 +17,7 @@ extension RadarrSortDirectionExtension on RadarrSortDirection {
     }
 
     /// The actual value/key for sorting directions used in Radarr.
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrSortDirection.ASCENDING: return 'ascending';
             case RadarrSortDirection.DESCENDING: return 'descending';

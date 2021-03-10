@@ -8,17 +8,15 @@ part of 'history.dart';
 
 RadarrHistory _$RadarrHistoryFromJson(Map<String, dynamic> json) {
   return RadarrHistory(
-    page: json['page'] as int,
-    pageSize: json['pageSize'] as int,
-    sortKey: RadarrUtilities.historySortKeyFromJson(json['sortKey'] as String),
+    page: json['page'] as int?,
+    pageSize: json['pageSize'] as int?,
+    sortKey: RadarrUtilities.historySortKeyFromJson(json['sortKey'] as String?),
     sortDirection:
-        RadarrUtilities.sortDirectionFromJson(json['sortDirection'] as String),
-    totalRecords: json['totalRecords'] as int,
-    records: (json['records'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrHistoryRecord.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+        RadarrUtilities.sortDirectionFromJson(json['sortDirection'] as String?),
+    totalRecords: json['totalRecords'] as int?,
+    records: (json['records'] as List<dynamic>?)
+        ?.map((e) => RadarrHistoryRecord.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -38,6 +36,6 @@ Map<String, dynamic> _$RadarrHistoryToJson(RadarrHistory instance) {
   writeNotNull('sortDirection',
       RadarrUtilities.sortDirectionToJson(instance.sortDirection));
   writeNotNull('totalRecords', instance.totalRecords);
-  writeNotNull('records', instance.records?.map((e) => e?.toJson())?.toList());
+  writeNotNull('records', instance.records?.map((e) => e.toJson()).toList());
   return val;
 }

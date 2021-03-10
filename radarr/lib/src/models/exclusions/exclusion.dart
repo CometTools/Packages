@@ -7,16 +7,16 @@ part 'exclusion.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrExclusion {
     @JsonKey(name: 'tmdbId')
-    int tmdbId;
+    int? tmdbId;
 
     @JsonKey(name: 'movieTitle')
-    String movieTitle;
+    String? movieTitle;
 
     @JsonKey(name: 'movieYear')
-    int movieYear;
+    int? movieYear;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrExclusion({
         this.tmdbId,
