@@ -1,3 +1,5 @@
+# 2.0.0
+- Updated to support null-safety/NNBD.
 # 1.1.2+1
 - Updated packages
 # 1.1.2
