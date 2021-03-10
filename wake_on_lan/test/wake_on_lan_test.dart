@@ -45,12 +45,6 @@ void _factoryFrom() {
         test('Invalid Instance: port defined, invalid number', () {
             expect(() => WakeOnLAN.from(ipv4, mac, port: 70000), throwsA(isA<AssertionError>()));
         });
-        test('Invalid Instance: MACAddress is null', () {
-            expect(() => WakeOnLAN.from(ipv4, null), throwsA(isA<AssertionError>()));
-        });
-        test('Invalid Instance: IPv4Address is null', () {
-            expect(() => WakeOnLAN.from(null, mac), throwsA(isA<AssertionError>()));
-        });
     });
 }
 

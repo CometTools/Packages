@@ -24,7 +24,7 @@ void _functionValidate() {
             expect(IPv4Address.validate(address), true);
         });
         test('Null String', () {
-            String address = null;
+            String? address = null;
             expect(IPv4Address.validate(address), false);
         });
         test('Empty String', () {
@@ -48,10 +48,6 @@ void _factoryFrom() {
         test('Valid Instance', () {
             String address = '192.168.1.1';
             expect(IPv4Address.from(address), equals(isA<IPv4Address>()));
-        });
-        test('Invalid Instance: Null String', () {
-            String address = null;
-            expect(() => IPv4Address.from(address), throwsA(isA<FormatException>()));
         });
         test('Invalid Instance: Empty String', () {
             String address = '';

@@ -28,7 +28,7 @@ void _functionValidate() {
             expect(MACAddress.validate(address), true);
         });
         test('Null String', () {
-            String address = null;
+            String? address = null;
             expect(MACAddress.validate(address), false);
         });
         test('Empty String', () {
@@ -55,10 +55,6 @@ void _factoryFrom() {
         test('Valid Instance', () {
             String address = '00:00:00:00:00:00';
             expect(MACAddress.from(address), equals(isA<MACAddress>()));
-        });
-        test('Invalid Instance: Null String', () {
-            String address = null;
-            expect(() => MACAddress.from(address), throwsA(isA<FormatException>()));
         });
         test('Invalid Instance: Empty String', () {
             String address = '';
