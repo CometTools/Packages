@@ -5,7 +5,6 @@
 library overseerr;
 
 // Imports
-import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
 
 /// The core class to handle all connections to Overseerr.
@@ -16,7 +15,7 @@ import 'package:dio/dio.dart';
 class Overseerr {
     /// Internal constructor
     Overseerr._internal({
-        @required this.httpClient,
+        required this.httpClient,
     });
 
     /// Create a new Overseerr API connection manager to connection to your instance.
@@ -31,18 +30,12 @@ class Overseerr {
     /// - `followRedirects`: If the HTTP client should follow URL redirects
     /// - `maxRedirects`: The maximum amount of redirects the client should follow (does nothing if `followRedirects` is false)
     factory Overseerr({
-        @required String host,
-        @required String apiKey,
-        Map<String, dynamic> headers,
+        required String host,
+        required String apiKey,
+        Map<String, dynamic>? headers,
         bool followRedirects = true,
         int maxRedirects = 5,
     }) {
-        // Ensure none of the fields (but headers) are null.
-        // If you do not want to set them, all optional parameters have default values.
-        assert(host != null, 'host cannot be null.');
-        assert(apiKey != null, 'apiKey cannot be null.');
-        assert(followRedirects != null, 'followsRedirects cannot be null.');
-        assert(maxRedirects != null, 'maxRedirects cannot be null.');
         // Build the HTTP client
         Dio _dio = Dio(
             BaseOptions(
@@ -81,9 +74,8 @@ class Overseerr {
     /// );
     /// ```
     factory Overseerr.from({
-        @required Dio client,
+        required Dio client,
     }) {
-        assert(client != null, 'client cannot be null.');
         return Overseerr._internal(
             httpClient: client,
         );
