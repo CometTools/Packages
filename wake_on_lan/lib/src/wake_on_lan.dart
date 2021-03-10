@@ -25,7 +25,7 @@ class WakeOnLAN {
     /// MAC Address string from [MACAddress].
     String get macAddress => _macAddress.address;
     /// IPv4 Address string from [IPv4Address].
-    String? get ipv4Address => _ipv4Address.address;
+    String get ipv4Address => _ipv4Address.address;
     /// Port used for wake-on-LAN packet.
     int get port => _port;
 

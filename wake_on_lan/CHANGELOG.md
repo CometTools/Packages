@@ -1,3 +1,5 @@
+# 2.0.1
+- Fix for IPv4 address getter being a nullable type
 # 2.0.0
 - Updated to support null-safety/NNBD.
 # 1.1.2+1
