@@ -18,8 +18,6 @@ class WakeOnLAN {
     /// 
     /// The port is defaulted to 9, the standard port for Wake on LAN functionality.
     factory WakeOnLAN.from(IPv4Address ipv4, MACAddress mac, { int port = 9 }) {
-        assert(ipv4 != null);
-        assert(mac != null);
         assert(port <= _MAX_PORT);
         return WakeOnLAN._internal(ipv4, mac, port);
     }
@@ -27,7 +25,7 @@ class WakeOnLAN {
     /// MAC Address string from [MACAddress].
     String get macAddress => _macAddress.address;
     /// IPv4 Address string from [IPv4Address].
-    String get ipv4Address => _ipv4Address.address;
+    String? get ipv4Address => _ipv4Address.address;
     /// Port used for wake-on-LAN packet.
     int get port => _port;
 
@@ -54,7 +52,6 @@ class WakeOnLAN {
             socket.broadcastEnabled = true;
             socket.send(magicPacket(), InternetAddress(_ipv4Address.address, type: InternetAddressType.IPv4), _port);
             socket.close();
-        })
-        .catchError((error) => Future.error(error));
+        });
     }
 }

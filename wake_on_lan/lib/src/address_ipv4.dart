@@ -27,7 +27,7 @@ class IPv4Address {
     /// Validate that an IPv4 address in string [address] is correctly formatted.
     /// 
     /// Returns [true] on a valid address, [false] on a poorly formatted [address].
-    static bool validate(String address) {
+    static bool validate(String? address) {
         if(address == null) return false;
         RegExp exp = RegExp(_REGEX);
         return exp.hasMatch(address);
