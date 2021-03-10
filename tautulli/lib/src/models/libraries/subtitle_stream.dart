@@ -9,7 +9,7 @@ part 'subtitle_stream.g.dart';
 class TautulliSubtitleStream {
     /// The part ID.
     @JsonKey(name: 'id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int id;
+    final int? id;
 
     /// The type of content within this stream.
     /// 
@@ -17,39 +17,39 @@ class TautulliSubtitleStream {
     /// - 2: Audio
     /// - 3: Subtitle
     @JsonKey(name: 'type', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int type;
+    final int? type;
 
     /// Codec of the subtitle stream.
     @JsonKey(name: 'subtitle_codec', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String subtitleCodec;
+    final String? subtitleCodec;
 
     /// Container of the subtitle stream.
     @JsonKey(name: 'subtitle_container', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String subtitleContainer;
+    final String? subtitleContainer;
 
     /// Format of the subtitle stream.
     @JsonKey(name: 'subtitle_format', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String subtitleFormat;
+    final String? subtitleFormat;
 
     /// Is the subtitle stream forced?
     @JsonKey(name: 'subtitle_forced', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool subtitleForced;
+    final bool? subtitleForced;
 
     /// Location of the subtitle stream.
     @JsonKey(name: 'subtitle_location', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String subtitleLocation;
+    final String? subtitleLocation;
 
     /// Language of the subtitle stream.
     @JsonKey(name: 'subtitle_language', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String subtitleLanguage;
+    final String? subtitleLanguage;
 
     /// Language code of the subtitle stream.
     @JsonKey(name: 'subtitle_language_code', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String subtitleLanguageCode;
+    final String? subtitleLanguageCode;
 
     /// _Unknown_
     @JsonKey(name: 'selected', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool selected;
+    final bool? selected;
 
     TautulliSubtitleStream({
         this.id,

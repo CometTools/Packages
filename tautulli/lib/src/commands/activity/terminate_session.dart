@@ -1,9 +1,9 @@
 part of tautulli_commands;
 
 Future<void> _commandTerminateSession(Dio client, {
-    @required int sessionKey,
-    @required String sessionId,
-    String message,
+    required int? sessionKey,
+    required String? sessionId,
+    String? message,
 }) async {
     if(sessionKey != null) assert(sessionId == null, 'sessionKey and sessionId both cannot be defined.');
     if(sessionKey == null) assert(sessionId != null, 'sessionKey and sessionId cannot both be null.');
@@ -16,7 +16,7 @@ Future<void> _commandTerminateSession(Dio client, {
             if(message != null) 'message': message,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

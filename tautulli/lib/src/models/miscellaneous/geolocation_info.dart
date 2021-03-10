@@ -9,43 +9,43 @@ part 'geolocation_info.g.dart';
 class TautulliGeolocationInfo {
     /// Country code.
     @JsonKey(name: 'code', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String code;
+    final String? code;
 
     /// Country.
     @JsonKey(name: 'country', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String country;
+    final String? country;
 
     /// Region within the country.
     @JsonKey(name: 'region', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String region;
+    final String? region;
 
     /// City within the region.
     @JsonKey(name: 'city', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String city;
+    final String? city;
 
     /// Postal code.
     @JsonKey(name: 'postal_code', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String postalCode;
+    final String? postalCode;
 
     /// Timezone.
     @JsonKey(name: 'timezone', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String timezone;
+    final String? timezone;
 
     /// Approximate latitude coordinate
     @JsonKey(name: 'latitude', fromJson: TautulliUtilities.ensureDoubleFromJson)
-    final double latitude;
+    final double? latitude;
 
     /// Approximate longitude coordinate
     @JsonKey(name: 'longitude', fromJson: TautulliUtilities.ensureDoubleFromJson)
-    final double longitude;
+    final double? longitude;
 
     /// Approximate accuracy
     @JsonKey(name: 'accuracy', fromJson: TautulliUtilities.ensureDoubleFromJson)
-    final double accuracy;
+    final double? accuracy;
 
     /// Content of the IP address.
     @JsonKey(name: 'continent', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String continent;
+    final String? continent;
 
     TautulliGeolocationInfo({
         this.code,

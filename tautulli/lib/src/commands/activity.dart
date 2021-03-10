@@ -21,9 +21,9 @@ class TautulliCommandHandler_Activity {
     /// Optional Parameters:
     /// - `sessionKey`: Session key for the session info to return, **OR**
     /// - `sessionId`: Session ID for the session info to return
-    Future<TautulliActivity> getActivity({
-        int sessionKey,
-        String sessionId,
+    Future<TautulliActivity?> getActivity({
+        int? sessionKey,
+        String? sessionId,
     }) async => _commandGetActivity(_client, sessionKey: sessionKey, sessionId: sessionId);
 
     /// Handler for [terminate_session](https://github.com/Tautulli/Tautulli/blob/master/API.md#terminate_session).
@@ -37,8 +37,8 @@ class TautulliCommandHandler_Activity {
     /// Optional parameters:
     /// - `message`: Message to show user for reason of termination
     Future<void> terminateSession({
-        int sessionKey,
-        String sessionId,
-        String message,
+        int? sessionKey,
+        String? sessionId,
+        String? message,
     }) async => _commandTerminateSession(_client, sessionKey: sessionKey, sessionId: sessionId, message: message);
 }

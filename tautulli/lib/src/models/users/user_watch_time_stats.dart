@@ -9,15 +9,15 @@ part 'user_watch_time_stats.g.dart';
 class TautulliUserWatchTimeStats {
     /// The amount of days covered by the query.
     @JsonKey(name: 'query_days', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int queryDays;
+    final int? queryDays;
 
     /// The total amount of plays from this user in this period.
     @JsonKey(name: 'total_plays', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int totalPlays;
+    final int? totalPlays;
 
     /// The total time this user has streamed content.
     @JsonKey(name: 'total_time', fromJson: TautulliUtilities.secondsDurationFromJson)
-    final Duration totalTime;
+    final Duration? totalTime;
 
     TautulliUserWatchTimeStats({
         this.queryDays,

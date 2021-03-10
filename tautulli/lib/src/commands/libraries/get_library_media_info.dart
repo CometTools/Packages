@@ -1,15 +1,15 @@
 part of tautulli_commands;
 
 Future<TautulliLibraryMediaInfo> _commandGetLibraryMediaInfo(Dio client, {
-    int sectionId,
-    int ratingKey,
-    TautulliSectionType sectionType,
-    TautulliOrderDirection orderDirection,
-    TautulliLibraryMediaInfoOrderColumn orderColumn,
-    int start,
-    int length,
-    String search,
-    bool refresh,
+    int? sectionId,
+    int? ratingKey,
+    TautulliSectionType? sectionType,
+    TautulliOrderDirection? orderDirection,
+    TautulliLibraryMediaInfoOrderColumn? orderColumn,
+    int? start,
+    int? length,
+    String? search,
+    bool? refresh,
 }) async {
     if(sectionId != null) assert(ratingKey == null, 'sectionId and ratingKey both cannot be defined.');
     if(sectionId == null) assert(ratingKey != null, 'sectionId and ratingKey cannot both be null.');

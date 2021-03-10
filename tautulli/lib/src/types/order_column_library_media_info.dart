@@ -20,7 +20,7 @@ enum TautulliLibraryMediaInfoOrderColumn {
 /// Extension on [TautulliLibraryMediaInfoOrderColumn] to implement extended functionality.
 extension TautulliLibraryMediaInfoOrderColumnExtension on TautulliLibraryMediaInfoOrderColumn {
     /// The actual value/key for library media information order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliLibraryMediaInfoOrderColumn.ADDED_AT: return 'added_at';
             case TautulliLibraryMediaInfoOrderColumn.SORT_TITLE: return 'sort_title';
@@ -36,6 +36,5 @@ extension TautulliLibraryMediaInfoOrderColumnExtension on TautulliLibraryMediaIn
             case TautulliLibraryMediaInfoOrderColumn.PLAY_COUNT: return 'play_count';
             case TautulliLibraryMediaInfoOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

@@ -9,15 +9,15 @@ part 'notifier_parameter.g.dart';
 class TautulliNotifierParameter {
     /// Name of the notifier parameter.
     @JsonKey(name: 'name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String name;
+    final String? name;
 
     /// The type of data stored in this parameter.
     @JsonKey(name: 'type', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String type;
+    final String? type;
 
     /// The key to the notifier parameter.
     @JsonKey(name: 'value', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String value;
+    final String? value;
 
     TautulliNotifierParameter({
         this.name,

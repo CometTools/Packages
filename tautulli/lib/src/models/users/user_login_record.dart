@@ -10,43 +10,43 @@ part 'user_login_record.g.dart';
 class TautulliUserLoginRecord {
     /// Timestamp of the login.
     @JsonKey(name: 'timestamp', fromJson: TautulliUtilities.millisecondsDateTimeFromJson)
-    final DateTime timestamp;
+    final DateTime? timestamp;
 
     /// The user's ID.
     @JsonKey(name: 'user_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int userId;
+    final int? userId;
 
     /// What group the user is apart of.
     @JsonKey(name: 'user_group', toJson: TautulliUtilities.userGroupToJson, fromJson: TautulliUtilities.userGroupFromJson)
-    final TautulliUserGroup userGroup;
+    final TautulliUserGroup? userGroup;
 
     /// Originating IP address of the login record.
     @JsonKey(name: 'ip_address', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String ipAddress;
+    final String? ipAddress;
 
     /// Host of the login record.
     @JsonKey(name: 'host', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String host;
+    final String? host;
 
     /// User agent of the device used to login.
     @JsonKey(name: 'user_agent', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String userAgent;
+    final String? userAgent;
 
     /// Operating system of the login device.
     @JsonKey(name: 'os', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String os;
+    final String? os;
 
     /// Browser used on the login device.
     @JsonKey(name: 'browser', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String browser;
+    final String? browser;
 
     /// Was the login successful?
     @JsonKey(name: 'success', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool success;
+    final bool? success;
 
     /// Friendly name of the user.
     @JsonKey(name: 'friendly_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String friendlyName;
+    final String? friendlyName;
 
     TautulliUserLoginRecord({
         this.timestamp,

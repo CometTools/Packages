@@ -9,11 +9,11 @@ part 'date_format.g.dart';
 class TautulliDateFormat {
     /// Date format.
     @JsonKey(name: 'date_format', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String dateFormat;
+    final String? dateFormat;
 
     /// Time format.
     @JsonKey(name: 'time_format', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String timeFormat;
+    final String? timeFormat;
 
     TautulliDateFormat({
         this.dateFormat,

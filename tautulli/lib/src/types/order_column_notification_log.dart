@@ -14,7 +14,7 @@ enum TautulliNotificationLogOrderColumn {
 /// Extension on [TautulliNotificationLogOrderColumn] to implement extended functionality.
 extension TautulliNotificationLogOrderColumnExtension on TautulliNotificationLogOrderColumn {
     /// The actual value/key for notification log order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliNotificationLogOrderColumn.TIMESTAMP: return 'timestamp';
             case TautulliNotificationLogOrderColumn.NOTIFIER_ID: return 'notifier_id';
@@ -24,6 +24,5 @@ extension TautulliNotificationLogOrderColumnExtension on TautulliNotificationLog
             case TautulliNotificationLogOrderColumn.BODY_TEXT: return 'body_text';
             case TautulliNotificationLogOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

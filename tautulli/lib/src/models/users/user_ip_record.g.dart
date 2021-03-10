@@ -21,7 +21,7 @@ TautulliUserIPRecord _$TautulliUserIPRecordFromJson(Map<String, dynamic> json) {
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),
     thumb: TautulliUtilities.ensureStringFromJson(json['thumb']),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     parentTitle: TautulliUtilities.ensureStringFromJson(json['parent_title']),
     year: TautulliUtilities.ensureIntegerFromJson(json['year']),
     mediaIndex: TautulliUtilities.ensureIntegerFromJson(json['media_index']),
@@ -34,7 +34,7 @@ TautulliUserIPRecord _$TautulliUserIPRecordFromJson(Map<String, dynamic> json) {
     friendlyName: TautulliUtilities.ensureStringFromJson(json['friendly_name']),
     userId: TautulliUtilities.ensureIntegerFromJson(json['user_id']),
     transcodedecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['transcode_decision'] as String),
+        json['transcode_decision'] as String?),
   );
 }
 

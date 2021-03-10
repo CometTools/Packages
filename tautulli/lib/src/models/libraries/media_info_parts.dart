@@ -12,32 +12,32 @@ part 'media_info_parts.g.dart';
 class TautulliMediaInfoParts {
     /// The part ID.
     @JsonKey(name: 'id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int id;
+    final int? id;
 
     /// The path to the file on your system.
     @JsonKey(name: 'file', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String file;
+    final String? file;
 
     /// The size of the file, in bytes.
     @JsonKey(name: 'file_size', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int fileSize;
+    final int? fileSize;
 
     /// Does the file have generated index files? 
     @JsonKey(name: 'indexes', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool indexes;
+    final bool? indexes;
 
     /// _Unknown_
     @JsonKey(name: 'selected', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool selected;
+    final bool? selected;
 
     @JsonKey(name: 'video_streams', toJson: _videoStreamToMap, fromJson: _videoStreamToObjectArray)
-    final List<TautulliVideoStream> videoStreams;
+    final List<TautulliVideoStream>? videoStreams;
 
     @JsonKey(name: 'audio_streams', toJson: _audioStreamToMap, fromJson: _audioStreamToObjectArray)
-    final List<TautulliAudioStream> audioStreams;
+    final List<TautulliAudioStream>? audioStreams;
 
     @JsonKey(name: 'subtitle_streams', toJson: _subtitleStreamToMap, fromJson: _subtitleStreamToObjectArray)
-    final List<TautulliSubtitleStream> subtitleStreams;
+    final List<TautulliSubtitleStream>? subtitleStreams;
 
     TautulliMediaInfoParts({
         this.id,
@@ -82,17 +82,17 @@ class TautulliMediaInfoParts {
         'file_size': this.fileSize,
         'indexes': this.indexes,
         'selected': this.selected,
-        'video_streams': TautulliMediaInfoParts._videoStreamToMap(this.videoStreams),
-        'audio_streams': TautulliMediaInfoParts._audioStreamToMap(this.audioStreams),
-        'subtitle_streams': TautulliMediaInfoParts._subtitleStreamToMap(this.subtitleStreams),
+        'video_streams': TautulliMediaInfoParts._videoStreamToMap(this.videoStreams!),
+        'audio_streams': TautulliMediaInfoParts._audioStreamToMap(this.audioStreams!),
+        'subtitle_streams': TautulliMediaInfoParts._subtitleStreamToMap(this.subtitleStreams!),
     };
 
     static List<TautulliVideoStream> _videoStreamToObjectArray(List<dynamic> streams) => streams.where((e) => e['type'] == '1').map((stream) => TautulliVideoStream.fromJson((stream as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _videoStreamToMap(List<TautulliVideoStream> streams) => streams.map((stream) => stream.toJson()).toList();
+    static List<Map<String, dynamic>>? _videoStreamToMap(List<TautulliVideoStream>? streams) => streams?.map((stream) => stream.toJson()).toList();
 
     static List<TautulliAudioStream> _audioStreamToObjectArray(List<dynamic> streams) => streams.where((e) => e['type'] == '2').map((stream) => TautulliAudioStream.fromJson((stream as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _audioStreamToMap(List<TautulliAudioStream> streams) => streams.map((stream) => stream.toJson()).toList();
+    static List<Map<String, dynamic>>? _audioStreamToMap(List<TautulliAudioStream>? streams) => streams?.map((stream) => stream.toJson()).toList();
 
     static List<TautulliSubtitleStream> _subtitleStreamToObjectArray(List<dynamic> streams) => streams.where((e) => e['type'] == '3').map((stream) => TautulliSubtitleStream.fromJson((stream as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _subtitleStreamToMap(List<TautulliSubtitleStream> streams) => streams.map((stream) => stream.toJson()).toList();
+    static List<Map<String, dynamic>>? _subtitleStreamToMap(List<TautulliSubtitleStream>? streams) => streams?.map((stream) => stream.toJson()).toList();
 }

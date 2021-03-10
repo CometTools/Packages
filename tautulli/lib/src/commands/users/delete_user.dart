@@ -1,10 +1,9 @@
 part of tautulli_commands;
 
 Future<void> _commandDeleteUser(Dio client, {
-    @required int userId,
-    List<int> rowIds,
+    required int userId,
+    List<int>? rowIds,
 }) async {
-    assert(userId != null, 'userId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'delete_user',

@@ -10,19 +10,19 @@ part 'library_name.g.dart';
 class TautulliLibraryName {
     /// The library's section ID.
     @JsonKey(name: 'section_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int sectionId;
+    final int? sectionId;
 
     /// THe name of the library section in Plex.
     @JsonKey(name: 'section_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String sectionName;
+    final String? sectionName;
 
     /// The type of content stored in this library.
     @JsonKey(name: 'section_type', toJson: TautulliUtilities.sectionTypeToJson, fromJson: TautulliUtilities.sectionTypeFromJson)
-    final TautulliSectionType sectionType;
+    final TautulliSectionType? sectionType;
 
     /// The metadata agent being used for the library.
     @JsonKey(name: 'agent', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String agent;
+    final String? agent;
 
     TautulliLibraryName({
         this.sectionId,

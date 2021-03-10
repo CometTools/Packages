@@ -10,96 +10,96 @@ part 'library_media_info_record.g.dart';
 class TautulliLibraryMediaInfoRecord {
     /// Library section ID.
     @JsonKey(name: 'section_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int sectionId;
+    final int? sectionId;
 
     /// Library section type.
     @JsonKey(name: 'section_type', toJson: TautulliUtilities.sectionTypeToJson, fromJson: TautulliUtilities.sectionTypeFromJson)
-    final TautulliSectionType sectionType;
+    final TautulliSectionType? sectionType;
 
     /// Date on which the content was added to Plex.
     /// This is typically read/stored as the file creation date within Plex.
     @JsonKey(name: 'added_at', fromJson: TautulliUtilities.millisecondsDateTimeFromJson)
-    final DateTime addedAt;
+    final DateTime? addedAt;
 
     /// Type of media in this session.
     @JsonKey(name: 'media_type', toJson: TautulliUtilities.mediaTypeToJson, fromJson: TautulliUtilities.mediaTypeFromJson)
-    final TautulliMediaType mediaType;
+    final TautulliMediaType? mediaType;
 
     /// The content's unique ID from Plex.
     @JsonKey(name: 'rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int ratingKey;
+    final int? ratingKey;
 
     /// The content's parent's unique ID from Plex.
     @JsonKey(name: 'parent_rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentRatingKey;
+    final int? parentRatingKey;
 
     /// The content's grandparent's unique ID from Plex.
     @JsonKey(name: 'grandparent_rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int grandparentRatingKey;
+    final int? grandparentRatingKey;
 
     /// Title of the content.
     @JsonKey(name: 'title', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String title;
+    final String? title;
 
     /// Sort title of the content.
     @JsonKey(name: 'sort_title', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String sortTitle;
+    final String? sortTitle;
 
     /// Year the content was released.
     @JsonKey(name: 'year', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int year;
+    final int? year;
 
     /// The index of the content with respect to its parent (for example, track number in an album).
     @JsonKey(name: 'media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int mediaIndex;
+    final int? mediaIndex;
 
     /// The index of the parent of the content.
     @JsonKey(name: 'parent_media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentMediaIndex;
+    final int? parentMediaIndex;
 
     /// Thumbnail path for the content.
     @JsonKey(name: 'thumb', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String thumb;
+    final String? thumb;
 
     /// The media container type of the content.
     @JsonKey(name: 'container', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String container;
+    final String? container;
 
     /// Bitrate of the content.
     @JsonKey(name: 'bitrate', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int bitrate;
+    final int? bitrate;
 
     /// Codec of the video stream.
     @JsonKey(name: 'video_codec', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String videoCodec;
+    final String? videoCodec;
 
     /// Resolution of the video stream.
     @JsonKey(name: 'video_resolution', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String videoResolution;
+    final String? videoResolution;
 
     /// Framerate of the video stream.
     @JsonKey(name: 'video_framerate', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String videoFramerate;
+    final String? videoFramerate;
 
     /// Codec of the audio stream.
     @JsonKey(name: 'audio_codec', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioCodec;
+    final String? audioCodec;
 
     /// Number of channels in the audio stream.
     @JsonKey(name: 'audio_channels', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int audioChannels;
+    final int? audioChannels;
 
     /// The size of the file, in bytes.
     @JsonKey(name: 'file_size', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int fileSize;
+    final int? fileSize;
 
     /// Date/time that the content was last played.
     @JsonKey(name: 'last_played', fromJson: TautulliUtilities.millisecondsDateTimeFromJson)
-    final DateTime lastPlayed;
+    final DateTime? lastPlayed;
 
     /// Amount of times the content has been played.
     @JsonKey(name: 'play_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int playCount;
+    final int? playCount;
 
     TautulliLibraryMediaInfoRecord({
         this.sectionId,

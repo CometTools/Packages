@@ -11,8 +11,9 @@ TautulliHomeStats _$TautulliHomeStatsFromJson(Map<String, dynamic> json) {
     id: TautulliUtilities.ensureStringFromJson(json['stat_id']),
     title: TautulliUtilities.ensureStringFromJson(json['stat_title']),
     type: TautulliUtilities.ensureStringFromJson(json['stat_type']),
-    data:
-        (json['rows'] as List)?.map((e) => e as Map<String, dynamic>)?.toList(),
+    data: (json['rows'] as List<dynamic>?)
+        ?.map((e) => e as Map<String, dynamic>)
+        .toList(),
   );
 }
 

@@ -1,12 +1,11 @@
 part of tautulli_commands;
 
 Future<void> _commandEditLibrary(Dio client, {
-    @required int sectionId,
-    String customThumb,
-    String customArt,
-    bool keepHistory,
+    required int sectionId,
+    String? customThumb,
+    String? customArt,
+    bool? keepHistory,
 }) async {
-    assert(sectionId != null, 'sectionId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'edit_library',

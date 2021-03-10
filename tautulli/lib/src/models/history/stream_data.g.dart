@@ -46,13 +46,13 @@ TautulliStreamData _$TautulliStreamDataFromJson(Map<String, dynamic> json) {
     streamContainer:
         TautulliUtilities.ensureStringFromJson(json['stream_container']),
     streamContainerDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_container_decision'] as String),
+        json['stream_container_decision'] as String?),
     streamVideoBitrate:
         TautulliUtilities.ensureIntegerFromJson(json['stream_video_bitrate']),
     streamVideoCodec:
         TautulliUtilities.ensureStringFromJson(json['stream_video_codec']),
     streamVideoDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_video_decision'] as String),
+        json['stream_video_decision'] as String?),
     streamVideoFullResolution: TautulliUtilities.ensureStringFromJson(
         json['stream_video_full_resolution']),
     streamVideoHeight:
@@ -66,14 +66,14 @@ TautulliStreamData _$TautulliStreamDataFromJson(Map<String, dynamic> json) {
     streamAudioCodec:
         TautulliUtilities.ensureStringFromJson(json['stream_audio_codec']),
     streamAudioDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_audio_decision'] as String),
+        json['stream_audio_decision'] as String?),
     streamVideoDynamicRange: TautulliUtilities.ensureStringFromJson(
         json['stream_video_dynamic_range']),
     streamVideoFramerate:
         TautulliUtilities.ensureStringFromJson(json['stream_video_framerate']),
     subtitles: TautulliUtilities.ensureBooleanFromJson(json['subtitles']),
     streamSubtitleDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_subtitle_decision'] as String),
+        json['stream_subtitle_decision'] as String?),
     streamSubtitleCodec:
         TautulliUtilities.ensureStringFromJson(json['stream_subtitle_codec']),
     transcodeHardwareDecoding:
@@ -81,11 +81,11 @@ TautulliStreamData _$TautulliStreamDataFromJson(Map<String, dynamic> json) {
     transcodeHardwareEncoding:
         TautulliUtilities.ensureBooleanFromJson(json['transcode_hw_encoding']),
     videoDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['audio_decision'] as String),
+        json['audio_decision'] as String?),
     audioDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['video_decision'] as String),
+        json['video_decision'] as String?),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     title: TautulliUtilities.ensureStringFromJson(json['title']),
     originalTitle:
         TautulliUtilities.ensureStringFromJson(json['original_title']),

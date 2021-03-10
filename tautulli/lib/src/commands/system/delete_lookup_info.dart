@@ -1,9 +1,9 @@
 part of tautulli_commands;
 
 Future<void> _commandDeleteLookupInfo(Dio client, {
-    int ratingKey,
-    TautulliAPILookupService service,
-    bool deleteAll,
+    int? ratingKey,
+    TautulliAPILookupService? service,
+    bool? deleteAll,
 }) async {
     Response response = await client.get('/',
         queryParameters: {
@@ -13,7 +13,7 @@ Future<void> _commandDeleteLookupInfo(Dio client, {
             if(deleteAll != null) 'delete_all': deleteAll,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

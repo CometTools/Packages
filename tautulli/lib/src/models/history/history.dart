@@ -12,27 +12,27 @@ part 'history.g.dart';
 class TautulliHistory {
     /// List of [TautulliHistoryRecord], each storing a single session history.
     @JsonKey(name: 'data', fromJson: _entriesFromJson, toJson: _entriesToJson)
-    final List<TautulliHistoryRecord> records;
+    final List<TautulliHistoryRecord>? records;
 
     /// _Unknown_
     @JsonKey(name: 'draw', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int draw;
+    final int? draw;
 
     /// Total amount of records.
     @JsonKey(name: 'recordsTotal', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsTotal;
+    final int? recordsTotal;
 
     /// The amount of records (filtered).
     @JsonKey(name: 'recordsFiltered', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsFiltered;
+    final int? recordsFiltered;
 
     /// The duration of the records (total) retrieved, as a preformatted string.
     @JsonKey(name: 'total_duration', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String totalDuration;
+    final String? totalDuration;
 
     /// The duration of the records (filtered) retrieved, as a preformatted string.
     @JsonKey(name: 'filter_duration', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String filterDuration;
+    final String? filterDuration;
 
     TautulliHistory({
         this.records,
@@ -53,5 +53,5 @@ class TautulliHistory {
     Map<String, dynamic> toJson() => _$TautulliHistoryToJson(this);
 
     static List<TautulliHistoryRecord> _entriesFromJson(List<dynamic> entries) => entries.map((entry) => TautulliHistoryRecord.fromJson((entry as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _entriesToJson(List<TautulliHistoryRecord> entries) => entries.map((entry) => entry.toJson()).toList();
+    static List<Map<String, dynamic>>? _entriesToJson(List<TautulliHistoryRecord>? entries) => entries?.map((entry) => entry.toJson()).toList();
 }

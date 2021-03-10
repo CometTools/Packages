@@ -9,11 +9,11 @@ part 'server_identity.g.dart';
 class TautulliServerIdentity {
     /// The machine identifier key.
     @JsonKey(name: 'machine_identifier', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String machineIdentifier;
+    final String? machineIdentifier;
 
     /// The Plex Media Server version currently installed.
     @JsonKey(name: 'version', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String version;
+    final String? version;
 
     TautulliServerIdentity({
         this.machineIdentifier,

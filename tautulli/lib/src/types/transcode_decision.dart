@@ -12,7 +12,7 @@ enum TautulliTranscodeDecision {
 /// Extension on [TautulliTranscodeDecision] to implement extended functionality.
 extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
     /// Given a String, will return the correct `TautulliTranscodeDecision` object.
-    TautulliTranscodeDecision from(String decision) {
+    TautulliTranscodeDecision? from(String? decision) {
         switch(decision) {
             case 'transcode': return TautulliTranscodeDecision.TRANSCODE;
             case 'copy': return TautulliTranscodeDecision.COPY;
@@ -24,7 +24,7 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
     }
 
     /// The actual value/key for transcode decisions used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliTranscodeDecision.TRANSCODE: return 'transcode';
             case TautulliTranscodeDecision.COPY: return 'copy';
@@ -32,11 +32,10 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case TautulliTranscodeDecision.BURN: return 'burn';
             case TautulliTranscodeDecision.NULL: return '';
         }
-        return null;
     }
 
     /// Readable version of the transcode decision.
-    String get name {
+    String? get name {
         switch(this) {
             case TautulliTranscodeDecision.TRANSCODE: return 'Transcode';
             case TautulliTranscodeDecision.COPY: return 'Direct Stream';
@@ -44,6 +43,5 @@ extension TautulliTranscodeDecisionExtension on TautulliTranscodeDecision {
             case TautulliTranscodeDecision.BURN: return 'Burn';
             case TautulliTranscodeDecision.NULL: return 'None';
         }
-        return null;
     }
 }

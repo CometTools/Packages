@@ -11,7 +11,7 @@ TautulliLibraryName _$TautulliLibraryNameFromJson(Map<String, dynamic> json) {
     sectionId: TautulliUtilities.ensureIntegerFromJson(json['section_id']),
     sectionName: TautulliUtilities.ensureStringFromJson(json['section_name']),
     sectionType:
-        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String),
+        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String?),
     agent: TautulliUtilities.ensureStringFromJson(json['agent']),
   );
 }

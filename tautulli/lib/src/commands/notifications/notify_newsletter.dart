@@ -1,12 +1,11 @@
 part of tautulli_commands;
 
 Future<void> _commandNotifyNewsletter(Dio client, {
-    @required int newsletterId,
-    String subject,
-    String body,
-    String message,
+    required int newsletterId,
+    String? subject,
+    String? body,
+    String? message,
 }) async {
-    assert(newsletterId != null, 'newsletterId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'notify_newsletter',
@@ -16,7 +15,7 @@ Future<void> _commandNotifyNewsletter(Dio client, {
             if(message != null) 'message': message,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

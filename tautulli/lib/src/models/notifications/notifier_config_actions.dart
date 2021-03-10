@@ -9,71 +9,71 @@ part 'notifier_config_actions.g.dart';
 class TautulliNotifierConfigActions {
     /// Trigger on play?
     @JsonKey(name: 'on_play', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPlay;
+    final bool? onPlay;
     
     /// Trigger on stop?
     @JsonKey(name: 'on_stop', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onStop;
+    final bool? onStop;
 
     /// Trigger on pause?
     @JsonKey(name: 'on_pause', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPause;
+    final bool? onPause;
 
     /// Trigger on resume?
     @JsonKey(name: 'on_resume', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onResume;
+    final bool? onResume;
 
     /// Trigger on transcode decision change?
     @JsonKey(name: 'on_change', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onChange;
+    final bool? onChange;
 
     /// Trigger on buffer warning?
     @JsonKey(name: 'on_buffer', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onBuffer;
+    final bool? onBuffer;
 
     /// Trigger on watched?
     @JsonKey(name: 'on_watched', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onWatched;
+    final bool? onWatched;
 
     /// Trigger on concurrent streams passing threshold?
     @JsonKey(name: 'on_concurrent', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onConcurrent;
+    final bool? onConcurrent;
 
     /// Trigger on new user device?
     @JsonKey(name: 'on_newdevice', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onNewDevice;
+    final bool? onNewDevice;
 
     /// Trigger on created/new content?
     @JsonKey(name: 'on_created', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onCreated;
+    final bool? onCreated;
 
     /// Trigger on Plex Media Server going down?
     @JsonKey(name: 'on_intdown', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPlexServerDown;
+    final bool? onPlexServerDown;
 
     /// Trigger on Plex Media Server going back up?
     @JsonKey(name: 'on_intup', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPlexServerUp;
+    final bool? onPlexServerUp;
 
     /// Trigger on Plex Media Server remote access going down?
     @JsonKey(name: 'on_extdown', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPlexServerRemoteAccessDown;
+    final bool? onPlexServerRemoteAccessDown;
 
     /// Trigger on Plex Media Server remote access going back up?
     @JsonKey(name: 'on_extup', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPlexServerRemoteAccessUp;
+    final bool? onPlexServerRemoteAccessUp;
 
     /// Trigger on Plex Media Server update?
     @JsonKey(name: 'on_pmsupdate', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onPlexUpdate;
+    final bool? onPlexUpdate;
 
     /// Trigger on Tautulli update?
     @JsonKey(name: 'on_plexpyupdate', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onTautulliUpdate;
+    final bool? onTautulliUpdate;
 
     /// Trigger on Tautulli database corruption?
     @JsonKey(name: 'on_plexpydbcorrupt', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool onTautulliDatabaseCorruption;
+    final bool? onTautulliDatabaseCorruption;
 
     TautulliNotifierConfigActions({
         this.onPlay,

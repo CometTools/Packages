@@ -6,7 +6,7 @@ Future<List<TautulliNewsletter>> _commandGetNewsletters(Dio client) async {
             'cmd': 'get_newsletters',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return (response.data['response']['data'] as List).map((notifier) => TautulliNewsletter.fromJson(notifier)).toList();
         case 'error':
         default: throw Exception(response.data['response']['message']);

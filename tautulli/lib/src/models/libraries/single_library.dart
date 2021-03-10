@@ -13,62 +13,62 @@ part 'single_library.g.dart';
 class TautulliSingleLibrary {
     /// The row ID of the library in Tautulli.
     @JsonKey(name: 'row_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int rowId;
+    final int? rowId;
 
     @JsonKey(name: 'server_id', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String serverId;
+    final String? serverId;
 
     /// The library's section ID.
     @JsonKey(name: 'section_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int sectionId;
+    final int? sectionId;
 
     /// THe name of the library section in Plex.
     @JsonKey(name: 'section_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String sectionName;
+    final String? sectionName;
 
     /// The type of content stored in this library.
     @JsonKey(name: 'section_type', toJson: TautulliUtilities.sectionTypeToJson, fromJson: TautulliUtilities.sectionTypeFromJson)
-    final TautulliSectionType sectionType;
+    final TautulliSectionType? sectionType;
 
     /// The library's thumbnail in Tautulli.
     @JsonKey(name: 'library_thumb', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String libraryThumb;
+    final String? libraryThumb;
 
     /// The library's artwork in Tautulli.
     @JsonKey(name: 'library_art', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String libraryArt;
+    final String? libraryArt;
 
     /// The amount of content in this library.
     @JsonKey(name: 'count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int count;
+    final int? count;
 
     /// The amount of parent content in this library (e.g., seasons, albums).
     @JsonKey(name: 'parent_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentCount;
+    final int? parentCount;
 
     /// The amount of child content in this library (e.g., songs, episodes).
     @JsonKey(name: 'child_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int childCount;
+    final int? childCount;
 
     /// Is the library active?
     @JsonKey(name: 'is_active', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool isActive;
+    final bool? isActive;
 
     /// Are notifications enabled for the library?
     @JsonKey(name: 'do_notify', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool doNotify;
+    final bool? doNotify;
 
     /// Are notifications enable for the library on creation of content?
     @JsonKey(name: 'do_notify_created', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool doNotifyCreated;
+    final bool? doNotifyCreated;
 
     /// Are you currently tracking/keeping history for this library?
     @JsonKey(name: 'keep_history', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool keepSection;
+    final bool? keepSection;
 
     /// Is the library section deleted?
     @JsonKey(name: 'deleted_section', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool deletedSection;
+    final bool? deletedSection;
 
     TautulliSingleLibrary({
         this.rowId,

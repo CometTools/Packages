@@ -10,7 +10,7 @@ enum TautulliUserGroup {
 /// Extension on [TautulliUserGroup] to implement extended functionality.
 extension TautulliUserGroupExtension on TautulliUserGroup {
     /// Given a String, will return the correct `TautulliUserGroup` object.
-    TautulliUserGroup from(String key) {
+    TautulliUserGroup? from(String? key) {
         switch(key) {
             case 'admin': return TautulliUserGroup.ADMIN;
             case 'guest': return TautulliUserGroup.GUEST;
@@ -21,12 +21,11 @@ extension TautulliUserGroupExtension on TautulliUserGroup {
 
 
     /// The actual value/key for the user group used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliUserGroup.ADMIN: return 'admin';
             case TautulliUserGroup.GUEST: return 'guest';
             case TautulliUserGroup.NULL: return '';
         }
-        return null;
     }
 }

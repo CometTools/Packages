@@ -1,13 +1,11 @@
 part of tautulli_commands;
 
-Future<String> _commandGetServerID(Dio client, {
-    @required String hostname,
-    @required int port,
-    bool ssl,
-    bool remote,
+Future<String?> _commandGetServerID(Dio client, {
+    required String hostname,
+    required int port,
+    bool? ssl,
+    bool? remote,
 }) async {
-    assert(hostname != null, 'hostname cannot be null.');
-    assert(port != null, 'port cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_server_id',
@@ -17,7 +15,7 @@ Future<String> _commandGetServerID(Dio client, {
             if(remote != null) 'remote': remote ? 1 : 0,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return response.data['response']['data']['identifier'];
         case 'error':
         default: throw Exception(response.data['response']['message']);

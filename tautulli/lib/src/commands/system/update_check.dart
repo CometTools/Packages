@@ -6,7 +6,7 @@ Future<TautulliUpdateCheck> _commandUpdateCheck(Dio client) async {
             'cmd': 'update_check',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliUpdateCheck.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

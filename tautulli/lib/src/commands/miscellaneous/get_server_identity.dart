@@ -6,7 +6,7 @@ Future<TautulliServerIdentity> _commandGetServerIdentity(Dio client) async {
             'cmd': 'get_server_identity',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliServerIdentity.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

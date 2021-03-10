@@ -1,9 +1,8 @@
 part of tautulli_commands;
 
 Future<TautulliSingleLibrary> _commandGetLibrary(Dio client, {
-    @required int sectionId,
+    required int sectionId,
 }) async {
-    assert(sectionId != null, 'sectionId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_library',

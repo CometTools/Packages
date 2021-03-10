@@ -6,7 +6,7 @@ Future<void> _commandRestart(Dio client) async {
             'cmd': 'restart',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

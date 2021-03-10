@@ -1,11 +1,10 @@
 part of tautulli_commands;
 
-Future<Map<String, dynamic>> _commandGetOldRatingKeys(Dio client, {
-    @required int ratingKey,
-    @required TautulliMediaType mediaType,
+Future<Map<String, dynamic>?> _commandGetOldRatingKeys(Dio client, {
+    required int ratingKey,
+    required TautulliMediaType mediaType,
 }) async {
-    assert(ratingKey != null, 'ratingKey cannot be null.');
-    assert(mediaType != null && mediaType != TautulliMediaType.NULL, 'mediaType cannot be null.');
+    assert(mediaType != TautulliMediaType.NULL, 'mediaType cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_old_rating_keys',

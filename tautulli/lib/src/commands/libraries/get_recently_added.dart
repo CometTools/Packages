@@ -1,12 +1,11 @@
 part of tautulli_commands;
 
 Future<List<TautulliRecentlyAdded>> _commandGetRecentlyAdded(Dio client, {
-    @required int count,
-    int start,
-    TautulliMediaType mediaType,
-    int sectionId,
+    required int count,
+    int? start,
+    TautulliMediaType? mediaType,
+    int? sectionId,
 }) async {
-    assert(count != null, 'count cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_recently_added',

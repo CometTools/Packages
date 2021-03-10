@@ -9,31 +9,31 @@ part 'newsletter.g.dart';
 class TautulliNewsletter {
     /// newsletter ID.
     @JsonKey(name: 'id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int id;
+    final int? id;
 
     /// newsletter agent ID.
     @JsonKey(name: 'agent_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int agentId;
+    final int? agentId;
 
     /// Name of the newsletter agent.
     @JsonKey(name: 'agent_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String agentName;
+    final String? agentName;
 
     /// Label of the newsletter agent.
     @JsonKey(name: 'agent_label', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String agentLabel;
+    final String? agentLabel;
 
     /// Friendly name (description) of the newsletter.
     @JsonKey(name: 'friendly_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String friendlyName;
+    final String? friendlyName;
 
     /// The Crontab schedule.
     @JsonKey(name: 'cron', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String cron;
+    final String? cron;
 
     /// Is the newsletter active/enabled?
     @JsonKey(name: 'active', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool active;
+    final bool? active;
 
     TautulliNewsletter({
         this.id,

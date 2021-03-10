@@ -9,7 +9,7 @@ part 'audio_stream.g.dart';
 class TautulliAudioStream {
     /// The part ID.
     @JsonKey(name: 'id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int id;
+    final int? id;
 
     /// The type of content within this stream.
     /// 
@@ -17,47 +17,47 @@ class TautulliAudioStream {
     /// - 2: Audio
     /// - 3: Subtitle
     @JsonKey(name: 'type', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int type;
+    final int? type;
 
     /// Codec of the audio stream.
     @JsonKey(name: 'audio_codec', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioCodec;
+    final String? audioCodec;
 
     /// Bitrate of the audio stream.
     @JsonKey(name: 'audio_bitrate', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int audioBitrate;
+    final int? audioBitrate;
 
     /// Bitrate mode of the audio stream.
     @JsonKey(name: 'audio_bitrate_mode', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioBitrateMode;
+    final String? audioBitrateMode;
 
     /// Number of channels in the audio stream.
     @JsonKey(name: 'audio_channels', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int audioChannels;
+    final int? audioChannels;
 
     /// The layout of the channels in the audio stream.
     @JsonKey(name: 'audio_channel_layout', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioChannelLayout;
+    final String? audioChannelLayout;
 
     /// Sample rate of the audio stream.
     @JsonKey(name: 'audio_sample_rate', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int audioSampleRate;
+    final int? audioSampleRate;
 
     /// Language of the audio stream.
     @JsonKey(name: 'audio_language', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioLanguage;
+    final String? audioLanguage;
 
     /// Language code of the audio stream.
     @JsonKey(name: 'audio_language_code', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioLanguageCode;
+    final String? audioLanguageCode;
 
     /// Profile of the audio stream.
     @JsonKey(name: 'audio_profile', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String audioProfile;
+    final String? audioProfile;
 
     /// _Unknown_
     @JsonKey(name: 'selected', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool selected;
+    final bool? selected;
 
     TautulliAudioStream({
         this.id,

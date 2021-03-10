@@ -1,9 +1,8 @@
 part of tautulli_commands;
 
 Future<TautulliMetadata> _commandGetMetadata(Dio client, {
-    @required int ratingKey,
+    required int ratingKey,
 }) async {
-    assert(ratingKey != null, 'ratingKey cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_metadata',

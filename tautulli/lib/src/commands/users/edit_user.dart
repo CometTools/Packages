@@ -1,13 +1,12 @@
 part of tautulli_commands;
 
 Future<void> _commandEditUser(Dio client, {
-    @required int userId,
-    String friendlyName,
-    String customThumb,
-    bool keepHistory,
-    bool allowGuest,
+    required int userId,
+    String? friendlyName,
+    String? customThumb,
+    bool? keepHistory,
+    bool? allowGuest,
 }) async {
-    assert(userId != null, 'userId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'edit_user',

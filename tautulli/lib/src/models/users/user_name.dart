@@ -9,11 +9,11 @@ part 'user_name.g.dart';
 class TautulliUserName {
     /// The user's ID.
     @JsonKey(name: 'user_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int userId;
+    final int? userId;
 
     /// The user's friendly name.
     @JsonKey(name: 'friendly_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String friendlyName;
+    final String? friendlyName;
 
     TautulliUserName({
         this.userId,

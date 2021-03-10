@@ -1,6 +1,6 @@
 part of tautulli_commands;
 
-Future<Uint8List> _commandDownloadConfig(Dio client) async {
+Future<Uint8List?> _commandDownloadConfig(Dio client) async {
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'download_config',
@@ -9,5 +9,5 @@ Future<Uint8List> _commandDownloadConfig(Dio client) async {
             responseType: ResponseType.bytes,
         ),
     );
-    return (response.data as Uint8List);
+    return (response.data as Uint8List?);
 }

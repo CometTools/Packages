@@ -1,12 +1,12 @@
 part of tautulli_commands;
 
 Future<TautulliLibrariesTable> _commandGetLibrariesTable(Dio client, {
-    bool grouping,
-    TautulliLibrariesOrderColumn orderColumn,
-    TautulliOrderDirection orderDirection,
-    int start,
-    int length,
-    String search,
+    bool? grouping,
+    TautulliLibrariesOrderColumn? orderColumn,
+    TautulliOrderDirection? orderDirection,
+    int? start,
+    int? length,
+    String? search,
 }) async {
     Response response = await client.get('/',
         queryParameters: {

@@ -6,7 +6,7 @@ Future<List<TautulliServerInfo>> _commandGetServersInfo(Dio client) async {
             'cmd': 'get_servers_info',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return (response.data['response']['data'] as List).map((server) => TautulliServerInfo.fromJson(server)).toList();
         case 'error':
         default: throw Exception(response.data['response']['message']);

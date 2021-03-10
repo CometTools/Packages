@@ -9,19 +9,19 @@ part 'home_stats.g.dart';
 class TautulliHomeStats {
     /// ID for the statistic type.
     @JsonKey(name: 'stat_id', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String id;
+    final String? id;
 
     /// Statistic type.
     @JsonKey(name: 'stat_type', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String type;
+    final String? type;
 
     /// Statistic title.
     @JsonKey(name: 'stat_title', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String title;
+    final String? title;
 
     /// Statistics data.
     @JsonKey(name: 'rows')
-    final List<Map<String, dynamic>> data;
+    final List<Map<String, dynamic>>? data;
 
     TautulliHomeStats({
         this.id,

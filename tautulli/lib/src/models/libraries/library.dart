@@ -13,43 +13,43 @@ part 'library.g.dart';
 class TautulliLibrary {
     /// The library's section ID.
     @JsonKey(name: 'section_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int sectionId;
+    final int? sectionId;
 
     /// THe name of the library section in Plex.
     @JsonKey(name: 'section_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String sectionName;
+    final String? sectionName;
 
     /// The type of content stored in this library.
     @JsonKey(name: 'section_type', toJson: TautulliUtilities.sectionTypeToJson, fromJson: TautulliUtilities.sectionTypeFromJson)
-    final TautulliSectionType sectionType;
+    final TautulliSectionType? sectionType;
 
     /// The metadata agent being used for the library.
     @JsonKey(name: 'agent', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String agent;
+    final String? agent;
 
     /// The library's thumbnail in Tautulli.
     @JsonKey(name: 'thumb', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String thumb;
+    final String? thumb;
 
     /// The library's artwork in Tautulli.
     @JsonKey(name: 'art', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String art;
+    final String? art;
 
     /// The amount of content in this library.
     @JsonKey(name: 'count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int count;
+    final int? count;
 
     /// Is the library active?
     @JsonKey(name: 'is_active', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool isActive;
+    final bool? isActive;
 
     /// The amount of parent content in this library (e.g., seasons, albums).
     @JsonKey(name: 'parent_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentCount;
+    final int? parentCount;
 
     /// The amount of child content in this library (e.g., songs, episodes).
     @JsonKey(name: 'child_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int childCount;
+    final int? childCount;
 
     TautulliLibrary({
         this.sectionId,

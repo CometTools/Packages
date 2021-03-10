@@ -10,7 +10,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
   return TautulliSession(
     sessionKey: TautulliUtilities.ensureIntegerFromJson(json['session_key']),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     viewOffset: TautulliUtilities.ensureIntegerFromJson(json['view_offset']),
     progressPercent:
         TautulliUtilities.ensureIntegerFromJson(json['progress_percent']),
@@ -200,14 +200,14 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     profile: TautulliUtilities.ensureStringFromJson(json['profile']),
     player: TautulliUtilities.ensureStringFromJson(json['player']),
     machineId: TautulliUtilities.ensureStringFromJson(json['machine_id']),
-    state: TautulliUtilities.sessionStateFromJson(json['state'] as String),
+    state: TautulliUtilities.sessionStateFromJson(json['state'] as String?),
     local: TautulliUtilities.ensureBooleanFromJson(json['local']),
     relayed: TautulliUtilities.ensureBooleanFromJson(json['relayed']),
     secure: TautulliUtilities.ensureBooleanFromJson(json['secure']),
     sessionId: TautulliUtilities.ensureStringFromJson(json['session_id']),
     bandwidth: TautulliUtilities.ensureIntegerFromJson(json['bandwidth']),
     location:
-        TautulliUtilities.sessionLocationFromJson(json['location'] as String),
+        TautulliUtilities.sessionLocationFromJson(json['location'] as String?),
     transcodeKey: TautulliUtilities.ensureStringFromJson(json['transcode_key']),
     transcodeThrottled:
         TautulliUtilities.ensureBooleanFromJson(json['transcode_throttled']),
@@ -242,11 +242,11 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     transcodeHardwareFullPipeline: TautulliUtilities.ensureBooleanFromJson(
         json['transcode_hw_full_pipeline']),
     audioDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['audio_decision'] as String),
+        json['audio_decision'] as String?),
     videoDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['video_decision'] as String),
+        json['video_decision'] as String?),
     subtitleDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['subtitle_decision'] as String),
+        json['subtitle_decision'] as String?),
     throttled: TautulliUtilities.ensureBooleanFromJson(json['throttled']),
     transcodeHardwareDecoding:
         TautulliUtilities.ensureBooleanFromJson(json['transcode_hw_decoding']),
@@ -279,7 +279,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     streamDuration:
         TautulliUtilities.millisecondsDurationFromJson(json['stream_duration']),
     streamContainerDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_container_decision'] as String),
+        json['stream_container_decision'] as String?),
     optimizedVersionTitle:
         TautulliUtilities.ensureStringFromJson(json['optimized_version_title']),
     syncedVersion:
@@ -287,7 +287,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     liveUuid: TautulliUtilities.ensureStringFromJson(json['live_uuid']),
     bifThumb: TautulliUtilities.ensureStringFromJson(json['bif_thumb']),
     transcodeDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['transcode_decision'] as String),
+        json['transcode_decision'] as String?),
     subtitles: TautulliUtilities.ensureBooleanFromJson(json['subtitles']),
     streamVideoFullResolution: TautulliUtilities.ensureStringFromJson(
         json['stream_video_full_resolution']),
@@ -312,7 +312,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     streamVideoRefFrames: TautulliUtilities.ensureIntegerFromJson(
         json['stream_video_ref_frames']),
     streamVideoDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_video_decision'] as String),
+        json['stream_video_decision'] as String?),
     streamVideoLanguage:
         TautulliUtilities.ensureStringFromJson(json['stream_video_language']),
     streamVideoLanguageCode: TautulliUtilities.ensureStringFromJson(
@@ -324,7 +324,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     streamAudioBitrateMode: TautulliUtilities.ensureStringFromJson(
         json['stream_audio_bitrate_mode']),
     streamAudioDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_audio_decision'] as String),
+        json['stream_audio_decision'] as String?),
     streamAudioLanguage:
         TautulliUtilities.ensureStringFromJson(json['stream_audio_language']),
     streamAudioLanguageCode: TautulliUtilities.ensureStringFromJson(
@@ -336,7 +336,7 @@ TautulliSession _$TautulliSessionFromJson(Map<String, dynamic> json) {
     streamSubtitleContainer: TautulliUtilities.ensureStringFromJson(
         json['stream_subtitle_container']),
     streamSubtitleDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['stream_subtitle_decision'] as String),
+        json['stream_subtitle_decision'] as String?),
     streamSubtitleForced:
         TautulliUtilities.ensureBooleanFromJson(json['stream_subtitle_forced']),
     streamSubtitleFormat:

@@ -15,7 +15,7 @@ enum TautulliUserIPsOrderColumn {
 /// Extension on [TautulliUserIPsOrderColumn] to implement extended functionality.
 extension TautulliUserIPsOrderColumnExtension on TautulliUserIPsOrderColumn {
     /// The actual value/key for the user IP address order columns used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliUserIPsOrderColumn.LAST_SEEN: return 'last_seen';
             case TautulliUserIPsOrderColumn.FIRST_SEEN: return 'first_seen';
@@ -26,6 +26,5 @@ extension TautulliUserIPsOrderColumnExtension on TautulliUserIPsOrderColumn {
             case TautulliUserIPsOrderColumn.PLAY_COUNT: return 'play_count';
             case TautulliUserIPsOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

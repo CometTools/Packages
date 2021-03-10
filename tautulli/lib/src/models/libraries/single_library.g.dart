@@ -14,7 +14,7 @@ TautulliSingleLibrary _$TautulliSingleLibraryFromJson(
     sectionId: TautulliUtilities.ensureIntegerFromJson(json['section_id']),
     sectionName: TautulliUtilities.ensureStringFromJson(json['section_name']),
     sectionType:
-        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String),
+        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String?),
     libraryThumb: TautulliUtilities.ensureStringFromJson(json['library_thumb']),
     libraryArt: TautulliUtilities.ensureStringFromJson(json['library_art']),
     count: TautulliUtilities.ensureIntegerFromJson(json['count']),

@@ -3,13 +3,13 @@ import 'dart:convert';
 /// Model to store a Plex Media Server or Plex Media Scanner log.
 class TautulliPlexLog {
     /// The log level.
-    final String level;
+    final String? level;
 
     /// The date and time of the log.
-    final String timestamp;
+    final String? timestamp;
 
     /// The log message.
-    final String message;
+    final String? message;
 
     TautulliPlexLog({
         this.timestamp,

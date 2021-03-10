@@ -9,23 +9,23 @@ part 'server_info.g.dart';
 class TautulliServerInfo {
     /// The server name.
     @JsonKey(name: 'name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String name;
+    final String? name;
 
     /// The machine identifier key.
     @JsonKey(name: 'machine_identifier', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String machineIdentifier;
+    final String? machineIdentifier;
 
     /// The Plex Media Server version currently installed.
     @JsonKey(name: 'version', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String version;
+    final String? version;
 
     /// The host/IP address of the Plex Media Server.
     @JsonKey(name: 'host', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String host;
+    final String? host;
 
     /// The public port that the Plex Media Server is available on.
     @JsonKey(name: 'port', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int port;
+    final int? port;
 
     TautulliServerInfo({
         this.name,

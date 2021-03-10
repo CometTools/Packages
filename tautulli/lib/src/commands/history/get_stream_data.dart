@@ -1,8 +1,8 @@
 part of tautulli_commands;
 
 Future<TautulliStreamData> _commandGetStreamData(Dio client, {
-    int rowId,
-    int sessionKey,
+    int? rowId,
+    int? sessionKey,
 }) async {
     if(rowId != null) assert(sessionKey == null, 'rowId and sessionKey cannot both be defined.');
     if(rowId == null) assert(sessionKey != null, 'rowId and sessionKey cannot both be null.');
@@ -14,7 +14,7 @@ Future<TautulliStreamData> _commandGetStreamData(Dio client, {
             if(sessionKey != null) 'session_key': sessionKey,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliStreamData.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

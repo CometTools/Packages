@@ -1,16 +1,16 @@
 part of tautulli_commands;
 
-Future<Uint8List> _commandPMSImageProxy(Dio client, {
-    String image,
-    int ratingKey,
-    int width,
-    int height,
-    int opacity,
-    String background,
-    int blur,
-    String imageFormat,
-    TautulliFallbackImage fallbackImage,
-    bool refresh,
+Future<Uint8List?> _commandPMSImageProxy(Dio client, {
+    String? image,
+    int? ratingKey,
+    int? width,
+    int? height,
+    int? opacity,
+    String? background,
+    int? blur,
+    String? imageFormat,
+    TautulliFallbackImage? fallbackImage,
+    bool? refresh,
 }) async {
     if(image == null && ratingKey == null) assert(false, 'image and ratingKey cannot both be null.');
     if(image != null) assert(ratingKey == null, 'image and ratingKey cannot both be defined.');
@@ -32,5 +32,5 @@ Future<Uint8List> _commandPMSImageProxy(Dio client, {
             responseType: ResponseType.bytes,
         ),
     );
-    return (response.data as Uint8List);
+    return (response.data as Uint8List?);
 }

@@ -13,7 +13,7 @@ TautulliUserLoginRecord _$TautulliUserLoginRecordFromJson(
         TautulliUtilities.millisecondsDateTimeFromJson(json['timestamp']),
     userId: TautulliUtilities.ensureIntegerFromJson(json['user_id']),
     userGroup:
-        TautulliUtilities.userGroupFromJson(json['user_group'] as String),
+        TautulliUtilities.userGroupFromJson(json['user_group'] as String?),
     ipAddress: TautulliUtilities.ensureStringFromJson(json['ip_address']),
     host: TautulliUtilities.ensureStringFromJson(json['host']),
     userAgent: TautulliUtilities.ensureStringFromJson(json['user_agent']),

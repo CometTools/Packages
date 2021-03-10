@@ -1,10 +1,9 @@
 part of tautulli_commands;
 
 Future<List<TautulliUserPlayerStats>> _commandGetUserPlayerStats(Dio client, {
-    @required int userId,
-    bool grouping,
+    required int userId,
+    bool? grouping,
 }) async {
-    assert(userId != null, 'userId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_user_player_stats',

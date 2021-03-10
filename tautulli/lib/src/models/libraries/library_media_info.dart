@@ -12,27 +12,27 @@ part 'library_media_info.g.dart';
 class TautulliLibraryMediaInfo {
     /// Number of filtered records returned.
     @JsonKey(name: 'recordsFiltered', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsFiltered;
+    final int? recordsFiltered;
 
     /// Total amount of records.
     @JsonKey(name: 'recordsTotal', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsTotal;
+    final int? recordsTotal;
 
     /// Total file size of the filtered returned results.
     @JsonKey(name: 'filtered_file_size', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int filteredFileSize;
+    final int? filteredFileSize;
 
     /// Total file size of the returned results.
     @JsonKey(name: 'total_file_size', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int totalFileSize;
+    final int? totalFileSize;
 
     /// _Unknown_
     @JsonKey(name: 'draw', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int draw;
+    final int? draw;
 
     /// The individual media information records.
     @JsonKey(name: 'data', toJson: _infoToJson, fromJson: _infoFromJson)
-    final List<TautulliLibraryMediaInfoRecord> mediaInfo;
+    final List<TautulliLibraryMediaInfoRecord>? mediaInfo;
 
     TautulliLibraryMediaInfo({
         this.recordsFiltered,
@@ -56,5 +56,5 @@ class TautulliLibraryMediaInfo {
         if(mediaInfo is List) return mediaInfo.map((info) => TautulliLibraryMediaInfoRecord.fromJson((info as Map<String, dynamic>))).toList();
         return [];
     }
-    static List<Map<String, dynamic>> _infoToJson(List<TautulliLibraryMediaInfoRecord> mediaInfo) => mediaInfo.map((info) => info.toJson()).toList();
+    static List<Map<String, dynamic>>? _infoToJson(List<TautulliLibraryMediaInfoRecord>? mediaInfo) => mediaInfo?.map((info) => info.toJson()).toList();
 }

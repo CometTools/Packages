@@ -11,10 +11,10 @@ part 'search.g.dart';
 class TautulliSearch {
     /// Total amount of returned results.
     @JsonKey(name: 'results_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int count;
+    final int? count;
 
     @JsonKey(name: 'results_list', toJson: _resultsToJson, fromJson: _resultsFromJson)
-    final TautulliSearchResults results;
+    final TautulliSearchResults? results;
 
     TautulliSearch({
         this.count,
@@ -31,5 +31,5 @@ class TautulliSearch {
     Map<String, dynamic> toJson() => _$TautulliSearchToJson(this);
 
     static TautulliSearchResults _resultsFromJson(Map<String, dynamic> json) => TautulliSearchResults.fromJson(json);
-    static Map<String, dynamic> _resultsToJson(TautulliSearchResults results) => results?.toJson();
+    static Map<String, dynamic>? _resultsToJson(TautulliSearchResults? results) => results?.toJson();
 }

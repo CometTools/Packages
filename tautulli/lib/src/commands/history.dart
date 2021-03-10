@@ -16,7 +16,7 @@ class TautulliCommandHandler_History {
     /// Required Parameters:
     /// - `rowIds`: List of row IDs to delete
     Future<void> deleteHistory({
-        @required List<int> rowIds,
+        required List<int> rowIds,
     }) async => _commandDeleteHistory(_client, rowIds: rowIds);
 
     /// Handler for [get_history](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_history).
@@ -41,22 +41,22 @@ class TautulliCommandHandler_History {
     /// - `length`: Number of records to return (default: 25)
     /// - `search`: A string to search for
     Future<TautulliHistory> getHistory({
-        bool grouping,
-        String user,
-        int userId,
-        int ratingKey,
-        int parentRatingKey,
-        int grandparentRatingKey,
-        String startDate,
-        int sectionId,
-        TautulliMediaType mediaType,
-        TautulliTranscodeDecision transcodeDecision,
-        String guid,
-        TautulliHistoryOrderColumn orderColumn,
-        TautulliOrderDirection orderDirection,
-        int start,
-        int length,
-        String search,
+        bool? grouping,
+        String? user,
+        int? userId,
+        int? ratingKey,
+        int? parentRatingKey,
+        int? grandparentRatingKey,
+        String? startDate,
+        int? sectionId,
+        TautulliMediaType? mediaType,
+        TautulliTranscodeDecision? transcodeDecision,
+        String? guid,
+        TautulliHistoryOrderColumn? orderColumn,
+        TautulliOrderDirection? orderDirection,
+        int? start,
+        int? length,
+        String? search,
     }) async => _commandGetHistory(
         _client,
         grouping: grouping,
@@ -87,10 +87,10 @@ class TautulliCommandHandler_History {
     /// - `statsType`: What type of statistics to fetch
     /// - `statsCount`: The number of top items in the lists
     Future<List<TautulliHomeStats>> getHomeStats({
-        bool grouping,
-        int timeRange,
-        TautulliStatsType statsType,
-        int statsCount,
+        bool? grouping,
+        int? timeRange,
+        TautulliStatsType? statsType,
+        int? statsCount,
     }) async => _commandGetHomeStats(_client, grouping: grouping, timeRange: timeRange, statsType: statsType, statsCount: statsCount);
 
     /// Handler for [get_plays_by_date](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_date).
@@ -103,10 +103,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByDate({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByDate(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_dayofweek](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_dayofweek).
@@ -119,10 +119,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByDayOfWeek({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByDayOfWeek(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_hourofday](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_hourofday).
@@ -135,10 +135,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByHourOfDay({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByHourOfDay(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_source_resolution](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_source_resolution).
@@ -151,10 +151,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysBySourceResolution({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysBySourceResolution(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_stream_resolution](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_stream_resolution).
@@ -167,10 +167,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByStreamResolution({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByStreamResolution(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_stream_type](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_stream_type).
@@ -183,10 +183,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByStreamType({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByStreamType(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_top_10_platforms](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_top_10_platforms).
@@ -199,10 +199,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByTopTenPlatforms({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByTopTenPlatforms(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_by_top_10_users](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_by_top_10_users).
@@ -215,10 +215,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysByTopTenUsers({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysByTopTenUsers(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_plays_per_month](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_plays_per_month).
@@ -231,10 +231,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getPlaysPerMonth({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetPlaysPerMonth(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_stream_data](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_stream_data).
@@ -245,8 +245,8 @@ class TautulliCommandHandler_History {
     /// - `sessionKey`: The session key of the current stream, **OR**
     /// - `rowId`: The row ID number for the history item.
     Future<TautulliStreamData> getStreamData({
-        int sessionKey,
-        int rowId,
+        int? sessionKey,
+        int? rowId,
     }) async => _commandGetStreamData(_client, rowId: rowId, sessionKey: sessionKey);
 
     /// Handler for [get_stream_type_by_top_10_users](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_stream_type_by_top_10_users).
@@ -259,10 +259,10 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getStreamTypeByTopTenUsers({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetStreamTypeByTopTenUsers(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 
     /// Handler for [get_stream_type_by_top_10_platforms](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_stream_type_by_top_10_platforms).
@@ -275,9 +275,9 @@ class TautulliCommandHandler_History {
     /// - `grouping`: Group data
     /// - `yAxis`: What key to use for the Y-Axis in the data
     Future<TautulliGraphData> getStreamTypeByTopTenPlatforms({
-        int timeRange,
-        int userId,
-        bool grouping,
-        TautulliGraphYAxis yAxis,
+        int? timeRange,
+        int? userId,
+        bool? grouping,
+        TautulliGraphYAxis? yAxis,
     }) async => _commandGetStreamTypeByTopTenPlatforms(_client, timeRange: timeRange, userId: userId, grouping: grouping, yAxis: yAxis);
 }

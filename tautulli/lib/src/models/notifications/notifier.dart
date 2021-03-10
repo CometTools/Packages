@@ -9,27 +9,27 @@ part 'notifier.g.dart';
 class TautulliNotifier {
     /// Notifier ID.
     @JsonKey(name: 'id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int id;
+    final int? id;
 
     /// Notifier agent ID.
     @JsonKey(name: 'agent_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int agentId;
+    final int? agentId;
 
     /// Name of the notifier agent.
     @JsonKey(name: 'agent_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String agentName;
+    final String? agentName;
 
     /// Label of the notifier agent.
     @JsonKey(name: 'agent_label', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String agentLabel;
+    final String? agentLabel;
 
     /// Friendly name (description) of the notifier.
     @JsonKey(name: 'friendly_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String friendlyName;
+    final String? friendlyName;
 
     /// Is the notifier active/enabled?
     @JsonKey(name: 'active', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool active;
+    final bool? active;
 
     TautulliNotifier({
         this.id,

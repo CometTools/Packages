@@ -6,7 +6,7 @@ Future<List<TautulliNotifierParameter>> _commandGetNotifierParameters(Dio client
             'cmd': 'get_notifier_parameters',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return (response.data['response']['data'] as List).map((parameter) => TautulliNotifierParameter.fromJson(parameter)).toList();
         case 'error':
         default: throw Exception(response.data['response']['message']);

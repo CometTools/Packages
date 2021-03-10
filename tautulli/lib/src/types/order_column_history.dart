@@ -18,7 +18,7 @@ enum TautulliHistoryOrderColumn {
 /// Extension on [TautulliHistoryOrderColumn] to implement extended functionality.
 extension TautulliHistoryOrderColumnExtension on TautulliHistoryOrderColumn {
     /// The actual value/key for history order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliHistoryOrderColumn.DATE: return 'date';
             case TautulliHistoryOrderColumn.FRIENDLY_NAME: return 'friendly_name';
@@ -32,6 +32,5 @@ extension TautulliHistoryOrderColumnExtension on TautulliHistoryOrderColumn {
             case TautulliHistoryOrderColumn.DURATION: return 'duration';
             case TautulliHistoryOrderColumn.NULL: return '';
         }
-        return null;
     }
 }
