@@ -11,10 +11,10 @@ TautulliLibraryMediaInfoRecord _$TautulliLibraryMediaInfoRecordFromJson(
   return TautulliLibraryMediaInfoRecord(
     sectionId: TautulliUtilities.ensureIntegerFromJson(json['section_id']),
     sectionType:
-        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String),
+        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String?),
     addedAt: TautulliUtilities.millisecondsDateTimeFromJson(json['added_at']),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),
     parentRatingKey:
         TautulliUtilities.ensureIntegerFromJson(json['parent_rating_key']),

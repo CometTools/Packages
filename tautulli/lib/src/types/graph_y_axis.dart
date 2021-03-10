@@ -10,12 +10,11 @@ enum TautulliGraphYAxis {
 /// Extension on [TautulliGraphYAxis] to implement extended functionality.
 extension TautulliGraphYAxisExtension on TautulliGraphYAxis {
     /// The actual value/key for the graph Y-axis value in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliGraphYAxis.PLAYS: return 'plays';
             case TautulliGraphYAxis.DURATION: return 'duration';
             case TautulliGraphYAxis.NULL: return ''; 
         }
-        return null;
     }
 }

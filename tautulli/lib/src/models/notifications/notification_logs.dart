@@ -12,19 +12,19 @@ part 'notification_logs.g.dart';
 class TautulliNotificationLogs {
     /// Number of filtered records returned.
     @JsonKey(name: 'recordsFiltered', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsFiltered;
+    final int? recordsFiltered;
 
     /// Total amount of records.
     @JsonKey(name: 'recordsTotal', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsTotal;
+    final int? recordsTotal;
 
     /// _Unknown_
     @JsonKey(name: 'draw', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int draw;
+    final int? draw;
 
     /// The individual notification logs.
     @JsonKey(name: 'data', toJson: _logsToJson, fromJson: _logsFromJson)
-    final List<TautulliNotificationLogRecord> logs;
+    final List<TautulliNotificationLogRecord>? logs;
 
     TautulliNotificationLogs({
         this.recordsFiltered,
@@ -43,5 +43,5 @@ class TautulliNotificationLogs {
     Map<String, dynamic> toJson() => _$TautulliNotificationLogsToJson(this);
 
     static List<TautulliNotificationLogRecord> _logsFromJson(List<dynamic> logs) => logs.map((log) => TautulliNotificationLogRecord.fromJson((log as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _logsToJson(List<TautulliNotificationLogRecord> logs) => logs.map((log) => log.toJson()).toList();
+    static List<Map<String, dynamic>>? _logsToJson(List<TautulliNotificationLogRecord>? logs) => logs?.map((log) => log.toJson()).toList();
 }

@@ -20,10 +20,10 @@ class TautulliUtilities {
     /// - integer => original value
     /// - string  => try parsing string, else null 
     /// - boolean => true = 1, false = 0
-    static int ensureIntegerFromJson(dynamic value) {
+    static int? ensureIntegerFromJson(dynamic value) {
         switch(value.runtimeType) {
             case double: return (value as double).floor();
-            case int: return (value as int);
+            case int: return (value as int?);
             case String: return int.tryParse(value as String);
             case bool: return (value as bool) ? 1 : 0;
             default: return null;
@@ -37,9 +37,9 @@ class TautulliUtilities {
     /// - integer => original value casted to double
     /// - string  => try parsing string, else null 
     /// - boolean => true = 1, false = 0
-    static double ensureDoubleFromJson(dynamic value) {
+    static double? ensureDoubleFromJson(dynamic value) {
         switch(value.runtimeType) {
-            case double: return (value as double);
+            case double: return (value as double?);
             case int: return (value as int).toDouble();
             case String: return double.tryParse(value as String);
             case bool: return (value as bool) ? 1 : 0;
@@ -54,12 +54,12 @@ class TautulliUtilities {
     /// - integer => 0 = false, anything else is true
     /// - string => "" = false,  "0" = false, anything else is true
     /// - boolean => original value
-    static bool ensureBooleanFromJson(dynamic value) {
+    static bool? ensureBooleanFromJson(dynamic value) {
         switch(value.runtimeType) {
-            case double: return (value as double) == 0 ? false : true;
-            case int: return (value as int) == 0 ? false : true;
-            case String: return (value as String) == "" || (value as String) == "0" ? false : true;
-            case bool: return (value as bool);
+            case double: return (value as double?) == 0 ? false : true;
+            case int: return (value as int?) == 0 ? false : true;
+            case String: return (value as String?) == "" || value == "0" ? false : true;
+            case bool: return (value as bool?);
             default: return null;
         }
     }
@@ -71,11 +71,11 @@ class TautulliUtilities {
     /// - integer => value `.toString()`
     /// - string => original value
     /// - boolean => true = "1", false = "0"
-    static String ensureStringFromJson(dynamic value) {
+    static String? ensureStringFromJson(dynamic value) {
         switch(value.runtimeType) {
-            case double: return (value as double).toString();
-            case int: return (value as int).toString();
-            case String: return (value as String);
+            case double: return (value as double?).toString();
+            case int: return (value as int?).toString();
+            case String: return (value as String?);
             case bool: return (value as bool) ? "1" : "0";
             default: return null;
         }
@@ -89,7 +89,7 @@ class TautulliUtilities {
     /// - integer => value `.toString()` within a list
     /// - string => original value within a list
     /// - boolean => true = "1", false = "0" within a list
-    static List<String> ensureStringListFromJson(dynamic value) {
+    static List<String?>? ensureStringListFromJson(dynamic value) {
         switch(value.runtimeType) {
             case bool:
             case int:
@@ -108,7 +108,7 @@ class TautulliUtilities {
     /// - integer => value `.toString()` within a list
     /// - string => original value within a list
     /// - boolean => true = "1", false = "0" within a list
-    static List<int> ensureIntegerListFromJson(dynamic value) {
+    static List<int?>? ensureIntegerListFromJson(dynamic value) {
         switch(value.runtimeType) {
             case bool:
             case int:
@@ -124,7 +124,7 @@ class TautulliUtilities {
      */
 
     /// Converts a String containing a unix/Epoch millisecond value to a [DateTime] object. Returns null on a poorly formatted string.
-    static DateTime millisecondsDateTimeFromJson(dynamic value) {
+    static DateTime? millisecondsDateTimeFromJson(dynamic value) {
         try {
             switch(value.runtimeType) {
                 case bool: return null;
@@ -143,7 +143,7 @@ class TautulliUtilities {
     /// - integer => value passed to [Duration]
     /// - string => value parsed as int, passed to [Duration]
     /// - boolean => null
-    static Duration millisecondsDurationFromJson(dynamic value) {
+    static Duration? millisecondsDurationFromJson(dynamic value) {
         try {
             switch(value.runtimeType) {
                 case bool: return null;
@@ -162,7 +162,7 @@ class TautulliUtilities {
     /// - integer => value passed to [Duration]
     /// - string => value parsed as int, passed to [Duration]
     /// - boolean => null
-    static Duration secondsDurationFromJson(dynamic value) {
+    static Duration? secondsDurationFromJson(dynamic value) {
         try {
             switch(value.runtimeType) {
                 case bool: return null;
@@ -180,44 +180,44 @@ class TautulliUtilities {
      */
 
     /// Converts a string to a List\<String\>. The default delimiter is a comma `,`.
-    static List<String> stringToListStringFromJson(String list, { String delimiter = ',' }) => list?.split(delimiter) ?? null;
+    static List<String>? stringToListStringFromJson(String? list, { String delimiter = ',' }) => list?.split(delimiter) ?? null;
 
     /**
      * Tautulli Types
      */
 
     /// Converts a string to a [TautulliMediaType] object.
-    static TautulliMediaType mediaTypeFromJson(String type) => TautulliMediaType.MOVIE.from(type);
+    static TautulliMediaType? mediaTypeFromJson(String? type) => TautulliMediaType.MOVIE.from(type);
     /// Converts a [TautulliMediaType] object back to its string representation.
-    static String mediaTypeToJson(TautulliMediaType type) => type?.value;
+    static String? mediaTypeToJson(TautulliMediaType? type) => type?.value;
 
     /// Converts a string to a [TautulliSessionState] object.
-    static TautulliSessionState sessionStateFromJson(String state) => TautulliSessionState.BUFFERING.from(state);
+    static TautulliSessionState? sessionStateFromJson(String? state) => TautulliSessionState.BUFFERING.from(state);
     /// Converts a [TautulliSessionState] object back to its string representation.
-    static String sessionStateToJson(TautulliSessionState state) => state?.value;
+    static String? sessionStateToJson(TautulliSessionState? state) => state?.value;
 
     /// Conerts a string to a [TautulliSessionLocation] object.
-    static TautulliSessionLocation sessionLocationFromJson(String location) => TautulliSessionLocation.LAN.from(location);
+    static TautulliSessionLocation? sessionLocationFromJson(String? location) => TautulliSessionLocation.LAN.from(location);
     /// Converts a [TautulliSessionLocation] object back to its string representation.
-    static String sessionLocationToJson(TautulliSessionLocation location) => location?.value;
+    static String? sessionLocationToJson(TautulliSessionLocation? location) => location?.value;
 
     /// Converts a string to a [TautulliTranscodeDecision] object.
-    static TautulliTranscodeDecision transcodeDecisionFromJson(String decision) => TautulliTranscodeDecision.COPY.from(decision);
+    static TautulliTranscodeDecision? transcodeDecisionFromJson(String? decision) => TautulliTranscodeDecision.COPY.from(decision);
     /// Converts a [TautulliTranscodeDecision] object back to its string representation.
-    static String transcodeDecisionToJson(TautulliTranscodeDecision decision) => decision?.value;
+    static String? transcodeDecisionToJson(TautulliTranscodeDecision? decision) => decision?.value;
 
     /// Converts a string to a [TautulliSectionType] object.
-    static TautulliSectionType sectionTypeFromJson(String type) => TautulliSectionType.MOVIE.from(type);
+    static TautulliSectionType? sectionTypeFromJson(String? type) => TautulliSectionType.MOVIE.from(type);
     /// Converts a [TautulliSectionType] object back to its string representation.
-    static String sectionTypeToJson(TautulliSectionType type) => type?.value;
+    static String? sectionTypeToJson(TautulliSectionType? type) => type?.value;
 
     /// Converts a string to a [TautulliUserGroup] object.
-    static TautulliUserGroup userGroupFromJson(String group) => TautulliUserGroup.ADMIN.from(group);
+    static TautulliUserGroup? userGroupFromJson(String? group) => TautulliUserGroup.ADMIN.from(group);
     /// Converts a [TautulliUserGroup] object back to its string representation.
-    static String userGroupToJson(TautulliUserGroup group) => group?.value;
+    static String? userGroupToJson(TautulliUserGroup? group) => group?.value;
 
     /// Converts a double to a [TautulliWatchedStatus] object.
-    static TautulliWatchedStatus watchedStatusFromJson(num watched) => TautulliWatchedStatus.WATCHED.from(watched);
+    static TautulliWatchedStatus? watchedStatusFromJson(num? watched) => TautulliWatchedStatus.WATCHED.from(watched);
     /// Converts a [TautulliWatchedStatus] object back to its double representation.
-    static num watchedStatusToJson(TautulliWatchedStatus watched) => watched?.value;
+    static num? watchedStatusToJson(TautulliWatchedStatus? watched) => watched?.value;
 }

@@ -1,10 +1,9 @@
 part of tautulli_commands;
 
 Future<void> _commandSetMobileDeviceConfig(Dio client, {
-    @required int mobileDeviceId,
-    String friendlyName,
+    required int mobileDeviceId,
+    String? friendlyName,
 }) async {
-    assert(mobileDeviceId != null, 'mobileDeviceId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'set_mobile_device_config',
@@ -12,7 +11,7 @@ Future<void> _commandSetMobileDeviceConfig(Dio client, {
             if(friendlyName != null) 'friendly_name': friendlyName,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

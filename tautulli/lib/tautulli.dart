@@ -5,7 +5,6 @@
 library tautulli;
 
 // Imports
-import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
 import 'commands.dart';
 
@@ -23,14 +22,14 @@ export 'utilities.dart';
 class Tautulli {
     /// Internal constructor
     Tautulli._internal({
-        @required this.httpClient,
-        @required this.activity,
-        @required this.history,
-        @required this.libraries,
-        @required this.miscellaneous,
-        @required this.notifications,
-        @required this.system,
-        @required this.users,
+        required this.httpClient,
+        required this.activity,
+        required this.history,
+        required this.libraries,
+        required this.miscellaneous,
+        required this.notifications,
+        required this.system,
+        required this.users,
     });
 
     /// Create a new Tautulli API connection manager to connection to your instance.
@@ -45,18 +44,12 @@ class Tautulli {
     /// - `followRedirects`: If the HTTP client should follow URL redirects
     /// - `maxRedirects`: The maximum amount of redirects the client should follow (does nothing if `followRedirects` is false)
     factory Tautulli({
-        @required String host,
-        @required String apiKey,
-        Map<String, dynamic> headers,
+        required String host,
+        required String apiKey,
+        Map<String, dynamic>? headers,
         bool followRedirects = true,
         int maxRedirects = 5,
     }) {
-        // Ensure none of the fields (but headers) are null.
-        // If you do not want to set them, all optional parameters have default values.
-        assert(host != null, 'host cannot be null.');
-        assert(apiKey != null, 'apiKey cannot be null.');
-        assert(followRedirects != null, 'followsRedirects cannot be null.');
-        assert(maxRedirects != null, 'maxRedirects cannot be null.');
         // Build the HTTP client
         Dio _dio = Dio(
             BaseOptions(
@@ -106,9 +99,8 @@ class Tautulli {
     /// );
     /// ```
     factory Tautulli.from({
-        @required Dio client,
+        required Dio client,
     }) {
-        assert(client != null, 'client cannot be null.');
         return Tautulli._internal(
             httpClient: client,
             activity: TautulliCommandHandler_Activity(client),

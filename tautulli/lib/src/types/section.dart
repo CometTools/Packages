@@ -12,7 +12,7 @@ enum TautulliSectionType {
 /// Extension on [TautulliSectionType] to implement extended functionality.
 extension TautulliSectionTypeExtension on TautulliSectionType {
     /// Given a String, will return the correct `TautulliSectionType` object.
-    TautulliSectionType from(String type) {
+    TautulliSectionType? from(String? type) {
         switch(type) {
             case 'movie': return TautulliSectionType.MOVIE;
             case 'show': return TautulliSectionType.SHOW;
@@ -24,7 +24,7 @@ extension TautulliSectionTypeExtension on TautulliSectionType {
     }
 
     /// The actual value/key for section types used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliSectionType.MOVIE: return 'movie';
             case TautulliSectionType.SHOW: return 'show';
@@ -32,6 +32,5 @@ extension TautulliSectionTypeExtension on TautulliSectionType {
             case TautulliSectionType.PHOTO: return 'photo';
             case TautulliSectionType.NULL: return '';
         }
-        return null;
     }
 }

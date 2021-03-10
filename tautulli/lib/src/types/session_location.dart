@@ -10,7 +10,7 @@ enum TautulliSessionLocation {
 /// Extension on [TautulliSessionLocation] to implement extended functionality.
 extension TautulliSessionLocationExtension on TautulliSessionLocation {
     /// Given a String, will return the correct `TautulliSessionLocation` object.
-    TautulliSessionLocation from(String location) {
+    TautulliSessionLocation? from(String? location) {
         switch(location) {
             case 'lan': return TautulliSessionLocation.LAN;
             case 'wan': return TautulliSessionLocation.WAN;
@@ -20,12 +20,11 @@ extension TautulliSessionLocationExtension on TautulliSessionLocation {
     }
 
     /// The actual value/key for session locations used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliSessionLocation.LAN: return 'lan';
             case TautulliSessionLocation.WAN: return 'wan';
             case TautulliSessionLocation.NULL: return '';
         }
-        return null;
     }
 }

@@ -18,7 +18,7 @@ enum TautulliLibrariesOrderColumn {
 /// Extension on [TautulliLibrariesOrderColumn] to implement extended functionality.
 extension TautulliLibrariesOrderColumnExtension on TautulliLibrariesOrderColumn {
     /// The actual value/key for the library order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliLibrariesOrderColumn.LIBRARY_THUMB: return 'library_thumb';
             case TautulliLibrariesOrderColumn.SECTION_NAME: return 'section_name';
@@ -32,6 +32,5 @@ extension TautulliLibrariesOrderColumnExtension on TautulliLibrariesOrderColumn 
             case TautulliLibrariesOrderColumn.DURATION: return 'duration';
             case TautulliLibrariesOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

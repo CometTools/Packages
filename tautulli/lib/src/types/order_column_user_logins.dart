@@ -14,7 +14,7 @@ enum TautulliUserLoginsOrderColumn {
 /// Extension on [TautulliUserLoginsOrderColumn] to implement extended functionality.
 extension TautulliUserLoginsOrderColumnExtension on TautulliUserLoginsOrderColumn {
     /// The actual value/key for the user login order columns used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliUserLoginsOrderColumn.DATE: return 'date';
             case TautulliUserLoginsOrderColumn.TIME: return 'time';
@@ -24,6 +24,5 @@ extension TautulliUserLoginsOrderColumnExtension on TautulliUserLoginsOrderColum
             case TautulliUserLoginsOrderColumn.BROWSER: return 'browser';
             case TautulliUserLoginsOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

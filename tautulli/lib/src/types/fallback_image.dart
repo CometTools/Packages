@@ -14,7 +14,7 @@ enum TautulliFallbackImage {
 /// Extension on [TautulliFallbackImage] to implement extended functionality.
 extension TautulliFallbackImageExtension on TautulliFallbackImage {
     /// The actual value/key for the fallback image in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliFallbackImage.POSTER: return 'poster';
             case TautulliFallbackImage.COVER: return 'cover';
@@ -24,6 +24,5 @@ extension TautulliFallbackImageExtension on TautulliFallbackImage {
             case TautulliFallbackImage.ART_LIVE_FULL: return 'art-live-full';
             case TautulliFallbackImage.NULL: return ''; 
         }
-        return null;
     }
 }

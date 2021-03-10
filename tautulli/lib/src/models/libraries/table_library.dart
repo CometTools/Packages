@@ -12,130 +12,130 @@ part 'table_library.g.dart';
 class TautulliTableLibrary {
     /// Row identifier of the library.
     @JsonKey(name: 'row_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int rowId;
+    final int? rowId;
 
     /// Server identifier of the library.
     @JsonKey(name: 'server_id', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String serverId;
+    final String? serverId;
 
     /// Section identifier of the library.
     @JsonKey(name: 'section_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int sectionId;
+    final int? sectionId;
 
     /// Section name of the library.
     @JsonKey(name: 'section_name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String sectionName;
+    final String? sectionName;
 
     /// Section type of the library.
     @JsonKey(name: 'section_type', toJson: TautulliUtilities.sectionTypeToJson, fromJson: TautulliUtilities.sectionTypeFromJson)
-    final TautulliSectionType sectionType;
+    final TautulliSectionType? sectionType;
 
     /// Amount of root-level content (show, artist, etc.) in the library.
     @JsonKey(name: 'count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int count;
+    final int? count;
 
     /// Amount of parent-level content (season, albums, etc.) in the library.
     @JsonKey(name: 'parent_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentCount;
+    final int? parentCount;
 
     /// Amount of child-level content (episode, song, etc.) in the library.
     @JsonKey(name: 'child_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int childCount;
+    final int? childCount;
 
     /// Path to the library thumbnail.
     @JsonKey(name: 'library_thumb', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String libraryThumb;
+    final String? libraryThumb;
 
     /// Path to the library artwork.
     @JsonKey(name: 'library_art', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String libraryArt;
+    final String? libraryArt;
 
     /// Total amount of plays from this library.
     @JsonKey(name: 'plays', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int plays;
+    final int? plays;
 
     /// Duration of the entire library.
     @JsonKey(name: 'duration', fromJson: TautulliUtilities.secondsDurationFromJson)
-    final Duration duration;
+    final Duration? duration;
 
     /// The date/time the library was last accessed.
     @JsonKey(name: 'last_accessed', fromJson: TautulliUtilities.millisecondsDateTimeFromJson)
-    final DateTime lastAccessed;
+    final DateTime? lastAccessed;
 
     /// The history row identifier of the content that was last played.
     @JsonKey(name: 'history_row_id', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int historyRowId;
+    final int? historyRowId;
 
     /// The title of the content that was last played.
     @JsonKey(name: 'last_played', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String lastPlayed;
+    final String? lastPlayed;
 
     /// The rating key of the content that was last played.
     @JsonKey(name: 'rating_key', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int ratingKey;
+    final int? ratingKey;
 
     /// The type of media that was last played.
     @JsonKey(name: 'media_type', toJson: TautulliUtilities.mediaTypeToJson, fromJson: TautulliUtilities.mediaTypeFromJson)
-    final TautulliMediaType mediaType;
+    final TautulliMediaType? mediaType;
 
     /// Path to the last streamed content's thumbnail.
     @JsonKey(name: 'thumb', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String thumb;
+    final String? thumb;
 
     /// Title of the content's parent.
     @JsonKey(name: 'parent_title', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String parentTitle;
+    final String? parentTitle;
 
     /// Year that the content was released.
     @JsonKey(name: 'year', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int year;
+    final int? year;
 
     /// Media index.
     @JsonKey(name: 'media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int mediaIndex;
+    final int? mediaIndex;
 
     /// Parent media index.
     @JsonKey(name: 'parent_media_index', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int parentMediaIndex;
+    final int? parentMediaIndex;
 
     /// Content rating of the content that was last played.
     @JsonKey(name: 'content_rating', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String contentRating;
+    final String? contentRating;
 
     /// Labels on the content that was last played.
     @JsonKey(name: 'labels', fromJson: TautulliUtilities.ensureStringListFromJson)
-    final List<String> labels;
+    final List<String?>? labels;
 
     /// Is the last played content live content?
     @JsonKey(name: 'live', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool live;
+    final bool? live;
 
     /// The date on which the last played content was originally available on.
     /// 
     /// Because of the custom formatting options, the DateTime is returned as a string.
     /// You can use the miscellaneous call `getDateFormats()` to pull the date and time formatting strings.
     @JsonKey(name: 'originally_available_at', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String originallyAvailableAt;
+    final String? originallyAvailableAt;
 
     /// GUID of the content that was last played from Plex.
     @JsonKey(name: 'guid', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String guid;
+    final String? guid;
 
     /// Are notifications enabled for this library?
     @JsonKey(name: 'do_notify', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool doNotify;
+    final bool? doNotify;
 
     /// Are created notifications enabled for this library?
     @JsonKey(name: 'do_notify_created', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool doNotifyCreated;
+    final bool? doNotifyCreated;
 
     /// Is history enabled for the library?
     @JsonKey(name: 'keep_history', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool keepHistory;
+    final bool? keepHistory;
 
     /// Is the library active?
     @JsonKey(name: 'is_active', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool isActive;
+    final bool? isActive;
 
     TautulliTableLibrary({
         this.rowId,

@@ -33,9 +33,9 @@ class TautulliCommandHandler_System {
     /// - `service`: A [TautulliImageHostService] object of the hosting service to delete from
     /// - `deleteAll`: True to delete all images from the service
     Future<void> deleteHostedImages({
-        int ratingKey,
-        TautulliImageHostService service,
-        bool deleteAll,
+        int? ratingKey,
+        TautulliImageHostService? service,
+        bool? deleteAll,
     }) async => _commandDeleteHostedImages(_client, ratingKey: ratingKey, service: service, deleteAll: deleteAll);
 
     /// Handler for [delete_image_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_image_cache).
@@ -57,9 +57,9 @@ class TautulliCommandHandler_System {
     /// - `service`: A [TautulliAPILookupService] object of the API lookup service to delete from
     /// - `deleteAll`: True to delete all info from the service
     Future<void> deleteLookupInfo({
-        int ratingKey,
-        TautulliAPILookupService service,
-        bool deleteAll,
+        int? ratingKey,
+        TautulliAPILookupService? service,
+        bool? deleteAll,
     }) async => _commandDeleteLookupInfo(_client, ratingKey: ratingKey, service: service, deleteAll: deleteAll);
 
     /// Handler for [delete_media_info_cache](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_media_info_cache).
@@ -69,7 +69,7 @@ class TautulliCommandHandler_System {
     /// Required Parameters:
     /// - `sectionId`: The ID of the Plex library section
     Future<void> deleteMediaInfoCache({
-        @required int sectionId,
+        required int sectionId,
     }) async => _commandDeleteMediaInfoCache(_client, sectionId: sectionId);
 
     /// Handler for [delete_newsletter_log](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_newsletter_log).
@@ -89,9 +89,9 @@ class TautulliCommandHandler_System {
     /// Required Parameters:
     /// - `username`: Your Plex username
     /// - `password`: Your Plex password
-    Future<String> getPMSToken({
-        @required String username,
-        @required String password,
+    Future<String?> getPMSToken({
+        required String username,
+        required String password,
     }) async => _commandGetPMSToken(_client, username: username, password: password);
 
     /// Handler for [get_pms_update](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_pms_update).
@@ -105,8 +105,8 @@ class TautulliCommandHandler_System {
     /// 
     /// Optional Parameters:
     /// - `key`: The name/key of a config section to return
-    Future<Map<String, dynamic>> getSettings({
-        String key,
+    Future<Map<String, dynamic>?> getSettings({
+        String? key,
     }) async => _commandGetSettings(_client, key: key);
 
     /// Handler for [restart](https://github.com/Tautulli/Tautulli/blob/master/API.md#restart).
@@ -117,7 +117,7 @@ class TautulliCommandHandler_System {
     /// Handler for [status](https://github.com/Tautulli/Tautulli/blob/master/API.md#status).
     /// 
     /// Get the current status of Tautulli.
-    Future<String> status() async => _commandStatus(_client);
+    Future<String?> status() async => _commandStatus(_client);
 
     /// Handler for [update](https://github.com/Tautulli/Tautulli/blob/master/API.md#update).
     /// 

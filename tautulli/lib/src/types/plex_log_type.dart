@@ -10,12 +10,11 @@ enum TautulliPlexLogType {
 /// Extension on [TautulliPlexLogType] to implement extended functionality.
 extension TautulliPlexLogTypeExtension on TautulliPlexLogType {
     /// The actual value/key for the Plex log type in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliPlexLogType.SERVER: return 'server';
             case TautulliPlexLogType.SCANNER: return 'scanner';
             case TautulliPlexLogType.NULL: return ''; 
         }
-        return null;
     }
 }

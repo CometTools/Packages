@@ -12,19 +12,19 @@ part 'libraries_table.g.dart';
 class TautulliLibrariesTable {
     /// List of [TautulliTableLibrary], each storing a single Tautulli library data.
     @JsonKey(name: 'data', fromJson: _librariesFromJson, toJson: _librariesToJson)
-    final List<TautulliTableLibrary> libraries;
+    final List<TautulliTableLibrary>? libraries;
 
     /// _Unknown_
     @JsonKey(name: 'draw', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int draw;
+    final int? draw;
 
     /// Total amount of records.
     @JsonKey(name: 'recordsTotal', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsTotal;
+    final int? recordsTotal;
 
     /// The amount of records (filtered).
     @JsonKey(name: 'recordsFiltered', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsFiltered;
+    final int? recordsFiltered;
 
     TautulliLibrariesTable({
         this.libraries,
@@ -43,5 +43,5 @@ class TautulliLibrariesTable {
     Map<String, dynamic> toJson() => _$TautulliLibrariesTableToJson(this);
 
     static List<TautulliTableLibrary> _librariesFromJson(List<dynamic> libraries) => libraries.map((library) => TautulliTableLibrary.fromJson((library as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _librariesToJson(List<TautulliTableLibrary> libraries) => libraries.map((library) => library.toJson()).toList();
+    static List<Map<String, dynamic>>? _librariesToJson(List<TautulliTableLibrary>? libraries) => libraries?.map((library) => library.toJson()).toList();
 }

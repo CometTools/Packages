@@ -15,9 +15,9 @@ enum TautulliMediaType {
 }
 
 /// Extension on [TautulliMediaType] to implement extended functionality.
-extension TautulliMediaTypeExtension on TautulliMediaType {
+extension TautulliMediaTypeExtension on TautulliMediaType? {
     /// Given a String, will return the correct `TautulliMediaType` object.
-    TautulliMediaType from(String type) {
+    TautulliMediaType? from(String? type) {
         switch(type) {
             case 'movie': return TautulliMediaType.MOVIE;
             case 'show': return TautulliMediaType.SHOW;
@@ -34,7 +34,7 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
     }
 
     /// The actual value/key for media types used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliMediaType.MOVIE: return 'movie';
             case TautulliMediaType.SHOW: return 'show';
@@ -46,7 +46,7 @@ extension TautulliMediaTypeExtension on TautulliMediaType {
             case TautulliMediaType.LIVE: return 'live';
             case TautulliMediaType.COLLECTION: return 'collection';
             case TautulliMediaType.NULL: return '';
+            default: return null;
         }
-        return null;
     }
 }

@@ -13,11 +13,11 @@ part 'graph_data.g.dart';
 class TautulliGraphData {
     /// The category header for the series.
     @JsonKey(name: 'categories', fromJson: TautulliUtilities.ensureStringListFromJson)
-    final List<String> categories;
+    final List<String?>? categories;
 
     /// List of [TautulliSeriesData], each storing a series for the graph data.
     @JsonKey(name: 'series', toJson: _seriesToJson, fromJson: _seriesFromJson)
-    final List<TautulliSeriesData> series;
+    final List<TautulliSeriesData>? series;
 
     TautulliGraphData({
         this.categories,
@@ -34,5 +34,5 @@ class TautulliGraphData {
     Map<String, dynamic> toJson() => _$TautulliGraphDataToJson(this);
 
     static List<TautulliSeriesData> _seriesFromJson(List<dynamic> series) => series.map((entry) => TautulliSeriesData.fromJson((entry as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _seriesToJson(List<TautulliSeriesData> series) => series.map((entry) => entry.toJson()).toList();
+    static List<Map<String, dynamic>>? _seriesToJson(List<TautulliSeriesData>? series) => series?.map((entry) => entry.toJson()).toList();
 }

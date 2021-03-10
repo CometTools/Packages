@@ -9,9 +9,9 @@ part of 'search_result.dart';
 TautulliSearchResult _$TautulliSearchResultFromJson(Map<String, dynamic> json) {
   return TautulliSearchResult(
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     subMediaType:
-        TautulliUtilities.mediaTypeFromJson(json['sub_media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['sub_media_type'] as String?),
     sectionId: TautulliUtilities.ensureIntegerFromJson(json['section_id']),
     libraryName: TautulliUtilities.ensureStringFromJson(json['library_name']),
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),

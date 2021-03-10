@@ -12,11 +12,11 @@ part 'whois_info.g.dart';
 class TautulliWHOISInfo {
     /// Host of the IP address.
     @JsonKey(name: 'host', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String host;
+    final String? host;
     
     /// List of [TautulliWHOISSubnet] containing information about each individual subnet.
     @JsonKey(name: 'nets', toJson: _subnetsToMap, fromJson: _subnetsToObjectArray)
-    final List<TautulliWHOISSubnet> subnets;
+    final List<TautulliWHOISSubnet>? subnets;
 
     TautulliWHOISInfo({
         this.host,
@@ -33,5 +33,5 @@ class TautulliWHOISInfo {
     Map<String, dynamic> toJson() => _$TautulliWHOISInfoToJson(this);
 
     static List<TautulliWHOISSubnet> _subnetsToObjectArray(List<dynamic> subnets) => subnets.map((subnet) => TautulliWHOISSubnet.fromJson((subnet as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _subnetsToMap(List<TautulliWHOISSubnet> subnets) => subnets.map((subnet) => subnet.toJson()).toList();
+    static List<Map<String, dynamic>>? _subnetsToMap(List<TautulliWHOISSubnet>? subnets) => subnets?.map((subnet) => subnet.toJson()).toList();
 }

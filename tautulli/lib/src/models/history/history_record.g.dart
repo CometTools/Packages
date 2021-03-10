@@ -27,7 +27,7 @@ TautulliHistoryRecord _$TautulliHistoryRecordFromJson(
     ipAddress: TautulliUtilities.ensureStringFromJson(json['ip_address']),
     live: TautulliUtilities.ensureBooleanFromJson(json['live']),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),
     parentRatingKey:
         TautulliUtilities.ensureIntegerFromJson(json['parent_rating_key']),
@@ -49,15 +49,15 @@ TautulliHistoryRecord _$TautulliHistoryRecordFromJson(
         TautulliUtilities.ensureStringFromJson(json['originally_available_at']),
     guid: TautulliUtilities.ensureStringFromJson(json['guid']),
     transcodeDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['transcode_decision'] as String),
+        json['transcode_decision'] as String?),
     percentComplete:
         TautulliUtilities.ensureIntegerFromJson(json['percent_complete']),
     watchedStatus:
-        TautulliUtilities.watchedStatusFromJson(json['watched_status'] as num),
+        TautulliUtilities.watchedStatusFromJson(json['watched_status'] as num?),
     groupCount: TautulliUtilities.ensureIntegerFromJson(json['group_count']),
     groupIds: TautulliUtilities.stringToListStringFromJson(
-        json['group_ids'] as String),
-    state: TautulliUtilities.sessionStateFromJson(json['state'] as String),
+        json['group_ids'] as String?),
+    state: TautulliUtilities.sessionStateFromJson(json['state'] as String?),
     sessionKey: TautulliUtilities.ensureIntegerFromJson(json['session_key']),
   );
 }

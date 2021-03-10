@@ -10,7 +10,7 @@ TautulliRecentlyAdded _$TautulliRecentlyAddedFromJson(
     Map<String, dynamic> json) {
   return TautulliRecentlyAdded(
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     sectionId: TautulliUtilities.ensureIntegerFromJson(json['section_id']),
     libraryName: TautulliUtilities.ensureStringFromJson(json['library_name']),
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),

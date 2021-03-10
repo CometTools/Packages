@@ -1,11 +1,11 @@
 part of tautulli_commands;
 
 Future<TautulliNewsletterLogs> _commandGetNewsletterLog(Dio client, {
-    TautulliNewsletterLogOrderColumn orderColumn,
-    TautulliOrderDirection orderDirection,
-    int start,
-    int length,
-    String search,
+    TautulliNewsletterLogOrderColumn? orderColumn,
+    TautulliOrderDirection? orderDirection,
+    int? start,
+    int? length,
+    String? search,
 }) async {
     Response response = await client.get('/',
         queryParameters: {
@@ -17,7 +17,7 @@ Future<TautulliNewsletterLogs> _commandGetNewsletterLog(Dio client, {
             if(search != null) 'search': search,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliNewsletterLogs.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

@@ -12,7 +12,7 @@ enum TautulliLogsOrderColumn {
 /// Extension on [TautulliLogsOrderColumn] to implement extended functionality.
 extension TautulliLogsOrderColumnExtension on TautulliLogsOrderColumn {
     /// The actual value/key for log order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliLogsOrderColumn.TIME: return 'time';
             case TautulliLogsOrderColumn.THREAD: return 'thread';
@@ -20,6 +20,5 @@ extension TautulliLogsOrderColumnExtension on TautulliLogsOrderColumn {
             case TautulliLogsOrderColumn.LEVEL: return 'loglevel';
             case TautulliLogsOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

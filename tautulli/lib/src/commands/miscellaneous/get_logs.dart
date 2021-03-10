@@ -1,12 +1,12 @@
 part of tautulli_commands;
 
 Future<List<TautulliLog>> _commandGetLogs(Dio client, {
-    String search,
-    TautulliLogsOrderColumn orderColumn,
-    TautulliOrderDirection orderDirection,
-    String regex,
-    int start,
-    int end,
+    String? search,
+    TautulliLogsOrderColumn? orderColumn,
+    TautulliOrderDirection? orderDirection,
+    String? regex,
+    int? start,
+    int? end,
 }) async {
     Response response = await client.get('/',
         queryParameters: {
@@ -19,7 +19,7 @@ Future<List<TautulliLog>> _commandGetLogs(Dio client, {
             if(end != null) 'end': end,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return (response.data['response']['data'] as List).map((log) => TautulliLog.fromJson(log)).toList();
         case 'error':
         default: throw Exception(response.data['response']['message']);

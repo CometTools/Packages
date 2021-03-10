@@ -12,35 +12,35 @@ part 'activity.g.dart';
 class TautulliActivity {
     /// List of [TautulliSession], each storing a single active session.
     @JsonKey(name: 'sessions', toJson: _sessionsToJson, fromJson: _sessionsFromJson)
-    final List<TautulliSession> sessions;
+    final List<TautulliSession>? sessions;
     
     /// Total number of active streams.
     @JsonKey(name: 'stream_count', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int streamCount;
+    final int? streamCount;
 
     /// Total number of _direct play_ active streams.
     @JsonKey(name: 'stream_count_direct_play', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int streamCountDirectPlay;
+    final int? streamCountDirectPlay;
 
     /// Total number of _direct stream_ active streams.
     @JsonKey(name: 'stream_count_direct_stream', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int streamCountDirectStream;
+    final int? streamCountDirectStream;
 
     /// Total number of _transcode_ active streams.
     @JsonKey(name: 'stream_count_transcode', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int streamCountTranscode;
+    final int? streamCountTranscode;
 
     /// Total bandwidth usage by all streams.
     @JsonKey(name: 'total_bandwidth', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int totalBandwidth;
+    final int? totalBandwidth;
 
     /// Total bandwidth usage on your local area network (internal, LAN).
     @JsonKey(name: 'lan_bandwidth', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int lanBandwidth;
+    final int? lanBandwidth;
 
     /// Total bandwidth usage on your wide area network (external, WAN).
     @JsonKey(name: 'wan_bandwidth', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int wanBandwidth;
+    final int? wanBandwidth;
 
     TautulliActivity({
         this.streamCount,
@@ -63,5 +63,5 @@ class TautulliActivity {
     Map<String, dynamic> toJson() => _$TautulliActivityToJson(this);
 
     static List<TautulliSession> _sessionsFromJson(List<dynamic> sessions) => sessions.map((session) => TautulliSession.fromJson((session as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _sessionsToJson(List<TautulliSession> sessions) => sessions.map((session) => session.toJson()).toList();
+    static List<Map<String, dynamic>>? _sessionsToJson(List<TautulliSession>? sessions) => sessions?.map((session) => session.toJson()).toList();
 }

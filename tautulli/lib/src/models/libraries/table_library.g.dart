@@ -13,7 +13,7 @@ TautulliTableLibrary _$TautulliTableLibraryFromJson(Map<String, dynamic> json) {
     sectionId: TautulliUtilities.ensureIntegerFromJson(json['section_id']),
     sectionName: TautulliUtilities.ensureStringFromJson(json['section_name']),
     sectionType:
-        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String),
+        TautulliUtilities.sectionTypeFromJson(json['section_type'] as String?),
     count: TautulliUtilities.ensureIntegerFromJson(json['count']),
     parentCount: TautulliUtilities.ensureIntegerFromJson(json['parent_count']),
     childCount: TautulliUtilities.ensureIntegerFromJson(json['child_count']),
@@ -28,7 +28,7 @@ TautulliTableLibrary _$TautulliTableLibraryFromJson(Map<String, dynamic> json) {
     lastPlayed: TautulliUtilities.ensureStringFromJson(json['last_played']),
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     thumb: TautulliUtilities.ensureStringFromJson(json['thumb']),
     parentTitle: TautulliUtilities.ensureStringFromJson(json['parent_title']),
     year: TautulliUtilities.ensureIntegerFromJson(json['year']),

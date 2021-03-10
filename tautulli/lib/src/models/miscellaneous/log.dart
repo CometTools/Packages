@@ -9,19 +9,19 @@ part 'log.g.dart';
 class TautulliLog {
     /// The log level.
     @JsonKey(name: 'loglevel', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String level;
+    final String? level;
 
     /// The date and time of the log.
     @JsonKey(name: 'time', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String timestamp;
+    final String? timestamp;
 
     /// The log message.
     @JsonKey(name: 'msg', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String message;
+    final String? message;
 
     /// The thread the log was recorded on.
     @JsonKey(name: 'thread', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String thread;
+    final String? thread;
 
     TautulliLog({
         this.timestamp,

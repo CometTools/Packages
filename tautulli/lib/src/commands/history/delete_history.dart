@@ -1,9 +1,8 @@
 part of tautulli_commands;
 
 Future<void> _commandDeleteHistory(Dio client, {
-    @required List<int> rowIds,
+    required List<int> rowIds,
 }) async {
-    assert(rowIds != null, 'rowIds cannot be null.');
     assert(rowIds.isNotEmpty, 'rowIds cannot be empty.');
     Response response = await client.get('/',
         queryParameters: {
@@ -11,7 +10,7 @@ Future<void> _commandDeleteHistory(Dio client, {
             'row_ids': rowIds.join(","),
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

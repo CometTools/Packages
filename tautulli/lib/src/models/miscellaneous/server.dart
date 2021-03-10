@@ -9,39 +9,39 @@ part 'server.g.dart';
 class TautulliServer {
     /// Is SSL required for this server?
     @JsonKey(name: 'httpsRequired', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool httpsRequired;
+    final bool? httpsRequired;
 
     /// Is this a local server instance?
     @JsonKey(name: 'local', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool local;
+    final bool? local;
 
     /// Client identifier key.
     @JsonKey(name: 'clientIdentifier', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String clientIdentifier;
+    final String? clientIdentifier;
 
     /// Plex Media Server label.
     @JsonKey(name: 'label', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String label;
+    final String? label;
 
     /// IP address of the Plex Media Server.
     @JsonKey(name: 'ip', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String ipAddress;
+    final String? ipAddress;
 
     /// Public port that the Plex Media Server is available on.
     @JsonKey(name: 'port', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int port;
+    final int? port;
 
     /// Direct URI to the Plex Media Server.
     @JsonKey(name: 'uri', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String uri;
+    final String? uri;
 
     /// IP address + port, the value entered in Tautulli.
     @JsonKey(name: 'value', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String value;
+    final String? value;
 
     /// Is this a cloud instance of Plex Media Server?
     @JsonKey(name: 'is_cloud', fromJson: TautulliUtilities.ensureBooleanFromJson)
-    final bool isCloud;
+    final bool? isCloud;
 
     TautulliServer({
         this.httpsRequired,

@@ -1,12 +1,12 @@
 part of tautulli_commands;
 
 Future<TautulliUserLogins> _commandGetUserLogins(Dio client, {
-    int userId,
-    TautulliUserLoginsOrderColumn orderColumn,
-    TautulliOrderDirection orderDirection,
-    int start,
-    int length,
-    String search,
+    int? userId,
+    TautulliUserLoginsOrderColumn? orderColumn,
+    TautulliOrderDirection? orderDirection,
+    int? start,
+    int? length,
+    String? search,
 
 }) async {
     Response response = await client.get('/',
@@ -20,7 +20,7 @@ Future<TautulliUserLogins> _commandGetUserLogins(Dio client, {
             if(search != null) 'search': search,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliUserLogins.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

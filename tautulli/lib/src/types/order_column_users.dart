@@ -17,7 +17,7 @@ enum TautulliUsersOrderColumn {
 /// Extension on [TautulliUsersOrderColumn] to implement extended functionality.
 extension TautulliUsersOrderColumnExtension on TautulliUsersOrderColumn {
     /// The actual value/key for the users order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliUsersOrderColumn.USER_THUMB: return 'user_thumb';
             case TautulliUsersOrderColumn.FRIENDLY_NAME: return 'friendly_name';
@@ -30,6 +30,5 @@ extension TautulliUsersOrderColumnExtension on TautulliUsersOrderColumn {
             case TautulliUsersOrderColumn.DURATION: return 'duration';
             case TautulliUsersOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

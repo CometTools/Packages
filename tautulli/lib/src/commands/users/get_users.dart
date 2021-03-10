@@ -6,7 +6,7 @@ Future<List<TautulliUser>> _commandGetUsers(Dio client) async {
             'cmd': 'get_users',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return (response.data['response']['data'] as List).map((user) => TautulliUser.fromJson(user)).toList();
         case 'error':
         default: throw Exception(response.data['response']['message']);

@@ -12,19 +12,19 @@ part 'user_ips.g.dart';
 class TautulliUserIPs {
     /// Number of filtered records returned.
     @JsonKey(name: 'recordsFiltered', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsFiltered;
+    final int? recordsFiltered;
 
     /// Total amount of records.
     @JsonKey(name: 'recordsTotal', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int recordsTotal;
+    final int? recordsTotal;
 
     /// _Unknown_
     @JsonKey(name: 'draw', fromJson: TautulliUtilities.ensureIntegerFromJson)
-    final int draw;
+    final int? draw;
 
     /// The individual notification logs.
     @JsonKey(name: 'data', toJson: _ipsToJson, fromJson: _ipsFromJson)
-    final List<TautulliUserIPRecord> ips;
+    final List<TautulliUserIPRecord>? ips;
 
     TautulliUserIPs({
         this.recordsFiltered,
@@ -43,5 +43,5 @@ class TautulliUserIPs {
     Map<String, dynamic> toJson() => _$TautulliUserIPsToJson(this);
 
     static List<TautulliUserIPRecord> _ipsFromJson(List<dynamic> ips) => ips.map((ip) => TautulliUserIPRecord.fromJson((ip as Map<String, dynamic>))).toList();
-    static List<Map<String, dynamic>> _ipsToJson(List<TautulliUserIPRecord> ips) => ips.map((ip) => ip.toJson()).toList();
+    static List<Map<String, dynamic>>? _ipsToJson(List<TautulliUserIPRecord>? ips) => ips?.map((ip) => ip.toJson()).toList();
 }

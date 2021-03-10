@@ -11,7 +11,7 @@ enum TautulliSessionState {
 /// Extension on [TautulliSessionState] to implement extended functionality.
 extension TautulliSessionStateExtension on TautulliSessionState {
     /// Given a String, will return the correct `TautulliSessionState` object.
-    TautulliSessionState from(String state) {
+    TautulliSessionState? from(String? state) {
         switch(state) {
             case 'playing': return TautulliSessionState.PLAYING;
             case 'buffering': return TautulliSessionState.BUFFERING;
@@ -22,13 +22,12 @@ extension TautulliSessionStateExtension on TautulliSessionState {
     }
 
     /// The actual value/key for session states used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliSessionState.PLAYING: return 'playing';
             case TautulliSessionState.PAUSED: return 'paused';
             case TautulliSessionState.BUFFERING: return 'buffering';
             case TautulliSessionState.NULL: return '';
         }
-        return null;
     }
 }

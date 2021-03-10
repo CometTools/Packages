@@ -19,8 +19,8 @@ class TautulliCommandHandler_Users {
     /// Optional Parameters:
     /// - `rowIds`: Optional list of row IDs to delete
     Future<void> deleteAllUserHistory({
-        @required int userId,
-        List<int> rowIds,
+        required int userId,
+        List<int>? rowIds,
     }) async => _commandDeleteAllUserHistory(_client, userId: userId, rowIds: rowIds);
 
     /// Handler for [delete_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#delete_user).
@@ -33,8 +33,8 @@ class TautulliCommandHandler_Users {
     /// Optional Parameters:
     /// - `rowIds`: Optional list of row IDs to delete
     Future<void> deleteUser({
-        @required int userId,
-        List<int> rowIds,
+        required int userId,
+        List<int>? rowIds,
     }) async => _commandDeleteUser(_client, userId: userId, rowIds: rowIds);
 
     /// Handler for [edit_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#edit_user).
@@ -50,11 +50,11 @@ class TautulliCommandHandler_Users {
     /// - `keepHistory`: Set if you should keep the history for the user
     /// - `allowGuest`: Set if you want to allow Tautulli guest access for the user
     Future<void> editUser({
-        @required int userId,
-        String friendlyName,
-        String customThumb,
-        bool keepHistory,
-        bool allowGuest,
+        required int userId,
+        String? friendlyName,
+        String? customThumb,
+        bool? keepHistory,
+        bool? allowGuest,
     }) async => _commandEditUser(_client, userId: userId, friendlyName: friendlyName, customThumb: customThumb, keepHistory: keepHistory, allowGuest: allowGuest);
 
     /// Handler for [get_user](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_user).
@@ -64,7 +64,7 @@ class TautulliCommandHandler_Users {
     /// Required Parameters:
     /// - `userId`: The user's ID
     Future<TautulliUser> getUser({
-        @required int userId,
+        required int userId,
     }) async => _commandGetUser(_client, userId: userId);
 
     /// Handler for [get_user_logins](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_user_logins).
@@ -79,12 +79,12 @@ class TautulliCommandHandler_Users {
     /// - `length`: Number of records to return (default: 25)
     /// - `search`: A string to search for
     Future<TautulliUserLogins> getUserLogins({
-        int userId,
-        TautulliUserLoginsOrderColumn orderColumn,
-        TautulliOrderDirection orderDirection,
-        int start,
-        int length,
-        String search,
+        int? userId,
+        TautulliUserLoginsOrderColumn? orderColumn,
+        TautulliOrderDirection? orderDirection,
+        int? start,
+        int? length,
+        String? search,
     }) async => _commandGetUserLogins(
         _client,
         userId: userId,
@@ -109,12 +109,12 @@ class TautulliCommandHandler_Users {
     /// - `length`: Number of records to return (default: 25)
     /// - `search`: A string to search for
     Future<TautulliUserIPs> getUserIPs({
-        @required int userId,
-        TautulliUserIPsOrderColumn orderColumn,
-        TautulliOrderDirection orderDirection,
-        int start,
-        int length,
-        String search,
+        required int userId,
+        TautulliUserIPsOrderColumn? orderColumn,
+        TautulliOrderDirection? orderDirection,
+        int? start,
+        int? length,
+        String? search,
     }) async => _commandGetUserIPs(
         _client,
         userId: userId,
@@ -140,8 +140,8 @@ class TautulliCommandHandler_Users {
     /// Optional Parameters:
     /// - `grouping`: Group data
     Future<List<TautulliUserPlayerStats>> getUserPlayerStats({
-        @required int userId,
-        bool grouping,
+        required int userId,
+        bool? grouping,
     }) async => _commandGetUserPlayerStats(_client, userId: userId, grouping: grouping);
 
     /// Handler for [get_user_watch_time_stats](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_user_watch_time_stats).
@@ -155,9 +155,9 @@ class TautulliCommandHandler_Users {
     /// - `grouping`: Group data
     /// - `queryDays`: List of days (integers) for which to fetch watch time statistics
     Future<List<TautulliUserWatchTimeStats>> getUserWatchTimeStats({
-        @required int userId,
-        bool grouping,
-        List<int> queryDays,
+        required int userId,
+        bool? grouping,
+        List<int>? queryDays,
     }) async => _commandGetUserWatchTimeStats(_client, userId: userId, grouping: grouping, queryDays: queryDays);
 
     /// Handler for [get_users](https://github.com/Tautulli/Tautulli/blob/master/API.md#get_users).
@@ -177,12 +177,12 @@ class TautulliCommandHandler_Users {
     /// - `length`: Number of records to return (default: 25)
     /// - `search`: A string to search for
     Future<TautulliUsersTable> getUsersTable({
-        bool grouping,
-        TautulliUsersOrderColumn orderColumn,
-        TautulliOrderDirection orderDirection,
-        int start,
-        int length,
-        String search,
+        bool? grouping,
+        TautulliUsersOrderColumn? orderColumn,
+        TautulliOrderDirection? orderDirection,
+        int? start,
+        int? length,
+        String? search,
     }) async => _commandGetUsersTable(
         _client,
         grouping: grouping,
@@ -206,7 +206,7 @@ class TautulliCommandHandler_Users {
     /// - `userId`: Identifier of the Plex user
     /// - `username`: Username of the Plex user
     Future<void> undeleteUser({
-        @required int userId,
-        @required String username,
+        required int userId,
+        required String username,
     }) async => _commandUndeleteUser(_client, userId: userId, username: username);
 }

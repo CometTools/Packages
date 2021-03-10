@@ -3,7 +3,6 @@ library tautulli_commands;
 
 import 'dart:typed_data';
 import 'package:dio/dio.dart';
-import 'package:meta/meta.dart';
 import 'types.dart';
 import 'models.dart';
 

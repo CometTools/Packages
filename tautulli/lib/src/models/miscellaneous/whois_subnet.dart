@@ -9,55 +9,55 @@ part 'whois_subnet.g.dart';
 class TautulliWHOISSubnet {
     /// CIDR ([classless inter-domain routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)) of the subnet.
     @JsonKey(name: 'cidr', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String cidr;
+    final String? cidr;
 
     /// Name of the subnet.
     @JsonKey(name: 'name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String name;
+    final String? name;
 
     /// Handle of the subnet.
     @JsonKey(name: 'handle', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String handle;
+    final String? handle;
 
     /// The IP range of the subnet.
     @JsonKey(name: 'range', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String range;
+    final String? range;
 
     /// A description of the subnet.
     @JsonKey(name: 'description', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String description;
+    final String? description;
 
     /// The originating country of the subnet.
     @JsonKey(name: 'country', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String country;
+    final String? country;
 
     /// The state (or privince, territory, etc.) within the country.
     @JsonKey(name: 'state', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String state;
+    final String? state;
 
     /// The city within the state.
     @JsonKey(name: 'city', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String city;
+    final String? city;
 
     /// The address within the city.
     @JsonKey(name: 'address', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String address;
+    final String? address;
 
     /// The postal/zip code.
     @JsonKey(name: 'postal_code', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String postalCode;
+    final String? postalCode;
 
     /// List of emails attached to the subnet.
     @JsonKey(name: 'emails', fromJson: TautulliUtilities.ensureStringListFromJson)
-    final List<String> emails;
+    final List<String?>? emails;
 
     /// Date that the subnet was created.
     @JsonKey(name: 'created', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String created;
+    final String? created;
 
     /// Date that the subnet was updated.
     @JsonKey(name: 'updated', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String updated;
+    final String? updated;
 
     TautulliWHOISSubnet({
         this.cidr,

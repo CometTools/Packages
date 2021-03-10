@@ -20,14 +20,14 @@ TautulliNewsletterConfig _$TautulliNewsletterConfigFromJson(
     body: TautulliUtilities.ensureStringFromJson(json['body']),
     subject: TautulliUtilities.ensureStringFromJson(json['subject']),
     message: TautulliUtilities.ensureStringFromJson(json['message']),
-    config: json['config'] as Map<String, dynamic>,
-    configOptions: (json['config_options'] as List)
+    config: json['config'] as Map<String, dynamic>?,
+    configOptions: (json['config_options'] as List<dynamic>?)
         ?.map((e) => e as Map<String, dynamic>)
-        ?.toList(),
-    emailConfig: json['email_config'] as Map<String, dynamic>,
-    emailConfigOptions: (json['email_config_options'] as List)
+        .toList(),
+    emailConfig: json['email_config'] as Map<String, dynamic>?,
+    emailConfigOptions: (json['email_config_options'] as List<dynamic>?)
         ?.map((e) => e as Map<String, dynamic>)
-        ?.toList(),
+        .toList(),
   );
 }
 

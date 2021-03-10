@@ -23,7 +23,7 @@ TautulliTableUser _$TautulliTableUserFromJson(Map<String, dynamic> json) {
     player: TautulliUtilities.ensureStringFromJson(json['player']),
     ratingKey: TautulliUtilities.ensureIntegerFromJson(json['rating_key']),
     mediaType:
-        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String),
+        TautulliUtilities.mediaTypeFromJson(json['media_type'] as String?),
     thumb: TautulliUtilities.ensureStringFromJson(json['thumb']),
     parentTitle: TautulliUtilities.ensureStringFromJson(json['parent_title']),
     year: TautulliUtilities.ensureIntegerFromJson(json['year']),
@@ -35,7 +35,7 @@ TautulliTableUser _$TautulliTableUserFromJson(Map<String, dynamic> json) {
         TautulliUtilities.ensureStringFromJson(json['originally_available_at']),
     guid: TautulliUtilities.ensureStringFromJson(json['guid']),
     transcodeDecision: TautulliUtilities.transcodeDecisionFromJson(
-        json['transcode_decision'] as String),
+        json['transcode_decision'] as String?),
     doNotify: TautulliUtilities.ensureBooleanFromJson(json['do_notify']),
     keepHistory: TautulliUtilities.ensureBooleanFromJson(json['keep_history']),
     allowGuest: TautulliUtilities.ensureBooleanFromJson(json['allow_guest']),

@@ -16,7 +16,7 @@ enum TautulliNewsletterLogOrderColumn {
 /// Extension on [TautulliNewsletterLogOrderColumn] to implement extended functionality.
 extension TautulliNewsletterLogOrderColumnExtension on TautulliNewsletterLogOrderColumn {
     /// The actual value/key for newsletter log order column used in Tautulli.
-    String get value {
+    String? get value {
         switch(this) {
             case TautulliNewsletterLogOrderColumn.TIMESTAMP: return 'timestamp';
             case TautulliNewsletterLogOrderColumn.NEWSLETTER_ID: return 'newsletter_id';
@@ -28,6 +28,5 @@ extension TautulliNewsletterLogOrderColumnExtension on TautulliNewsletterLogOrde
             case TautulliNewsletterLogOrderColumn.UUID: return 'uuid';
             case TautulliNewsletterLogOrderColumn.NULL: return '';
         }
-        return null;
     }
 }

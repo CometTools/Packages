@@ -1,12 +1,12 @@
 part of tautulli_commands;
 
 Future<TautulliUsersTable> _commandGetUsersTable(Dio client, {
-    bool grouping,
-    TautulliUsersOrderColumn orderColumn,
-    TautulliOrderDirection orderDirection,
-    int start,
-    int length,
-    String search,
+    bool? grouping,
+    TautulliUsersOrderColumn? orderColumn,
+    TautulliOrderDirection? orderDirection,
+    int? start,
+    int? length,
+    String? search,
 }) async {
     Response response = await client.get('/',
         queryParameters: {
@@ -19,7 +19,7 @@ Future<TautulliUsersTable> _commandGetUsersTable(Dio client, {
             if(search != null) 'search': search,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliUsersTable.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

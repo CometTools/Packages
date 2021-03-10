@@ -1,8 +1,8 @@
 part of tautulli_commands;
 
 Future<List<TautulliSyncedItem>> _commandGetSyncedItems(Dio client, {
-    String machineId,
-    int userId,
+    String? machineId,
+    int? userId,
 }) async {
     Response response = await client.get('/',
         queryParameters: {

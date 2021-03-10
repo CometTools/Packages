@@ -1,11 +1,10 @@
 part of tautulli_commands;
 
 Future<List<TautulliLibraryWatchTimeStats>> _commandGetLibraryWatchTimeStats(Dio client, {
-    @required int sectionId,
-    bool grouping,
-    List<int> queryDays,
+    required int sectionId,
+    bool? grouping,
+    List<int>? queryDays,
 }) async {
-    assert(sectionId != null, 'sectionId cannot be null.');
     Response response = await client.get('/',
         queryParameters: {
             'cmd': 'get_library_watch_time_stats',

@@ -6,7 +6,7 @@ Future<void> _commandDeleteRecentlyAdded(Dio client) async {
             'cmd': 'delete_recently_added',
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return;
         case 'error':
         default: throw Exception(response.data['response']['message']);

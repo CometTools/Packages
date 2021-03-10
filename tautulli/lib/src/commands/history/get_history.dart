@@ -1,22 +1,22 @@
 part of tautulli_commands;
 
 Future<TautulliHistory> _commandGetHistory(Dio client, {
-    bool grouping,
-    String user,
-    int userId,
-    int ratingKey,
-    int parentRatingKey,
-    int grandparentRatingKey,
-    String startDate,
-    int sectionId,
-    TautulliMediaType mediaType,
-    TautulliTranscodeDecision transcodeDecision,
-    String guid,
-    TautulliHistoryOrderColumn orderColumn,
-    TautulliOrderDirection orderDirection,
-    int start,
-    int length,
-    String search,
+    bool? grouping,
+    String? user,
+    int? userId,
+    int? ratingKey,
+    int? parentRatingKey,
+    int? grandparentRatingKey,
+    String? startDate,
+    int? sectionId,
+    TautulliMediaType? mediaType,
+    TautulliTranscodeDecision? transcodeDecision,
+    String? guid,
+    TautulliHistoryOrderColumn? orderColumn,
+    TautulliOrderDirection? orderDirection,
+    int? start,
+    int? length,
+    String? search,
 }) async {
     Response response = await client.get('/',
         queryParameters: {
@@ -38,7 +38,7 @@ Future<TautulliHistory> _commandGetHistory(Dio client, {
             if(search != null) 'search': search,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliHistory.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

@@ -1,10 +1,10 @@
 part of tautulli_commands;
 
 Future<TautulliGraphData> _commandGetPlaysByTopTenUsers(Dio client, {
-    int timeRange,
-    int userId,
-    bool grouping,
-    TautulliGraphYAxis yAxis,
+    int? timeRange,
+    int? userId,
+    bool? grouping,
+    TautulliGraphYAxis? yAxis,
 }) async {
     Response response = await client.get('/',
         queryParameters: {
@@ -15,7 +15,7 @@ Future<TautulliGraphData> _commandGetPlaysByTopTenUsers(Dio client, {
             if(yAxis != null && yAxis != TautulliGraphYAxis.NULL) 'y_axis': yAxis.value,
         },
     );
-    switch((response.data['response']['result'] as String)) {
+    switch((response.data['response']['result'] as String?)) {
         case 'success': return TautulliGraphData.fromJson(response.data['response']['data']);
         case 'error':
         default: throw Exception(response.data['response']['message']);

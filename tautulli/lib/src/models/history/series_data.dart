@@ -9,11 +9,11 @@ part 'series_data.g.dart';
 class TautulliSeriesData {
     /// Name of the series.
     @JsonKey(name: 'name', fromJson: TautulliUtilities.ensureStringFromJson)
-    final String name;
+    final String? name;
 
     /// The data of the series.
     @JsonKey(name: 'data', fromJson: TautulliUtilities.ensureIntegerListFromJson)
-    final List<int> data;
+    final List<int?>? data;
 
     TautulliSeriesData({
         this.name,
