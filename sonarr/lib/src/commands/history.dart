@@ -22,11 +22,11 @@ class SonarrCommandHandler_History {
     /// - `sortDirection`: [SonarrSortDirection] object containing the sorting direction
     /// - `episodeId`: The episode ID to filter results for
     Future<SonarrHistory> getHistory({
-        @required SonarrHistorySortKey sortKey,
-        int page,
-        int pageSize,
-        SonarrSortDirection sortDirection,
-        int episodeId,
+        required SonarrHistorySortKey sortKey,
+        int? page,
+        int? pageSize,
+        SonarrSortDirection? sortDirection,
+        int? episodeId,
     }) async => _commandGetHistory(
         _client,
         sortKey: sortKey,

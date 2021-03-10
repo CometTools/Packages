@@ -8,15 +8,15 @@ part 'episode_file_quality_revision.g.dart';
 class SonarrEpisodeFileQualityRevision {
     /// Version of the file
     @JsonKey(name: 'version')
-    int version;
+    int? version;
 
     /// Real (?)
     @JsonKey(name: 'real')
-    int real;
+    int? real;
 
     /// Is the file source a repack?
     @JsonKey(name: 'isRepack')
-    bool isRepack;
+    bool? isRepack;
 
     SonarrEpisodeFileQualityRevision({
         this.version,

@@ -10,13 +10,13 @@ SonarrSeriesSeasonStatistics _$SonarrSeriesSeasonStatisticsFromJson(
     Map<String, dynamic> json) {
   return SonarrSeriesSeasonStatistics(
     previousAiring:
-        SonarrUtilities.dateTimeFromJson(json['previousAiring'] as String),
-    nextAiring: SonarrUtilities.dateTimeFromJson(json['nextAiring'] as String),
-    episodeFileCount: json['episodeFileCount'] as int,
-    episodeCount: json['episodeCount'] as int,
-    totalEpisodeCount: json['totalEpisodeCount'] as int,
-    sizeOnDisk: json['sizeOnDisk'] as int,
-    percentOfEpisodes: (json['percentOfEpisodes'] as num)?.toDouble(),
+        SonarrUtilities.dateTimeFromJson(json['previousAiring'] as String?),
+    nextAiring: SonarrUtilities.dateTimeFromJson(json['nextAiring'] as String?),
+    episodeFileCount: json['episodeFileCount'] as int?,
+    episodeCount: json['episodeCount'] as int?,
+    totalEpisodeCount: json['totalEpisodeCount'] as int?,
+    sizeOnDisk: json['sizeOnDisk'] as int?,
+    percentOfEpisodes: (json['percentOfEpisodes'] as num?)?.toDouble(),
   );
 }
 

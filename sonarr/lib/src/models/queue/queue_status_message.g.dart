@@ -9,8 +9,9 @@ part of 'queue_status_message.dart';
 SonarrQueueStatusMessage _$SonarrQueueStatusMessageFromJson(
     Map<String, dynamic> json) {
   return SonarrQueueStatusMessage(
-    title: json['title'] as String,
-    messages: (json['messages'] as List)?.map((e) => e as String)?.toList(),
+    title: json['title'] as String?,
+    messages:
+        (json['messages'] as List<dynamic>?)?.map((e) => e as String).toList(),
   );
 }
 

@@ -8,13 +8,13 @@ part of 'episode_file.dart';
 
 SonarrEpisodeFile _$SonarrEpisodeFileFromJson(Map<String, dynamic> json) {
   return SonarrEpisodeFile(
-    seriesId: json['seriesId'] as int,
-    seasonNumber: json['seasonNumber'] as int,
-    relativePath: json['relativePath'] as String,
-    path: json['path'] as String,
-    size: json['size'] as int,
-    dateAdded: SonarrUtilities.dateTimeFromJson(json['dateAdded'] as String),
-    sceneName: json['sceneName'] as String,
+    seriesId: json['seriesId'] as int?,
+    seasonNumber: json['seasonNumber'] as int?,
+    relativePath: json['relativePath'] as String?,
+    path: json['path'] as String?,
+    size: json['size'] as int?,
+    dateAdded: SonarrUtilities.dateTimeFromJson(json['dateAdded'] as String?),
+    sceneName: json['sceneName'] as String?,
     quality: json['quality'] == null
         ? null
         : SonarrEpisodeFileQuality.fromJson(
@@ -27,9 +27,9 @@ SonarrEpisodeFile _$SonarrEpisodeFileFromJson(Map<String, dynamic> json) {
         ? null
         : SonarrEpisodeFileMediaInfo.fromJson(
             json['mediaInfo'] as Map<String, dynamic>),
-    originalFilePath: json['originalFilePath'] as String,
-    qualityCutoffNotMet: json['qualityCutoffNotMet'] as bool,
-    id: json['id'] as int,
+    originalFilePath: json['originalFilePath'] as String?,
+    qualityCutoffNotMet: json['qualityCutoffNotMet'] as bool?,
+    id: json['id'] as int?,
   );
 }
 

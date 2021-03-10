@@ -12,7 +12,7 @@ enum SonarrHistoryEventType {
 /// Extension on [SonarrHistoryEventType] to implement extended functionality.
 extension SonarrHistoryEventTypeExtension on SonarrHistoryEventType {
     /// Given a String, will return the correct `SonarrHistoryEventType` object.
-    SonarrHistoryEventType from(String type) {
+    SonarrHistoryEventType? from(String? type) {
         switch(type) {
             case 'episodeFileRenamed': return SonarrHistoryEventType.EPISODE_FILE_RENAMED;
             case 'episodeFileDeleted': return SonarrHistoryEventType.EPISODE_FILE_DELETED;
@@ -24,7 +24,7 @@ extension SonarrHistoryEventTypeExtension on SonarrHistoryEventType {
     }
 
     /// The actual value/key for media types used in Sonarr.
-    String get value {
+    String? get value {
         switch(this) {
             case SonarrHistoryEventType.EPISODE_FILE_RENAMED: return 'episodeFileRenamed';
             case SonarrHistoryEventType.EPISODE_FILE_DELETED: return 'episodeFileDeleted';

@@ -8,15 +8,15 @@ part 'image.g.dart';
 class SonarrSeriesImage {
     /// Type of image (banner, poster, etc.)
     @JsonKey(name: 'coverType')
-    String coverType;
+    String? coverType;
 
     /// Direct URL to the image
     @JsonKey(name: 'url')
-    String url;
+    String? url;
     
     /// Remote URL to the image
     @JsonKey(name: 'remoteUrl')
-    String remoteUrl;
+    String? remoteUrl;
 
     SonarrSeriesImage({
         this.coverType,

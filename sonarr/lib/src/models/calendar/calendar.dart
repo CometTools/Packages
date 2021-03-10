@@ -11,75 +11,75 @@ part 'calendar.g.dart';
 class SonarrCalendar {
     /// Series identifier
     @JsonKey(name: 'seriesId')
-    int seriesId;
+    int? seriesId;
 
     /// Episode file identifier
     @JsonKey(name: 'episodeFileId')
-    int episodeFileId;
+    int? episodeFileId;
 
     /// Season Number
     @JsonKey(name: 'seasonNumber')
-    int seasonNumber;
+    int? seasonNumber;
 
     /// Episode Number
     @JsonKey(name: 'episodeNumber')
-    int episodeNumber;
+    int? episodeNumber;
 
     /// Title
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     /// Air date
     @JsonKey(name: 'airDate')
-    String airDate;
+    String? airDate;
 
     /// [DateTime] object containing the air date
     @JsonKey(name: 'airDateUtc', fromJson: SonarrUtilities.dateTimeFromJson, toJson: SonarrUtilities.dateTimeToJson)
-    DateTime airDateUtc;
+    DateTime? airDateUtc;
 
     /// [SonarrEpisodeFile] object containing the episode file details (if available)
     @JsonKey(name: 'episodeFile')
-    SonarrEpisodeFile episodeFile;
+    SonarrEpisodeFile? episodeFile;
 
     /// Overview of the episode
     @JsonKey(name: 'overview')
-    String overview;
+    String? overview;
 
     /// Does the episode have a file?
     @JsonKey(name: 'hasFile')
-    bool hasFile;
+    bool? hasFile;
 
     /// Is the episode monitored?
     @JsonKey(name: 'monitored')
-    bool monitored;
+    bool? monitored;
 
     /// Absolute episode number
     @JsonKey(name: 'absoluteEpisodeNumber')
-    int absoluteEpisodeNumber;
+    int? absoluteEpisodeNumber;
 
     /// Scene absolute episode number
     @JsonKey(name: 'sceneAbsoluteEpisodeNumber')
-    int sceneAbsoluteEpisodeNumber;
+    int? sceneAbsoluteEpisodeNumber;
 
     /// Scene episode number
     @JsonKey(name: 'sceneEpisodeNumber')
-    int sceneEpisodeNumber;
+    int? sceneEpisodeNumber;
 
     /// Scene season number
     @JsonKey(name: 'sceneSeasonNumber')
-    int sceneSeasonNumber;
+    int? sceneSeasonNumber;
 
     /// Is the scene numbering unverified?
     @JsonKey(name: 'unverifiedSceneNumbering')
-    bool unverifiedSceneNumbering;
+    bool? unverifiedSceneNumbering;
 
     /// [SonarrSeries] object containing details about the series
     @JsonKey(name: 'series')
-    SonarrSeries series;
+    SonarrSeries? series;
 
     /// Episode identifier
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrCalendar({
         this.seriesId,

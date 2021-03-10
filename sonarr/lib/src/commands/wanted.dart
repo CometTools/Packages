@@ -19,9 +19,9 @@ class SonarrCommandHandler_Wanted {
     /// - `page`: Page of results to fetch
     /// - `pageSize`: Size of the page to fetch
     Future<SonarrMissing> getMissing({
-        SonarrSortDirection sortDir,
-        SonarrWantedMissingSortKey sortKey,
-        int page,
-        int pageSize,
+        SonarrSortDirection? sortDir,
+        SonarrWantedMissingSortKey? sortKey,
+        int? page,
+        int? pageSize,
     }) async => _commandGetMissing(_client, sortDir: sortDir, sortKey: sortKey, page: page, pageSize: pageSize);
 }

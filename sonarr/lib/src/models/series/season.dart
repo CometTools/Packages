@@ -9,15 +9,15 @@ part 'season.g.dart';
 class SonarrSeriesSeason {
     /// Season number
     @JsonKey(name: 'seasonNumber')
-    int seasonNumber;
+    int? seasonNumber;
 
     /// Is the season being monitored?
     @JsonKey(name: 'monitored')
-    bool monitored;
+    bool? monitored;
 
     /// Model storing statistical information about the season
     @JsonKey(name: 'statistics')
-    SonarrSeriesSeasonStatistics statistics;
+    SonarrSeriesSeasonStatistics? statistics;
 
     SonarrSeriesSeason({
         this.seasonNumber,

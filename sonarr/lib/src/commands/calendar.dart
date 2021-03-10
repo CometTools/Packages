@@ -18,7 +18,7 @@ class SonarrCommandHandler_Calendar {
     /// - `start`: [DateTime] object for the start date
     /// - `end`: [DateTime] object for the end date
     Future<List<SonarrCalendar>> getCalendar({
-        DateTime start,
-        DateTime end,
+        DateTime? start,
+        DateTime? end,
     }) async => _commandGetCalendar(_client, start: start, end: end);
 }

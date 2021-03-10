@@ -32,17 +32,17 @@ class SonarrCommandHandler_Series {
     /// - `ignoreEpisodesWithoutFiles`: If true, automatically ignore episodes that do not have episodes
     /// - `searchForMissingEpisodes`: If true, start searching for all missing episodes after adding
     Future<SonarrSeries> addSeries({
-        @required int tvdbId,
-        @required int profileId,
-        @required int languageProfileId,
-        @required String title,
-        @required String titleSlug,
-        @required List<SonarrSeriesImage> images,
-        @required List<SonarrSeriesSeason> seasons,
-        List<int> tags,
-        String path,
-        String rootFolderPath,
-        int tvRageId,
+        required int tvdbId,
+        required int profileId,
+        required String title,
+        required String titleSlug,
+        required List<SonarrSeriesImage> images,
+        required List<SonarrSeriesSeason> seasons,
+        int? languageProfileId,
+        List<int>? tags,
+        String? path,
+        String? rootFolderPath,
+        int? tvRageId,
         bool seasonFolder = true,
         bool monitored = true,
         bool ignoreEpisodesWithFiles = false,
@@ -78,7 +78,7 @@ class SonarrCommandHandler_Series {
     /// Optional Parameters:
     /// - `deleteFiles`: If true, will delete all files as well
     Future<SonarrSeries> deleteSeries({
-        @required int seriesId,
+        required int seriesId,
         bool deleteFiles = false,
     }) async => _commandDeleteSeries(_client, seriesId: seriesId, deleteFiles: deleteFiles);
 
@@ -89,7 +89,7 @@ class SonarrCommandHandler_Series {
     /// Required Parameters:
     /// - `seriesId`: Series ID for the series to return
     Future<SonarrSeries> getSeries({
-        @required int seriesId,
+        required int seriesId,
     }) async => _commandGetSeries(_client, seriesId: seriesId);
 
     /// Handler for [series](https://github.com/Sonarr/Sonarr/wiki/Series#get).
@@ -104,6 +104,6 @@ class SonarrCommandHandler_Series {
     /// Required Parameters:
     /// - `series`: [SonarrSeries] object containing the updated series information.
     Future<SonarrSeries> updateSeries({
-        @required SonarrSeries series,
+        required SonarrSeries series,
     }) async => _commandUpdateSeries(_client, series: series);
 }

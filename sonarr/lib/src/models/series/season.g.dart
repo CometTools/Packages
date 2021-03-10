@@ -8,8 +8,8 @@ part of 'season.dart';
 
 SonarrSeriesSeason _$SonarrSeriesSeasonFromJson(Map<String, dynamic> json) {
   return SonarrSeriesSeason(
-    seasonNumber: json['seasonNumber'] as int,
-    monitored: json['monitored'] as bool,
+    seasonNumber: json['seasonNumber'] as int?,
+    monitored: json['monitored'] as bool?,
     statistics: json['statistics'] == null
         ? null
         : SonarrSeriesSeasonStatistics.fromJson(

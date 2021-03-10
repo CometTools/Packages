@@ -10,63 +10,63 @@ part 'episode.g.dart';
 class SonarrEpisode {
     /// Series identifier
     @JsonKey(name: 'seriesId')
-    int seriesId;
+    int? seriesId;
 
     /// Episode file identifier (if there is a file available)
     @JsonKey(name: 'episodeFileId')
-    int episodeFileId;
+    int? episodeFileId;
 
     /// Episode season number
     @JsonKey(name: 'seasonNumber')
-    int seasonNumber;
+    int? seasonNumber;
 
     /// Episode number
     @JsonKey(name: 'episodeNumber')
-    int episodeNumber;
+    int? episodeNumber;
 
     /// Episode title
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     /// Episode airdate (as a string)
     @JsonKey(name: 'airDate')
-    String airDate;
+    String? airDate;
 
     /// [DateTime] object containing the airdate in UTC timezone
     @JsonKey(name: 'airDateUtc', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime airDateUtc;
+    DateTime? airDateUtc;
 
     /// Episode overview
     @JsonKey(name: 'overview')
-    String overview;
+    String? overview;
 
     /// If there is a file available, a [SonarrEpisodeFile] object containing episode file details
     @JsonKey(name: 'episodeFile')
-    SonarrEpisodeFile episodeFile;
+    SonarrEpisodeFile? episodeFile;
 
     /// Is there a file available?
     @JsonKey(name: 'hasFile')
-    bool hasFile;
+    bool? hasFile;
 
     /// Is the episode monitored?
     @JsonKey(name: 'monitored')
-    bool monitored;
+    bool? monitored;
 
     /// Absolute episode number
     @JsonKey(name: 'absoluteEpisodeNumber')
-    int absoluteEpisodeNumber;
+    int? absoluteEpisodeNumber;
 
     /// Is the scene number verified?
     @JsonKey(name: 'unverifiedSceneNumbering')
-    bool unverifiedSceneNumbering;
+    bool? unverifiedSceneNumbering;
 
     /// [DateTime] object for when the episode was last searched
     @JsonKey(name: 'lastSearchTime', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime lastSearchTime;
+    DateTime? lastSearchTime;
 
     /// Episode identifier
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrEpisode({
         this.seriesId,

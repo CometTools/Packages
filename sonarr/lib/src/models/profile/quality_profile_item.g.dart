@@ -9,7 +9,7 @@ part of 'quality_profile_item.dart';
 SonarrQualityProfileItem _$SonarrQualityProfileItemFromJson(
     Map<String, dynamic> json) {
   return SonarrQualityProfileItem(
-    allowed: json['allowed'] as bool,
+    allowed: json['allowed'] as bool?,
     quality: json['quality'] == null
         ? null
         : SonarrQualityProfileItemQuality.fromJson(

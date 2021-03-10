@@ -21,7 +21,7 @@ class SonarrCommandHandler_Command {
     /// Required Parameters:
     /// - `episodeIds`: List of episode identifiers to search for
     Future<SonarrCommand> episodeSearch({
-        @required List<int> episodeIds,
+        required List<int> episodeIds,
     }) async => _commandEpisodeSearch(_client, episodeIds: episodeIds);
 
     /// Handler for [command](https://github.com/Sonarr/Sonarr/wiki/Command#get).
@@ -42,7 +42,7 @@ class SonarrCommandHandler_Command {
     /// Optional Parameters:
     /// - `seriesId`: Series ID for the series to refresh
     Future<SonarrCommand> refreshSeries({
-        int seriesId,
+        int? seriesId,
     }) async => _commandRefreshSeries(_client, seriesId: seriesId);
 
     /// Handler for [command (RescanSeries)](https://github.com/Sonarr/Sonarr/wiki/Command#rescanseries).
@@ -53,7 +53,7 @@ class SonarrCommandHandler_Command {
     /// Optional Parameters:
     /// - `seriesId`: Series ID for the series to refresh
     Future<SonarrCommand> rescanSeries({
-        int seriesId,
+        int? seriesId,
     }) async => _commandRescanSeries(_client, seriesId: seriesId);
 
     /// Handler for [command (RssSync)](https://github.com/Sonarr/Sonarr/wiki/Command#rsssync).
@@ -69,7 +69,7 @@ class SonarrCommandHandler_Command {
     /// - `seriesId`: Series identifier
     /// - `seasonNumber`: Season number to search for
     Future<SonarrCommand> seasonSearch({
-        @required int seriesId,
-        @required int seasonNumber,
+        required int seriesId,
+        required int seasonNumber,
     }) async => _commandSeasonSearch(_client, seriesId: seriesId, seasonNumber: seasonNumber);
 }

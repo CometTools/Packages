@@ -9,8 +9,8 @@ part of 'episode_file_language.dart';
 SonarrEpisodeFileLanguage _$SonarrEpisodeFileLanguageFromJson(
     Map<String, dynamic> json) {
   return SonarrEpisodeFileLanguage(
-    id: json['id'] as int,
-    name: json['name'] as String,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
   );
 }
 

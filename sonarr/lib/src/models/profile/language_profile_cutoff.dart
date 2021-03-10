@@ -8,11 +8,11 @@ part 'language_profile_cutoff.g.dart';
 class SonarrLanguageProfileCutoff {
     /// Identifier of the cutoff profile
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     /// Name of the cutoff profile
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     SonarrLanguageProfileCutoff({
         this.id,

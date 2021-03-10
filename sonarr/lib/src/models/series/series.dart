@@ -14,163 +14,163 @@ part 'series.g.dart';
 class SonarrSeries {
     /// Title of the series
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     /// List of [SonarrSeriesAlternateTitle] objects to store alternate titles
     @JsonKey(name: 'alternateTitles')
-    List<SonarrSeriesAlternateTitle> alternateTitles;
+    List<SonarrSeriesAlternateTitle>? alternateTitles;
 
     /// Title used for sorting the series
     @JsonKey(name: 'sortTitle')
-    String sortTitle;
+    String? sortTitle;
 
     /// Total amount of seasons
     @JsonKey(name: 'seasonCount')
-    int seasonCount;
+    int? seasonCount;
 
     /// Total amount of episodes in this series, including episodes not aired
     @JsonKey(name: 'totalEpisodeCount')
-    int totalEpisodeCount;
+    int? totalEpisodeCount;
 
     /// Amount of episodes available
     @JsonKey(name: 'episodeCount')
-    int episodeCount;
+    int? episodeCount;
 
     /// Amount of episode files available
     @JsonKey(name: 'episodeFileCount')
-    int episodeFileCount;
+    int? episodeFileCount;
 
     /// Size of this series, in bytes
     @JsonKey(name: 'sizeOnDisk')
-    int sizeOnDisk;
+    int? sizeOnDisk;
 
     /// Status of the series
     @JsonKey(name: 'status')
-    String status;
+    String? status;
 
     /// Summary/overview of the series
     @JsonKey(name: 'overview')
-    String overview;
+    String? overview;
 
     /// Date that the next episode will air
     @JsonKey(name: 'nextAiring', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime nextAiring;
+    DateTime? nextAiring;
 
     /// Date that the previous episode aired on
     @JsonKey(name: 'previousAiring', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime previousAiring;
+    DateTime? previousAiring;
 
     /// Network that hosts the series
     @JsonKey(name: 'network')
-    String network;
+    String? network;
 
     /// Time which the series airs at
     @JsonKey(name: 'airTime')
-    String airTime;
+    String? airTime;
 
     /// List of [SonarrSeriesImage] objects to store available images
     @JsonKey(name: 'images')
-    List<SonarrSeriesImage> images;
+    List<SonarrSeriesImage>? images;
 
     /// List of [SonarrSeriesSeason] objects to store season data
     @JsonKey(name: 'seasons')
-    List<SonarrSeriesSeason> seasons;
+    List<SonarrSeriesSeason>? seasons;
 
     /// Year that the series premiered
     @JsonKey(name: 'year')
-    int year;
+    int? year;
 
     /// Path to the series' files
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     /// Profile ID for the series
     @JsonKey(name: 'profileId')
-    int profileId;
+    int? profileId;
 
     /// Language profile ID for the series
     @JsonKey(name: 'languageProfileId')
-    int languageProfileId;
+    int? languageProfileId;
 
     /// Are season folders being used?
     @JsonKey(name: 'seasonFolder')
-    bool seasonFolder;
+    bool? seasonFolder;
 
     /// Is the series monitored?
     @JsonKey(name: 'monitored')
-    bool monitored;
+    bool? monitored;
 
     /// Is the series using scene numbering?
     @JsonKey(name: 'useSceneNumbering')
-    bool useSceneNumbering;
+    bool? useSceneNumbering;
 
     /// Runtime of an average episode in the series, in minutes
     @JsonKey(name: 'runtime')
-    int runtime;
+    int? runtime;
 
     /// TVDB ID for the series
     @JsonKey(name: 'tvdbId')
-    int tvdbId;
+    int? tvdbId;
 
     /// TVRage ID for the series
     @JsonKey(name: 'tvRageId')
-    int tvRageId;
+    int? tvRageId;
 
     /// TVMaze ID for the series
     @JsonKey(name: 'tvMazeId')
-    int tvMazeId;
+    int? tvMazeId;
 
     /// Date that the series premiered
     @JsonKey(name: 'firstAired', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime firstAired;
+    DateTime? firstAired;
 
     /// Date that the series was last refreshed in Sonarr
     @JsonKey(name: 'lastInfoSync', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime lastInfoSync;
+    DateTime? lastInfoSync;
 
     /// [SonarrSeriesType] to store the type of the series
     @JsonKey(name: 'seriesType', fromJson: SonarrUtilities.seriesTypeFromJson, toJson: SonarrUtilities.seriesTypeToJson)
-    SonarrSeriesType seriesType;
+    SonarrSeriesType? seriesType;
 
     /// Title with any special characters removed
     @JsonKey(name: 'cleanTitle')
-    String cleanTitle;
+    String? cleanTitle;
 
     /// IMDB ID of the series
     @JsonKey(name: 'imdbId')
-    String imdbId;
+    String? imdbId;
 
     /// Title slug, used for routing to the series via URL
     @JsonKey(name: 'titleSlug')
-    String titleSlug;
+    String? titleSlug;
 
     /// Content rating of the series
     @JsonKey(name: 'certification')
-    String certification;
+    String? certification;
 
     /// List of genres for the series
     @JsonKey(name: 'genres')
-    List<String> genres;
+    List<String>? genres;
 
     /// List of tag IDs associated with the series
     @JsonKey(name: 'tags')
-    List<int> tags;
+    List<int>? tags;
 
     /// Date that the series was added to Sonarr
     @JsonKey(name: 'added', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime added;
+    DateTime? added;
 
     /// [SonarrSeriesRating] object to store rating information
     @JsonKey(name: 'ratings')
-    SonarrSeriesRating ratings;
+    SonarrSeriesRating? ratings;
 
     /// Quality profile ID for the series
     @JsonKey(name: 'qualityProfileId')
-    int qualityProfileId;
+    int? qualityProfileId;
 
     /// The unique ID for the series in Sonarr
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrSeries({
         this.title,

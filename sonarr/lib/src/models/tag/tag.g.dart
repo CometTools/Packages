@@ -8,8 +8,8 @@ part of 'tag.dart';
 
 SonarrTag _$SonarrTagFromJson(Map<String, dynamic> json) {
   return SonarrTag(
-    id: json['id'] as int,
-    label: json['label'] as String,
+    id: json['id'] as int?,
+    label: json['label'] as String?,
   );
 }
 

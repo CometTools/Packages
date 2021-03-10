@@ -9,8 +9,8 @@ part of 'language_profile_item_language.dart';
 SonarrLanguageProfileItemLanguage _$SonarrLanguageProfileItemLanguageFromJson(
     Map<String, dynamic> json) {
   return SonarrLanguageProfileItemLanguage(
-    id: json['id'] as int,
-    name: json['name'] as String,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
   );
 }
 

@@ -8,7 +8,7 @@ enum SonarrHistorySortKey {
 /// Extension on [SonarrHistorySortKey] to implement extended functionality.
 extension SonarrHistorySortKeyExtension on SonarrHistorySortKey {
     /// Given a String, will return the correct `SonarrHistorySortKey` object.
-    SonarrHistorySortKey from(String type) {
+    SonarrHistorySortKey? from(String? type) {
         switch(type) {
             case 'date': return SonarrHistorySortKey.DATE;
             case 'series.title': return SonarrHistorySortKey.SERIES_TITLE;
@@ -17,7 +17,7 @@ extension SonarrHistorySortKeyExtension on SonarrHistorySortKey {
     }
 
     /// The actual value/key for sorting directions used in Sonarr.
-    String get value {
+    String? get value {
         switch(this) {
             case SonarrHistorySortKey.DATE: return 'date';
             case SonarrHistorySortKey.SERIES_TITLE: return 'series.title';

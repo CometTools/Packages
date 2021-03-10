@@ -8,25 +8,25 @@ part of 'command.dart';
 
 SonarrCommand _$SonarrCommandFromJson(Map<String, dynamic> json) {
   return SonarrCommand(
-    name: json['name'] as String,
+    name: json['name'] as String?,
     body: json['body'] == null
         ? null
         : SonarrCommandBody.fromJson(json['body'] as Map<String, dynamic>),
-    priority: json['priority'] as String,
-    status: json['status'] as String,
-    queued: SonarrUtilities.dateTimeFromJson(json['queued'] as String),
-    trigger: json['trigger'] as String,
-    state: json['state'] as String,
-    manual: json['manual'] as bool,
-    startedOn: SonarrUtilities.dateTimeFromJson(json['startedOn'] as String),
-    sendUpdatesToClient: json['sendUpdatesToClient'] as bool,
-    updateScheduledTask: json['updateScheduledTask'] as bool,
-    id: json['id'] as int,
+    priority: json['priority'] as String?,
+    status: json['status'] as String?,
+    queued: SonarrUtilities.dateTimeFromJson(json['queued'] as String?),
+    trigger: json['trigger'] as String?,
+    state: json['state'] as String?,
+    manual: json['manual'] as bool?,
+    startedOn: SonarrUtilities.dateTimeFromJson(json['startedOn'] as String?),
+    sendUpdatesToClient: json['sendUpdatesToClient'] as bool?,
+    updateScheduledTask: json['updateScheduledTask'] as bool?,
+    id: json['id'] as int?,
   )
-    ..message = json['message'] as String
-    ..started = SonarrUtilities.dateTimeFromJson(json['started'] as String)
+    ..message = json['message'] as String?
+    ..started = SonarrUtilities.dateTimeFromJson(json['started'] as String?)
     ..stateChangeTime =
-        SonarrUtilities.dateTimeFromJson(json['stateChangeTime'] as String);
+        SonarrUtilities.dateTimeFromJson(json['stateChangeTime'] as String?);
 }
 
 Map<String, dynamic> _$SonarrCommandToJson(SonarrCommand instance) =>

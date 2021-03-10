@@ -9,10 +9,10 @@ part 'language_profile_item.g.dart';
 class SonarrLanguageProfileItem {
     /// Is this profile allowed/enabled?
     @JsonKey(name: 'allowed')
-    bool allowed;
+    bool? allowed;
 
     @JsonKey(name: 'language')
-    SonarrLanguageProfileItemLanguage language;
+    SonarrLanguageProfileItemLanguage? language;
 
     SonarrLanguageProfileItem({
         this.allowed,

@@ -10,54 +10,54 @@ part 'queue_record.g.dart';
 class SonarrQueueRecord {
     /// [SonarrSeries] object containing series information
     @JsonKey(name: 'series')
-    SonarrSeries series;
+    SonarrSeries? series;
 
     /// [SonarrEpisode] object containing episode information
     @JsonKey(name: 'episode')
-    SonarrEpisode episode;
+    SonarrEpisode? episode;
 
     /// [SonarrEpisodeFileQuality] object containing quality information
     @JsonKey(name: 'quality')
-    SonarrEpisodeFileQuality quality;
+    SonarrEpisodeFileQuality? quality;
 
     /// Size of the queued item
     @JsonKey(name: 'size')
-    double size;
+    double? size;
 
     /// Title of the queued item
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     /// Size of the download remaining
     @JsonKey(name: 'sizeleft')
-    double sizeLeft;
+    double? sizeLeft;
 
     /// Estimated remaining time left
     @JsonKey(name: 'timeleft')
-    String timeLeft;
+    String? timeLeft;
 
     /// Estimated time of completion
     @JsonKey(name: 'estimatedCompletionTime', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime estimatedCompletionTime;
+    DateTime? estimatedCompletionTime;
 
     /// Status of the queued item (Delay, Completed, etc.)
     @JsonKey(name: 'status')
-    String status;
+    String? status;
 
     /// Status of the download
     @JsonKey(name: 'trackedDownloadStatus')
-    String trackedDownloadStatus;
+    String? trackedDownloadStatus;
 
     @JsonKey(name: 'statusMessages')
-    List<SonarrQueueStatusMessage> statusMessages;
+    List<SonarrQueueStatusMessage>? statusMessages;
 
     /// Protocol being used (torrent, usenet)
     @JsonKey(name: 'protocol')
-    String protocol;
+    String? protocol;
 
     /// Queue item identifier
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrQueueRecord({
         this.series,

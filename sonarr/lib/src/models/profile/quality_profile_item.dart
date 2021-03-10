@@ -9,10 +9,10 @@ part 'quality_profile_item.g.dart';
 class SonarrQualityProfileItem {
     /// Is this profile allowed/enabled?
     @JsonKey(name: 'allowed')
-    bool allowed;
+    bool? allowed;
 
     @JsonKey(name: 'quality')
-    SonarrQualityProfileItemQuality quality;
+    SonarrQualityProfileItemQuality? quality;
 
     SonarrQualityProfileItem({
         this.allowed,

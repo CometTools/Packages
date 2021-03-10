@@ -9,11 +9,11 @@ part 'episode_file_quality.g.dart';
 class SonarrEpisodeFileQuality {
     /// [SonarrEpisodeFileQualityQuality] object containing the quality profile
     @JsonKey(name: 'quality')
-    SonarrEpisodeFileQualityQuality quality;
+    SonarrEpisodeFileQualityQuality? quality;
 
     /// [SonarrEpisodeFileQualityRevision] object containing the revision information
     @JsonKey(name: 'revision')
-    SonarrEpisodeFileQualityRevision revision;
+    SonarrEpisodeFileQualityRevision? revision;
 
     SonarrEpisodeFileQuality({
         this.quality,

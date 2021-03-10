@@ -10,23 +10,23 @@ part 'quality_profile.g.dart';
 class SonarrQualityProfile {
     /// Name of the profile
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Are upgrades allowed?
     @JsonKey(name: 'upgradeAllowed')
-    bool upgradeAllowed;
+    bool? upgradeAllowed;
 
     /// Cutoff profile information
     @JsonKey(name: 'cutoff')
-    SonarrQualityProfileCutoff cutoff;
+    SonarrQualityProfileCutoff? cutoff;
 
     /// Nested profile items
     @JsonKey(name: 'items')
-    List<SonarrQualityProfileItem> items;
+    List<SonarrQualityProfileItem>? items;
 
     /// Identifier of the quality profile
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrQualityProfile({
         this.name,

@@ -8,19 +8,19 @@ part 'quality_profile_item_quality.g.dart';
 class SonarrQualityProfileItemQuality {
     /// Identifier of the cutoff profile
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     /// Name of the cutoff profile
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Typical source medium of the cutoff profile
     @JsonKey(name: 'source')
-    String source;
+    String? source;
 
     /// Resolution of the cutoff profile
     @JsonKey(name: 'resolution')
-    int resolution;
+    int? resolution;
 
     SonarrQualityProfileItemQuality({
         this.id,

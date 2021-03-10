@@ -11,26 +11,26 @@ part 'history.g.dart';
 class SonarrHistory {
     /// Page number
     @JsonKey(name: 'page')
-    int page;
+    int? page;
 
     /// Page size
     @JsonKey(name: 'pageSize')
-    int pageSize;
+    int? pageSize;
 
     /// [SonarrHistorySortKey] object containing the sorting key
     @JsonKey(name: 'sortKey', fromJson: SonarrUtilities.historySortKeyFromJson, toJson: SonarrUtilities.historySortKeyToJson)
-    SonarrHistorySortKey sortKey;
+    SonarrHistorySortKey? sortKey;
 
     /// Sorting direction
     @JsonKey(name: 'sortDirection')
-    String sortDirection;
+    String? sortDirection;
 
     /// Total amount of records available
     @JsonKey(name: 'totalRecords')
-    int totalRecords;
+    int? totalRecords;
 
     @JsonKey(name: 'records')
-    List<SonarrHistoryRecord> records;
+    List<SonarrHistoryRecord>? records;
 
     SonarrHistory({
         this.page,

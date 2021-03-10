@@ -6,10 +6,10 @@ part 'queue_status_message.g.dart';
 @JsonSerializable(explicitToJson: true)
 class SonarrQueueStatusMessage {
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     @JsonKey(name: 'messages')
-    List<String> messages;
+    List<String>? messages;
 
     SonarrQueueStatusMessage({
         this.title,

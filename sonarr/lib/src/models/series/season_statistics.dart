@@ -9,31 +9,31 @@ part 'season_statistics.g.dart';
 class SonarrSeriesSeasonStatistics {
     /// Date of the last aired episode
     @JsonKey(name: 'previousAiring', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime previousAiring;
+    DateTime? previousAiring;
 
     /// Date of the next/upcoming episode
     @JsonKey(name: 'nextAiring', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime nextAiring;
+    DateTime? nextAiring;
 
     /// Amount of episode files available
     @JsonKey(name: 'episodeFileCount')
-    int episodeFileCount;
+    int? episodeFileCount;
 
     /// Amount of episodes available
     @JsonKey(name: 'episodeCount')
-    int episodeCount;
+    int? episodeCount;
 
     /// Total amount of episodes in this season, including episodes not aired
     @JsonKey(name: 'totalEpisodeCount')
-    int totalEpisodeCount;
+    int? totalEpisodeCount;
 
     /// Size of this season, in bytes
     @JsonKey(name: 'sizeOnDisk')
-    int sizeOnDisk;
+    int? sizeOnDisk;
 
     /// Percentage of episodes available
     @JsonKey(name: 'percentOfEpisodes')
-    double percentOfEpisodes;
+    double? percentOfEpisodes;
 
     SonarrSeriesSeasonStatistics({
         this.previousAiring,

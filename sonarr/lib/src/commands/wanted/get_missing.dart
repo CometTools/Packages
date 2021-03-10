@@ -1,10 +1,10 @@
 part of sonarr_commands;
 
 Future<SonarrMissing> _commandGetMissing(Dio client, {
-    SonarrSortDirection sortDir,
-    SonarrWantedMissingSortKey sortKey,
-    int page,
-    int pageSize,
+    SonarrSortDirection? sortDir,
+    SonarrWantedMissingSortKey? sortKey,
+    int? page,
+    int? pageSize,
 }) async {
     Response response = await client.get('wanted/missing', queryParameters: {
         if(sortDir != null) 'sortDir': sortDir.value,

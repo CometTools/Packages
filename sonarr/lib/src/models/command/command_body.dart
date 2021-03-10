@@ -8,47 +8,47 @@ part 'command_body.g.dart';
 class SonarrCommandBody {
     /// Series ID attached to the command (if applicable, else null).
     @JsonKey(name: 'seriesId')
-    int seriesId;
+    int? seriesId;
 
     /// Is this command handling a new series?
     @JsonKey(name: 'isNewSeries')
-    bool isNewSeries;
+    bool? isNewSeries;
 
     /// Type of the command
     @JsonKey(name: 'type')
-    String type;
+    String? type;
 
     /// Will updates be sent to the client for this command?
     @JsonKey(name: 'sendUpdatesToClient')
-    bool sendUpdatesToClient;
+    bool? sendUpdatesToClient;
 
     /// Will this command update the scheduled tasks?
     @JsonKey(name: 'updateScheduledTask')
-    bool updateScheduledTask;
+    bool? updateScheduledTask;
 
     /// Message for completion
     @JsonKey(name: 'completionMessage')
-    String completionMessage;
+    String? completionMessage;
 
     /// Does this command require disk access?
     @JsonKey(name: 'requiresDiskAccess')
-    bool requiresDiskAccess;
+    bool? requiresDiskAccess;
 
     /// Does this command need to execute exclusively?
     @JsonKey(name: 'isExclusive')
-    bool isExclusive;
+    bool? isExclusive;
 
     /// Name of the command
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Method that triggered the command
     @JsonKey(name: 'trigger')
-    String trigger;
+    String? trigger;
 
     /// Will messages for this command be suppressed?
     @JsonKey(name: 'suppressMessages')
-    bool suppressMessages;
+    bool? suppressMessages;
 
     SonarrCommandBody({
         this.seriesId,
