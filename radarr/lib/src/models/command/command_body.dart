@@ -7,37 +7,37 @@ part 'command_body.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCommandBody {
     @JsonKey(name: 'type')
-    String type;
+    String? type;
 
     @JsonKey(name: 'sendUpdatesToClient')
-    bool sendUpdatesToClient;
+    bool? sendUpdatesToClient;
 
     @JsonKey(name: 'updateScheduledTask')
-    bool updateScheduledTask;
+    bool? updateScheduledTask;
 
     @JsonKey(name: 'completionMessage')
-    String completionMessage;
+    String? completionMessage;
 
     @JsonKey(name: 'requiresDiskAccess')
-    bool requiresDiskAccess;
+    bool? requiresDiskAccess;
 
     @JsonKey(name: 'isExclusive')
-    bool isExclusive;
+    bool? isExclusive;
 
     @JsonKey(name: 'isTypeExclusive')
-    bool isTypeExclusive;
+    bool? isTypeExclusive;
 
     /// Name of the command
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Method that triggered the command
     @JsonKey(name: 'trigger')
-    String trigger;
+    String? trigger;
 
     /// Will messages for this command be suppressed?
     @JsonKey(name: 'suppressMessages')
-    bool suppressMessages;
+    bool? suppressMessages;
 
     RadarrCommandBody({
         this.type,

@@ -8,19 +8,19 @@ part 'item.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQualityProfileItem {
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'quality')
-    RadarrQualityProfileItemQuality quality;
+    RadarrQualityProfileItemQuality? quality;
 
     @JsonKey(name: 'items')
-    List<RadarrQualityProfileItem> items;
+    List<RadarrQualityProfileItem>? items;
 
     @JsonKey(name: 'allowed')
-    bool allowed;
+    bool? allowed;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrQualityProfileItem({
         this.name,

@@ -1,19 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'tag.dart';
+part of 'queue_record.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RadarrTag _$RadarrTagFromJson(Map<String, dynamic> json) {
-  return RadarrTag(
-    id: json['id'] as int?,
-    label: json['label'] as String?,
+RadarrQueueRecord _$RadarrQueueRecordFromJson(Map<String, dynamic> json) {
+  return RadarrQueueRecord(
+    movieId: json['movieId'] as int?,
   );
 }
 
-Map<String, dynamic> _$RadarrTagToJson(RadarrTag instance) {
+Map<String, dynamic> _$RadarrQueueRecordToJson(RadarrQueueRecord instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -22,7 +21,6 @@ Map<String, dynamic> _$RadarrTagToJson(RadarrTag instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
-  writeNotNull('label', instance.label);
+  writeNotNull('movieId', instance.movieId);
   return val;
 }

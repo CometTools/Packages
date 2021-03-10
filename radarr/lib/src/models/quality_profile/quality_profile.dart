@@ -10,31 +10,31 @@ part 'quality_profile.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQualityProfile {
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'upgradeAllowed')
-    bool upgradeAllowed;
+    bool? upgradeAllowed;
 
     @JsonKey(name: 'cutoff')
-    int cutoff;
+    int? cutoff;
 
     @JsonKey(name: 'items')
-    List<RadarrQualityProfileItem> items;
+    List<RadarrQualityProfileItem>? items;
 
     @JsonKey(name: 'minFormatScore')
-    int minFormatScore;
+    int? minFormatScore;
 
     @JsonKey(name: 'cutoffFormatScore')
-    int cutoffFormatScore;
+    int? cutoffFormatScore;
 
     @JsonKey(name: 'formatItems')
-    List<RadarrQualityProfileFormatItem> formatItems;
+    List<RadarrQualityProfileFormatItem>? formatItems;
 
     @JsonKey(name: 'language')
-    RadarrLanguage language;
+    RadarrLanguage? language;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrQualityProfile({
         this.name,

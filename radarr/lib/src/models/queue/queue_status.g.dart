@@ -8,13 +8,13 @@ part of 'queue_status.dart';
 
 RadarrQueueStatus _$RadarrQueueStatusFromJson(Map<String, dynamic> json) {
   return RadarrQueueStatus(
-    totalCount: json['totalCount'] as int,
-    count: json['count'] as int,
-    unknownCount: json['unknownCount'] as int,
-    errors: json['errors'] as bool,
-    warnings: json['warnings'] as bool,
-    unknownErrors: json['unknownErrors'] as bool,
-    unknownWarnings: json['unknownWarnings'] as bool,
+    totalCount: json['totalCount'] as int?,
+    count: json['count'] as int?,
+    unknownCount: json['unknownCount'] as int?,
+    errors: json['errors'] as bool?,
+    warnings: json['warnings'] as bool?,
+    unknownErrors: json['unknownErrors'] as bool?,
+    unknownWarnings: json['unknownWarnings'] as bool?,
   );
 }
 

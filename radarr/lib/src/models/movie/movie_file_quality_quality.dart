@@ -7,19 +7,19 @@ part 'movie_file_quality_quality.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFileQualityQuality {
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'source')
-    String source;
+    String? source;
 
     @JsonKey(name: 'resolution')
-    int resolution;
+    int? resolution;
 
     @JsonKey(name: 'modifier')
-    String modifier;
+    String? modifier;
 
     RadarrMovieFileQualityQuality({
         this.id,

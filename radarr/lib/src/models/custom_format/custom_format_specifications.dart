@@ -7,25 +7,25 @@ part 'custom_format_specifications.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCustomFormatSpecifications {
     @JsonKey(name: 'name')
-    String name;
+    String? name;
     
     @JsonKey(name: 'implementation')
-    String implementation;
+    String? implementation;
 
     @JsonKey(name: 'implementationName')
-    String implementationName;
+    String? implementationName;
 
     @JsonKey(name: 'infoLink')
-    String infoLink;
+    String? infoLink;
 
     @JsonKey(name: 'negate')
-    bool negate;
+    bool? negate;
 
     @JsonKey(name: 'required')
-    bool required;
+    bool? required;
 
     @JsonKey(name: 'fields')
-    List<Map<dynamic, dynamic>> fields;
+    List<Map<dynamic, dynamic>>? fields;
 
     RadarrCustomFormatSpecifications({
         this.name,

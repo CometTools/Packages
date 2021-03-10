@@ -8,12 +8,12 @@ part of 'extra_file.dart';
 
 RadarrExtraFile _$RadarrExtraFileFromJson(Map<String, dynamic> json) {
   return RadarrExtraFile(
-    movieId: json['movieId'] as int,
-    movieFileId: json['movieFileId'] as int,
-    relativePath: json['relativePath'] as String,
-    extension: json['extension'] as String,
-    type: json['type'] as String,
-    id: json['id'] as int,
+    movieId: json['movieId'] as int?,
+    movieFileId: json['movieFileId'] as int?,
+    relativePath: json['relativePath'] as String?,
+    extension: json['extension'] as String?,
+    type: json['type'] as String?,
+    id: json['id'] as int?,
   );
 }
 

@@ -7,13 +7,13 @@ part 'image.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrImage {
     @JsonKey(name: 'coverType')
-    String coverType;
+    String? coverType;
 
     @JsonKey(name: 'url')
-    String url;
+    String? url;
     
     @JsonKey(name: 'remoteUrl')
-    String remoteUrl;
+    String? remoteUrl;
 
     RadarrImage({
         this.coverType,

@@ -8,15 +8,13 @@ part of 'root_folder.dart';
 
 RadarrRootFolder _$RadarrRootFolderFromJson(Map<String, dynamic> json) {
   return RadarrRootFolder(
-    path: json['path'] as String,
-    accessible: json['accessible'] as bool,
-    freeSpace: json['freeSpace'] as int,
-    unmappedFolders: (json['unmappedFolders'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrUnmappedFolder.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    id: json['id'] as int,
+    path: json['path'] as String?,
+    accessible: json['accessible'] as bool?,
+    freeSpace: json['freeSpace'] as int?,
+    unmappedFolders: (json['unmappedFolders'] as List<dynamic>?)
+        ?.map((e) => RadarrUnmappedFolder.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    id: json['id'] as int?,
   );
 }
 
@@ -33,7 +31,7 @@ Map<String, dynamic> _$RadarrRootFolderToJson(RadarrRootFolder instance) {
   writeNotNull('accessible', instance.accessible);
   writeNotNull('freeSpace', instance.freeSpace);
   writeNotNull('unmappedFolders',
-      instance.unmappedFolders?.map((e) => e?.toJson())?.toList());
+      instance.unmappedFolders?.map((e) => e.toJson()).toList());
   writeNotNull('id', instance.id);
   return val;
 }

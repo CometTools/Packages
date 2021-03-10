@@ -9,7 +9,7 @@ enum RadarrFileSystemType {
 /// Extension on [RadarrFileSystemType] to implement extended functionality.
 extension RadarrFileSystemTypeExtension on RadarrFileSystemType {
     /// Given a String, will return the correct [RadarrFileSystemType] object.
-    RadarrFileSystemType from(String type) {
+    RadarrFileSystemType? from(String? type) {
         switch(type) {
             case 'folder': return RadarrFileSystemType.FOLDER;
             case 'file': return RadarrFileSystemType.FILE;
@@ -17,7 +17,7 @@ extension RadarrFileSystemTypeExtension on RadarrFileSystemType {
         }
     }
 
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrFileSystemType.FOLDER: return 'folder';
             case RadarrFileSystemType.FILE: return 'file';
@@ -25,7 +25,7 @@ extension RadarrFileSystemTypeExtension on RadarrFileSystemType {
         }
     }
 
-    String get readable {
+    String? get readable {
         switch(this) {
             case RadarrFileSystemType.FOLDER: return 'Folder';
             case RadarrFileSystemType.FILE: return 'File';

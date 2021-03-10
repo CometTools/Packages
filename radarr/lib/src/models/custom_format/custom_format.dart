@@ -8,16 +8,16 @@ part 'custom_format.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCustomFormat {
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     @JsonKey(name: 'name')
-    String name;
+    String? name;
     
     @JsonKey(name: 'includeCustomFormatWhenRenaming')
-    bool includeCustomFormatWhenRenaming;
+    bool? includeCustomFormatWhenRenaming;
 
     @JsonKey(name: 'specifications')
-    List<RadarrCustomFormatSpecifications> specifications;
+    List<RadarrCustomFormatSpecifications>? specifications;
 
     RadarrCustomFormat({
         this.id,

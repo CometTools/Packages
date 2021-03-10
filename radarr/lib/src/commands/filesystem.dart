@@ -20,9 +20,9 @@ class RadarrCommandHandler_FileSystem {
     /// - `allowFoldersWithoutTrailingSlashes`: Go into a folders without trailing slashes
     /// - `includeFiles`: Include files in the folder (defaulted to false)
     Future<RadarrFileSystem> get({
-        @required String path,
-        bool allowFoldersWithoutTrailingSlashes,
-        bool includeFiles,
+        required String path,
+        bool? allowFoldersWithoutTrailingSlashes,
+        bool? includeFiles,
     }) async => _commandGetFileSystem(
         _client,
         path: path, allowFoldersWithoutTrailingSlashes: allowFoldersWithoutTrailingSlashes,

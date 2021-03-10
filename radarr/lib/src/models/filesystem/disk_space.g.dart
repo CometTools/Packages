@@ -8,10 +8,10 @@ part of 'disk_space.dart';
 
 RadarrDiskSpace _$RadarrDiskSpaceFromJson(Map<String, dynamic> json) {
   return RadarrDiskSpace(
-    path: json['path'] as String,
-    label: json['label'] as String,
-    freeSpace: json['freeSpace'] as int,
-    totalSpace: json['totalSpace'] as int,
+    path: json['path'] as String?,
+    label: json['label'] as String?,
+    freeSpace: json['freeSpace'] as int?,
+    totalSpace: json['totalSpace'] as int?,
   );
 }
 

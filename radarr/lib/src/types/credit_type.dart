@@ -8,7 +8,7 @@ enum RadarrCreditType {
 /// Extension on [RadarrCreditType] to implement extended functionality.
 extension RadarrCreditTypeExtension on RadarrCreditType {
     /// Given a String, will return the correct [RadarrCreditType] object.
-    RadarrCreditType from(String type) {
+    RadarrCreditType? from(String? type) {
         switch(type) {
             case 'crew': return RadarrCreditType.CREW;
             case 'cast': return RadarrCreditType.CAST;
@@ -16,7 +16,7 @@ extension RadarrCreditTypeExtension on RadarrCreditType {
         }
     }
 
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrCreditType.CREW: return 'crew';
             case RadarrCreditType.CAST: return 'cast';
@@ -24,7 +24,7 @@ extension RadarrCreditTypeExtension on RadarrCreditType {
         }
     }
 
-    String get readable {
+    String? get readable {
         switch(this) {
             case RadarrCreditType.CREW: return 'Crew';
             case RadarrCreditType.CAST: return 'Cast';

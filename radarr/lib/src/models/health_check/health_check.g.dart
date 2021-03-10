@@ -8,10 +8,10 @@ part of 'health_check.dart';
 
 RadarrHealthCheck _$RadarrHealthCheckFromJson(Map<String, dynamic> json) {
   return RadarrHealthCheck(
-    source: json['source'] as String,
-    type: RadarrUtilities.healthCheckTypeFromJson(json['type'] as String),
-    message: json['message'] as String,
-    wikiUrl: json['wikiUrl'] as String,
+    source: json['source'] as String?,
+    type: RadarrUtilities.healthCheckTypeFromJson(json['type'] as String?),
+    message: json['message'] as String?,
+    wikiUrl: json['wikiUrl'] as String?,
   );
 }
 

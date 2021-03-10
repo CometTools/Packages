@@ -8,26 +8,26 @@ part of 'import_list.dart';
 
 RadarrImportList _$RadarrImportListFromJson(Map<String, dynamic> json) {
   return RadarrImportList(
-    enabled: json['enabled'] as bool,
-    enableAuto: json['enableAuto'] as bool,
-    shouldMonitor: json['shouldMonitor'] as bool,
-    rootFolderPath: json['rootFolderPath'] as String,
-    qualityProfileId: json['qualityProfileId'] as int,
-    searchOnAdd: json['searchOnAdd'] as bool,
+    enabled: json['enabled'] as bool?,
+    enableAuto: json['enableAuto'] as bool?,
+    shouldMonitor: json['shouldMonitor'] as bool?,
+    rootFolderPath: json['rootFolderPath'] as String?,
+    qualityProfileId: json['qualityProfileId'] as int?,
+    searchOnAdd: json['searchOnAdd'] as bool?,
     minimumAvailability: RadarrUtilities.availabilityFromJson(
-        json['minimumAvailability'] as String),
-    listType: json['listType'] as String,
-    listOrder: json['listOrder'] as int,
-    name: json['name'] as String,
-    fields: (json['fields'] as List)
+        json['minimumAvailability'] as String?),
+    listType: json['listType'] as String?,
+    listOrder: json['listOrder'] as int?,
+    name: json['name'] as String?,
+    fields: (json['fields'] as List<dynamic>?)
         ?.map((e) => e as Map<String, dynamic>)
-        ?.toList(),
-    implementationName: json['implementationName'] as String,
-    implementation: json['implementation'] as String,
-    configContract: json['configContract'] as String,
-    infoLink: json['infoLink'] as String,
-    tags: (json['tags'] as List)?.map((e) => e as int)?.toList(),
-    id: json['id'] as int,
+        .toList(),
+    implementationName: json['implementationName'] as String?,
+    implementation: json['implementation'] as String?,
+    configContract: json['configContract'] as String?,
+    infoLink: json['infoLink'] as String?,
+    tags: (json['tags'] as List<dynamic>?)?.map((e) => e as int).toList(),
+    id: json['id'] as int?,
   );
 }
 

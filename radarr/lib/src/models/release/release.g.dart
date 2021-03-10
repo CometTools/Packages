@@ -8,50 +8,48 @@ part of 'release.dart';
 
 RadarrRelease _$RadarrReleaseFromJson(Map<String, dynamic> json) {
   return RadarrRelease(
-    guid: json['guid'] as String,
+    guid: json['guid'] as String?,
     quality: json['quality'] == null
         ? null
         : RadarrMovieFileQuality.fromJson(
             json['quality'] as Map<String, dynamic>),
-    customFormats: (json['customFormats'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrCustomFormat.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    customFormatScore: json['customFormatScore'] as int,
-    qualityWeight: json['qualityWeight'] as int,
-    age: json['age'] as int,
-    ageHours: (json['ageHours'] as num)?.toDouble(),
-    ageMinutes: (json['ageMinutes'] as num)?.toDouble(),
-    size: json['size'] as int,
-    indexerId: json['indexerId'] as int,
-    indexer: json['indexer'] as String,
-    releaseGroup: json['releaseGroup'] as String,
-    releaseHash: json['releaseHash'] as String,
-    title: json['title'] as String,
-    sceneSource: json['sceneSource'] as bool,
-    movieTitle: json['movieTitle'] as String,
-    languages: (json['languages'] as List)
-        ?.map((e) => e == null
-            ? null
-            : RadarrLanguage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    approved: json['approved'] as bool,
-    temporarilyRejected: json['temporarilyRejected'] as bool,
-    rejected: json['rejected'] as bool,
-    imdbId: json['imdbId'] as int,
-    rejections: (json['rejections'] as List)?.map((e) => e as String)?.toList(),
+    customFormats: (json['customFormats'] as List<dynamic>?)
+        ?.map((e) => RadarrCustomFormat.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    customFormatScore: json['customFormatScore'] as int?,
+    qualityWeight: json['qualityWeight'] as int?,
+    age: json['age'] as int?,
+    ageHours: (json['ageHours'] as num?)?.toDouble(),
+    ageMinutes: (json['ageMinutes'] as num?)?.toDouble(),
+    size: json['size'] as int?,
+    indexerId: json['indexerId'] as int?,
+    indexer: json['indexer'] as String?,
+    releaseGroup: json['releaseGroup'] as String?,
+    releaseHash: json['releaseHash'] as String?,
+    title: json['title'] as String?,
+    sceneSource: json['sceneSource'] as bool?,
+    movieTitle: json['movieTitle'] as String?,
+    languages: (json['languages'] as List<dynamic>?)
+        ?.map((e) => RadarrLanguage.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    approved: json['approved'] as bool?,
+    temporarilyRejected: json['temporarilyRejected'] as bool?,
+    rejected: json['rejected'] as bool?,
+    imdbId: json['imdbId'] as int?,
+    rejections: (json['rejections'] as List<dynamic>?)
+        ?.map((e) => e as String)
+        .toList(),
     publishDate:
-        RadarrUtilities.dateTimeFromJson(json['publishDate'] as String),
-    commentUrl: json['commentUrl'] as String,
-    downloadUrl: json['downloadUrl'] as String,
-    infoUrl: json['infoUrl'] as String,
-    downloadAllowed: json['downloadAllowed'] as bool,
-    releaseWeight: json['releaseWeight'] as int,
-    edition: json['edition'] as String,
-    seeders: json['seeders'] as int,
-    leechers: json['leechers'] as int,
-    protocol: RadarrUtilities.protocolFromJson(json['protocol'] as String),
+        RadarrUtilities.dateTimeFromJson(json['publishDate'] as String?),
+    commentUrl: json['commentUrl'] as String?,
+    downloadUrl: json['downloadUrl'] as String?,
+    infoUrl: json['infoUrl'] as String?,
+    downloadAllowed: json['downloadAllowed'] as bool?,
+    releaseWeight: json['releaseWeight'] as int?,
+    edition: json['edition'] as String?,
+    seeders: json['seeders'] as int?,
+    leechers: json['leechers'] as int?,
+    protocol: RadarrUtilities.protocolFromJson(json['protocol'] as String?),
   );
 }
 
@@ -66,8 +64,8 @@ Map<String, dynamic> _$RadarrReleaseToJson(RadarrRelease instance) {
 
   writeNotNull('guid', instance.guid);
   writeNotNull('quality', instance.quality?.toJson());
-  writeNotNull('customFormats',
-      instance.customFormats?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'customFormats', instance.customFormats?.map((e) => e.toJson()).toList());
   writeNotNull('customFormatScore', instance.customFormatScore);
   writeNotNull('qualityWeight', instance.qualityWeight);
   writeNotNull('age', instance.age);
@@ -82,7 +80,7 @@ Map<String, dynamic> _$RadarrReleaseToJson(RadarrRelease instance) {
   writeNotNull('sceneSource', instance.sceneSource);
   writeNotNull('movieTitle', instance.movieTitle);
   writeNotNull(
-      'languages', instance.languages?.map((e) => e?.toJson())?.toList());
+      'languages', instance.languages?.map((e) => e.toJson()).toList());
   writeNotNull('approved', instance.approved);
   writeNotNull('temporarilyRejected', instance.temporarilyRejected);
   writeNotNull('rejected', instance.rejected);

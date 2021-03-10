@@ -6,25 +6,25 @@ part 'queue_status.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQueueStatus {
     @JsonKey(name: 'totalCount')
-    int totalCount;
+    int? totalCount;
 
     @JsonKey(name: 'count')
-    int count;
+    int? count;
 
     @JsonKey(name: 'unknownCount')
-    int unknownCount;
+    int? unknownCount;
 
     @JsonKey(name: 'errors')
-    bool errors;
+    bool? errors;
 
     @JsonKey(name: 'warnings')
-    bool warnings;
+    bool? warnings;
 
     @JsonKey(name: 'unknownErrors')
-    bool unknownErrors;
+    bool? unknownErrors;
 
     @JsonKey(name: 'unknownWarnings')
-    bool unknownWarnings;
+    bool? unknownWarnings;
 
     RadarrQueueStatus({
         this.totalCount,

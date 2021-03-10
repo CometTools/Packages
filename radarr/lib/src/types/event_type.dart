@@ -13,7 +13,7 @@ enum RadarrEventType {
 /// Extension on [RadarrEventType] to implement extended functionality.
 extension RadarrEventTypeExtension on RadarrEventType {
     /// Given a String, will return the correct [RadarrEventType] object.
-    RadarrEventType from(String type) {
+    RadarrEventType? from(String? type) {
         switch(type) {
             case 'grabbed': return RadarrEventType.GRABBED;
             case 'downloadFailed': return RadarrEventType.DOWNLOAD_FAILED;
@@ -23,10 +23,9 @@ extension RadarrEventTypeExtension on RadarrEventType {
             case 'movieFileRenamed': return RadarrEventType.MOVIE_FILE_RENAMED;
             case 'movieFolderImported': return RadarrEventType.MOVIE_FOLDER_IMPORTED;
         }
-        return null;
     }
 
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrEventType.GRABBED: return 'grabbed';
             case RadarrEventType.DOWNLOAD_FAILED: return 'downloadFailed';
@@ -36,10 +35,9 @@ extension RadarrEventTypeExtension on RadarrEventType {
             case RadarrEventType.MOVIE_FILE_RENAMED: return 'movieFileRenamed';
             case RadarrEventType.MOVIE_FOLDER_IMPORTED: return 'movieFolderImported';
         }
-        return null;
     }
 
-    String get readable {
+    String? get readable {
         switch(this) {
             case RadarrEventType.GRABBED: return 'Grabbed';
             case RadarrEventType.DOWNLOAD_FAILED: return 'Download Failed';
@@ -49,6 +47,5 @@ extension RadarrEventTypeExtension on RadarrEventType {
             case RadarrEventType.MOVIE_FILE_RENAMED: return 'Movie File Renamed';
             case RadarrEventType.MOVIE_FOLDER_IMPORTED: return 'Movie Imported';
         }
-        return null;
     }
 }

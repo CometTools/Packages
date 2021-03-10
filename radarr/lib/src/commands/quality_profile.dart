@@ -15,7 +15,7 @@ class RadarrCommandHandler_QualityProfile {
     /// 
     /// Required Parameters:
     /// - `profileId`: Quality profile identifier
-    Future<RadarrQualityProfile> get({ @required int profileId }) async => _commandGetQualityProfile(_client, profileId: profileId);
+    Future<RadarrQualityProfile> get({ required int profileId }) async => _commandGetQualityProfile(_client, profileId: profileId);
 
     /// Handler for [qualityprofile](https://radarr.video/docs/api/#/Quality/get-add-discover).
     /// 

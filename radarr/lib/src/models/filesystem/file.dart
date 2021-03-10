@@ -9,22 +9,22 @@ part 'file.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrFileSystemFile {
     @JsonKey(name: 'type', fromJson: RadarrUtilities.fileSystemTypeFromJson, toJson: RadarrUtilities.fileSystemTypeToJson)
-    RadarrFileSystemType type;
+    RadarrFileSystemType? type;
 
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     @JsonKey(name: 'extension')
-    String extension;
+    String? extension;
 
     @JsonKey(name: 'size')
-    int size;
+    int? size;
 
     @JsonKey(name: 'lastModified', fromJson: RadarrUtilities.dateTimeFromJson, toJson: RadarrUtilities.dateTimeToJson)
-    DateTime lastModified;
+    DateTime? lastModified;
 
     RadarrFileSystemFile({
         this.type,

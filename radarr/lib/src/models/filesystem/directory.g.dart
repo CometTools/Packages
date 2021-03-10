@@ -9,12 +9,12 @@ part of 'directory.dart';
 RadarrFileSystemDirectory _$RadarrFileSystemDirectoryFromJson(
     Map<String, dynamic> json) {
   return RadarrFileSystemDirectory(
-    type: RadarrUtilities.fileSystemTypeFromJson(json['type'] as String),
-    name: json['name'] as String,
-    path: json['path'] as String,
-    size: json['size'] as int,
+    type: RadarrUtilities.fileSystemTypeFromJson(json['type'] as String?),
+    name: json['name'] as String?,
+    path: json['path'] as String?,
+    size: json['size'] as int?,
     lastModified:
-        RadarrUtilities.dateTimeFromJson(json['lastModified'] as String),
+        RadarrUtilities.dateTimeFromJson(json['lastModified'] as String?),
   );
 }
 

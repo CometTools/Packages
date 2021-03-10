@@ -9,49 +9,49 @@ part 'command.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrCommand {
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'commandName')
-    String commandName;
+    String? commandName;
 
     @JsonKey(name: 'message')
-    String message;
+    String? message;
 
     @JsonKey(name: 'body')
-    RadarrCommandBody body;
+    RadarrCommandBody? body;
 
     @JsonKey(name: 'priority')
-    String priority;
+    String? priority;
 
     @JsonKey(name: 'status')
-    String status;
+    String? status;
 
     @JsonKey(name: 'queued', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime queued;
+    DateTime? queued;
 
     @JsonKey(name: 'started', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime started;
+    DateTime? started;
 
     @JsonKey(name: 'ended', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime ended;
+    DateTime? ended;
 
     @JsonKey(name: 'trigger')
-    String trigger;
+    String? trigger;
 
     @JsonKey(name: 'stateChangeTime', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime stateChangeTime;
+    DateTime? stateChangeTime;
 
     @JsonKey(name: 'sendUpdatesToClient')
-    bool sendUpdatesToClient;
+    bool? sendUpdatesToClient;
 
     @JsonKey(name: 'updateScheduledTask')
-    bool updateScheduledTask;
+    bool? updateScheduledTask;
 
     @JsonKey(name: 'lastExecutionTime', toJson: RadarrUtilities.dateTimeToJson, fromJson: RadarrUtilities.dateTimeFromJson)
-    DateTime lastExecutionTime;
+    DateTime? lastExecutionTime;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrCommand({
         this.name,

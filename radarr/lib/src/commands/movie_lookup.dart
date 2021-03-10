@@ -15,5 +15,5 @@ class RadarrCommandHandler_MovieLookup {
     /// 
     /// Required Parameters:
     /// - `term`: Term to search for
-    Future<List<RadarrMovie>> get({ @required String term }) async => _commandGetMovieLookup(_client, term: term);
+    Future<List<RadarrMovie>> get({ required String term }) async => _commandGetMovieLookup(_client, term: term);
 }

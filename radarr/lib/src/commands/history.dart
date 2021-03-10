@@ -19,10 +19,10 @@ class RadarrCommandHandler_History {
     /// - `sortDirection`: Direction to sort the history entries (Default: descending)
     /// - `sortKey`: Key used to sort the history items (Default: date)
     Future<RadarrHistory> get({
-        int page,
-        int pageSize,
-        RadarrSortDirection sortDirection,
-        RadarrHistorySortKey sortKey,
+        int? page,
+        int? pageSize,
+        RadarrSortDirection? sortDirection,
+        RadarrHistorySortKey? sortKey,
     }) async => _commandGetHistory(_client, page: page, pageSize: pageSize, sortDirection: sortDirection, sortKey: sortKey);
 
     /// Handler for `history/movie/{id}`.
@@ -31,5 +31,5 @@ class RadarrCommandHandler_History {
     /// 
     /// Required Parameters:
     /// - `movieId`: Movie identifier
-    Future<List<RadarrHistoryRecord>> getForMovie({ @required int movieId }) async => _commandGetMovieHistory(_client, movieId: movieId);
+    Future<List<RadarrHistoryRecord>> getForMovie({ required int movieId }) async => _commandGetMovieHistory(_client, movieId: movieId);
 }

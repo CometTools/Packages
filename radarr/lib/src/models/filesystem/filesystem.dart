@@ -8,13 +8,13 @@ part 'filesystem.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrFileSystem {
     @JsonKey(name: 'parent')
-    String parent;
+    String? parent;
 
     @JsonKey(name: 'directories')
-    List<RadarrFileSystemDirectory> directories;
+    List<RadarrFileSystemDirectory>? directories;
 
     @JsonKey(name: 'files')
-    List<RadarrFileSystemFile> files;
+    List<RadarrFileSystemFile>? files;
 
     RadarrFileSystem({
         this.parent,

@@ -10,37 +10,37 @@ part 'credits.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieCredits {
     @JsonKey(name: 'personName')
-    String personName;
+    String? personName;
 
     @JsonKey(name: 'creditTmdbId')
-    String creditTmdbId;
+    String? creditTmdbId;
 
     @JsonKey(name: 'personTmdbId')
-    int personTmdbId;
+    int? personTmdbId;
 
     @JsonKey(name: 'movieId')
-    int movieId;
+    int? movieId;
 
     @JsonKey(name: 'images')
-    List<RadarrImage> images;
+    List<RadarrImage>? images;
 
     @JsonKey(name: 'character')
-    String character;
+    String? character;
 
     @JsonKey(name: 'department')
-    String department;
+    String? department;
 
     @JsonKey(name: 'job')
-    String job;
+    String? job;
 
     @JsonKey(name: 'order')
-    int order;
+    int? order;
 
     @JsonKey(name: 'type', toJson: RadarrUtilities.creditTypeToJson, fromJson: RadarrUtilities.creditTypeFromJson)
-    RadarrCreditType type;
+    RadarrCreditType? type;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrMovieCredits({
         this.personName,

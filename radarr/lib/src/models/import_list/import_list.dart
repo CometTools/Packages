@@ -9,55 +9,55 @@ part 'import_list.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrImportList {
     @JsonKey(name: 'enabled')
-    bool enabled;
+    bool? enabled;
 
     @JsonKey(name: 'enableAuto')
-    bool enableAuto;
+    bool? enableAuto;
 
     @JsonKey(name: 'shouldMonitor')
-    bool shouldMonitor;
+    bool? shouldMonitor;
 
     @JsonKey(name: 'rootFolderPath')
-    String rootFolderPath;
+    String? rootFolderPath;
 
     @JsonKey(name: 'qualityProfileId')
-    int qualityProfileId;
+    int? qualityProfileId;
 
     @JsonKey(name: 'searchOnAdd')
-    bool searchOnAdd;
+    bool? searchOnAdd;
 
     @JsonKey(name: 'minimumAvailability', toJson: RadarrUtilities.availabilityToJson, fromJson: RadarrUtilities.availabilityFromJson)
-    RadarrAvailability minimumAvailability;
+    RadarrAvailability? minimumAvailability;
 
     @JsonKey(name: 'listType')
-    String listType;
+    String? listType;
 
     @JsonKey(name: 'listOrder')
-    int listOrder;
+    int? listOrder;
 
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'fields')
-    List<Map> fields;
+    List<Map>? fields;
 
     @JsonKey(name: 'implementationName')
-    String implementationName;
+    String? implementationName;
 
     @JsonKey(name: 'implementation')
-    String implementation;
+    String? implementation;
 
     @JsonKey(name: 'configContract')
-    String configContract;
+    String? configContract;
 
     @JsonKey(name: 'infoLink')
-    String infoLink;
+    String? infoLink;
 
     @JsonKey(name: 'tags')
-    List<int> tags;
+    List<int>? tags;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrImportList({
         this.enabled,

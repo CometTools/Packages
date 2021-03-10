@@ -7,13 +7,13 @@ part 'format_item.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrQualityProfileFormatItem {
     @JsonKey(name: 'format')
-    int format;
+    int? format;
 
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'score')
-    int score;
+    int? score;
 
     RadarrQualityProfileFormatItem({
         this.format,

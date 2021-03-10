@@ -15,7 +15,7 @@ class RadarrCommandHandler_ImportList {
     /// 
     /// Required Parameters:
     /// - `listId`: Import list identifier
-    Future<RadarrImportList> get({ @required int listId }) async => _commandGetImportList(_client, listId: listId);
+    Future<RadarrImportList> get({ required int listId }) async => _commandGetImportList(_client, listId: listId);
 
     /// Handler for [impostlist](https://radarr.video/docs/api/#/Import%20Lists/get-importList).
     /// 
@@ -29,6 +29,6 @@ class RadarrCommandHandler_ImportList {
     /// Optional Parameters:
     /// - `includeRecommendations`: Include recommendations from Radarr
     Future<List<RadarrMovie>> getMovies({
-        bool includeRecommendations
+        bool? includeRecommendations
     }) async => _commandGetImportListMovies(_client, includeRecommendations: includeRecommendations);
 }

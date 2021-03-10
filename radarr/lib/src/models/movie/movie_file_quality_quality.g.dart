@@ -9,11 +9,11 @@ part of 'movie_file_quality_quality.dart';
 RadarrMovieFileQualityQuality _$RadarrMovieFileQualityQualityFromJson(
     Map<String, dynamic> json) {
   return RadarrMovieFileQualityQuality(
-    id: json['id'] as int,
-    name: json['name'] as String,
-    source: json['source'] as String,
-    resolution: json['resolution'] as int,
-    modifier: json['modifier'] as String,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
+    source: json['source'] as String?,
+    resolution: json['resolution'] as int?,
+    modifier: json['modifier'] as String?,
   );
 }
 

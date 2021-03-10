@@ -1,9 +1,8 @@
 part of radarr_commands;
 
 Future<List<RadarrMovie>> _commandGetMovieLookup(Dio client, {
-    @required String term,
+    required String term,
 }) async {
-    assert(term != null, 'term cannot be null.');
     Response response = await client.get('movie/lookup', queryParameters: {
         'term': term,
     });

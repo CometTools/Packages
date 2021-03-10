@@ -7,16 +7,16 @@ part 'disk_space.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrDiskSpace {
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     @JsonKey(name: 'label')
-    String label;
+    String? label;
 
     @JsonKey(name: 'freeSpace')
-    int freeSpace;
+    int? freeSpace;
 
     @JsonKey(name: 'totalSpace')
-    int totalSpace;
+    int? totalSpace;
 
     RadarrDiskSpace({
         this.path,

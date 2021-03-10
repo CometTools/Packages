@@ -8,13 +8,13 @@ part of 'file.dart';
 
 RadarrFileSystemFile _$RadarrFileSystemFileFromJson(Map<String, dynamic> json) {
   return RadarrFileSystemFile(
-    type: RadarrUtilities.fileSystemTypeFromJson(json['type'] as String),
-    name: json['name'] as String,
-    path: json['path'] as String,
-    extension: json['extension'] as String,
-    size: json['size'] as int,
+    type: RadarrUtilities.fileSystemTypeFromJson(json['type'] as String?),
+    name: json['name'] as String?,
+    path: json['path'] as String?,
+    extension: json['extension'] as String?,
+    size: json['size'] as int?,
     lastModified:
-        RadarrUtilities.dateTimeFromJson(json['lastModified'] as String),
+        RadarrUtilities.dateTimeFromJson(json['lastModified'] as String?),
   );
 }
 

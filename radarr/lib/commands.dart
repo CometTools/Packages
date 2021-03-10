@@ -2,9 +2,8 @@
 library radarr_commands;
 
 import 'package:dio/dio.dart';
-import 'package:meta/meta.dart';
-import 'package:radarr/radarr.dart';
 import 'models.dart';
+import 'types.dart';
 
 // Commands
 part 'src/commands/command.dart';

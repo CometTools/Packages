@@ -9,7 +9,7 @@ enum RadarrProtocol {
 /// Extension on [RadarrProtocol] to implement extended functionality.
 extension RadarrProtocolExtension on RadarrProtocol {
     /// Given a String, will return the correct [RadarrProtocol] object.
-    RadarrProtocol from(String type) {
+    RadarrProtocol? from(String? type) {
         switch(type) {
             case 'usenet': return RadarrProtocol.USENET;
             case 'torrent': return RadarrProtocol.TORRENT;
@@ -17,7 +17,7 @@ extension RadarrProtocolExtension on RadarrProtocol {
         }
     }
 
-    String get value {
+    String? get value {
         switch(this) {
             case RadarrProtocol.USENET: return 'usenet';
             case RadarrProtocol.TORRENT: return 'torrent';
@@ -25,7 +25,7 @@ extension RadarrProtocolExtension on RadarrProtocol {
         }
     }
 
-    String get readable {
+    String? get readable {
         switch(this) {
             case RadarrProtocol.USENET: return 'Usenet';
             case RadarrProtocol.TORRENT: return 'Torrent';

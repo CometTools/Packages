@@ -20,7 +20,7 @@ class RadarrCommandHandler_Movie {
     /// 
     /// Required Parameters:
     /// - `movieId`: Movie identifier
-    Future<RadarrMovie> get({ @required int movieId }) async => _commandGetMovie(_client, movieId: movieId);
+    Future<RadarrMovie> get({ required int movieId }) async => _commandGetMovie(_client, movieId: movieId);
 
     /// Handler for [movie](https://radarr.video/docs/api/#/Movie/put_movie).
     /// 
@@ -28,7 +28,7 @@ class RadarrCommandHandler_Movie {
     /// 
     /// Required Parameters:
     /// - `movie`: [RadarrMovie] object with the updated information
-    Future<RadarrMovie> update({ @required RadarrMovie movie }) async => _commandUpdateMovie(_client, movie: movie);
+    Future<RadarrMovie> update({ required RadarrMovie movie }) async => _commandUpdateMovie(_client, movie: movie);
 
     /// Handler for [movie/{id}](https://radarr.video/docs/api/#/Movie/deleteMovie).
     /// 
@@ -41,7 +41,7 @@ class RadarrCommandHandler_Movie {
     /// - `addImportExclusion`: If true, adds the movie to Radarr's exclusion list for import lists
     /// - `deleteFiles`: If true, deletes all files as well
     Future<void> delete({
-        @required int movieId,
+        required int movieId,
         bool addImportExclusion = false,
         bool deleteFiles = false,
     }) => _commandDeleteMovie(_client, movieId: movieId, addImportExclusion: addImportExclusion, deleteFiles: deleteFiles);
@@ -61,12 +61,12 @@ class RadarrCommandHandler_Movie {
     /// - `tags`: List of [RadarrTag]s to be assigned to the movie
     /// - `searchForMovie` Should a search for the movie be started after being added?
     Future<RadarrMovie> create({
-        @required RadarrMovie movie,
-        @required RadarrRootFolder rootFolder,
-        @required bool monitored,
-        @required RadarrAvailability minimumAvailability,
-        @required RadarrQualityProfile qualityProfile,
-        List<RadarrTag> tags,
+        required RadarrMovie movie,
+        required RadarrRootFolder rootFolder,
+        required bool monitored,
+        required RadarrAvailability minimumAvailability,
+        required RadarrQualityProfile qualityProfile,
+        List<RadarrTag>? tags,
         bool searchForMovie = false,
     }) async => _commandAddMovie(
         _client,

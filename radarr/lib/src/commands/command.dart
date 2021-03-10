@@ -26,7 +26,7 @@ class RadarrCommandHandler_Command {
     /// Required Parameters:
     /// - `movieIds`: List of movie IDs to search for.
     Future<RadarrCommand> moviesSearch({
-        @required List<int> movieIds,
+        required List<int> movieIds,
     }) async => _commandMoviesSearch(_client, movieIds: movieIds);
 
     /// Handler for [command (RefreshMovie)](https://radarr.video/docs/api/#/Command/post-command).
@@ -37,7 +37,7 @@ class RadarrCommandHandler_Command {
     /// Optional Parameters:
     /// - `movieIds`: List of movie IDs for the movies in specific to refresh
     Future<RadarrCommand> refreshMovie({
-        List<int> movieIds,
+        List<int>? movieIds,
     }) async => _commandRefreshMovie(_client, movieIds: movieIds);
 
     /// Handler for [command (RssSync)](https://radarr.video/docs/api/#/Command/post-command).

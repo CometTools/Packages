@@ -9,11 +9,11 @@ part of 'item_quality.dart';
 RadarrQualityProfileItemQuality _$RadarrQualityProfileItemQualityFromJson(
     Map<String, dynamic> json) {
   return RadarrQualityProfileItemQuality(
-    id: json['id'] as int,
-    name: json['name'] as String,
-    source: json['source'] as String,
-    resolution: json['resolution'] as int,
-    modifier: json['modifier'] as String,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
+    source: json['source'] as String?,
+    resolution: json['resolution'] as int?,
+    modifier: json['modifier'] as String?,
   );
 }
 

@@ -7,22 +7,22 @@ part 'extra_file.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrExtraFile {
     @JsonKey(name: 'movieId')
-    int movieId;
+    int? movieId;
 
     @JsonKey(name: 'movieFileId')
-    int movieFileId;
+    int? movieFileId;
     
     @JsonKey(name: 'relativePath')
-    String relativePath;
+    String? relativePath;
 
     @JsonKey(name: 'extension')
-    String extension;
+    String? extension;
 
     @JsonKey(name: 'type')
-    String type;
+    String? type;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     RadarrExtraFile({
         this.movieId,

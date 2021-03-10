@@ -7,10 +7,10 @@ part 'rating.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieRating {
     @JsonKey(name: 'votes')
-    int votes;
+    int? votes;
 
     @JsonKey(name: 'value')
-    double value;
+    double? value;
 
     RadarrMovieRating({
         this.votes,

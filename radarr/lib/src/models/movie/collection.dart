@@ -7,10 +7,10 @@ part 'collection.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieCollection {
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     @JsonKey(name: 'tmdbId')
-    int tmdbId;
+    int? tmdbId;
 
     RadarrMovieCollection({
         this.name,
