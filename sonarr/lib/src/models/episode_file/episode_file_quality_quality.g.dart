@@ -9,10 +9,10 @@ part of 'episode_file_quality_quality.dart';
 SonarrEpisodeFileQualityQuality _$SonarrEpisodeFileQualityQualityFromJson(
     Map<String, dynamic> json) {
   return SonarrEpisodeFileQualityQuality(
-    id: json['id'] as int,
-    name: json['name'] as String,
-    source: json['source'] as String,
-    resolution: json['resolution'] as int,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
+    source: json['source'] as String?,
+    resolution: json['resolution'] as int?,
   );
 }
 

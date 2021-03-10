@@ -1,7 +1,7 @@
 part of sonarr_commands;
 
 Future<SonarrCommand> _commandRescanSeries(Dio client, {
-    int seriesId,
+    int? seriesId,
 }) async {
     Response response = await client.post('command', data: {
         'name': 'RescanSeries',

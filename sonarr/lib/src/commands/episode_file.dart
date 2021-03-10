@@ -16,7 +16,7 @@ class SonarrCommandHandler_EpisodeFile {
     /// Required Parameters:
     /// - `episodeFileId`: Episode ID for the episode to fetch
     Future<void> deleteEpisodeFile({
-        @required int episodeFileId,
+        required int episodeFileId,
     }) async => _commandDeleteEpisodeFile(_client, episodeFileId: episodeFileId);
 
     /// Handler for [episodefile/{id}](https://github.com/Sonarr/Sonarr/wiki/EpisodeFile#get).
@@ -26,7 +26,7 @@ class SonarrCommandHandler_EpisodeFile {
     /// Required Parameters:
     /// - `episodeId`: Episode ID for the episode to fetch
     Future<SonarrEpisodeFile> getEpisodeFile({
-        @required int episodeId,
+        required int episodeId,
     }) async => _commandGetEpisodeFile(_client, episodeId: episodeId);
 
     /// Handler for [episodefile?seriesid={id}](https://github.com/Sonarr/Sonarr/wiki/EpisodeFile#getid).
@@ -36,6 +36,6 @@ class SonarrCommandHandler_EpisodeFile {
     /// Required Parameters:
     /// - `seriesId`: Series ID for which to fetch episodes for
     Future<List<SonarrEpisodeFile>> getSeriesEpisodeFiles({
-        @required int seriesId,
+        required int seriesId,
     }) async => _commandGetSeriesEpisodeFiles(_client, seriesId: seriesId);
 }

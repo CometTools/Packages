@@ -10,23 +10,23 @@ part 'language_profile.g.dart';
 class SonarrLanguageProfile {
     /// Name of the profile
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Are upgrades allowed?
     @JsonKey(name: 'upgradeAllowed')
-    bool upgradeAllowed;
+    bool? upgradeAllowed;
 
     /// Cutoff profile information
     @JsonKey(name: 'cutoff')
-    SonarrLanguageProfileCutoff cutoff;
+    SonarrLanguageProfileCutoff? cutoff;
 
     /// Nested profile languages
     @JsonKey(name: 'languages')
-    List<SonarrLanguageProfileItem> languages;
+    List<SonarrLanguageProfileItem>? languages;
 
     /// Identifier of the language profile
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrLanguageProfile({
         this.name,

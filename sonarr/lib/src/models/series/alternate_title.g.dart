@@ -9,9 +9,9 @@ part of 'alternate_title.dart';
 SonarrSeriesAlternateTitle _$SonarrSeriesAlternateTitleFromJson(
     Map<String, dynamic> json) {
   return SonarrSeriesAlternateTitle(
-    title: json['title'] as String,
-    sceneSeasonNumber: json['sceneSeasonNumber'] as int,
-    seasonNumber: json['seasonNumber'] as int,
+    title: json['title'] as String?,
+    sceneSeasonNumber: json['sceneSeasonNumber'] as int?,
+    seasonNumber: json['seasonNumber'] as int?,
   );
 }
 

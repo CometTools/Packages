@@ -10,40 +10,40 @@ part 'history_record.g.dart';
 @JsonSerializable(explicitToJson: true)
 class SonarrHistoryRecord {
     @JsonKey(name: 'episodeId')
-    int episodeId;
+    int? episodeId;
 
     @JsonKey(name: 'seriesId')
-    int seriesId;
+    int? seriesId;
 
     @JsonKey(name: 'sourceTitle')
-    String sourceTitle;
+    String? sourceTitle;
 
     @JsonKey(name: 'quality')
-    SonarrEpisodeFileQuality quality;
+    SonarrEpisodeFileQuality? quality;
 
     @JsonKey(name: 'qualityCutoffNotMet')
-    bool qualityCutoffNotMet;
+    bool? qualityCutoffNotMet;
 
     @JsonKey(name: 'date', toJson: SonarrUtilities.dateTimeToJson, fromJson: SonarrUtilities.dateTimeFromJson)
-    DateTime date;
+    DateTime? date;
 
     @JsonKey(name: 'downloadId')
-    String downloadId;
+    String? downloadId;
 
     @JsonKey(name: 'eventType', toJson: SonarrUtilities.historyEventTypeToJson, fromJson: SonarrUtilities.historyEventTypeFromJson)
-    SonarrHistoryEventType eventType;
+    SonarrHistoryEventType? eventType;
 
     @JsonKey(name: 'data')
-    SonarrHistoryRecordData data;
+    SonarrHistoryRecordData? data;
 
     @JsonKey(name: 'episode')
-    SonarrEpisode episode;
+    SonarrEpisode? episode;
 
     @JsonKey(name: 'series')
-    SonarrSeries series;
+    SonarrSeries? series;
 
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     SonarrHistoryRecord({
         this.episodeId,

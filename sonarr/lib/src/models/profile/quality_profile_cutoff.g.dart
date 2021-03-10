@@ -9,10 +9,10 @@ part of 'quality_profile_cutoff.dart';
 SonarrQualityProfileCutoff _$SonarrQualityProfileCutoffFromJson(
     Map<String, dynamic> json) {
   return SonarrQualityProfileCutoff(
-    id: json['id'] as int,
-    name: json['name'] as String,
-    source: json['source'] as String,
-    resolution: json['resolution'] as int,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
+    source: json['source'] as String?,
+    resolution: json['resolution'] as int?,
   );
 }
 

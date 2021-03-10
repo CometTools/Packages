@@ -8,15 +8,15 @@ part 'alternate_title.g.dart';
 class SonarrSeriesAlternateTitle {
     /// Title of the alternate title
     @JsonKey(name: 'title')
-    String title;
+    String? title;
 
     /// Scene season number associated with this title (Mainly used in anime series)
     @JsonKey(name: 'sceneSeasonNumber')
-    int sceneSeasonNumber;
+    int? sceneSeasonNumber;
 
     /// Season number associated with this title
     @JsonKey(name: 'seasonNumber')
-    int seasonNumber;
+    int? seasonNumber;
 
     SonarrSeriesAlternateTitle({
         this.title,

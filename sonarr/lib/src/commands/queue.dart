@@ -18,7 +18,7 @@ class SonarrCommandHandler_Queue {
     /// 
     /// Deletes an item from the queue and download client..
     Future<void> deleteQueue({
-        @required int id,
-        bool blacklist,
+        required int id,
+        bool? blacklist,
     }) async => _commandDeleteQueue(_client, id: id, blacklist: blacklist);
 }

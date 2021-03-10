@@ -9,10 +9,10 @@ part of 'quality_profile_item_quality.dart';
 SonarrQualityProfileItemQuality _$SonarrQualityProfileItemQualityFromJson(
     Map<String, dynamic> json) {
   return SonarrQualityProfileItemQuality(
-    id: json['id'] as int,
-    name: json['name'] as String,
-    source: json['source'] as String,
-    resolution: json['resolution'] as int,
+    id: json['id'] as int?,
+    name: json['name'] as String?,
+    source: json['source'] as String?,
+    resolution: json['resolution'] as int?,
   );
 }
 

@@ -8,11 +8,11 @@ part 'episode_file_language.g.dart';
 class SonarrEpisodeFileLanguage {
     /// Identifier of the language profile
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     /// Name of the language profile
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     SonarrEpisodeFileLanguage({
         this.id,

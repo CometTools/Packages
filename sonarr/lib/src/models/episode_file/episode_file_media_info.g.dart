@@ -9,9 +9,9 @@ part of 'episode_file_media_info.dart';
 SonarrEpisodeFileMediaInfo _$SonarrEpisodeFileMediaInfoFromJson(
     Map<String, dynamic> json) {
   return SonarrEpisodeFileMediaInfo(
-    audioChannels: (json['audioChannels'] as num)?.toDouble(),
-    audioCodec: json['audioCodec'] as String,
-    videoCodec: json['videoCodec'] as String,
+    audioChannels: (json['audioChannels'] as num?)?.toDouble(),
+    audioCodec: json['audioCodec'] as String?,
+    videoCodec: json['videoCodec'] as String?,
   );
 }
 

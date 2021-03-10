@@ -8,11 +8,11 @@ part 'unmapped_folder.g.dart';
 class SonarrUnmappedFolder {
     /// Folder name
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Root folder's path
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     SonarrUnmappedFolder({
         this.name,

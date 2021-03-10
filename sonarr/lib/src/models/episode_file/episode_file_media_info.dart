@@ -8,15 +8,15 @@ part 'episode_file_media_info.g.dart';
 class SonarrEpisodeFileMediaInfo {
     /// Audio channels in the file
     @JsonKey(name: 'audioChannels')
-    double audioChannels;
+    double? audioChannels;
 
     /// Audio codec of the file
     @JsonKey(name: 'audioCodec')
-    String audioCodec;
+    String? audioCodec;
 
     /// Video codec of the file
     @JsonKey(name: 'videoCodec')
-    String videoCodec;
+    String? videoCodec;
 
     SonarrEpisodeFileMediaInfo({
         this.audioChannels,

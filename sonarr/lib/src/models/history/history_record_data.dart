@@ -11,14 +11,14 @@ class SonarrHistoryRecordData {
     /// Found in event type(s):
     /// - downloadFolderImported
     @JsonKey(name: 'droppedPath')
-    String droppedPath;
+    String? droppedPath;
 
     /// Path once the file was imported
     /// 
     /// Found in event type(s):
     /// - downloadFolderImported
     @JsonKey(name: 'importedPath')
-    String importedPath;
+    String? importedPath;
 
     /// Download client where the file was downloaded
     /// 
@@ -26,7 +26,7 @@ class SonarrHistoryRecordData {
     /// - downloadFolderImported
     /// - grabbed
     @JsonKey(name: 'downloadClient')
-    String downloadClient;
+    String? downloadClient;
 
     /// Name of the download client
     /// 
@@ -34,84 +34,84 @@ class SonarrHistoryRecordData {
     /// - downloadFolderImported
     /// - grabbed
     @JsonKey(name: 'downloadClientName')
-    String downloadClientName;
+    String? downloadClientName;
 
     /// Originating indexer
     /// 
     /// Found in event type(s):
     /// - grabbed
     @JsonKey(name: 'indexer')
-    String indexer;
+    String? indexer;
 
     /// NZB info URL
     /// 
     /// Found in event type(s):
     /// - grabbed
     @JsonKey(name: 'nzbInfoUrl')
-    String nzbInfoUrl;
+    String? nzbInfoUrl;
 
     /// Release group of the episode
     /// 
     /// Found in event type(s):
     /// - grabbed
     @JsonKey(name: 'releaseGroup')
-    String releaseGroup;
+    String? releaseGroup;
 
     /// NZB download URL
     /// 
     /// Found in event type(s):
     /// - grabbed
     @JsonKey(name: 'downloadUrl')
-    String downloadUrl;
+    String? downloadUrl;
 
     /// Release GUID
     /// 
     /// Found in event type(s):
     /// - grabbed
     @JsonKey(name: 'guid')
-    String guid;
+    String? guid;
 
     /// Reason for the event
     /// 
     /// Found in event type(s):
     /// - episodeFileDeleted
     @JsonKey(name: 'reason')
-    String reason;
+    String? reason;
 
     /// The message (typically from the download client)
     /// 
     /// Found in the event type(s):
     /// - downloadFailed
     @JsonKey(name: 'message')
-    String message;
+    String? message;
 
     /// Source file full path
     /// 
     /// Found in the event type(s):
     /// - episodeFileRenamed
     @JsonKey(name: 'sourcePath')
-    String sourcePath;
+    String? sourcePath;
 
     /// Source file relative path to the series' root folder
     /// 
     /// Found in the event type(s):
     /// - episodeFileRenamed
     @JsonKey(name: 'sourceRelativePath')
-    String sourceRelativePath;
+    String? sourceRelativePath;
 
     /// File's new full path
     /// 
     /// Found in the event type(s):
     /// - episodeFileRenamed
     @JsonKey(name: 'path')
-    String path;
+    String? path;
 
     /// File's new relative path to the series' root folder
     /// 
     /// Found in the event type(s):
     /// - episodeFileRenamed
     @JsonKey(name: 'relativePath')
-    String relativePath;
+    String? relativePath;
 
     SonarrHistoryRecordData({
         this.droppedPath,

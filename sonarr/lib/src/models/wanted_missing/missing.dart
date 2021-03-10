@@ -11,27 +11,27 @@ part 'missing.g.dart';
 class SonarrMissing {
     /// Page of the list of missing episodes
     @JsonKey(name: 'page')
-    int page;
+    int? page;
 
     /// Amount of records returned on this page
     @JsonKey(name: 'pageSize')
-    int pageSize;
+    int? pageSize;
 
     /// Key used to sort the results
     @JsonKey(name: 'sortKey', toJson: SonarrUtilities.wantedMissingSortKeyToJson, fromJson: SonarrUtilities.wantedMissingSortKeyFromJson)
-    SonarrWantedMissingSortKey sortKey;
+    SonarrWantedMissingSortKey? sortKey;
 
     /// Direction that the results were sorted
     @JsonKey(name: 'sortDirection')
-    String sortDirection;
+    String? sortDirection;
 
     /// Total amount of records available
     @JsonKey(name: 'totalRecords')
-    int totalRecords;
+    int? totalRecords;
 
     /// Missing episode records, each being an [SonarrMissingRecord] object.
     @JsonKey(name: 'records')
-    List<SonarrMissingRecord> records;
+    List<SonarrMissingRecord>? records;
 
     SonarrMissing({
         this.page,

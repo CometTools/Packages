@@ -9,7 +9,7 @@ part of 'language_profile_item.dart';
 SonarrLanguageProfileItem _$SonarrLanguageProfileItemFromJson(
     Map<String, dynamic> json) {
   return SonarrLanguageProfileItem(
-    allowed: json['allowed'] as bool,
+    allowed: json['allowed'] as bool?,
   )..language = json['language'] == null
       ? null
       : SonarrLanguageProfileItemLanguage.fromJson(

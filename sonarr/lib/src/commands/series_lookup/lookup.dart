@@ -1,10 +1,10 @@
 part of sonarr_commands;
 
 Future<List<SonarrSeriesLookup>> _commandGetSeriesLookup(Dio client, {
-    @required String term,
+    required String term,
 }) async {
     Response response = await client.get('series/lookup', queryParameters: {
-        if(term != null) 'term': term,
+        'term': term,
     });
     return (response.data as List).map((series) => SonarrSeriesLookup.fromJson(series)).toList();
 }

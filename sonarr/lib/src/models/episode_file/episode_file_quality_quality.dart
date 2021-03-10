@@ -8,19 +8,19 @@ part 'episode_file_quality_quality.g.dart';
 class SonarrEpisodeFileQualityQuality {
     /// Identifier of the quality profile
     @JsonKey(name: 'id')
-    int id;
+    int? id;
 
     /// Name of the quality profile
     @JsonKey(name: 'name')
-    String name;
+    String? name;
 
     /// Source
     @JsonKey(name: 'source')
-    String source;
+    String? source;
 
     /// Source resolution
     @JsonKey(name: 'resolution')
-    int resolution;
+    int? resolution;
 
     SonarrEpisodeFileQualityQuality({
         this.id,

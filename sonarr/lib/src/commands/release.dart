@@ -16,7 +16,7 @@ class SonarrCommandHandler_Release {
     /// Required Parameters:
     /// - `episodeId`: Episode ID for the episode to find releases for
     Future<List<SonarrRelease>> getReleases({
-        @required int episodeId,
+        required int episodeId,
     }) async => _commandGetReleases(_client, episodeId: episodeId);
 
     /// Handler for [release](https://github.com/Sonarr/Sonarr/wiki/Release#get).
@@ -29,8 +29,8 @@ class SonarrCommandHandler_Release {
     /// - `seriesId`: Series ID for season searching
     /// - `seasonNumber`: Season number to search for
     Future<List<SonarrRelease>> getSeasonReleases({
-        @required int seriesId,
-        @required int seasonNumber,
+        required int seriesId,
+        required int seasonNumber,
     }) async => _commandGetSeasonReleases(_client, seriesId: seriesId, seasonNumber: seasonNumber);
 
     /// Handler for [release](https://github.com/Sonarr/Sonarr/wiki/Release#post).
@@ -47,8 +47,8 @@ class SonarrCommandHandler_Release {
     /// Optional Parameters:
     /// - `useVersion3`: Push the release using Sonarr v3's route.
     Future<SonarrAddedRelease> addRelease({
-        @required String guid,
-        @required int indexerId,
+        required String guid,
+        required int indexerId,
         bool useVersion3 = false,
     }) async => _commandAddRelease(_client, guid: guid, indexerId: indexerId, useVersion3: useVersion3);
 }

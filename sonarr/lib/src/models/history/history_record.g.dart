@@ -8,18 +8,18 @@ part of 'history_record.dart';
 
 SonarrHistoryRecord _$SonarrHistoryRecordFromJson(Map<String, dynamic> json) {
   return SonarrHistoryRecord(
-    episodeId: json['episodeId'] as int,
-    seriesId: json['seriesId'] as int,
-    sourceTitle: json['sourceTitle'] as String,
+    episodeId: json['episodeId'] as int?,
+    seriesId: json['seriesId'] as int?,
+    sourceTitle: json['sourceTitle'] as String?,
     quality: json['quality'] == null
         ? null
         : SonarrEpisodeFileQuality.fromJson(
             json['quality'] as Map<String, dynamic>),
-    qualityCutoffNotMet: json['qualityCutoffNotMet'] as bool,
-    date: SonarrUtilities.dateTimeFromJson(json['date'] as String),
-    downloadId: json['downloadId'] as String,
+    qualityCutoffNotMet: json['qualityCutoffNotMet'] as bool?,
+    date: SonarrUtilities.dateTimeFromJson(json['date'] as String?),
+    downloadId: json['downloadId'] as String?,
     eventType:
-        SonarrUtilities.historyEventTypeFromJson(json['eventType'] as String),
+        SonarrUtilities.historyEventTypeFromJson(json['eventType'] as String?),
     data: json['data'] == null
         ? null
         : SonarrHistoryRecordData.fromJson(
@@ -30,7 +30,7 @@ SonarrHistoryRecord _$SonarrHistoryRecordFromJson(Map<String, dynamic> json) {
     series: json['series'] == null
         ? null
         : SonarrSeries.fromJson(json['series'] as Map<String, dynamic>),
-    id: json['id'] as int,
+    id: json['id'] as int?,
   );
 }
 

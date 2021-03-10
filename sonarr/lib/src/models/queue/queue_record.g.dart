@@ -18,21 +18,20 @@ SonarrQueueRecord _$SonarrQueueRecordFromJson(Map<String, dynamic> json) {
         ? null
         : SonarrEpisodeFileQuality.fromJson(
             json['quality'] as Map<String, dynamic>),
-    size: (json['size'] as num)?.toDouble(),
-    title: json['title'] as String,
-    sizeLeft: (json['sizeleft'] as num)?.toDouble(),
-    timeLeft: json['timeleft'] as String,
+    size: (json['size'] as num?)?.toDouble(),
+    title: json['title'] as String?,
+    sizeLeft: (json['sizeleft'] as num?)?.toDouble(),
+    timeLeft: json['timeleft'] as String?,
     estimatedCompletionTime: SonarrUtilities.dateTimeFromJson(
-        json['estimatedCompletionTime'] as String),
-    status: json['status'] as String,
-    trackedDownloadStatus: json['trackedDownloadStatus'] as String,
-    statusMessages: (json['statusMessages'] as List)
-        ?.map((e) => e == null
-            ? null
-            : SonarrQueueStatusMessage.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    id: json['id'] as int,
-  )..protocol = json['protocol'] as String;
+        json['estimatedCompletionTime'] as String?),
+    status: json['status'] as String?,
+    trackedDownloadStatus: json['trackedDownloadStatus'] as String?,
+    statusMessages: (json['statusMessages'] as List<dynamic>?)
+        ?.map(
+            (e) => SonarrQueueStatusMessage.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    id: json['id'] as int?,
+  )..protocol = json['protocol'] as String?;
 }
 
 Map<String, dynamic> _$SonarrQueueRecordToJson(SonarrQueueRecord instance) =>
@@ -49,7 +48,7 @@ Map<String, dynamic> _$SonarrQueueRecordToJson(SonarrQueueRecord instance) =>
       'status': instance.status,
       'trackedDownloadStatus': instance.trackedDownloadStatus,
       'statusMessages':
-          instance.statusMessages?.map((e) => e?.toJson())?.toList(),
+          instance.statusMessages?.map((e) => e.toJson()).toList(),
       'protocol': instance.protocol,
       'id': instance.id,
     };

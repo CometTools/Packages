@@ -9,9 +9,9 @@ part of 'episode_file_quality_revision.dart';
 SonarrEpisodeFileQualityRevision _$SonarrEpisodeFileQualityRevisionFromJson(
     Map<String, dynamic> json) {
   return SonarrEpisodeFileQualityRevision(
-    version: json['version'] as int,
-    real: json['real'] as int,
-    isRepack: json['isRepack'] as bool,
+    version: json['version'] as int?,
+    real: json['real'] as int?,
+    isRepack: json['isRepack'] as bool?,
   );
 }
 

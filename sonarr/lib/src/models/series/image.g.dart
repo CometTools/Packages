@@ -8,9 +8,9 @@ part of 'image.dart';
 
 SonarrSeriesImage _$SonarrSeriesImageFromJson(Map<String, dynamic> json) {
   return SonarrSeriesImage(
-    coverType: json['coverType'] as String,
-    url: json['url'] as String,
-    remoteUrl: json['remoteUrl'] as String,
+    coverType: json['coverType'] as String?,
+    url: json['url'] as String?,
+    remoteUrl: json['remoteUrl'] as String?,
   );
 }
 

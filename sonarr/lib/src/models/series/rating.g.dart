@@ -8,8 +8,8 @@ part of 'rating.dart';
 
 SonarrSeriesRating _$SonarrSeriesRatingFromJson(Map<String, dynamic> json) {
   return SonarrSeriesRating(
-    votes: json['votes'] as int,
-    value: (json['value'] as num)?.toDouble(),
+    votes: json['votes'] as int?,
+    value: (json['value'] as num?)?.toDouble(),
   );
 }
 

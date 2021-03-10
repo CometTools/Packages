@@ -16,6 +16,6 @@ class SonarrCommandHandler_SeriesLookup {
     /// Required Parameters:
     /// - `term`: Term/words to search for
     Future<List<SonarrSeriesLookup>> getSeriesLookup({
-        @required String term,
+        required String term,
     }) async => _commandGetSeriesLookup(_client, term: term);
 }

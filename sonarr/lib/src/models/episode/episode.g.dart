@@ -8,25 +8,25 @@ part of 'episode.dart';
 
 SonarrEpisode _$SonarrEpisodeFromJson(Map<String, dynamic> json) {
   return SonarrEpisode(
-    seriesId: json['seriesId'] as int,
-    episodeFileId: json['episodeFileId'] as int,
-    seasonNumber: json['seasonNumber'] as int,
-    episodeNumber: json['episodeNumber'] as int,
-    title: json['title'] as String,
-    airDate: json['airDate'] as String,
-    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String),
-    overview: json['overview'] as String,
+    seriesId: json['seriesId'] as int?,
+    episodeFileId: json['episodeFileId'] as int?,
+    seasonNumber: json['seasonNumber'] as int?,
+    episodeNumber: json['episodeNumber'] as int?,
+    title: json['title'] as String?,
+    airDate: json['airDate'] as String?,
+    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String?),
+    overview: json['overview'] as String?,
     episodeFile: json['episodeFile'] == null
         ? null
         : SonarrEpisodeFile.fromJson(
             json['episodeFile'] as Map<String, dynamic>),
-    hasFile: json['hasFile'] as bool,
-    monitored: json['monitored'] as bool,
-    absoluteEpisodeNumber: json['absoluteEpisodeNumber'] as int,
-    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool,
+    hasFile: json['hasFile'] as bool?,
+    monitored: json['monitored'] as bool?,
+    absoluteEpisodeNumber: json['absoluteEpisodeNumber'] as int?,
+    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool?,
     lastSearchTime:
-        SonarrUtilities.dateTimeFromJson(json['lastSearchTime'] as String),
-    id: json['id'] as int,
+        SonarrUtilities.dateTimeFromJson(json['lastSearchTime'] as String?),
+    id: json['id'] as int?,
   );
 }
 

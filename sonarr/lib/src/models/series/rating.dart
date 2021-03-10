@@ -8,11 +8,11 @@ part 'rating.g.dart';
 class SonarrSeriesRating {
     /// Number of votes for the rating score
     @JsonKey(name: 'votes')
-    int votes;
+    int? votes;
 
     /// Final score/value of the rating
     @JsonKey(name: 'value')
-    double value;
+    double? value;
 
     SonarrSeriesRating({
         this.votes,

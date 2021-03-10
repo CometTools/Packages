@@ -16,7 +16,7 @@ class SonarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `label`: Tag label
     Future<SonarrTag> addTag({
-        @required String label,
+        required String label,
     }) async => _commandAddTag(_client, label: label);
 
     /// Handler for [tag/{id}](https://github.com/Sonarr/Sonarr/wiki/Tag#deleteid).
@@ -26,7 +26,7 @@ class SonarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `id`: Tag identifier
     Future<void> deleteTag({
-        @required int id,
+        required int id,
     }) async => _commandDeleteTag(_client, id: id);
 
     /// Handler for [tag/{id}](https://github.com/Sonarr/Sonarr/wiki/Tag#getid).
@@ -36,7 +36,7 @@ class SonarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `id`: Tag identifier
     Future<void> getTag({
-        @required int id,
+        required int id,
     }) async => _commandGetTag(_client, id: id);
 
     /// Handler for [tag](https://github.com/Sonarr/Sonarr/wiki/Tag#get).
@@ -51,6 +51,6 @@ class SonarrCommandHandler_Tag {
     /// Required Parameters:
     /// - `tag`: A modified [SonarrTag] object
     Future<SonarrTag> updateTag({
-        @required SonarrTag tag,
+        required SonarrTag tag,
     }) async => _commandUpdateTag(_client, tag: tag);
 }

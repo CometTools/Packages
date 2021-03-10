@@ -8,21 +8,21 @@ part of 'missing_record.dart';
 
 SonarrMissingRecord _$SonarrMissingRecordFromJson(Map<String, dynamic> json) {
   return SonarrMissingRecord(
-    seriesId: json['seriesId'] as int,
-    episodeFileId: json['episodeFileId'] as int,
-    seasonNumber: json['seasonNumber'] as int,
-    episodeNumber: json['episodeNumber'] as int,
-    title: json['title'] as String,
-    airDate: json['airDate'] as String,
-    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String),
-    overview: json['overview'] as String,
-    hasFile: json['hasFile'] as bool,
-    monitored: json['monitored'] as bool,
-    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool,
+    seriesId: json['seriesId'] as int?,
+    episodeFileId: json['episodeFileId'] as int?,
+    seasonNumber: json['seasonNumber'] as int?,
+    episodeNumber: json['episodeNumber'] as int?,
+    title: json['title'] as String?,
+    airDate: json['airDate'] as String?,
+    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String?),
+    overview: json['overview'] as String?,
+    hasFile: json['hasFile'] as bool?,
+    monitored: json['monitored'] as bool?,
+    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool?,
     series: json['series'] == null
         ? null
         : SonarrSeries.fromJson(json['series'] as Map<String, dynamic>),
-    id: json['id'] as int,
+    id: json['id'] as int?,
   );
 }
 

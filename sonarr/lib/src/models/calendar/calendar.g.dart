@@ -8,29 +8,29 @@ part of 'calendar.dart';
 
 SonarrCalendar _$SonarrCalendarFromJson(Map<String, dynamic> json) {
   return SonarrCalendar(
-    seriesId: json['seriesId'] as int,
-    episodeFileId: json['episodeFileId'] as int,
-    seasonNumber: json['seasonNumber'] as int,
-    episodeNumber: json['episodeNumber'] as int,
-    title: json['title'] as String,
-    airDate: json['airDate'] as String,
-    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String),
+    seriesId: json['seriesId'] as int?,
+    episodeFileId: json['episodeFileId'] as int?,
+    seasonNumber: json['seasonNumber'] as int?,
+    episodeNumber: json['episodeNumber'] as int?,
+    title: json['title'] as String?,
+    airDate: json['airDate'] as String?,
+    airDateUtc: SonarrUtilities.dateTimeFromJson(json['airDateUtc'] as String?),
     episodeFile: json['episodeFile'] == null
         ? null
         : SonarrEpisodeFile.fromJson(
             json['episodeFile'] as Map<String, dynamic>),
-    overview: json['overview'] as String,
-    hasFile: json['hasFile'] as bool,
-    monitored: json['monitored'] as bool,
-    absoluteEpisodeNumber: json['absoluteEpisodeNumber'] as int,
-    sceneAbsoluteEpisodeNumber: json['sceneAbsoluteEpisodeNumber'] as int,
-    sceneEpisodeNumber: json['sceneEpisodeNumber'] as int,
-    sceneSeasonNumber: json['sceneSeasonNumber'] as int,
-    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool,
+    overview: json['overview'] as String?,
+    hasFile: json['hasFile'] as bool?,
+    monitored: json['monitored'] as bool?,
+    absoluteEpisodeNumber: json['absoluteEpisodeNumber'] as int?,
+    sceneAbsoluteEpisodeNumber: json['sceneAbsoluteEpisodeNumber'] as int?,
+    sceneEpisodeNumber: json['sceneEpisodeNumber'] as int?,
+    sceneSeasonNumber: json['sceneSeasonNumber'] as int?,
+    unverifiedSceneNumbering: json['unverifiedSceneNumbering'] as bool?,
     series: json['series'] == null
         ? null
         : SonarrSeries.fromJson(json['series'] as Map<String, dynamic>),
-    id: json['id'] as int,
+    id: json['id'] as int?,
   );
 }
 

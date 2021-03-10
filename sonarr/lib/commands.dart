@@ -3,7 +3,6 @@ library sonarr_commands;
 
 import 'package:dio/dio.dart';
 import 'package:intl/intl.dart';
-import 'package:meta/meta.dart';
 import 'package:sonarr/types.dart';
 import 'models.dart';
 
