@@ -1,4 +1,4 @@
-# 2.0.0
+# 2.0.0-pre.1
 - Null-safety/NNBD support
 - Add support to fetch Radarr queue status
 - Add support to fetch filesystem folders and files
