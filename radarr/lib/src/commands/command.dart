@@ -14,6 +14,16 @@ class RadarrCommandHandler_Command {
     /// Trigger a backup routine.
     Future<RadarrCommand> backup() async => _commandBackup(_client);
 
+    /// Handler for [command (DownloadedMoviesScan)](https://radarr.video/docs/api/#/Command/post-command).
+    /// 
+    /// Triggers a scan at the path for downloaded movies.
+    /// 
+    /// Required Parameters:
+    /// - `path`: Full/absolute path of the host's filesystem.
+    Future<RadarrCommand> downloadedMoviesScan({
+        required String path,
+    }) async => _commandDownloadedMoviesScan(_client, path: path);
+
     /// Handler for [command (MissingMoviesSearch)](https://radarr.video/docs/api/#/Command/post-command).
     /// 
     /// Triggers a search of all missing movies.

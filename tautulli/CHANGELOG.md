@@ -1,3 +1,5 @@
+# 2.0.0-pre.3
+- Updated packages
 # 2.0.0-pre.2
 - Support for null-safety/NNBD.
 # 2.0.0-pre.1
