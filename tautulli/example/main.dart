@@ -30,7 +30,7 @@ Future<void> printActivity(Tautulli api) async {
     // Fetch the current activity
     api.activity.getActivity().then((activity) {
         // Loop over all sessions and print "user / content / ip address"
-        activity!.sessions!.forEach((session) => print('${session.user} / ${session.fullTitle} / ${session.ipAddressPublic}'));
+        activity?.sessions?.forEach((session) => print('${session.user} / ${session.fullTitle} / ${session.ipAddressPublic}'));
     });
 }
 
@@ -38,6 +38,6 @@ Future<void> printActivity(Tautulli api) async {
 Future<void> printHistory(Tautulli api) async {
     api.history.getHistory(length: 5).then((history) {
         /// Loop over all history records and print "user / content / date"
-        history.records!.forEach((record) => print('${record.user} / ${record.fullTitle} / ${record.date}'));
+        history.records?.forEach((record) => print('${record.user} / ${record.fullTitle} / ${record.date}'));
     });
 }
