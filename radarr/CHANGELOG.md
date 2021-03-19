@@ -1,3 +1,5 @@
+# 2.0.0-pre.3
+- Add `images` array of `RadarrImage` to `RadarrMovieCollection`
 # 2.0.0-pre.2
 - Added command: `DownloadedMoviesScan`
 - Updated packages

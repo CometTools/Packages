@@ -34,6 +34,11 @@ export 'src/models/image/image.dart';
 /// Import List
 export 'src/models/import_list/import_list.dart';
 
+/// Manual Import
+export 'src/models/manual_import/manual_import.dart';
+export 'src/models/manual_import/manual_import_rejection.dart';
+export 'src/models/manual_import/manual_import_update.dart';
+
 /// Movie
 export 'src/models/movie/alternate_titles.dart';
 export 'src/models/movie/collection.dart';

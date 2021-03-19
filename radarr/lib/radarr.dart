@@ -33,6 +33,7 @@ class Radarr {
         required this.healthCheck,
         required this.history,
         required this.importList,
+        required this.manualImport,
         required this.movie,
         required this.movieFile,
         required this.movieLookup,
@@ -86,6 +87,7 @@ class Radarr {
             healthCheck: RadarrCommandHandler_HealthCheck(_dio),
             history: RadarrCommandHandler_History(_dio),
             importList: RadarrCommandHandler_ImportList(_dio),
+            manualImport: RadarrCommandHandler_ManualImport(_dio),
             movie: RadarrCommandHandler_Movie(_dio),
             movieFile: RadarrCommandHandler_MovieFile(_dio),
             movieLookup: RadarrCommandHandler_MovieLookup(_dio),
@@ -129,6 +131,7 @@ class Radarr {
             healthCheck: RadarrCommandHandler_HealthCheck(client),
             history: RadarrCommandHandler_History(client),
             importList: RadarrCommandHandler_ImportList(client),
+            manualImport: RadarrCommandHandler_ManualImport(client),
             movie: RadarrCommandHandler_Movie(client),
             movieFile: RadarrCommandHandler_MovieFile(client),
             movieLookup: RadarrCommandHandler_MovieLookup(client),
@@ -186,6 +189,11 @@ class Radarr {
     /// 
     /// _Check the documentation to see all API calls that fall under this category._
     final RadarrCommandHandler_ImportList importList;
+
+    /// Command handler for all manual import-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final RadarrCommandHandler_ManualImport manualImport;
 
     /// Command handler for all movie-related API calls.
     /// 
