@@ -11,6 +11,9 @@ RadarrMovieCollection _$RadarrMovieCollectionFromJson(
   return RadarrMovieCollection(
     name: json['name'] as String?,
     tmdbId: json['tmdbId'] as int?,
+    images: (json['images'] as List<dynamic>?)
+        ?.map((e) => RadarrImage.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -26,5 +29,6 @@ Map<String, dynamic> _$RadarrMovieCollectionToJson(
 
   writeNotNull('name', instance.name);
   writeNotNull('tmdbId', instance.tmdbId);
+  writeNotNull('images', instance.images?.map((e) => e.toJson()).toList());
   return val;
 }

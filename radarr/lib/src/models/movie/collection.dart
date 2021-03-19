@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
+import '../../../models.dart';
 
 part 'collection.g.dart';
 
@@ -12,9 +13,13 @@ class RadarrMovieCollection {
     @JsonKey(name: 'tmdbId')
     int? tmdbId;
 
+    @JsonKey(name: 'images')
+    List<RadarrImage>? images;
+
     RadarrMovieCollection({
         this.name,
         this.tmdbId,
+        this.images,
     });
 
     /// Returns a JSON-encoded string version of this object.
