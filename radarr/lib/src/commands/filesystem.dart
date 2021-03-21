@@ -12,20 +12,19 @@ class RadarrCommandHandler_FileSystem {
     /// Handler for `filesystem`.
     /// 
     /// Returns a list of directories and files in the supplied path.
+    /// If no path is supplied, fetches the root directory of the OS.
     /// 
-    /// Required Parameters:
     /// - `path`: The full path on the filesystem
-    /// 
-    /// Optional Parameters:
     /// - `allowFoldersWithoutTrailingSlashes`: Go into a folders without trailing slashes
     /// - `includeFiles`: Include files in the folder (defaulted to false)
     Future<RadarrFileSystem> get({
-        required String path,
+        String? path,
         bool? allowFoldersWithoutTrailingSlashes,
         bool? includeFiles,
     }) async => _commandGetFileSystem(
         _client,
-        path: path, allowFoldersWithoutTrailingSlashes: allowFoldersWithoutTrailingSlashes,
+        path: path,
+        allowFoldersWithoutTrailingSlashes: allowFoldersWithoutTrailingSlashes,
         includeFiles: includeFiles,
     );
 
