@@ -46,6 +46,11 @@ part 'src/commands/import_list/get_all_import_lists.dart';
 part 'src/commands/import_list/get_import_list.dart';
 part 'src/commands/import_list/get_movies_from_list.dart';
 
+// Language
+part 'src/commands/language.dart';
+part 'src/commands/language/get_all_languages.dart';
+part 'src/commands/language/get_language.dart';
+
 // Manual Import
 part 'src/commands/manual_import.dart';
 part 'src/commands/manual_import/get_manual_import.dart';
