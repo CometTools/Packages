@@ -22,4 +22,14 @@ class RadarrCommandHandler_ManualImport {
         required String folder,
         bool? filterExistingFiles,
     }) async => _commandGetManualImport(_client, folder: folder, filterExistingFiles: filterExistingFiles);
+
+    /// Handler for `manualimport`.
+    /// 
+    /// Returns the updated information and rejections for a manual import.
+    /// 
+    /// Required Parameters:
+    /// - `data`: Array of [RadarrManualImportUpdateData] objects that each contain a single manual import to update.
+    Future<List<RadarrManualImportUpdate>> update({
+        required List<RadarrManualImportUpdateData> data,
+    }) async => _commandUpdateManualImport(_client, data: data);
 }

@@ -49,6 +49,7 @@ part 'src/commands/import_list/get_movies_from_list.dart';
 // Manual Import
 part 'src/commands/manual_import.dart';
 part 'src/commands/manual_import/get_manual_import.dart';
+part 'src/commands/manual_import/update_manual_import.dart';
 
 // Movie
 part 'src/commands/movie.dart';
