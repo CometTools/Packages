@@ -1,3 +1,6 @@
+# 2.0.0-pre.3
+- Updated packages
+- Add support for setting series type when POSTing/adding a new series
 # 2.0.0-pre.2
 - Updated packages
 # 2.0.0-pre.1

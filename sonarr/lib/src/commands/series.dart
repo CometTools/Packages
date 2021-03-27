@@ -23,6 +23,7 @@ class SonarrCommandHandler_Series {
     /// - `seasons`: List of [SonarrSeriesSeason] objects containing the season information
     /// - `path`: Full path to where the series is located **OR**
     /// - `rootFolderPath`: Path to the root folder, where the folder will be created as the title
+    /// - `seriesType`: The type of the series (anime, standard, or daily)
     /// 
     /// Optional Parameters:
     /// - `tvRageId`: TVRage identifier for the series
@@ -38,6 +39,7 @@ class SonarrCommandHandler_Series {
         required String titleSlug,
         required List<SonarrSeriesImage> images,
         required List<SonarrSeriesSeason> seasons,
+        required SonarrSeriesType seriesType,
         int? languageProfileId,
         List<int>? tags,
         String? path,
@@ -62,6 +64,7 @@ class SonarrCommandHandler_Series {
         tvRageId: tvRageId,
         seasonFolder: seasonFolder,
         monitored: monitored,
+        seriesType: seriesType,
         tags: tags,
         ignoreEpisodesWithFiles: ignoreEpisodesWithFiles,
         ignoreEpisodesWithoutFiles: ignoreEpisodesWithoutFiles,
