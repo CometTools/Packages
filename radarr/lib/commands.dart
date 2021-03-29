@@ -81,6 +81,7 @@ part 'src/commands/release/push_release.dart';
 // Quality Profile
 part 'src/commands/quality_profile.dart';
 part 'src/commands/quality_profile/get_quality_profile.dart';
+part 'src/commands/quality_profile/get_quality_definitions.dart';
 part 'src/commands/quality_profile/get_all_quality_profiles.dart';
 
 // Queue

@@ -11,11 +11,10 @@ RadarrMovieFileQuality _$RadarrMovieFileQualityFromJson(
   return RadarrMovieFileQuality(
     quality: json['quality'] == null
         ? null
-        : RadarrMovieFileQualityQuality.fromJson(
-            json['quality'] as Map<String, dynamic>),
+        : RadarrQuality.fromJson(json['quality'] as Map<String, dynamic>),
     revision: json['revision'] == null
         ? null
-        : RadarrMovieFileQualityRevision.fromJson(
+        : RadarrQualityRevision.fromJson(
             json['revision'] as Map<String, dynamic>),
   );
 }

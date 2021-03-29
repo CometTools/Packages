@@ -1,22 +1,22 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'movie_file_quality_revision.dart';
+part of 'quality_revision.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RadarrMovieFileQualityRevision _$RadarrMovieFileQualityRevisionFromJson(
+RadarrQualityRevision _$RadarrQualityRevisionFromJson(
     Map<String, dynamic> json) {
-  return RadarrMovieFileQualityRevision(
+  return RadarrQualityRevision(
     version: json['version'] as int?,
     real: json['real'] as int?,
     isRepack: json['isRepack'] as bool?,
   );
 }
 
-Map<String, dynamic> _$RadarrMovieFileQualityRevisionToJson(
-    RadarrMovieFileQualityRevision instance) {
+Map<String, dynamic> _$RadarrQualityRevisionToJson(
+    RadarrQualityRevision instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

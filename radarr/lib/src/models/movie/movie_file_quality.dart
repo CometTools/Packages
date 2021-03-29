@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'movie_file_quality_quality.dart';
-import 'movie_file_quality_revision.dart';
+import '../../../models.dart';
 
 part 'movie_file_quality.g.dart';
 
@@ -9,10 +8,10 @@ part 'movie_file_quality.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class RadarrMovieFileQuality {
     @JsonKey(name: 'quality')
-    RadarrMovieFileQualityQuality? quality;
+    RadarrQuality? quality;
 
     @JsonKey(name: 'revision')
-    RadarrMovieFileQualityRevision? revision;
+    RadarrQualityRevision? revision;
 
     RadarrMovieFileQuality({
         this.quality,
