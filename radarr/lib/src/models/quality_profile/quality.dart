@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'movie_file_quality_quality.g.dart';
+part 'quality.g.dart';
 
-/// Model for an movie file's quality profile's quality.
+/// Store details about a quality profile item.
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class RadarrMovieFileQualityQuality {
+class RadarrQuality {
     @JsonKey(name: 'id')
     int? id;
 
@@ -21,7 +21,7 @@ class RadarrMovieFileQualityQuality {
     @JsonKey(name: 'modifier')
     String? modifier;
 
-    RadarrMovieFileQualityQuality({
+    RadarrQuality({
         this.id,
         this.name,
         this.source,
@@ -33,8 +33,8 @@ class RadarrMovieFileQualityQuality {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [RadarrMovieFileQualityQuality] object.
-    factory RadarrMovieFileQualityQuality.fromJson(Map<String, dynamic> json) => _$RadarrMovieFileQualityQualityFromJson(json);
-    /// Serialize a [RadarrMovieFileQualityQuality] object to a JSON map.
-    Map<String, dynamic> toJson() => _$RadarrMovieFileQualityQualityToJson(this);
+    /// Deserialize a JSON map to a [RadarrQuality] object.
+    factory RadarrQuality.fromJson(Map<String, dynamic> json) => _$RadarrQualityFromJson(json);
+    /// Serialize a [RadarrQuality] object to a JSON map.
+    Map<String, dynamic> toJson() => _$RadarrQualityToJson(this);
 }

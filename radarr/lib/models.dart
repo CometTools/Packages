@@ -34,6 +34,12 @@ export 'src/models/image/image.dart';
 /// Import List
 export 'src/models/import_list/import_list.dart';
 
+/// Manual Import
+export 'src/models/manual_import/manual_import.dart';
+export 'src/models/manual_import/manual_import_rejection.dart';
+export 'src/models/manual_import/manual_import_update.dart';
+export 'src/models/manual_import/manual_import_update_data.dart';
+
 /// Movie
 export 'src/models/movie/alternate_titles.dart';
 export 'src/models/movie/collection.dart';
@@ -42,16 +48,16 @@ export 'src/models/movie/movie.dart';
 export 'src/models/movie/movie_file.dart';
 export 'src/models/movie/movie_file_media_info.dart';
 export 'src/models/movie/movie_file_quality.dart';
-export 'src/models/movie/movie_file_quality_revision.dart';
-export 'src/models/movie/movie_file_quality_quality.dart';
 export 'src/models/movie/rating.dart';
 
 /// Quality Profile
 export 'src/models/quality_profile/format_item.dart';
 export 'src/models/quality_profile/item.dart';
-export 'src/models/quality_profile/item_quality.dart';
 export 'src/models/quality_profile/language.dart';
+export 'src/models/quality_profile/quality.dart';
+export 'src/models/quality_profile/quality_definition.dart';
 export 'src/models/quality_profile/quality_profile.dart';
+export 'src/models/quality_profile/quality_revision.dart';
 
 /// Queue
 export 'src/models/queue/queue.dart';

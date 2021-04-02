@@ -46,6 +46,16 @@ part 'src/commands/import_list/get_all_import_lists.dart';
 part 'src/commands/import_list/get_import_list.dart';
 part 'src/commands/import_list/get_movies_from_list.dart';
 
+// Language
+part 'src/commands/language.dart';
+part 'src/commands/language/get_all_languages.dart';
+part 'src/commands/language/get_language.dart';
+
+// Manual Import
+part 'src/commands/manual_import.dart';
+part 'src/commands/manual_import/get_manual_import.dart';
+part 'src/commands/manual_import/update_manual_import.dart';
+
 // Movie
 part 'src/commands/movie.dart';
 part 'src/commands/movie/add_movie.dart';
@@ -71,6 +81,7 @@ part 'src/commands/release/push_release.dart';
 // Quality Profile
 part 'src/commands/quality_profile.dart';
 part 'src/commands/quality_profile/get_quality_profile.dart';
+part 'src/commands/quality_profile/get_quality_definitions.dart';
 part 'src/commands/quality_profile/get_all_quality_profiles.dart';
 
 // Queue

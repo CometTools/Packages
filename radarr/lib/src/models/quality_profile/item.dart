@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'item_quality.dart';
+import '../../../models.dart';
 
 part 'item.g.dart';
 
@@ -11,7 +11,7 @@ class RadarrQualityProfileItem {
     String? name;
 
     @JsonKey(name: 'quality')
-    RadarrQualityProfileItemQuality? quality;
+    RadarrQuality? quality;
 
     @JsonKey(name: 'items')
     List<RadarrQualityProfileItem>? items;

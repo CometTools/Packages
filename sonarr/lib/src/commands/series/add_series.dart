@@ -7,6 +7,7 @@ Future<SonarrSeries> _commandAddSeries(Dio client, {
     required String titleSlug,
     required List<SonarrSeriesImage> images,
     required List<SonarrSeriesSeason> seasons,
+    required SonarrSeriesType seriesType,
     String? path,
     String? rootFolderPath,
     int? tvRageId,
@@ -33,6 +34,7 @@ Future<SonarrSeries> _commandAddSeries(Dio client, {
         if(tvRageId != null) 'tvRageId': tvRageId,
         'seasonFolder': seasonFolder,
         'monitored': monitored,
+        'seriesType': seriesType.value,
         if(tags != null) 'tags': tags,
         'addOptions': {
             'ignoreEpisodesWithFiles': ignoreEpisodesWithFiles,

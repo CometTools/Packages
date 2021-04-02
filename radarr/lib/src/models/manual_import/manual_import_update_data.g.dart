@@ -1,20 +1,22 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'language.dart';
+part of 'manual_import_update_data.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RadarrLanguage _$RadarrLanguageFromJson(Map<String, dynamic> json) {
-  return RadarrLanguage(
+RadarrManualImportUpdateData _$RadarrManualImportUpdateDataFromJson(
+    Map<String, dynamic> json) {
+  return RadarrManualImportUpdateData(
     id: json['id'] as int?,
-    name: json['name'] as String?,
-    nameLower: json['nameLower'] as String?,
+    path: json['path'] as String?,
+    movieId: json['movieId'] as int?,
   );
 }
 
-Map<String, dynamic> _$RadarrLanguageToJson(RadarrLanguage instance) {
+Map<String, dynamic> _$RadarrManualImportUpdateDataToJson(
+    RadarrManualImportUpdateData instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -24,7 +26,7 @@ Map<String, dynamic> _$RadarrLanguageToJson(RadarrLanguage instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('name', instance.name);
-  writeNotNull('nameLower', instance.nameLower);
+  writeNotNull('path', instance.path);
+  writeNotNull('movieId', instance.movieId);
   return val;
 }

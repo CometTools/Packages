@@ -1,3 +1,10 @@
+# 2.0.0-pre.4
+- Unify `RadarrQualityProfile` definitions
+- Support for fetching languages
+- Support for fetching quality definitions
+- Add support for manual import fetching commands
+# 2.0.0-pre.3
+- Add `images` array of `RadarrImage` to `RadarrMovieCollection`
 # 2.0.0-pre.2
 - Added command: `DownloadedMoviesScan`
 - Updated packages

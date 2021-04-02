@@ -12,8 +12,7 @@ RadarrQualityProfileItem _$RadarrQualityProfileItemFromJson(
     name: json['name'] as String?,
     quality: json['quality'] == null
         ? null
-        : RadarrQualityProfileItemQuality.fromJson(
-            json['quality'] as Map<String, dynamic>),
+        : RadarrQuality.fromJson(json['quality'] as Map<String, dynamic>),
     items: (json['items'] as List<dynamic>?)
         ?.map(
             (e) => RadarrQualityProfileItem.fromJson(e as Map<String, dynamic>))

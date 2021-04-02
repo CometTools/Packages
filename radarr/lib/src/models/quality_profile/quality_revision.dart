@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'movie_file_quality_revision.g.dart';
+part 'quality_revision.g.dart';
 
 /// Model for an movie file's quality profile's revision.
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
-class RadarrMovieFileQualityRevision {
+class RadarrQualityRevision {
     @JsonKey(name: 'version')
     int? version;
 
@@ -15,7 +15,7 @@ class RadarrMovieFileQualityRevision {
     @JsonKey(name: 'isRepack')
     bool? isRepack;
 
-    RadarrMovieFileQualityRevision({
+    RadarrQualityRevision({
         this.version,
         this.real,
         this.isRepack,
@@ -25,8 +25,8 @@ class RadarrMovieFileQualityRevision {
     @override
     String toString() => json.encode(this.toJson());
 
-    /// Deserialize a JSON map to a [RadarrMovieFileQualityRevision] object.
-    factory RadarrMovieFileQualityRevision.fromJson(Map<String, dynamic> json) => _$RadarrMovieFileQualityRevisionFromJson(json);
-    /// Serialize a [RadarrMovieFileQualityRevision] object to a JSON map.
-    Map<String, dynamic> toJson() => _$RadarrMovieFileQualityRevisionToJson(this);
+    /// Deserialize a JSON map to a [RadarrQualityRevision] object.
+    factory RadarrQualityRevision.fromJson(Map<String, dynamic> json) => _$RadarrQualityRevisionFromJson(json);
+    /// Serialize a [RadarrQualityRevision] object to a JSON map.
+    Map<String, dynamic> toJson() => _$RadarrQualityRevisionToJson(this);
 }

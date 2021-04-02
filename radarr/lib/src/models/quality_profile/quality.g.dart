@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'item_quality.dart';
+part of 'quality.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RadarrQualityProfileItemQuality _$RadarrQualityProfileItemQualityFromJson(
-    Map<String, dynamic> json) {
-  return RadarrQualityProfileItemQuality(
+RadarrQuality _$RadarrQualityFromJson(Map<String, dynamic> json) {
+  return RadarrQuality(
     id: json['id'] as int?,
     name: json['name'] as String?,
     source: json['source'] as String?,
@@ -17,8 +16,7 @@ RadarrQualityProfileItemQuality _$RadarrQualityProfileItemQualityFromJson(
   );
 }
 
-Map<String, dynamic> _$RadarrQualityProfileItemQualityToJson(
-    RadarrQualityProfileItemQuality instance) {
+Map<String, dynamic> _$RadarrQualityToJson(RadarrQuality instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

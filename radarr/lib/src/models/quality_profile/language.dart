@@ -12,9 +12,13 @@ class RadarrLanguage {
     @JsonKey(name: 'name')
     String? name;
 
+    @JsonKey(name: 'nameLower')
+    String? nameLower;
+
     RadarrLanguage({
         this.id,
         this.name,
+        this.nameLower,
     });
 
     /// Returns a JSON-encoded string version of this object.
