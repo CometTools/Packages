@@ -1,10 +1,6 @@
-# 2.0.0-pre.3
-- Updated packages
+# 2.0.0
 - Add support for setting series type when POSTing/adding a new series
-# 2.0.0-pre.2
-- Updated packages
-# 2.0.0-pre.1
-- Updated for null-safety/NNBD support.
+- Updated for null-safety/NNBD support
 # 1.1.1+1
 - Updated packages
 # 1.1.1

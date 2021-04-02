@@ -1,9 +1,5 @@
-# 2.0.0-pre.3
-- Updated packages
-# 2.0.0-pre.2
+# 2.0.0
 - Support for null-safety/NNBD.
-# 2.0.0-pre.1
-- Update Dio to 4.0.0 beta
 # 1.2.2+1
 - Updated packages
 # 1.2.2
