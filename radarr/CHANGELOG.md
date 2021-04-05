@@ -1,14 +1,12 @@
-# 2.0.0-pre.4
+# 2.0.0
+- Ability to trigger manual import command
 - Unify `RadarrQualityProfile` definitions
 - Support for fetching languages
 - Support for fetching quality definitions
 - Add support for manual import fetching commands
-# 2.0.0-pre.3
 - Add `images` array of `RadarrImage` to `RadarrMovieCollection`
-# 2.0.0-pre.2
 - Added command: `DownloadedMoviesScan`
 - Updated packages
-# 2.0.0-pre.1
 - Null-safety/NNBD support
 - Add support to fetch Radarr queue status
 - Add support to fetch filesystem folders and files

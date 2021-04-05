@@ -36,6 +36,7 @@ export 'src/models/import_list/import_list.dart';
 
 /// Manual Import
 export 'src/models/manual_import/manual_import.dart';
+export 'src/models/manual_import/manual_import_file.dart';
 export 'src/models/manual_import/manual_import_rejection.dart';
 export 'src/models/manual_import/manual_import_update.dart';
 export 'src/models/manual_import/manual_import_update_data.dart';

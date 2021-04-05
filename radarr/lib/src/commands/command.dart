@@ -24,6 +24,18 @@ class RadarrCommandHandler_Command {
         required String path,
     }) async => _commandDownloadedMoviesScan(_client, path: path);
 
+    /// Handler for [command (ManualImport)](https://radarr.video/docs/api/#/Command/post-command).
+    /// 
+    /// Trigger the manual import of the files.
+    /// 
+    /// Required Parameters:
+    /// - `files`: List of [RadarrManualImportFile] instances each containing details on a file to import.
+    /// - `importMode`: [RadarrImportMode] to describe which mode of import to use.
+    Future<RadarrCommand> manualImport({
+        required List<RadarrManualImportFile> files,
+        required RadarrImportMode importMode,
+    }) async => _commandManualImport(_client, files: files, importMode: importMode);
+
     /// Handler for [command (MissingMoviesSearch)](https://radarr.video/docs/api/#/Command/post-command).
     /// 
     /// Triggers a search of all missing movies.
