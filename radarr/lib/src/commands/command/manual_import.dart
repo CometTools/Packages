@@ -7,7 +7,7 @@ Future<RadarrCommand> _commandManualImport(Dio client, {
     assert(files.length != 0, 'Files must contain at least one RadarrManualImportFile');
     Response response = await client.post('command', data: {
         'name': 'ManualImport',
-        'files': files.map((file) => file.toJson()),
+        'files': files.map((file) => file.toJson()).toList(),
         'importMode': importMode.value,
     });
     return RadarrCommand.fromJson(response.data);
