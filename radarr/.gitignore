@@ -29,3 +29,4 @@ coverage/
 .test_coverage.dart
 coverage_badge.svg
 _internal.dart
+_internal.json
