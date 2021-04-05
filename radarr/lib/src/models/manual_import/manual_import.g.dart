@@ -13,23 +13,23 @@ RadarrManualImport _$RadarrManualImportFromJson(Map<String, dynamic> json) {
     folderName: json['folderName'] as String?,
     name: json['name'] as String?,
     size: json['size'] as int?,
-  )
-    ..movie = json['movie'] == null
+    movie: json['movie'] == null
         ? null
-        : RadarrMovie.fromJson(json['movie'] as Map<String, dynamic>)
-    ..quality = json['quality'] == null
+        : RadarrMovie.fromJson(json['movie'] as Map<String, dynamic>),
+    quality: json['quality'] == null
         ? null
         : RadarrMovieFileQuality.fromJson(
-            json['quality'] as Map<String, dynamic>)
-    ..languages = (json['languages'] as List<dynamic>?)
+            json['quality'] as Map<String, dynamic>),
+    languages: (json['languages'] as List<dynamic>?)
         ?.map((e) => RadarrLanguage.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..qualityWeight = json['qualityWeight'] as int?
-    ..rejections = (json['rejections'] as List<dynamic>?)
+        .toList(),
+    qualityWeight: json['qualityWeight'] as int?,
+    rejections: (json['rejections'] as List<dynamic>?)
         ?.map((e) =>
             RadarrManualImportRejection.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..id = json['id'] as int?;
+        .toList(),
+    id: json['id'] as int?,
+  );
 }
 
 Map<String, dynamic> _$RadarrManualImportToJson(RadarrManualImport instance) {

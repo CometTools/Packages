@@ -46,6 +46,12 @@ class RadarrManualImport {
         this.folderName,
         this.name,
         this.size,
+        this.movie,
+        this.quality,
+        this.languages,
+        this.qualityWeight,
+        this.rejections,
+        this.id,
     });
 
     /// Returns a JSON-encoded string version of this object.
