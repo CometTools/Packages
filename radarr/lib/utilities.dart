@@ -60,4 +60,19 @@ class RadarrUtilities {
     static RadarrFileSystemType? fileSystemTypeFromJson(String? type) => RadarrFileSystemType.FOLDER.from(type);
     /// Converts a [RadarrFileSystemType] object back to its string representation.
     static String? fileSystemTypeToJson(RadarrFileSystemType? type) => type?.value;
+
+    /// Converts a string to a [RadarrQueueRecordStatus] object.
+    static RadarrQueueRecordStatus? queueRecordStatusFromJson(String? type) => RadarrQueueRecordStatus.COMPLETED.from(type);
+    /// Converts a [RadarrQueueRecordStatus] object back to its string representation.
+    static String? queueRecordStatusToJson(RadarrQueueRecordStatus? type) => type?.key;
+
+    /// Converts a string to a [RadarrTrackedDownloadState] object.
+    static RadarrTrackedDownloadState? trackedDownloadStateFromJson(String? type) => RadarrTrackedDownloadState.DOWNLOADING.from(type);
+    /// Converts a [RadarrTrackedDownloadState] object back to its string representation.
+    static String? trackedDownloadStateToJson(RadarrTrackedDownloadState? type) => type?.key;
+
+    /// Converts a string to a [RadarrTrackedDownloadStatus] object.
+    static RadarrTrackedDownloadStatus? trackedDownloadStatusFromJson(String? type) => RadarrTrackedDownloadStatus.OK.from(type);
+    /// Converts a [RadarrTrackedDownloadStatus] object back to its string representation.
+    static String? trackedDownloadStatusToJson(RadarrTrackedDownloadStatus? type) => type?.key;
 }

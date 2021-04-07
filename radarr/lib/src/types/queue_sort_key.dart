@@ -18,8 +18,8 @@ extension RadarrQueueSortKeyExtension on RadarrQueueSortKey {
             case 'movies.sortTitle': return RadarrQueueSortKey.MOVIES_TITLE;
             case 'progress': return RadarrQueueSortKey.PROGRESS;
             case 'quality': return RadarrQueueSortKey.QUALITY;
-            default: return null;
         }
+        return null;
     }
 
     /// The actual value/key for sorting directions used in Radarr.
@@ -29,7 +29,7 @@ extension RadarrQueueSortKeyExtension on RadarrQueueSortKey {
             case RadarrQueueSortKey.MOVIES_TITLE: return 'movies.sortTitle';
             case RadarrQueueSortKey.LANGUAGES: return 'languages';
             case RadarrQueueSortKey.QUALITY: return 'quality';
-            default: return null;
+            case RadarrQueueSortKey.PROGRESS: return 'progress';
         }
     }
 }

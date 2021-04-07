@@ -9,6 +9,24 @@ class RadarrCommandHandler_Queue {
     /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_Queue(this._client);
 
+    /// Handler for [queue](https://radarr.video/docs/api/#/Queue/get-queue).
+    /// 
+    /// Return a list of items in the queue.
+    Future<RadarrQueue> get({
+        int page = 1,
+        int pageSize = 20,
+        RadarrSortDirection sortDirection = RadarrSortDirection.DESCENDING,
+        RadarrQueueSortKey sortKey = RadarrQueueSortKey.PROGRESS,
+        bool includeUnknownMovieItems = false,
+    }) async => _commandGetQueue(
+        _client,
+        page: page,
+        pageSize: pageSize,
+        sortDirection: sortDirection,
+        sortKey: sortKey,
+        includeUnknownMovieItems: includeUnknownMovieItems,
+    );
+
     /// Handler for [queue/status](https://radarr.video/docs/api/#/Queue/get-queue-status).
     /// 
     /// Stats on items in queue.

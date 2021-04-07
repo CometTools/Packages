@@ -1,5 +1,8 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
+import '../../../models.dart';
+import '../../../types.dart';
+import '../../../utilities.dart';
 
 part 'queue_record.g.dart';
 
@@ -8,8 +11,64 @@ class RadarrQueueRecord {
     @JsonKey(name: 'movieId')
     int? movieId;
 
+    @JsonKey(name: 'languages')
+    List<RadarrLanguage>? languages;
+
+    @JsonKey(name: 'quality')
+    RadarrMovieFileQuality? quality;
+
+    @JsonKey(name: 'customFormats')
+    List<RadarrCustomFormat>? customFormats;
+
+    @JsonKey(name: 'size')
+    double? size;
+
+    @JsonKey(name: 'title')
+    String? title;
+
+    @JsonKey(name: 'sizeleft')
+    double? sizeLeft;
+
+    @JsonKey(name: 'status', fromJson: RadarrUtilities.queueRecordStatusFromJson, toJson: RadarrUtilities.queueRecordStatusToJson)
+    RadarrQueueRecordStatus? status;
+
+    @JsonKey(name: 'trackedDownloadStatus', fromJson: RadarrUtilities.trackedDownloadStatusFromJson, toJson: RadarrUtilities.trackedDownloadStatusToJson)
+    RadarrTrackedDownloadStatus? trackedDownloadStatus;
+
+    @JsonKey(name: 'trackedDownloadState', fromJson: RadarrUtilities.trackedDownloadStateFromJson, toJson: RadarrUtilities.trackedDownloadStateToJson)
+    RadarrTrackedDownloadState? trackedDownloadState;
+
+    @JsonKey(name: 'downloadId')
+    String? downloadId;
+
+    @JsonKey(name: 'protocol', fromJson: RadarrUtilities.protocolFromJson, toJson: RadarrUtilities.protocolToJson)
+    RadarrProtocol? protocol;
+
+    @JsonKey(name: 'downloadClient')
+    String? downloadClient;
+
+    @JsonKey(name: 'indexer')
+    String? indexer;
+
+    @JsonKey(name: 'id')
+    int? id;
+
     RadarrQueueRecord({
         this.movieId,
+        this.languages,
+        this.quality,
+        this.customFormats,
+        this.size,
+        this.title,
+        this.sizeLeft,
+        this.status,
+        this.trackedDownloadStatus,
+        this.trackedDownloadState,
+        this.downloadId,
+        this.protocol,
+        this.downloadClient,
+        this.indexer,
+        this.id,
     });
 
     /// Returns a JSON-encoded string version of this object.

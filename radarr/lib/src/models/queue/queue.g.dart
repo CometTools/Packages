@@ -14,6 +14,9 @@ RadarrQueue _$RadarrQueueFromJson(Map<String, dynamic> json) {
     sortDirection:
         RadarrUtilities.sortDirectionFromJson(json['sortDirection'] as String?),
     totalRecords: json['totalRecords'] as int?,
+    records: (json['records'] as List<dynamic>?)
+        ?.map((e) => RadarrQueueRecord.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -32,5 +35,6 @@ Map<String, dynamic> _$RadarrQueueToJson(RadarrQueue instance) {
   writeNotNull('sortDirection',
       RadarrUtilities.sortDirectionToJson(instance.sortDirection));
   writeNotNull('totalRecords', instance.totalRecords);
+  writeNotNull('records', instance.records?.map((e) => e.toJson()).toList());
   return val;
 }
