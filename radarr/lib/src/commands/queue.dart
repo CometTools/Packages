@@ -9,9 +9,37 @@ class RadarrCommandHandler_Queue {
     /// Create a command handler using an initialized [Dio] client.
     RadarrCommandHandler_Queue(this._client);
 
+    /// Handler for [queue](https://radarr.video/docs/api/#/Queue/delete-queue-id).
+    /// 
+    /// Remove an item from the queue and optionally blacklist it.
+    /// 
+    /// Required Parameters:
+    /// - `id`: Radarr queue record identifier
+    /// 
+    /// Optional Parameters:
+    /// - `removeFromClient` Remove the release from the download client
+    /// - `blacklist` Blacklist the release from being fetched again
+    Future<void> delete({
+        required int id,
+        bool removeFromClient = false,
+        bool blacklist = false,
+    }) async => _commandDeleteQueue(
+        _client,
+        id: id,
+        removeFromClient: removeFromClient,
+        blacklist: blacklist,
+    );
+
     /// Handler for [queue](https://radarr.video/docs/api/#/Queue/get-queue).
     /// 
     /// Return a list of items in the queue.
+    /// 
+    /// Optional Parameters:
+    /// - `page`: Page of the queue
+    /// - `pageSize`: Size of the page to fetch
+    /// - `sortDirection`: Sorting direction
+    /// - `sortKey`: Sorting key
+    /// - `includeUnknownMovieItems` Include unknown items in the queue
     Future<RadarrQueue> get({
         int page = 1,
         int pageSize = 20,

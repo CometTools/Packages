@@ -43,12 +43,12 @@ extension RadarrQueueRecordStatusExtension on RadarrQueueRecordStatus {
         switch(this) {
             case RadarrQueueRecordStatus.COMPLETED: return 'Downloaded';
             case RadarrQueueRecordStatus.DELAY: return 'Pending';
-            case RadarrQueueRecordStatus.DOWNLOAD_CLIENT_UNAVAILABLE: return 'Pending - Download Client is Unavailable';
+            case RadarrQueueRecordStatus.DOWNLOAD_CLIENT_UNAVAILABLE: return 'Download Client Unavailable';
             case RadarrQueueRecordStatus.DOWNLOADING: return 'Downloading';
-            case RadarrQueueRecordStatus.FAILED: return 'Download Failed';
+            case RadarrQueueRecordStatus.FAILED: return 'Failed';
             case RadarrQueueRecordStatus.PAUSED: return 'Paused';
             case RadarrQueueRecordStatus.QUEUED: return 'Queued';
-            case RadarrQueueRecordStatus.WARNING: return 'Download Warning';
+            case RadarrQueueRecordStatus.WARNING: return 'Warning';
         }
     }
 }

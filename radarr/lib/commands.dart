@@ -88,6 +88,7 @@ part 'src/commands/quality_profile/get_all_quality_profiles.dart';
 
 // Queue
 part 'src/commands/queue.dart';
+part 'src/commands/queue/delete_queue.dart';
 part 'src/commands/queue/get_queue.dart';
 part 'src/commands/queue/get_queue_status.dart';
 
