@@ -12,6 +12,7 @@ part 'src/commands/command/downloaded_movies_scan.dart';
 part 'src/commands/command/manual_import.dart';
 part 'src/commands/command/missing_movie_search.dart';
 part 'src/commands/command/movies_search.dart';
+part 'src/commands/command/refresh_monitored_downloads.dart';
 part 'src/commands/command/refresh_movie.dart';
 part 'src/commands/command/rss_sync.dart';
 
