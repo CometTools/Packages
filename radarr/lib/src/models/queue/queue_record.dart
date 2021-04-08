@@ -29,6 +29,12 @@ class RadarrQueueRecord {
     @JsonKey(name: 'sizeleft')
     double? sizeLeft;
 
+    @JsonKey(name: 'timeleft')
+    String? timeLeft;
+
+    @JsonKey(name: 'estimatedCompletionTime', fromJson: RadarrUtilities.dateTimeFromJson, toJson: RadarrUtilities.dateTimeToJson)
+    DateTime? estimatedCompletionTime;
+
     @JsonKey(name: 'status', fromJson: RadarrUtilities.queueRecordStatusFromJson, toJson: RadarrUtilities.queueRecordStatusToJson)
     RadarrQueueRecordStatus? status;
 
@@ -37,6 +43,9 @@ class RadarrQueueRecord {
 
     @JsonKey(name: 'trackedDownloadState', fromJson: RadarrUtilities.trackedDownloadStateFromJson, toJson: RadarrUtilities.trackedDownloadStateToJson)
     RadarrTrackedDownloadState? trackedDownloadState;
+
+    @JsonKey(name: 'statusMessages')
+    List<RadarrQueueStatusMessage>? statusMessages;
 
     @JsonKey(name: 'downloadId')
     String? downloadId;
@@ -50,6 +59,9 @@ class RadarrQueueRecord {
     @JsonKey(name: 'indexer')
     String? indexer;
 
+    @JsonKey(name: 'outputPath')
+    String? outputPath;
+
     @JsonKey(name: 'id')
     int? id;
 
@@ -61,13 +73,17 @@ class RadarrQueueRecord {
         this.size,
         this.title,
         this.sizeLeft,
+        this.timeLeft,
+        this.estimatedCompletionTime,
         this.status,
         this.trackedDownloadStatus,
         this.trackedDownloadState,
+        this.statusMessages,
         this.downloadId,
         this.protocol,
         this.downloadClient,
         this.indexer,
+        this.outputPath,
         this.id,
     });
 
