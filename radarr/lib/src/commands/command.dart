@@ -51,6 +51,11 @@ class RadarrCommandHandler_Command {
         required List<int> movieIds,
     }) async => _commandMoviesSearch(_client, movieIds: movieIds);
 
+    /// Handler for [command (RefreshMonitoredDownloads)](https://radarr.video/docs/api/#/Command/post-command).
+    /// 
+    /// Triggers the scan of monitored downloads.
+    Future<RadarrCommand> refreshMonitoredDownloads() async => _commandRefreshMonitoredDownloads(_client);
+
     /// Handler for [command (RefreshMovie)](https://radarr.video/docs/api/#/Command/post-command).
     /// 
     /// Trigger a refresh / scan of library.

@@ -1,3 +1,6 @@
+# 2.1.0
+- Ability to fetch queue
+- Ability to delete a queue record
 # 2.0.0
 - Ability to trigger manual import command
 - Unify `RadarrQualityProfile` definitions

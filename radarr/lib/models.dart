@@ -64,6 +64,7 @@ export 'src/models/quality_profile/quality_revision.dart';
 export 'src/models/queue/queue.dart';
 export 'src/models/queue/queue_record.dart';
 export 'src/models/queue/queue_status.dart';
+export 'src/models/queue/queue_status_message.dart';
 
 /// Release
 export 'src/models/release/release.dart';

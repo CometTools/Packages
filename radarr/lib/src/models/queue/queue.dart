@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
+import '../../../models.dart';
 import '../../../types.dart';
 import '../../../utilities.dart';
 
@@ -22,12 +23,16 @@ class RadarrQueue {
     @JsonKey(name: 'totalRecords')
     int? totalRecords;
 
+    @JsonKey(name: 'records')
+    List<RadarrQueueRecord>? records;
+
     RadarrQueue({
         this.page,
         this.pageSize,
         this.sortKey,
         this.sortDirection,
         this.totalRecords,
+        this.records,
     });
 
     /// Returns a JSON-encoded string version of this object.
