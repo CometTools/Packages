@@ -6,6 +6,13 @@ library overseerr;
 
 // Imports
 import 'package:dio/dio.dart';
+import 'commands.dart';
+
+// Exports
+export 'commands.dart';
+export 'models.dart';
+export 'types.dart';
+export 'utilities.dart';
 
 /// The core class to handle all connections to Overseerr.
 /// Gives you easy access to all implemented command handlers, initialized and ready to call.
@@ -16,6 +23,7 @@ class Overseerr {
     /// Internal constructor
     Overseerr._internal({
         required this.httpClient,
+        required this.status,
     });
 
     /// Create a new Overseerr API connection manager to connection to your instance.
@@ -40,18 +48,19 @@ class Overseerr {
         Dio _dio = Dio(
             BaseOptions(
                 baseUrl: host.endsWith('/')
-                    ? '${host}api/v3/'
-                    : '$host/api/v3/',
-                queryParameters: {
-                    'apikey': apiKey,
+                    ? '${host}api/v1/'
+                    : '$host/api/v1/',
+                headers: {
+                    'X-Api-Key': apiKey,
+                    if(headers != null) ...headers,
                 },
-                headers: headers,
                 followRedirects: followRedirects,
                 maxRedirects: maxRedirects,
             ),
         );
         return Overseerr._internal(
             httpClient: _dio,
+            status: OverseerrCommandHandler_Status(_dio),
         );
     }
 
@@ -78,6 +87,7 @@ class Overseerr {
     }) {
         return Overseerr._internal(
             httpClient: client,
+            status: OverseerrCommandHandler_Status(client),
         );
     }
 
@@ -86,4 +96,9 @@ class Overseerr {
     /// Making changes to the [Dio] client should propogate to the command handlers, but is not recommended.
     /// The recommended way to make changes to the HTTP client is to use the `.from()` factory to build your own [Dio] HTTP client.
     final Dio httpClient;
+
+    /// Command handler for all status command-related API calls.
+    /// 
+    /// _Check the documentation to see all API calls that fall under this category._
+    final OverseerrCommandHandler_Status status;
 }
