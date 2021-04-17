@@ -1,3 +1,5 @@
+# 2.0.1
+- Added support for executing command: `RefreshMonitoredDownloads`
 # 2.0.0
 - Add support for setting series type when POSTing/adding a new series
 - Updated for null-safety/NNBD support

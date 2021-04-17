@@ -16,6 +16,7 @@ part 'src/commands/command/backup.dart';
 part 'src/commands/command/episode_search.dart';
 part 'src/commands/command/missing_episode_search.dart';
 part 'src/commands/command/queue.dart';
+part 'src/commands/command/refresh_monitored_downloads.dart';
 part 'src/commands/command/refresh_series.dart';
 part 'src/commands/command/rescan_series.dart';
 part 'src/commands/command/rss_sync.dart';

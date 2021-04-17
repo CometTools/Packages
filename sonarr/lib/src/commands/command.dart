@@ -34,6 +34,13 @@ class SonarrCommandHandler_Command {
     /// Instruct Sonarr to perform a backlog search of missing episodes (Similar functionality to Sickbeard).
     Future<SonarrCommand> missingEpisodeSearch() async => _commandMissingEpisodeSearch(_client);
 
+    /// Handler for [command (RefreshMonitoredDownloads)](https://github.com/Sonarr/Sonarr/wiki/Command).
+    /// 
+    /// Refresh the actively monitored downloads in the queue.
+    Future<SonarrCommand> refreshMonitoredDownloads({
+        int? seriesId,
+    }) async => _commandRefreshMonitoredDownloads(_client);
+
     /// Handler for [command (RefreshSeries)](https://github.com/Sonarr/Sonarr/wiki/Command#refreshseries).
     /// 
     /// Refresh series information from trakt and rescan disk.
