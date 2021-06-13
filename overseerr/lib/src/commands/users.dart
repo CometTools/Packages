@@ -9,7 +9,7 @@ class OverseerrCommandHandler_Users {
   /// Create a command handler using an initialized [Dio] client.
   OverseerrCommandHandler_Users(this._client);
 
-  /// Handler for [user](https://api-docs.overseerr.dev/#/public/get_user).
+  /// Handler for [user](https://api-docs.overseerr.dev/#/users/get_user).
   ///
   /// Returns all users.
   Future<OverseerrUserPage> get({
@@ -20,5 +20,16 @@ class OverseerrCommandHandler_Users {
         _client,
         take: take,
         skip: skip,
+      );
+
+  /// Handler for [user/${userId}](https://api-docs.overseerr.dev/#/users/get_user__userId_).
+  ///
+  /// Returns a single user.
+  Future<OverseerrUser> getByID({
+    required int id,
+  }) async =>
+      _commandGetUser(
+        _client,
+        id: id,
       );
 }
