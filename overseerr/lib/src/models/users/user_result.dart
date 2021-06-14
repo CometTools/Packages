@@ -16,7 +16,7 @@ class OverseerrUser {
   String email;
 
   @JsonKey(name: 'plexUsername')
-  String plexUsername;
+  String? plexUsername;
 
   @JsonKey(name: 'username')
   String? username;
@@ -64,7 +64,7 @@ class OverseerrUser {
     required this.permissions,
     required this.id,
     required this.email,
-    required this.plexUsername,
+    this.plexUsername,
     this.username,
     this.recoveryLinkExpirationDate,
     required this.userType,

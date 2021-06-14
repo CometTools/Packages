@@ -11,7 +11,7 @@ OverseerrUser _$OverseerrUserFromJson(Map<String, dynamic> json) {
     permissions: json['permissions'] as int,
     id: json['id'] as int,
     email: json['email'] as String,
-    plexUsername: json['plexUsername'] as String,
+    plexUsername: json['plexUsername'] as String?,
     username: json['username'] as String?,
     recoveryLinkExpirationDate: json['recoveryLinkExpirationDate'] as String?,
     userType: json['userType'] as int,
@@ -34,7 +34,6 @@ Map<String, dynamic> _$OverseerrUserToJson(OverseerrUser instance) {
     'permissions': instance.permissions,
     'id': instance.id,
     'email': instance.email,
-    'plexUsername': instance.plexUsername,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -43,6 +42,7 @@ Map<String, dynamic> _$OverseerrUserToJson(OverseerrUser instance) {
     }
   }
 
+  writeNotNull('plexUsername', instance.plexUsername);
   writeNotNull('username', instance.username);
   writeNotNull(
       'recoveryLinkExpirationDate', instance.recoveryLinkExpirationDate);

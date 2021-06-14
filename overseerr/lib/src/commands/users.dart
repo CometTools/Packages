@@ -15,11 +15,13 @@ class OverseerrCommandHandler_Users {
   Future<OverseerrUserPage> get({
     int? take,
     int? skip,
+    OverseerrUserSortType? sort,
   }) async =>
       _commandGetUsers(
         _client,
         take: take,
         skip: skip,
+        sort: sort,
       );
 
   /// Handler for [user/${userId}](https://api-docs.overseerr.dev/#/users/get_user__userId_).
