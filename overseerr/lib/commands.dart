@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'models.dart';
 import 'types.dart';
 
-// Request
+// Requests
 part 'src/commands/requests.dart';
 part 'src/commands/requests/get_request_count.dart';
 
