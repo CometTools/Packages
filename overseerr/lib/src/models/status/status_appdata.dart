@@ -6,14 +6,14 @@ part 'status_appdata.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OverseerrStatusAppData {
   @JsonKey(name: 'appData')
-  bool appData;
+  bool? appData;
 
   @JsonKey(name: 'appDataPath')
-  String appDataPath;
+  String? appDataPath;
 
   OverseerrStatusAppData({
-    required this.appData,
-    required this.appDataPath,
+    this.appData,
+    this.appDataPath,
   });
 
   /// Returns a JSON-encoded string version of this object.

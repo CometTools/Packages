@@ -8,13 +8,13 @@ part of 'user_result.dart';
 
 OverseerrUser _$OverseerrUserFromJson(Map<String, dynamic> json) {
   return OverseerrUser(
-    permissions: json['permissions'] as int,
-    id: json['id'] as int,
-    email: json['email'] as String,
+    permissions: json['permissions'] as int?,
+    id: json['id'] as int?,
+    email: json['email'] as String?,
     plexUsername: json['plexUsername'] as String?,
     username: json['username'] as String?,
     recoveryLinkExpirationDate: json['recoveryLinkExpirationDate'] as String?,
-    userType: json['userType'] as int,
+    userType: json['userType'] as int?,
     avatar: json['avatar'] as String?,
     movieQuotaLimit: json['movieQuotaLimit'] as int?,
     movieQuotaDays: json['movieQuotaDays'] as int?,
@@ -24,17 +24,13 @@ OverseerrUser _$OverseerrUserFromJson(Map<String, dynamic> json) {
         OverseerrUtilities.dateTimeFromJson(json['createdAt'] as String?),
     updatedAt:
         OverseerrUtilities.dateTimeFromJson(json['updatedAt'] as String?),
-    requestCount: json['requestCount'] as int,
-    displayName: json['displayName'] as String,
+    requestCount: json['requestCount'] as int?,
+    displayName: json['displayName'] as String?,
   );
 }
 
 Map<String, dynamic> _$OverseerrUserToJson(OverseerrUser instance) {
-  final val = <String, dynamic>{
-    'permissions': instance.permissions,
-    'id': instance.id,
-    'email': instance.email,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -42,11 +38,14 @@ Map<String, dynamic> _$OverseerrUserToJson(OverseerrUser instance) {
     }
   }
 
+  writeNotNull('permissions', instance.permissions);
+  writeNotNull('id', instance.id);
+  writeNotNull('email', instance.email);
   writeNotNull('plexUsername', instance.plexUsername);
   writeNotNull('username', instance.username);
   writeNotNull(
       'recoveryLinkExpirationDate', instance.recoveryLinkExpirationDate);
-  val['userType'] = instance.userType;
+  writeNotNull('userType', instance.userType);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('movieQuotaLimit', instance.movieQuotaLimit);
   writeNotNull('movieQuotaDays', instance.movieQuotaDays);
@@ -56,7 +55,7 @@ Map<String, dynamic> _$OverseerrUserToJson(OverseerrUser instance) {
       'createdAt', OverseerrUtilities.dateTimeToJson(instance.createdAt));
   writeNotNull(
       'updatedAt', OverseerrUtilities.dateTimeToJson(instance.updatedAt));
-  val['requestCount'] = instance.requestCount;
-  val['displayName'] = instance.displayName;
+  writeNotNull('requestCount', instance.requestCount);
+  writeNotNull('displayName', instance.displayName);
   return val;
 }

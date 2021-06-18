@@ -6,10 +6,10 @@ part 'quota.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OverseerrQuota {
   @JsonKey(name: 'days')
-  int days;
+  int? days;
 
   @JsonKey(name: 'limit')
-  int limit;
+  int? limit;
 
   @JsonKey(name: 'used')
   int? used;
@@ -18,14 +18,14 @@ class OverseerrQuota {
   int? remaining;
 
   @JsonKey(name: 'restricted')
-  bool restricted;
+  bool? restricted;
 
   OverseerrQuota({
-    required this.days,
-    required this.limit,
+    this.days,
+    this.limit,
     this.used,
     this.remaining,
-    required this.restricted,
+    this.restricted,
   });
 
   /// Returns a JSON-encoded string version of this object.

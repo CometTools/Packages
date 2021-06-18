@@ -7,13 +7,13 @@ part 'user_result.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OverseerrUser {
   @JsonKey(name: 'permissions')
-  int permissions;
+  int? permissions;
 
   @JsonKey(name: 'id')
-  int id;
+  int? id;
 
   @JsonKey(name: 'email')
-  String email;
+  String? email;
 
   @JsonKey(name: 'plexUsername')
   String? plexUsername;
@@ -25,7 +25,7 @@ class OverseerrUser {
   String? recoveryLinkExpirationDate;
 
   @JsonKey(name: 'userType')
-  int userType;
+  int? userType;
 
   @JsonKey(name: 'avatar')
   String? avatar;
@@ -43,31 +43,33 @@ class OverseerrUser {
   int? tvQuotaDays;
 
   @JsonKey(
-      name: 'createdAt',
-      fromJson: OverseerrUtilities.dateTimeFromJson,
-      toJson: OverseerrUtilities.dateTimeToJson)
+    name: 'createdAt',
+    fromJson: OverseerrUtilities.dateTimeFromJson,
+    toJson: OverseerrUtilities.dateTimeToJson,
+  )
   DateTime? createdAt;
 
   @JsonKey(
-      name: 'updatedAt',
-      fromJson: OverseerrUtilities.dateTimeFromJson,
-      toJson: OverseerrUtilities.dateTimeToJson)
+    name: 'updatedAt',
+    fromJson: OverseerrUtilities.dateTimeFromJson,
+    toJson: OverseerrUtilities.dateTimeToJson,
+  )
   DateTime? updatedAt;
 
   @JsonKey(name: 'requestCount')
-  int requestCount;
+  int? requestCount;
 
   @JsonKey(name: 'displayName')
-  String displayName;
+  String? displayName;
 
   OverseerrUser({
-    required this.permissions,
-    required this.id,
-    required this.email,
+    this.permissions,
+    this.id,
+    this.email,
     this.plexUsername,
     this.username,
     this.recoveryLinkExpirationDate,
-    required this.userType,
+    this.userType,
     this.avatar,
     this.movieQuotaLimit,
     this.movieQuotaDays,
@@ -75,8 +77,8 @@ class OverseerrUser {
     this.tvQuotaDays,
     this.createdAt,
     this.updatedAt,
-    required this.requestCount,
-    required this.displayName,
+    this.requestCount,
+    this.displayName,
   });
 
   /// Returns a JSON-encoded string version of this object.

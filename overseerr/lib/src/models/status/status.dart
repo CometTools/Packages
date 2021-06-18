@@ -6,22 +6,22 @@ part 'status.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OverseerrStatus {
   @JsonKey(name: 'version')
-  String version;
+  String? version;
 
   @JsonKey(name: 'commitTag')
-  String commitTag;
+  String? commitTag;
 
   @JsonKey(name: 'updateAvailable')
-  bool updateAvailable;
+  bool? updateAvailable;
 
   @JsonKey(name: 'commitsBehind')
-  int commitsBehind;
+  int? commitsBehind;
 
   OverseerrStatus({
-    required this.version,
-    required this.commitTag,
-    required this.updateAvailable,
-    required this.commitsBehind,
+    this.version,
+    this.commitTag,
+    this.updateAvailable,
+    this.commitsBehind,
   });
 
   /// Returns a JSON-encoded string version of this object.

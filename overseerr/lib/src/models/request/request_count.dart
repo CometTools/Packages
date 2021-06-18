@@ -6,22 +6,22 @@ part 'request_count.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OverseerrRequestCount {
   @JsonKey(name: 'pending')
-  int pending;
+  int? pending;
 
   @JsonKey(name: 'approved')
-  int approved;
+  int? approved;
 
   @JsonKey(name: 'processing')
-  int processing;
+  int? processing;
 
   @JsonKey(name: 'available')
-  int available;
+  int? available;
 
   OverseerrRequestCount({
-    required this.pending,
-    required this.approved,
-    required this.processing,
-    required this.available,
+    this.pending,
+    this.approved,
+    this.processing,
+    this.available,
   });
 
   /// Returns a JSON-encoded string version of this object.

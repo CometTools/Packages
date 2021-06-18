@@ -23,7 +23,7 @@ class Overseerr {
   /// Internal constructor
   Overseerr._internal({
     required this.httpClient,
-    required this.request,
+    required this.requests,
     required this.status,
     required this.users,
   });
@@ -60,7 +60,7 @@ class Overseerr {
     );
     return Overseerr._internal(
       httpClient: _dio,
-      request: OverseerrCommandHandler_Request(_dio),
+      requests: OverseerrCommandHandler_Requests(_dio),
       status: OverseerrCommandHandler_Status(_dio),
       users: OverseerrCommandHandler_Users(_dio),
     );
@@ -89,7 +89,7 @@ class Overseerr {
   }) {
     return Overseerr._internal(
       httpClient: client,
-      request: OverseerrCommandHandler_Request(client),
+      requests: OverseerrCommandHandler_Requests(client),
       status: OverseerrCommandHandler_Status(client),
       users: OverseerrCommandHandler_Users(client),
     );
@@ -104,7 +104,7 @@ class Overseerr {
   /// Command handler for all request command-related API calls.
   ///
   /// _Check the documentation to see all API calls that fall under this category._
-  final OverseerrCommandHandler_Request request;
+  final OverseerrCommandHandler_Requests requests;
 
   /// Command handler for all status command-related API calls.
   ///

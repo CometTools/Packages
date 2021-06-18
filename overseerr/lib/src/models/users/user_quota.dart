@@ -7,14 +7,14 @@ part 'user_quota.g.dart';
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class OverseerrUserQuota {
   @JsonKey(name: 'movie')
-  OverseerrQuota movie;
+  OverseerrQuota? movie;
 
   @JsonKey(name: 'tv')
-  OverseerrQuota tv;
+  OverseerrQuota? tv;
 
   OverseerrUserQuota({
-    required this.movie,
-    required this.tv,
+    this.movie,
+    this.tv,
   });
 
   /// Returns a JSON-encoded string version of this object.

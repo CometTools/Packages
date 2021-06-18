@@ -8,19 +8,16 @@ part of 'quota.dart';
 
 OverseerrQuota _$OverseerrQuotaFromJson(Map<String, dynamic> json) {
   return OverseerrQuota(
-    days: json['days'] as int,
-    limit: json['limit'] as int,
+    days: json['days'] as int?,
+    limit: json['limit'] as int?,
     used: json['used'] as int?,
     remaining: json['remaining'] as int?,
-    restricted: json['restricted'] as bool,
+    restricted: json['restricted'] as bool?,
   );
 }
 
 Map<String, dynamic> _$OverseerrQuotaToJson(OverseerrQuota instance) {
-  final val = <String, dynamic>{
-    'days': instance.days,
-    'limit': instance.limit,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -28,8 +25,10 @@ Map<String, dynamic> _$OverseerrQuotaToJson(OverseerrQuota instance) {
     }
   }
 
+  writeNotNull('days', instance.days);
+  writeNotNull('limit', instance.limit);
   writeNotNull('used', instance.used);
   writeNotNull('remaining', instance.remaining);
-  val['restricted'] = instance.restricted;
+  writeNotNull('restricted', instance.restricted);
   return val;
 }
