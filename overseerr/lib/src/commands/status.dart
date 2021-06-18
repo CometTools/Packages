@@ -1,6 +1,6 @@
 part of overseerr_commands;
 
-/// Facilitates, encapsulates, and manages individual calls related to movie credits within Overseerr.
+/// Facilitates, encapsulates, and manages individual calls related to statuses within Overseerr.
 ///
 /// [OverseerrCommandHandler_Status] internally handles routing the HTTP client to the API calls.
 class OverseerrCommandHandler_Status {

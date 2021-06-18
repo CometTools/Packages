@@ -2,11 +2,12 @@
 library overseerr_utilities;
 
 /// [OverseerrUtilities] gives access to static, functional operations. These are mainly used for the (de)serialization of received JSON data.
-/// 
+///
 /// [OverseerrUtilities] cannot be initialized, all available functions are available statically.
 class OverseerrUtilities {
-    OverseerrUtilities._();
+  OverseerrUtilities._();
 
-    static DateTime? dateTimeFromJson(String? date) => DateTime.tryParse(date ?? '');
-    static String? dateTimeToJson(DateTime? date) => date?.toIso8601String();
+  static DateTime? dateTimeFromJson(String? date) =>
+      DateTime.tryParse(date ?? '');
+  static String? dateTimeToJson(DateTime? date) => date?.toIso8601String();
 }

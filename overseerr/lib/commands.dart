@@ -5,6 +5,10 @@ import 'package:dio/dio.dart';
 import 'models.dart';
 import 'types.dart';
 
+// Request
+part 'src/commands/request.dart';
+part 'src/commands/request/get_request_count.dart';
+
 // Status
 part 'src/commands/status.dart';
 part 'src/commands/status/get_status.dart';
