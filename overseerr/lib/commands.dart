@@ -12,5 +12,6 @@ part 'src/commands/status/get_status_appdata.dart';
 
 // User
 part 'src/commands/users.dart';
+part 'src/commands/users/get_user_quota.dart';
 part 'src/commands/users/get_user.dart';
 part 'src/commands/users/get_users.dart';

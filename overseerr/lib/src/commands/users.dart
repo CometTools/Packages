@@ -12,7 +12,11 @@ class OverseerrCommandHandler_Users {
   /// Handler for [user](https://api-docs.overseerr.dev/#/users/get_user).
   ///
   /// Returns all users.
-  Future<OverseerrUserPage> get({
+  ///
+  /// - [take] a specific amount of users
+  /// - [skip] to a different page
+  /// - [sort] the incoming list
+  Future<OverseerrUserPage> getUsers({
     int? take,
     int? skip,
     OverseerrUserSortType? sort,
@@ -27,10 +31,21 @@ class OverseerrCommandHandler_Users {
   /// Handler for [user/${userId}](https://api-docs.overseerr.dev/#/users/get_user__userId_).
   ///
   /// Returns a single user.
-  Future<OverseerrUser> getByID({
+  Future<OverseerrUser> getUserByID({
     required int id,
   }) async =>
       _commandGetUser(
+        _client,
+        id: id,
+      );
+
+  /// Handler for [user/${userId}/quota](https://api-docs.overseerr.dev/#/users/get_user__userId__quota).
+  ///
+  /// Returns quota details for a user.
+  Future<OverseerrUserQuota> getUserQuota({
+    required int id,
+  }) async =>
+      _commandGetUserQuota(
         _client,
         id: id,
       );
