@@ -3,6 +3,8 @@ library overseerr_models;
 
 // Requests
 export 'src/models/requests/request_count.dart';
+export 'src/models/requests/request_page.dart';
+export 'src/models/requests/request.dart';
 
 // Status
 export 'src/models/status/status.dart';
@@ -14,4 +16,5 @@ export 'src/models/users/user_quota.dart';
 export 'src/models/users/user.dart';
 
 // General
+export 'src/models/page.dart';
 export 'src/models/quota.dart';

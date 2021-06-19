@@ -9,7 +9,7 @@ enum OverseerrUserSortType {
 
 /// Extension on [OverseerrUserSortType] to implement extended functionality.
 extension OverseerrUserSortTypeExtension on OverseerrUserSortType {
-  OverseerrUserSortType? from(String type) {
+  OverseerrUserSortType? from(String? type) {
     switch (type) {
       case 'created':
         return OverseerrUserSortType.CREATED;

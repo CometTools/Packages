@@ -8,6 +8,8 @@ import 'types.dart';
 // Requests
 part 'src/commands/requests.dart';
 part 'src/commands/requests/get_request_count.dart';
+part 'src/commands/requests/get_request.dart';
+part 'src/commands/requests/get_requests.dart';
 
 // Status
 part 'src/commands/status.dart';
